@@ -1,0 +1,92 @@
+{
+    "name": "Operation Blacksmith TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Lazarus Group's Operation Blacksmith",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1219",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "Operation Blacksmith employed three new DLang-based malware families, two of which were RATs. One used Telegram bots and channels as a C2 communication medium."
+        },
+        {
+            "techniqueID": "T1027",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "The RAT, NineRat, uses Telegram as its C2 channel for accepting commands, communicating outputs, and for file transfer. This use of a legitimate service helps evade detection."
+        },
+        {
+            "techniqueID": "T1543",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "The dropper creates persistence for the malware component using a BAT script."
+        },
+        {
+            "techniqueID": "T1082",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "NineRat was designed to gather preliminary information about infected systems, such as OS architecture and antivirus products in use."
+        },
+        {
+            "techniqueID": "T1210",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "Lazarus exploited CVE-2021-44228, known as Log4Shell, for initial access."
+        },
+        {
+            "techniqueID": "T1055",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "The dropper injects two components on the disk and then deletes itself."
+        },
+        {
+            "techniqueID": "T1136",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "Operators created a local account and granted it administrative privileges."
+        },
+        {
+            "techniqueID": "T1003",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "The attackers used credential dumping utilities such as ProcDump and MimiKatz."
+        },
+        {
+            "techniqueID": "T1518",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "Lazarus performed software discovery using Windows Management Instrumentation(WMIC)"
+        },
+        {
+            "techniqueID": "T1071.001",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "NineRat uses DLang-based libraries to interact and communicate with command and control via Telegram\u2019s APIs."
+        },
+        {
+            "techniqueID": "T1059.001",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "The RAT, BottomLoader, downloads the next stage payload from a remote URL using a PowerShell command."
+        },
+        {
+            "techniqueID": "T1005",
+            "score": 1,
+            "color": "#c6effe",
+            "comment": "The RAT, NineRat is programmed to collect system information using various commands such as cmd.exe, ipconfig, and whoami."
+        }
+    ],
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
