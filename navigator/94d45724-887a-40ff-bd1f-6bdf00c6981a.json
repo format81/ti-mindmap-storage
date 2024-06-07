@@ -1,0 +1,127 @@
+{
+    "name": "Lazarus Group TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Lazarus Group's Campaign",
+    "filters": {
+        "stages": [
+            "act"
+        ]
+    },
+    "tactics": [
+        {
+            "tacticID": "TA0002",
+            "techniques": [
+                {
+                    "techniqueID": "T1059.001",
+                    "comment": "BottomLoader and NineRAT utilize PowerShell commands to download and execute payloads.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1059",
+                    "comment": "Lazarus group uses command line for reconnaissance after initial access and initial execution of malware.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1203",
+                    "comment": "Lazarus group exploited CVE-2021-44228 (Log4Shell) for initial access and execution of RATs.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1505",
+                    "comment": "Lazarus group exploited a component of VMWare Horizon servers for initial access and execution of RATs.",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "tacticID": "TA0003",
+            "techniques": [
+                {
+                    "techniqueID": "T1068",
+                    "comment": "The group exploited Log4Shell (CVE-2021-44228) vulnerability on publicly facing VMWare Horizon servers for privilege escalation.",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "tacticID": "TA0005",
+            "techniques": [
+                {
+                    "techniqueID": "T1083",
+                    "comment": "The threat actor used 'dir' command to gather information about users, and also used 'tasklist' command to discover software on the system.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1046",
+                    "comment": "Lazarus group uses 'netstat' command to discover information about network services.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1018",
+                    "comment": "The group uses 'net group /domain Domain Computers' command to remotely discover other systems within the domain.",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "tacticID": "TA0008",
+            "techniques": [
+                {
+                    "techniqueID": "T1071",
+                    "comment": "NineRAT uses Telegram as its C2 channel, likely to evade network and host-based detection measures.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1090",
+                    "comment": "HazyLoad, a custom-made proxy tool, was used to establish direct access to the infected system without having to repeatedly exploit the discovered vulnerability.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1132",
+                    "comment": "The session information ID used by DLRAT is hardcoded into the malware as a base64-encoded string.",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "tacticID": "TA0011",
+            "techniques": [
+                {
+                    "techniqueID": "T1002",
+                    "comment": "The group used HazyLoad to exfiltrate the collected data by proxying the data to their servers.",
+                    "enabled": true
+                },
+                {
+                    "techniqueID": "T1020",
+                    "comment": "NineRAT can automatically send a file to the C2 server from the infected endpoint.",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "tacticID": "TA0004",
+            "techniques": [
+                {
+                    "techniqueID": "T1550",
+                    "comment": "Lazarus group created additional user accounts on the system, granting them administrative privileges.",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "tacticID": "TA0001",
+            "techniques": [
+                {
+                    "techniqueID": "T1005",
+                    "comment": "DLRAT, NineRAT and BottomLoader malware collects information about the local system including the operating system version and user that is running the malware.",
+                    "enabled": true
+                }
+            ]
+        }
+    ]
+}
