@@ -1,0 +1,74 @@
+{
+    "name": "ATT&CK for Good Day Ransomware",
+    "description": "Techniques used by Good Day Ransomware.",
+    "version": "4.5",
+    "domain": "enterprise-attack",
+    "techniques": [
+        {
+            "techniqueID": "T1486",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The Good Day ransomware, a variant of the ARCrypter family, encrypts all the local volumes including available shares on the victim's machine. It also tries to remove volume shadow copies to prevent file recovery and delays its execution to evade detection."
+        },
+        {
+            "techniqueID": "T1140",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The Good Day ransomware masquerades as a Microsoft Windows Update executable (WindowsUpdate.exe)."
+        },
+        {
+            "techniqueID": "T1059",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "Good Day ransomware is designed to launch via a dropper or script."
+        },
+        {
+            "techniqueID": "T1057",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The ransomware enumerates all running processes."
+        },
+        {
+            "techniqueID": "T1213",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The threat actors communicate data to the victim via the TOR-based victim portal. The threat actors also threaten the victims to leak or sell their data on the Cloak website if the ransom is not paid."
+        },
+        {
+            "techniqueID": "T1204",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The ransomware requires the /START parameter to fully launch the encryption process."
+        },
+        {
+            "techniqueID": "T1036",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The ransomware executes with a User Access Control (UAC) prompt to elevate privileges when launched. It also masquerades as a legitimate Microsoft utility and checks if it's running in any specific debugger to evade detection."
+        },
+        {
+            "techniqueID": "T1048",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The actors exfiltrate data to the Cloak website in the event of non-payment of ransom."
+        },
+        {
+            "techniqueID": "T1486",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "Affected files are renamed with the .crYptA or .crYptB extensions post-encryption."
+        },
+        {
+            "techniqueID": "T1568.002",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The Good Day ransomware uses TOR-based URLs for Command & Control."
+        },
+        {
+            "techniqueID": "T1485",
+            "score": 100,
+            "color": "#ff6666",
+            "comment": "The ransomware tries to delete volume shadow copies using the command 'vssadmin.exe delete shadows /all /quiet' to prevent file recovery."
+        }
+    ]
+}
