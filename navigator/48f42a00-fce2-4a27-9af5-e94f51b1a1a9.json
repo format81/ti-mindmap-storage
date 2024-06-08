@@ -1,0 +1,88 @@
+{
+    "name": "Good Day Ransomware Campaign",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Attack patterns used by Good Day ransomware variant of the ARCrypter family",
+    "techniques": [
+        {
+            "techniqueID": "T1085",
+            "color": "",
+            "comment": "The Good Day ransomware, a variant of the ARCrypter family, employs this technique to execute its payload.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.003",
+            "color": "",
+            "comment": "The ransomware executes commands via the Windows Command Shell. This includes instructions to delete volume shadow copies, which prevents file recovery.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1571.001",
+            "color": "",
+            "comment": "The threat actors used Tor-based victim portals for each target.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204.002",
+            "color": "",
+            "comment": "The ransomware is designed to be launched via a dropper or script, with the sample masquerading as a Microsoft Windows Update executable.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1036.003",
+            "color": "",
+            "comment": "The sample masquerades as a Microsoft Windows Update executable (WindowsUpdate.exe).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1486",
+            "color": "",
+            "comment": "The ransomware threatens victims with having their data leaked or sold on the Cloak website if they fail to pay.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1041",
+            "color": "",
+            "comment": "The Cloak site lists victims data as 'sold,' suggesting exfiltration over C2 channels.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1068",
+            "color": "",
+            "comment": "The payload issues a User Access Control (UAC) prompt to elevate privileges when launched.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1550",
+            "color": "",
+            "comment": "The payload communicates via the URL of the blog where they intend to leak the victim's data using TOR-based victim portals.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "filters": {
+        "stages": [
+            "act"
+        ],
+        "platforms": [
+            "windows"
+        ]
+    },
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": false
+}
