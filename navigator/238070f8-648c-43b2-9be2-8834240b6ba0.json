@@ -1,0 +1,81 @@
+{
+    "name": "Enterprise ATT&CK - Lazarus TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified as used by the Lazarus group.",
+    "techniques": [
+        {
+            "techniqueID": "T1213",
+            "color": "",
+            "comment": "Lazarus group used Data from Information Repositories (T1213) by using credential dumping utility such as Procdump and Microdump to obtain the necessary credentials.",
+            "tactic": "collection"
+        },
+        {
+            "techniqueID": "T1059.001",
+            "color": "",
+            "comment": "Lazarus group used PowerShell (T1059.001) to download additional malware.",
+            "tactic": "execution"
+        },
+        {
+            "techniqueID": "T1120",
+            "color": "",
+            "comment": "Lazarus group used Peripheral Device Discovery (T1120) by scanning the infected systems to obtain information about the system.",
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1053.003",
+            "color": "",
+            "comment": "Lazarus group used Scheduled Task (T1053) as a persistence mechanism for the first component.",
+            "tactic": "persistence"
+        },
+        {
+            "techniqueID": "T1082",
+            "color": "",
+            "comment": "Lazarus group used System Information Discovery (T1082) to initially fingerprint the infected systems using the Telegram-based C2 channel.",
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1070.004",
+            "color": "",
+            "comment": "Lazarus group used Indicator Removal on Host: File Deletion (T1070.004) to clean traces of its activity by using a BAT script for self-deletion.",
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1201.001",
+            "color": "",
+            "comment": "NineRAT has the capability to remove all traces of its presence using Removal:T1201.001.",
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1071.001",
+            "color": "",
+            "comment": "Lazarus APT uses Telegram-based C2 infrastructure. This technique can be categorized as Application Layer Protocol: Web Protocol (T1071.001).",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1049",
+            "color": "",
+            "comment": "Lazarus APT group uses System Network Connections Discovery (T1049) to scan active network connections.",
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1105",
+            "color": "",
+            "comment": "Lazarus group used Command and Control (T1105) via a BAT script to set up persistence for the first component malware.",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1190",
+            "color": "",
+            "comment": "As a part of the Initial Access stage, the threat actors used the vulnerability CVE-2021-44228 (log4j/Log4Shell). This action refers to the technique Exploit Public-Facing Application (T1190) within the tactic Initial Access.",
+            "tactic": "initial-access"
+        }
+    ],
+    "legendItems": [],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd"
+}
