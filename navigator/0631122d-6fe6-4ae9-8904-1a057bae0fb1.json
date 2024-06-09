@@ -1,0 +1,168 @@
+{
+    "name": "Enterprise techniques used by LilacSquid",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques used by LilacSquid APT group as observed in Operation Blacksmith",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1588.002",
+            "tactic": "resource-development",
+            "color": "",
+            "comment": "LilacSquid used MeshAgent, an open-source remote management tool, after compromising vulnerable application servers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1210",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "LilacSquid exploited vulnerabilities in public-facing application servers to gain initial access. They also used compromised RDP credentials to gain access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1094.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "The interaction with the C2 server was performed using a customized version of QuasarRAT, called 'PurpleInk.'",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1483",
+            "tactic": "control-and-command",
+            "color": "",
+            "comment": "The malware 'PurpleInk' uses an accompanying file to obtain information such as the C2 server's address and port.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1076",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "LilacSquid uses compromised remote desktop protocol (RDP) credentials for lateral movement across victim organization's infrastructure.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "color": "",
+            "comment": "LilacSquid used PurpleInk to gather system information about the infected host using WMI queries.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1203",
+            "tactic": "execution",
+            "color": "",
+            "comment": "LilacSquid used the successful exploitation of a vulnerable web application to execute 'MeshAgent' from a remote server.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1069",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "LilacSquid used PurpleInk to gather information about domain and user credentials.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1547",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "InkLoader is used to persist across reboots on the infected host by registering it as a service.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "LilacSquid used PurpleInk to exfiltrate data through the C2 channel.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1573",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "LilacSquid uses an encrypted configuration file for PurpleInk.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "LilacSquid used command line interface to execute specific commands for service creation and deployment.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Secure Socket Funneling (SSF), an open-source tool for proxying and tunneling, was used by LilacSquid for managing access to victim servers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "releaseDate": "2022-03-01"
+}
