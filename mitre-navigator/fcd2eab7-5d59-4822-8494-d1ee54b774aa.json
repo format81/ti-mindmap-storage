@@ -1,0 +1,165 @@
+{
+    "name": "Lazarus Group Techniques",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs used by Lazarus Group during Operation Blacksmith",
+    "techniques": [
+        {
+            "techniqueID": "T1082",
+            "color": "",
+            "comment": "The group used the command to gather OS version, user running the malware and MAC address",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1518",
+            "color": "",
+            "comment": "The group used the command to discover antivirus software on infected system",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003.005",
+            "color": "",
+            "comment": "The group executed the command to dump credentials",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "color": "",
+            "comment": "The group executed the command to tamper with the registry",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1038",
+            "color": "",
+            "comment": "The group used this technique during their malware development, where NineRAT was originally built in May 2022",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "color": "",
+            "comment": "The group created a new administrative user on the system",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1098",
+            "color": "",
+            "comment": "",
+            "enabled": false,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "color": "",
+            "comment": "The group discovered the newly created user",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "color": "",
+            "comment": "The group use of CVE-2021-44228 enabled them to perform escalation on the exploited servers",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1203",
+            "color": "",
+            "comment": "The group used CVE-2021-44228 to exploit publicly exposed VMWare Horizon servers for initial access",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "color": "",
+            "comment": "The group used PowerShell commands to download and execute payloads",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "color": "",
+            "comment": "NineRAT interfaced with Telegram for command and control communications",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1001",
+            "color": "",
+            "comment": "NineRAT was able to send confidential information from the victim organization to a pre-configured Telegram channel",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1569",
+            "color": "",
+            "comment": "The group installed a RAT (NineRAT) and downloader (BottomLoader) on the compromised system",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1190",
+            "color": "",
+            "comment": "Lazarus successfully exploited CVE-2021-44228, also known as Log4Shell, on publicly facing VMWare Horizon servers",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1505",
+            "color": "",
+            "comment": "Lazarus utilized Telegram servers to interact with NineRAT deployed on the infected endpoint",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1553",
+            "color": "",
+            "comment": "They used a legitimate service (Telegram) to evade network and host-based detection measures",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1195",
+            "color": "",
+            "comment": "Lazarus was able to infiltrate the supply chain through a third-party software vulnerability (Log4Shell)",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    }
+}
