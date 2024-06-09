@@ -1,0 +1,95 @@
+{
+    "version": "4.5",
+    "name": "Enterprise Layer",
+    "domain": "enterprise-attack",
+    "description": "LilacSquid Att&ck Techniques",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1203",
+            "score": 1,
+            "color": "",
+            "comment": "LilacSquid operated by using compromised RDP credentials or by exploiting vulnerabilities in web applications for execution.",
+            "enabled": true,
+            "tactic": "execution",
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1076",
+            "score": 1,
+            "color": "",
+            "comment": "After gaining access through compromised RDP credentials or a vulnerable web application, LilacSquid persisted in the victim system.",
+            "enabled": true,
+            "tactic": "persistence",
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1059",
+            "score": 1,
+            "color": "",
+            "comment": "LilacSquid used the bitsadmin utility to download and execute the MeshAgent. Also, used the command-line interface to create and execute services on endpoint.",
+            "enabled": true,
+            "tactic": "execution",
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1082",
+            "score": 1,
+            "color": "",
+            "comment": "PurpleInk implant is capable of gathering system information about the infected host using WMI queries.",
+            "enabled": true,
+            "tactic": "discovery",
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1083",
+            "score": 1,
+            "color": "",
+            "comment": "PurpleInk implant can enumerate a given directory to obtain underlying directory names, file names and file sizes.",
+            "enabled": true,
+            "tactic": "discovery",
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1547",
+            "score": 1,
+            "color": "",
+            "comment": "LilacSquid deployed InkLoader, a malware loader, to persist across reboots.",
+            "enabled": true,
+            "tactic": "persistence",
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1005",
+            "score": 1,
+            "color": "",
+            "comment": "PurpleInk can read a file specified by the C2 and exfiltrate its contents.",
+            "enabled": true,
+            "tactic": "collection",
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1005",
+            "score": 1,
+            "color": "",
+            "comment": "MeshAgent was observed to manage files on the system and providing capabilities such as viewing and controlling desktop, and viewing software and hardware information about the device.",
+            "enabled": true,
+            "tactic": "collection",
+            "metadata": []
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#DAE8FC",
+            "#4B74AD"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    },
+    "metadata": [],
+    "showSubtechniques": false
+}
