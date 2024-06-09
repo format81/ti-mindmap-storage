@@ -1,0 +1,86 @@
+{
+    "name": "Enterprise ATT&CK Layer - Lazarus TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "",
+    "techniques": [
+        {
+            "techniqueID": "T1082",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The attackers use several commands such as \"cmd.exe /C ipconfig /all\", \"cmd.exe /C ver\", \"cmd.exe /C wmic os get osarchitecture\", among others, to gather information about the infected system."
+        },
+        {
+            "techniqueID": "T1518",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The malware uses the command \"cmd.exe /C WMIC /Node:localhost /Namespace:\\root\\SecurityCenter2 Path AntiVirusProduct Get displayName\" to discover what antivirus software is installed on the infected system."
+        },
+        {
+            "techniqueID": "T1059.001",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The attackers appear to utilize PowerShell command to download and execute the next stage payload from a remote host."
+        },
+        {
+            "techniqueID": "T1105",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "Lazarus uses initial access to vulnerable publicly-exposed servers combined with successful exploitation of CVE-2021-44228, also known as Log4Shell, to transfer its tools into the networking environment."
+        },
+        {
+            "techniqueID": "T1003.005",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The attackers utilize commands designed to dump the credentials stored in the Windows Digest authentication package."
+        },
+        {
+            "techniqueID": "T1136",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The adversaries created a new local user account and granted it administrative privileges."
+        },
+        {
+            "techniqueID": "T1098",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The adversaries created a new local user account and granted it administrative privileges."
+        },
+        {
+            "techniqueID": "T1133",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "Actively using HazyLoad, a proxy tool, to maintain direct external access to infected system."
+        },
+        {
+            "techniqueID": "T1210",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The attackers initially gain access by successfully exploiting CVE-2021-44228, also known as Log4Shell, on publicly facing VMWare Horizon servers."
+        },
+        {
+            "techniqueID": "T1112",
+            "score": 1,
+            "color": "#ff6666",
+            "comment": "The threat actors use a specific registry modification command to prepare for OS Credential Dumping."
+        }
+    ],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    },
+    "legendItems": [],
+    "showLegend": false
+}
