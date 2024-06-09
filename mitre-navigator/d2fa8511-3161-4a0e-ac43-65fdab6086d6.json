@@ -1,0 +1,159 @@
+{
+    "name": "Lazarus Group TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Lazarus Group's Operation Blacksmith",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Lazarus group exploits CVE-2021-44228 (Log4j) vulnerability for initial access",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Powershell is used to download and execute HazyLoad and the next payload",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1569/002",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "A BAT script is used to set up persistence for a RAT instrumentor component",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1090/003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Lazarus uses their custom made proxy tool (HazyLoad) for establishing direct access to the infected system",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Lazarus Group uses system commands to collect information about infected systems (i.e., cmd.exe /C ipconfig /all, cmd.exe /C ver, etc.)",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Lazarus Group creates unauthorized user accounts at both domain and local levels",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Lazarus Group uses a custom-made proxy tool (HazyLoad) and NineRAT, a RAT with C2 channel implemented via Telegram",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Lazarus modifies the registry to use logon credentials for later dumping",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1529",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "A legitimate public Telegram bot was used for initial access",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1073",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Preliminary data is gathered from the local system",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Remote Access Trojans (RATs) are used",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003/005",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Lazarus uses ProcDump and Mimikatz tools to dump credentials",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Download and execution of NineRAT on the infected system",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1098",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Lazarus changes the user account used to conceal the activity and maintain persistence",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Collected fingerprint data of the system is likely being shared with other APT groups",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Telegram is used as a Channel for C2 communications",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Persistence is created for newer versions or completely new follow-up payloads by creating a \".URL\" file in the Startup directory",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
