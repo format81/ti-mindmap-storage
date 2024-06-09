@@ -1,0 +1,105 @@
+{
+    "name": "ATT&CK Layer",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Layer showing techniques used by Lazarus group",
+    "techniques": [
+        {
+            "techniqueID": "T1210",
+            "color": "#c55a11",
+            "comment": "Lazarus exploited CVE-2021-44228 for remote access to public-facing servers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1505",
+            "color": "#c55a11",
+            "comment": "The attackers exploited a vulnerability in the Log4j server software component.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "color": "#c55a11",
+            "comment": "Attackers used PowerShell to download and execute malicious payloads.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "color": "#c55a11",
+            "comment": "Attackers ran commands like 'whoami,' 'getmac,' and 'systeminfo' to gather information about the system.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1057",
+            "color": "#c55a11",
+            "comment": "'tasklist' command was used by the attackers to discover running processes.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1518",
+            "color": "#c55a11",
+            "comment": "Attackers used the WMIC command to discover antivirus software.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1063",
+            "color": "#c55a11",
+            "comment": "The attackers used the WMIC command to discover antivirus software on the system.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1046",
+            "color": "#c55a11",
+            "comment": "The 'netstat -nap tcp' command was used by attackers to scan network services.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "color": "#c55a11",
+            "comment": "The attackers created an additional user account on the system with administrative privileges.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1106",
+            "color": "#c55a11",
+            "comment": "A BAT script was used to setup persistence for the malware.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003.005",
+            "color": "#c55a11",
+            "comment": "Lazarus used credential dumping utilities like ProcDump and MimiKatz.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "color": "#c55a11",
+            "comment": "The attackers used RAT tools for remote access and control, including a new RAT named 'NineRAT'.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071",
+            "color": "#c55a11",
+            "comment": "The operation used Telegram for command and control.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "minValue": 0,
+        "maxValue": 100,
+        "colors": [
+            "#fff2cc",
+            "#ffe699",
+            "#ffc000",
+            "#bf9000",
+            "#704c00"
+        ]
+    },
+    "legendItems": [],
+    "metadata": [],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd"
+}
