@@ -1,0 +1,107 @@
+{
+    "format": "json",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "name": "APT29-WINELOADER",
+    "description": "APT29 uses WINELOADER to target German political parties.",
+    "domain": "enterprise-attack",
+    "techniques": [
+        {
+            "techniqueID": "T1543.003",
+            "score": 1,
+            "color": "",
+            "comment": "APT29 uses WINELOADER which involves the creation or modification of Windows services.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1012",
+            "score": 1,
+            "color": "",
+            "comment": "WINELOADER, used by APT29, queries the registry to discover information.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1082",
+            "score": 1,
+            "color": "",
+            "comment": "APT29's payload WINELOADER discovers system information.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1134",
+            "score": 1,
+            "color": "",
+            "comment": "APT29 uses WINELOADER which can manipulate access tokens.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1057",
+            "score": 1,
+            "color": "",
+            "comment": "APT29 uses WINELOADER to discover processes.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1007",
+            "score": 1,
+            "color": "",
+            "comment": "WINELOADER, used by APT29, discovers system services.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1027",
+            "score": 1,
+            "color": "",
+            "comment": "WINELOADER, used by APT29, obfuscates files or information.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1070.004",
+            "score": 1,
+            "color": "",
+            "comment": "WINELOADER, a tool used by APT29, can delete files to evade defenses.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1055.003",
+            "score": 1,
+            "color": "",
+            "comment": "WINELOADER has a functionality that allows for thread execution hijacking.",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1083",
+            "score": 1,
+            "color": "",
+            "comment": "APT29 uses WINELOADER for file and directory discovery within the target system.",
+            "enabled": true,
+            "metadata": []
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    },
+    "legendItems": [],
+    "notes": "",
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true
+}
