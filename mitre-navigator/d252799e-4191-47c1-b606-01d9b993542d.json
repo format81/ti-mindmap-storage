@@ -1,0 +1,111 @@
+{
+    "name": "Lazarus Group TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques used by Lazarus Group during Operation Blacksmith",
+    "techniques": [
+        {
+            "techniqueID": "T1566.001",
+            "color": "#AB47BC",
+            "comment": "Lazarus Group targeted organizations worldwide using a Telegram-based malware.",
+            "tactic": "initial-access"
+        },
+        {
+            "techniqueID": "T1090",
+            "color": "#AB47BC",
+            "comment": "Lazarus Group used a proxy tool named 'HazyLoad' to maintain direct access to the infected system.",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1136",
+            "color": "#AB47BC",
+            "comment": "Lazarus created a local user account and granted it administrative privileges.",
+            "tactic": "persistence"
+        },
+        {
+            "techniqueID": "T1098",
+            "color": "#AB47BC",
+            "comment": "Lazarus created a local user account and granted it administrative privileges.",
+            "tactic": "persistence"
+        },
+        {
+            "techniqueID": "T1105",
+            "color": "#AB47BC",
+            "comment": "Once the user account was set up, the threat actors, switched to it for their activities.",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1082",
+            "color": "#AB47BC",
+            "comment": "Once NineRAT, a tool used in the attack, was activated, the attackers command the tool to gather system data all over again.",
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1518",
+            "color": "#AB47BC",
+            "comment": "Several commands were executed by NineRat including an enquiry for antivirus product information.",
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1017",
+            "color": "#AB47BC",
+            "comment": "Upon successful exploitation of CVE-2021-44228, Lazarus operators deployed HazyLoad, a proxy tool used to establish direct access to the infected system without having to repeatedly exploit CVE-2021-44228.",
+            "tactic": "execution"
+        },
+        {
+            "techniqueID": "T1003.005",
+            "color": "#AB47BC",
+            "comment": "Attackers used the command 'cmd.exe /c reg add HKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest /v UseLogonCredential /t REG_DWORD /d 1' to dump credentials.",
+            "tactic": "credential-access"
+        },
+        {
+            "techniqueID": "T1112",
+            "color": "#AB47BC",
+            "comment": "Lazarus Group used the command 'cmd.exe /c reg add HKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest /v UseLogonCredential /t REG_DWORD /d 1' to modify the registry.",
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1092",
+            "color": "#AB47BC",
+            "comment": "A DLang-based RAT, DLRAT, was used to deploy additional malware and retrieve commands from the C2 and execute them on the infected endpoints.",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1203",
+            "color": "#AB47BC",
+            "comment": "Lazarus used the infamous Log4j vulnerability, CVE-2021-44228, for exploitation.",
+            "tactic": "execution"
+        },
+        {
+            "techniqueID": "T1105",
+            "color": "#AB47BC",
+            "comment": "Lazarus attackers used a RAT to download and execute a next-stage payload from a remote host.",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1078",
+            "color": "#AB47BC",
+            "comment": "Lazarus created a local account, which matches the user account documented by Microsoft.",
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1518",
+            "color": "#AB47BC",
+            "comment": "Lazarus discovered installed antivirus products using the WMIC command.",
+            "tactic": "discovery"
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    }
+}
