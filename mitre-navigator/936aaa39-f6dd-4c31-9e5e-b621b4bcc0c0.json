@@ -1,0 +1,100 @@
+{
+    "name": "Lazarus Group ATT&CK Matrix (v14)",
+    "version": "4.5",
+    "domain": "enterprise",
+    "description": "ATT&CK Layer describing Lazarus Group's techniques.",
+    "techniques": [
+        {
+            "techniqueID": "T1210",
+            "comment": "The group uses compromised remote desktop protocol (RDP) credentials to gain initial access.",
+            "tactic": "initial-access",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1076",
+            "comment": "The group uses stolen credentials along with RDP to enable lateral movement within the targeted system.",
+            "tactic": "lateral-movement",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1203",
+            "comment": "The group uses QuasarRAT, customized and dubbed as 'PurpleInk', as a Remote Access Tool (RAT). They also use the malware loaders 'InkBox' and 'InkLoader'.",
+            "tactic": "execution",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1505",
+            "comment": "The group uses an open-source remote management tool, MeshAgent, and Secure Socket Funneling (SSF) as part of its infrastructure for persistence.",
+            "tactic": "persistence",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "comment": "The group executes commands via the command-line interface to create and start services.",
+            "tactic": "execution",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1005",
+            "comment": "PurpleInk is also used to gather system information about the infected host using WMI queries.",
+            "tactic": "collection",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1486",
+            "comment": "The group employs encryption for stealing data.",
+            "tactic": "impact",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1214",
+            "comment": "Group uses compromised RDP credentials to gain access.",
+            "tactic": "credential-access",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1094",
+            "comment": "The group uses custom command and control protocols to maintain communication with their remote servers.",
+            "tactic": "command-and-control",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#66ddff",
+            "#66ccff",
+            "#66bbff"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": false,
+    "compareLayer": false,
+    "metadata": [],
+    "platforms": [
+        "Windows"
+    ],
+    "filters": {
+        "stages": [
+            "act"
+        ],
+        "platforms": [
+            "windows"
+        ]
+    },
+    "hideDisabled": false,
+    "showSubtitle": true,
+    "title": "Lazarus Group ATT&CK Matrix (v14)",
+    "navVersion": "4.9.1",
+    "footer": "",
+    "notes": "",
+    "sorting": 0,
+    "viewMode": 0,
+    "selectedTechniques": [],
+    "layerURLVersion": "4.5",
+    "techniquesPer tactic": {},
+    "color": ""
+}
