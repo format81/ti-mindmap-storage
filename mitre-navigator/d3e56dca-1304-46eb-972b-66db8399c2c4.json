@@ -1,0 +1,182 @@
+{
+    "name": "APT29 Uses WINELOADER to Target German Political Parties",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "APT29 used a spearphishing attachment with a CDU-themed lure to target German political parties. The attachment contained a link to a malicious ZIP file hosted on a compromised website. The ROOTSAW dropper used JavaScript obfuscation and a JavaScript command and scripting interpreter to download and execute the WINELOADER payload. APT29 employed obfuscated files or information to evade detection. The ROOTSAW payload contained a JSObfuscated payload that was decoded using Windows Certutil and decompressed using tar. WINELOADER used a custom command and control protocol to communicate with the APT29-controlled server, sending environment information and receiving tasks. APT29 compressed data to evade detection. The ROOTSAW payload was compressed using tar before being delivered to the victim's machine. WINELOADER may have achieved persistence on the victim's machine by creating a run key in the registry. APT29 may have deleted files to evade detection and remove evidence of their activity. WINELOADER may have discovered files and directories on the victim's machine to identify valuable data or facilitate lateral movement. WINELOADER may have used process discovery to identify running processes on the victim's machine and determine whether the compromised system was a valid target. WINELOADER may have discovered system services on the victim's machine to identify valuable data or facilitate lateral movement. WINELOADER may have manipulated access tokens to escalate privileges on the victim's machine. WINELOADER may have queried the registry to gather information about the victim's machine and identify valuable data or facilitate lateral movement. WINELOADER may have used thread execution hijacking to evade detection and execute malicious code in the context of a legitimate process.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1193",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "APT29 used a spearphishing attachment with a CDU-themed lure to target German political parties. The attachment contained a link to a malicious ZIP file hosted on a compromised website.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.004",
+            "tactic": "execution",
+            "color": "",
+            "comment": "The ROOTSAW dropper used JavaScript obfuscation and a JavaScript command and scripting interpreter to download and execute the WINELOADER payload.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "APT29 employed obfuscated files or information to evade detection. The ROOTSAW payload contained a JSObfuscated payload that was decoded using Windows Certutil and decompressed using tar.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "The ROOTSAW dropper decoded and decrypted the second-stage WINELOADER payload using Windows Certutil and decompressed it using tar.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1094",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "WINELOADER used a custom command and control protocol to communicate with the APT29-controlled server, sending environment information and receiving tasks.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1002",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "APT29 compressed data to evade detection. The ROOTSAW payload was compressed using tar before being delivered to the victim's machine.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "WINELOADER may have achieved persistence on the victim's machine by creating a run key in the registry.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "APT29 may have deleted files to evade detection and remove evidence of their activity.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "WINELOADER may have discovered files and directories on the victim's machine to identify valuable data or facilitate lateral movement.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1057",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "WINELOADER may have used process discovery to identify running processes on the victim's machine and determine whether the compromised system was a valid target.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1007",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "WINELOADER may have discovered system services on the victim's machine to identify valuable data or facilitate lateral movement.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1134",
+            "tactic": "privilege-escalation",
+            "color": "",
+            "comment": "WINELOADER may have manipulated access tokens to escalate privileges on the victim's machine.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1012",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "WINELOADER may have queried the registry to gather information about the victim's machine and identify valuable data or facilitate lateral movement.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055.003",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "WINELOADER may have used thread execution hijacking to evade detection and execute malicious code in the context of a legitimate process.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
