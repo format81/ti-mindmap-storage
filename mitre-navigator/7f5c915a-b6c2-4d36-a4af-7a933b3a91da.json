@@ -1,0 +1,66 @@
+{
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "name": "LilacSquid TTPs",
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in LilacSquid's campaign.",
+    "techniques": [
+        {
+            "techniqueID": "T1203",
+            "color": "",
+            "comment": "LilacSquid exploits vulnerabilities in public-facing servers, such as remote desktop protocol (RDP) credentials, to execute multiple open-source tools and customized malware.",
+            "tactic": "execution",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1072",
+            "color": "",
+            "comment": "LilacSquid uses MeshAgent, an open-source remote management tool, and a customized version of QuasarRAT named \u201cPurpleInk\u201d. These tools are used to maintain long-term access and initiate data theft.",
+            "tactic": "execution",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "color": "",
+            "comment": "Compromised remote desktop protocol (RDP) credentials were used by LilacSquid to gain system access.",
+            "tactic": "credential_access",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021",
+            "color": "",
+            "comment": "LilacSquid were known to gain long-term access using remote desktop protocol (RDP). They also utilized protocols for proxying and tunneling multiple sockets through a single secure TLS tunnel to a remote computer.",
+            "tactic": "lateral_movement",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1041",
+            "color": "",
+            "comment": "This campaign operates to enable LilacSquid to siphon data of interest to attacker-controlled servers. Furthermore, PurpleInk, the primary implant of choice, could perform actions such as send the process ID, name and associated Window Title to the command and control (C2) server or read a file specified by the C2 and exfiltrate its contents.",
+            "tactic": "exfiltration",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1190",
+            "color": "",
+            "comment": "Vulnerabilities in public-facing application servers are leveraged by LilacSquid to orchestrate the deployment of a variety of open-source tools and customized malware.",
+            "tactic": "initial_access",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#c8c8c8",
+            "#ff6666"
+        ],
+        "minValue": 0,
+        "maxValue": 3
+    },
+    "metadata": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#cccccc",
+    "selectTechniquesAcrossTactics": true
+}
