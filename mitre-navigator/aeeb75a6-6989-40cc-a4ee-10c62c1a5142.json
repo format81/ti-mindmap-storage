@@ -1,0 +1,94 @@
+{
+    "name": "LilacSquid Campaign v1.0",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Tracking LilacSquid attack techniques for an attack from 2021 up until 2024",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1021.001",
+            "tactic": "lateral-movement",
+            "comment": "The threat actor exploits compromised remote desktop protocol (RDP) credentials for lateral movement",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1347",
+            "tactic": "strategies-tactics-and-procedures",
+            "comment": "Known malware like QuasarRAT and MeshAgent are used for remote access",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1572.004",
+            "tactic": "command-and-control",
+            "comment": "The threat actor creates tunnels for data siphoning using Secure Socket Funneling (SSF) to maintain a connection to their remote servers",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1098",
+            "tactic": "persistence",
+            "comment": "The threat actor manipulates RDP credentials to maintain persistence in the infected system",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "persistence",
+            "comment": "The threat actor exploits a vulnerable web application to establish long-term access for data theft",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "The C2 server's address and port are obtained from an obfuscated file that is decrypted",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "comment": "The threat actor uses an application layer protocol to hide C2 communication",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "comment": "The threat actor controls the infected host using ' cmd[.]exe /K ' to start a remote shell",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547.001",
+            "tactic": "persistence",
+            "comment": "The Command Line Interface is used to inject malware into the registry run keys/startup folder to maintain persistence",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "comment": "The threat actor employs a remote desktop server and tunnels for exfiltrating data",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "metadata": [],
+    "disabledTechniques": [],
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true
+}
