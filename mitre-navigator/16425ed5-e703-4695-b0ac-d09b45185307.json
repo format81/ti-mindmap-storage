@@ -1,0 +1,219 @@
+{
+    "name": "LilacSquid TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in LilacSquid's activities",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1203",
+            "tactic": "execution",
+            "color": "",
+            "comment": "LilacSquid uses exploits known server vulnerabilities to execute malicious code.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence,defense-evasion",
+            "color": "",
+            "comment": "LilacSquid uses stolen RDP credentials for persistence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "They use MeshAgent and SSF to access and perform tasks on compromised systems.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Customized PurpleInk and InkLoader are made to run on the compromised system.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1102",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "LilacSquid connects the infected systems to its C2 servers via Web services.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "They exfiltrate data using the command and control channel.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "They use a customized version of QuasarRAT, known as PurpleInk.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Through PurpleInk, they can enumerate the process, send IDs, get drive information, and gather system info using WMI queries.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1057",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "color": "",
+            "comment": "They can read a file specified by the C2 and exfiltrate its contents.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1045",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "PurpleInk is heavily obfuscated, this could be done to evade defenses.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "PurpleInk can connect to a specified remote address via proxy servers, thus allowing the threat actor to scan the infected network.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control,initial-access",
+            "color": "",
+            "comment": "They use Webservice protocols (MeshCentral), the method of payload delivery is not mentioned but phishing emails could be a potential entry point.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1193",
+            "tactic": "command-and-control,initial-access",
+            "color": "",
+            "comment": "",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "The actor created tunnels to their servers using SSF.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1032",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "They may be using SSL/TLS for creating tunnels through SSF for secure communication to the C2.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1106",
+            "tactic": "execution",
+            "color": "",
+            "comment": "The command line interface is used for command execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "HTTPS is used as a Control server protocol.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1197",
+            "tactic": "defense-evasion,persistence",
+            "color": "",
+            "comment": "BITSadmin is used to download and execute the MeshAgent.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1050",
+            "tactic": "execution,persistence",
+            "color": "",
+            "comment": "They use sc command to register a new service that executes PurpleInk.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "A technique to avoid direct connections to the C2 server by using other compromised hosts as proxies.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1016",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Discovering an infected host\u2019s IP address, hostname, and active network interfaces through QuasarRAT.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Downloading additional tools.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "persistence,privilege-escalation",
+            "color": "",
+            "comment": "Specific registry keys used to enable persistence.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "dismissedTechniques": [],
+    "links": [],
+    "enabledTechniques": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
