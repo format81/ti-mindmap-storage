@@ -1,0 +1,110 @@
+{
+    "name": "Ludus ATT&CK Matrix",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Ludus is an open-source, API driven infrastructure management system that can be used for various purposes, including command and control, persistence, defense evasion, and initial access.",
+    "filters": {},
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1106",
+            "tactic": "command-and-control",
+            "comment": "Ludus is an open-source, API driven infrastructure management system that can deploy and configure complex networks with a single command.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "command-and-control",
+            "comment": "Ludus allows users to define configuration at a high level and handles the details. It can install Active Directory, any Microsoft Office version, and arbitrary Chocolatey packages on Windows hosts.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "persistence",
+            "comment": "Ludus can Sysprep Windows hosts before AD joins, indicating a possible technique for establishing persistence in a target environment.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "initial-access",
+            "comment": "Ludus provides an easy installer and template builds to go from zero to ready-to-deploy easily. It also allows users to add their own templates backed by Packer.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1088",
+            "tactic": "defense-evasion",
+            "comment": "Ludus can define up to 255 VLANs with arbitrary firewall rules, allowing for network segmentation to evade defenses.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "command-and-control",
+            "comment": "Ludus can generate an Ansible inventory for automated configuration outside of Ludus, providing a way to manage and control multiple systems.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "command-and-control",
+            "comment": "Ludus provides internal DNS with easy-to-set rewrites, allowing for the simulation of any domain.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "defense-evasion",
+            "comment": "Ludus can easily and quickly isolate VMs from the internet, snapshots are taken before isolation and reverted before internet is turned back on.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "defense-evasion",
+            "comment": "Ludus allows specific domains or IPs while isolated to test live C2 channels or techniques that require internet access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "command-and-control",
+            "comment": "Ludus has a built-in WireGuard server that allows secure connections from anywhere in the world.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1593",
+            "tactic": "initial-access",
+            "comment": "Ludus is open-source software, potentially allowing threat actors to gather information about its functionality and use it for malicious purposes.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "command-and-control",
+            "comment": "Ludus can be deployed on any Debian 12 host with virtualization support, indicating that it can be used to create virtualized environments for command and control purposes.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
