@@ -1,0 +1,124 @@
+{
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "name": "Lazarus Group ATT&CK Patterns",
+    "description": "The tactics, techniques and procedures used by the Lazarus Group as part of their global operations",
+    "domain": "enterprise-attack",
+    "techniques": [
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "comment": "Lazarus group used Windows Command Shell in their operations, allowing them to execute arbitrary commands.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1065",
+            "tactic": "command-and-control",
+            "comment": "Lazarus group used the Telegram service's uncommon ports for their command and control communications.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "comment": "Lazarus group's malware includes remote access trojans (RATs) named 'NineRAT' and 'DLRAT'.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1203",
+            "tactic": "execution",
+            "comment": "Lazarus group used the vulnerability of CVE-2021-44228 (Log4Shell) for initial access and to carry out their operations.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "comment": "Lazarus group conducted extensive system fingerprinting and collected credentials with the help of utilities such as ProcDump and MimiKatz.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Lazarus group created an additional local user account on the systems they infiltrated, granting it administrative privileges.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "comment": "The malware used by Lazarus group requires a user to run or directly interact with it in order for execution to occur.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1539",
+            "tactic": "collection",
+            "comment": "Lazarus undertook several methods to collect user data, for instance by running commands such as 'whoami' and 'getmac'.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "comment": "Lazarus exploited the CVE-2021-44228 vulnerability, using direct access to carry out an information gathering reconnaissance mission.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1092",
+            "tactic": "command-and-control",
+            "comment": "Lazarus used Telegram channels to communicate, this allows them to evade network and host-based detection measures.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Lazarus performed OS credential dumping using ProdDump and Mimikaz tools.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547.001",
+            "tactic": "persistence",
+            "comment": "Lazarus created a URL file in the Startup directory to maintain persistence for their follow-up payloads.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1569",
+            "tactic": "persistence",
+            "subtechniqueID": "s0016",
+            "comment": "Lazarus is manipulating system services by modifying service binary paths, executing malicious codes as services.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Several commands were executed to gather system information as a part of the reconnaissance. The gathered data includes user info, system version, antivirus product info etc.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "discovery",
+            "comment": "Used to identify installed defensive solutions on victim's machines.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1210",
+            "tactic": "initial-access",
+            "comment": "Lazarus successfully exploited the Log4j vulnerability for initial access and to deploy several pieces of malware.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204.001",
+            "tactic": "initial-access",
+            "comment": "Initial infection was carried out by tricking users into clicking on malicious linkage which is attached to spear-phishing mails or exists in malicious websites.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "minValue": 0,
+        "maxValue": 100,
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ]
+    }
+}
