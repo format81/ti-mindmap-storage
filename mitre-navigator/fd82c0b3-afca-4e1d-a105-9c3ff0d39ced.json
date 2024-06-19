@@ -1,0 +1,98 @@
+{
+    "name": "Lazarus Group Operation Blacksmith",
+    "version": "4.5",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs used by Lazarus Group during Operation Blacksmith",
+    "techniques": [
+        {
+            "techniqueID": "T1094",
+            "tactic": "command-and-control",
+            "comment": "The Lazarus Group used Telegram bots and channels for command and control communications in Operation Blacksmith",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1134",
+            "tactic": "persistence",
+            "comment": "The malware sets up persistence for a component using a BAT script",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "comment": "The Lazarus group employed three new DLang-based malware families, two of which were RATs namely NineRAT and DLRAT",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "The Lazarus group, during their initial reconnaissance phase, used several commands to gather information about the system such as 'whoami', 'ver', 'getmac', etc",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1203",
+            "tactic": "initial-access",
+            "comment": "The Lazarus group used an exploit for CVE-2021-44228 (Log4Shell) as a mean of initial access to vulnerable public-facing servers",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1057",
+            "tactic": "discovery",
+            "comment": "Lazarus group used tasklist command for software discovery",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Lazarus Group used process dumping to harvest system credentials using tools such as Procdump and Mimikatz",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "The threat actors created an additional user account on the system, granting it administrative privileges. This TTP was reported by Microsoft",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Lazarus Group made extensive use of the command-line interface for executing commands",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1012",
+            "tactic": "discovery",
+            "comment": "Lazarus Group queried the Windows Registry for information",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "comment": "Lazarus Group modified the windows registry",
+            "score": 100
+        },
+        {
+            "techniqueID": "T1107",
+            "tactic": "defense-evasion",
+            "comment": "Lazarus Group DLRAT malware deletes itself from the system using a BAT file",
+            "score": 100
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "metadata": [],
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "selectSubtechniquesWithParent": false
+}
