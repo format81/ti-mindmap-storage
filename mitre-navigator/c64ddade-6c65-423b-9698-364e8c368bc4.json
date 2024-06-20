@@ -1,0 +1,119 @@
+{
+    "name": "Lazarus Group NineRAT",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Tactics, techniques, and procedures (TTPs) of the Lazarus Group used in their recent campaign with NineRAT malware",
+    "techniques": [
+        {
+            "techniqueID": "T1027",
+            "color": "",
+            "comment": "NineRAT malware uses Telegram as a Command and Control (C2) channel to evade network and host-based detection measures",
+            "enabled": true,
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1059",
+            "color": "",
+            "comment": "The Lazarus Group used PowerShell and cmd.exe to run commands for the initial reconnaissance and later stages of the attack",
+            "enabled": true,
+            "tactic": "execution"
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "The Lazarus used a modular infection chain with different components to achieve defense evasion and functional separation",
+            "enabled": true,
+            "tactic": "privilege-escalation"
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "The Lazarus used a modular infection chain with different components to achieve defense evasion and functional separation",
+            "enabled": true,
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1203",
+            "color": "",
+            "comment": "Lazarus exploited Log4j (CVE-2021-44228) to gain initial access",
+            "enabled": true,
+            "tactic": "execution"
+        },
+        {
+            "techniqueID": "T1098",
+            "color": "",
+            "comment": "The Lazarus Group created a new user account and granted it administrative privileges",
+            "enabled": true,
+            "tactic": "persistence"
+        },
+        {
+            "techniqueID": "T1003",
+            "color": "",
+            "comment": "Laazrus used credential dumping utilities like ProcDump and MimiKatz",
+            "enabled": true,
+            "tactic": "credential-access"
+        },
+        {
+            "techniqueID": "T1082",
+            "color": "",
+            "comment": "During the initial reconnaissance, Lazarus used several commands to gather system information. Later, NineRAT was used to finger-print the systems",
+            "enabled": true,
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1135",
+            "color": "",
+            "comment": "Lazarus used the 'net group /domain Domain Computers' command during network reconnaissance",
+            "enabled": true,
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1022",
+            "color": "",
+            "comment": "The NineRAT RAT sent stolen data to the C2 server via an encrypted channel (Telegram)",
+            "enabled": true,
+            "tactic": "exfiltration"
+        },
+        {
+            "techniqueID": "T1018",
+            "color": "",
+            "comment": "Lazarus used the 'getmac' command to discover remote systems on the network",
+            "enabled": true,
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1518",
+            "color": "",
+            "comment": "NineRAT ran the WMIC command to discover anti-virus products on the system",
+            "enabled": true,
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1057",
+            "color": "",
+            "comment": "Lazarus used the 'tasklist' command to discover running processes on the system",
+            "enabled": true,
+            "tactic": "discovery"
+        },
+        {
+            "techniqueID": "T1003.005",
+            "color": "",
+            "comment": "Lazarus used several commands like procdump.exe and pwdump.exe to dump credentials from the OS",
+            "enabled": true,
+            "tactic": "credential-access"
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    }
+}
