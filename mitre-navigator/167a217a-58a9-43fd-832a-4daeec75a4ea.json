@@ -1,0 +1,88 @@
+{
+    "name": "StrelaStealer",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs employed by StrelaStealer malware",
+    "techniques": [
+        {
+            "techniqueID": "T1140",
+            "color": "",
+            "comment": "The malware appears to deobfuscate information during its execution to evade detection and carry out its malicious activities.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1024",
+            "color": "",
+            "comment": "The malware uses encryption to pack its payload and avoid detection.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1001",
+            "color": "",
+            "comment": "The malware uses data obfuscation to pack its payload, making it more difficult to interpret the software's malicious actions.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1083",
+            "color": "",
+            "comment": "Sometimes it is seen that the malware is looking for some specific files or directories when infecting a machine.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1179",
+            "color": "",
+            "comment": "The malware relies on API Hooking, attaching its payload to a particular function's API calls to ensure that it runs each time that function is invoked.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1002",
+            "color": "",
+            "comment": "The original malware payload is packed or compressed, presumably to make it easier to deliver to the targeted systems.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1045",
+            "color": "",
+            "comment": "StrelaStealer uses software packing to obfuscate its code, making it harder for security tools to detect its malicious functions.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "The malware appears to inject its malicious code into other processes to execute its payload and potentially elevate its access privileges in the process.",
+            "score": 1,
+            "metadata": [],
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#66ff66",
+            "#ff6666"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    },
+    "metadata": [],
+    "enabled": true,
+    "selectTechniquesAcrossTactics": true
+}
