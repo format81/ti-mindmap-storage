@@ -1,0 +1,96 @@
+{
+    "name": "Operation Blacksmith TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Operation Blacksmith, conducted by Lazarus Group",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Operation Blacksmith used two new DLang-based Remote Access Trojans (RATs), one of which used Telegram for command and control communications.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "The Log4j vulnerability (CVE-2021-44228) was exploited for initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Several command line operations, such as 'whoami', 'wmic os get osarchitecture', were used to gather system information.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Used the 'wmic /Node:localhost /Namespace:\\root\\SecurityCenter2 Path AntiVirusProduct Get displayName' command to discover software.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "An unauthorised user account, with administrative privileges, is created on the system.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Used the 'reg add HKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\WDigest /v UseLogonCredential /t REG_DWORD /d 1' command to modify the registry.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003.005",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Used Procdump and Mimikatz to dump credentials.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1094.004",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "NineRAT was used to interact with Telegram-based C2 channels, indicating a shift in Tactics, Techniques, and Procedures (TTPs).",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
