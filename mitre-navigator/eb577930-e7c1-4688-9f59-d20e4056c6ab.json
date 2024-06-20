@@ -1,0 +1,85 @@
+{
+    "name": "Operation Blacksmith",
+    "description": "Lazarus targets organizations worldwide using novel Telegram-based malware written in DLang",
+    "domain": "enterprise-attack",
+    "version": "14",
+    "navigator_version": "4.9.1",
+    "layer_version": "4.5",
+    "techniques": [
+        {
+            "id": "T1190",
+            "name": "Exploit Public-Facing Application",
+            "tactic": "Initial Access",
+            "subtechnique": false,
+            "data_source": [
+                "Windows Event Logs",
+                "Network Traffic"
+            ]
+        },
+        {
+            "id": "T1059",
+            "name": "Command and Scripting Interpreter",
+            "tactic": "Execution",
+            "subtechnique": false,
+            "data_source": [
+                "Windows Event Logs",
+                "Process Monitoring"
+            ]
+        },
+        {
+            "id": "T1543",
+            "name": "Create or Modify System Process",
+            "tactic": "Persistence",
+            "subtechnique": false,
+            "data_source": [
+                "Windows Registry",
+                "Process Monitoring"
+            ]
+        },
+        {
+            "id": "T1140",
+            "name": "Deobfuscate/Decode Files or Information",
+            "tactic": "Defense Evasion",
+            "subtechnique": false,
+            "data_source": [
+                "File Monitoring",
+                "Network Traffic"
+            ]
+        },
+        {
+            "id": "T1102",
+            "name": "Web Service",
+            "tactic": "Command and Control",
+            "subtechnique": false,
+            "data_source": [
+                "Network Traffic"
+            ]
+        },
+        {
+            "id": "T1082",
+            "name": "System Information Discovery",
+            "tactic": "Discovery",
+            "subtechnique": false,
+            "data_source": [
+                "Windows Event Logs",
+                "Process Monitoring"
+            ]
+        },
+        {
+            "id": "T1005",
+            "name": "Data from Local System",
+            "tactic": "Collection",
+            "subtechnique": false,
+            "data_source": [
+                "File Monitoring",
+                "Network Traffic"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "source": "Cisco Talos Blog",
+            "url": "<URL>"
+        }
+    ]
+}
