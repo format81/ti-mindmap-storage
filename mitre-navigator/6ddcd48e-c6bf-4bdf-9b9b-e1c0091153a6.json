@@ -1,0 +1,81 @@
+{
+    "name": "Uncharmed: Untangling Iran's APT42 Operations",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "A mapping of the TTPs identified to APT42 operation",
+    "techniques": [
+        {
+            "techniqueID": "T1566.002",
+            "color": "",
+            "comment": "APT42 has been observed using spear-phishing links in order to deliver legitimate documents or invitations to conferences, further enabling them to harvest credentials",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1566",
+            "color": "",
+            "comment": "In order to gain initial access to the victim's network, APT42 has been observed to pose as journalists and event organizers, aiming to build trust with victims through ongoing correspondence",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.003",
+            "color": "",
+            "comment": "APT42 has been observed issuing Windows native commands through the Windows Command Shell during data exfiltration",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1074.001",
+            "color": "",
+            "comment": "APT42 was observed staging files for exfiltration in password-protected 7-ZIP archives",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1486",
+            "color": "",
+            "comment": "APT42 has been observed using AES encryption to encrypt data for impact",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1530",
+            "color": "",
+            "comment": "APT42 was observed exploiting this technique, exfiltrating files to a OneDrive account masquerading as the victim\u2019s organization",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1203",
+            "color": "",
+            "comment": "APT42 was observed deploying two custom backdoors namely NICECURL and TAMECAT, providing an access point to various clients for further execution of commands",
+            "enabled": true
+        },
+        {
+            "techniqueID": "TA0005",
+            "color": "",
+            "comment": "APT42 has been observed using various built-in features and publicly available tools to evade their defense. They were also seen clearing Google Chrome browser history and using anonymized infrastructure to interact with the victim's environment",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1526",
+            "color": "",
+            "comment": "APT42 leveraged social engineering to gain access to victim networks and discover cloud services for credential harvesting",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053.004",
+            "color": "",
+            "comment": "The TAMECAT backdoor initially writes a likely victim identifier to a location and makes an initial POST request to a C2 domain. If the response is successful, the decrypted response data is later split into four values.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1566.001",
+            "color": "",
+            "comment": "This indicates potential phishing through attachment",
+            "enabled": false
+        }
+    ],
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
