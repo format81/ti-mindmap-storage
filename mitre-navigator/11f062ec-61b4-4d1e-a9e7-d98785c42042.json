@@ -1,0 +1,220 @@
+{
+    "name": "APT42 TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs used by Iran's APT42 in their broad cyber espionage campaign.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "weighted",
+        "showID": false,
+        "aggregateFunction": "average",
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 leveraged spear-phishing emails to gain initial access to victims' cloud environments."
+        },
+        {
+            "techniqueID": "T1539",
+            "tactic": "credential-access",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 stole credentials-seemingly from cookies to gain access to victims' accounts."
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "collection",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 staged files in preparation for exfiltration."
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 harvested credentials and information of strategic interest to Iran."
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 performed registry modifications to blend their operations."
+        },
+        {
+            "techniqueID": "T1562",
+            "tactic": "defense-evasion",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 cleared Google Chrome browser history after reviewing documents of interest."
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "defense-evasion",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 minimized their intrusion footprint."
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "persistence",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 gained persistent access by leveraging legitimate feature of Microsoft Office."
+        },
+        {
+            "techniqueID": "T1053.005",
+            "tactic": "execution",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 leveraged task scheduler to maintain persistence."
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 masqueraded as legitimate entities to gain victim's trust."
+        },
+        {
+            "techniqueID": "T1587",
+            "tactic": "resource-development",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 impersonated high-ranking personnel in e-mail correspondences."
+        },
+        {
+            "techniqueID": "T1558.001",
+            "tactic": "credential-access",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 successfully bypassed multi-factor authentication through Kerberos Silver Tickets."
+        },
+        {
+            "techniqueID": "T1550.005",
+            "tactic": "lateral-movement",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 maintained persistent access."
+        },
+        {
+            "techniqueID": "T1550.003",
+            "tactic": "lateral-movement",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 forged credentials to execute lateral movement."
+        },
+        {
+            "techniqueID": "T1550.002",
+            "tactic": "lateral-movement",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 performed lateral movement using victims' hashed credential data."
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "initial-access",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 enticed users to run malicious software."
+        },
+        {
+            "techniqueID": "T1569.002",
+            "tactic": "privilege-escalation",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 leveraged system services to achieve privilege escalation."
+        },
+        {
+            "techniqueID": "T1548.002",
+            "tactic": "privilege-escalation",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 bypassed User Account Control to escalate privileges."
+        },
+        {
+            "techniqueID": "T1587.002",
+            "tactic": "resource-development",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 crafted custom backdoors (TAMECAT and NICECURL) to achieve their objectives."
+        },
+        {
+            "techniqueID": "T1583",
+            "tactic": "resource-development",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 leveraged infrastructure of compromised organizations in their operations."
+        },
+        {
+            "techniqueID": "T1587.007",
+            "tactic": "resource-development",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 designed decoy documents that exploit certain vulnerability when opened."
+        },
+        {
+            "techniqueID": "T1588.004",
+            "tactic": "resource-development",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 leveraged now patched vulnerabilities in their operations."
+        },
+        {
+            "techniqueID": "T1566.011",
+            "tactic": "phishing",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 sends a spear-phishing email to its target, posing as the Jackson-Milton Local School District DPAC system."
+        },
+        {
+            "techniqueID": "T1098.001",
+            "tactic": "persistence",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 used the compromised user's permissions to create faux admin accounts to maintain persistence."
+        },
+        {
+            "techniqueID": "T1179.002",
+            "tactic": "persistence",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42  deployed kernel hooks to gain a higher level of control over system functionality."
+        },
+        {
+            "techniqueID": "T1556",
+            "tactic": "credential-access",
+            "enabled": true,
+            "color": "",
+            "comment": "APT42 manipulated a platform\u2019s authentication process to bypass the system password."
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#92d050"
+        ],
+        "minValue": 0,
+        "maxValue": 10
+    },
+    "legendItems": [],
+    "comments": [],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd"
+}
