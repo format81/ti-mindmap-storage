@@ -1,0 +1,67 @@
+{
+    "name": "Rafel RAT Android Malware",
+    "description": "Tracking the behavior of Rafel RAT Android malware",
+    "domain": "enterprise-attack",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1219",
+            "comment": "Rafel is an open-source remote administration tool (RAT) that operates stealthily on Android devices. This provides malicious actors with a toolkit for remote administration and control, enabling data theft and device manipulation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1566",
+            "comment": "This malware was part of various phishing campaigns. It uses deceptive tactics to manipulate user trust and exploit their interactions.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1190",
+            "comment": "The malware impersonates multiple widely recognized applications, including Instagram, WhatsApp, various e-commerce platforms, antivirus programs, and support apps for numerous services.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1134",
+            "comment": "Depending on the attacker\u2019s modifications, the malware may request permissions for Notifications or Device Admin rights or stealthily seek minimal sensitive permissions in order to remain undetected.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543.003",
+            "comment": "The malware initiates an InternalService to manage communications with the command-and-control (C&C) server.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1486",
+            "comment": "The ransomware application has the ability to deploy AES encryption to encrypt files on the infected device.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1110",
+            "comment": "In ransomware operations, the malware incorporates a variant that encrypts files and deletes files from the device\u2019s storage.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1005",
+            "comment": "The Rafel tool is able to siphon sensitive data from android devices, such as series types of devices, information from specific applications, and specific files from directories. This is done through the command and control server. The valuable data can be used for future attacks.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#66ff66",
+            "#ff6666"
+        ],
+        "minValue": -10,
+        "maxValue": 10
+    },
+    "sorting": 0,
+    "hideDisabled": false,
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "legendItems": []
+}
