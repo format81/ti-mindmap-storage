@@ -1,0 +1,222 @@
+{
+    "name": "ToddyCat TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in ToddyCat's Operation Blacksmith",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1021.002",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "ToddyCat uses the SMB protocol with shared folders to transfer files, such as the SSH client and a private key file, to the target host.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "unknown",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Data transferred via reverse SSH tunnel. Communication travels securely from the malware to the C2 server.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136.001",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "The adversary assigns each user to a different port on the infected host.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1553.004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "User-specific strings are hidden in the command-line interface using .ini and .dat extensions for private key files, disguising their purpose making them look less suspicious.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053.004",
+            "tactic": "execution",
+            "color": "",
+            "comment": "A scheduled task is created to run the SSH command that starts the tunnel.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1486",
+            "tactic": "impact",
+            "color": "",
+            "comment": "The AppReadiness service is used to hide the presence of the malware in the system. The permission settings of the folder are changed to prohibit all users from having access to it.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Attackers used the server utility (VPN Server) from the SoftEther VPN package to tunnel traffic to the infected infrastructure.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Attackers renamed VPN server utilities to hide their actual use in the infected system.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Attackers searched for file paths for WhatsApp database files in the Chrome, Edge, and Mozilla local storages.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Attackers used FRP, a fast reverse proxy, to allow access from the Internet to a local server located behind a NAT or firewall.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Attackers used Cuthead (cyber espionage tool) to search and archive documents of interest on the host.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Attackers used TomBerBil to extract and decrypt browser data containing cookies and saved passwords for authentication forms.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1574.002",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "The DLL used for redirecting C2 traffic from the cloud infrastructure to a certain port on the host (Krong) is sideloaded with a legitimate application.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "privilege-escalation",
+            "color": "",
+            "comment": "Attackers impersonated users on target hosts and took over their WhatsApp sessions for information gathering.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1571",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "TomBerBil variants enumerate all processes running in the system and search for all instances of explorer.exe. They impersonate the users detected and attempt to decrypt cookies and passwords saved in browsers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Traffic is tunneled securely from the malware to the Command and Control (C2) server, with attackers leveraging on several tools.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036.005",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Some variants of TomBerBil pretended to be Kaspersky Anti-Virus using the same executable.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Files needed by the malware are masked and transferred to the victim host.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
