@@ -1,0 +1,72 @@
+{
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "name": "ToddyCat APT Techniques",
+    "domain": "enterprise-attack",
+    "description": "Mapping of the techniques used by ToddyCat",
+    "techniques": [
+        {
+            "techniqueID": "T1005",
+            "comment": "ToddyCat used a tool called \"cuthead\" to search for documents on the infected system",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1555.003",
+            "comment": "The ToddyCat group has a tool to extract cookies and passwords from Chrome and Edge",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560.002",
+            "comment": "ToddyCat used the System.IO.Compression.ZipFile module to pack collected data into a ZIP archive",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560.002",
+            "comment": "The attackers used the System.IO.Compression.ZipFile module to create ZIP archives for moving the data",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021.002",
+            "comment": "The APT group transferred tools to target hosts via SMB",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1022",
+            "comment": "To evade detection, the malicious group encrypted the data transmitted through a tool they used called \"Krong\"",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560.001",
+            "comment": "Various files were packed into an archive for exfiltration",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1550.004",
+            "comment": "ToddyCat group used OpenSSH private key files to establish a connection to the remote server",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1573",
+            "comment": "Part of the command and control process involved creating an SSH tunnel to a remote server",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1574.002",
+            "comment": "A tool called \"Krong\" was side-loaded with a legitimate application",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": []
+}
