@@ -1,0 +1,89 @@
+{
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "name": "Credential Leak Monitoring",
+    "description": "Monitoring for leaked credentials and mitigating the associated risks to improve organizational security posture.",
+    "techniques": [
+        {
+            "techniqueID": "T1078",
+            "tactic": "initial-access",
+            "comment": "Stolen credentials could be leveraged to use valid accounts for unauthorized access.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "comment": "Phishing may be a method through which credentials are harvested.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Monitoring for credential leaks suggests the possibility of detecting or responding to credential dumping incidents.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1555",
+            "tactic": "credential-access",
+            "comment": "API keys mentioned as part of sensitive information, hinting at misuse of API credentials as a TTP.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "comment": "Refers to the data compromise which could happen as a result of credentials being stolen from repositories.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "collection",
+            "comment": "Credential leak monitoring automates the detection of leaked information.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1567",
+            "tactic": "exfiltration",
+            "comment": "Leaked credentials found on the dark web might be exfiltrated using web services.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1486",
+            "tactic": "impact",
+            "comment": "Refers to potential data theft that could occur following a breach that leverages stolen credentials.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "defense-evasion",
+            "comment": "Discusses improving the security posture, which might include detecting attempts to evade or disable security software.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "discovery",
+            "comment": "Attackers might perform account discovery after gaining access with stolen credentials to understand the environment better.",
+            "enabled": true,
+            "color": ""
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "defense-evasion",
+            "comment": "The comment on addressing vulnerabilities could imply removing indicators of compromise to maintain a stronger security posture.",
+            "enabled": true,
+            "color": ""
+        }
+    ]
+}
