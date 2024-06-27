@@ -1,0 +1,130 @@
+{
+    "name": "Lazarus TTPs-Operation Blacksmith",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs used by Lazarus Group in Operation Blacksmith",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "layout": {
+        "layout": "side",
+        "showID": false,
+        "showName": true
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "Uses CVE-2021-44228 to exploit publicly exposed servers for initial access",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Uses commands and scripts for execution",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543",
+            "tactic": "persistence",
+            "comment": "Uses NineRAT to set up persistence by creating services using BAT scripts",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "comment": "NineRAT dropper deletes itself for defense evasion",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1102",
+            "tactic": "command-and-control",
+            "comment": "Uses Telegram for command and control",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Uses commands for system information discovery",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "comment": "Uses NineRAT for data collection",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "comment": "Uses Telegram-based malware namely NineRAT for command and control",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Starts with commands like whoami and dir /a c:\\users for system information discovery",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003/005",
+            "tactic": "credential-access",
+            "comment": "Attempts to enable plain text password storage in memory",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Creates additional user account on the system, granting it administrative privileges",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1098",
+            "tactic": "persistence",
+            "comment": "Grants the new user account administrative privileges",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "discovery",
+            "comment": "Discovers all local group Administrators",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Downloads and uses credential dumping tools such as ProcDump and MimiKatz",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "discovery",
+            "comment": "Discovers all software that's running",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "comment": "Changes registry to enable plain text password storage in memory",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
