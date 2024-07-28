@@ -1,0 +1,112 @@
+{
+    "name": "Onyx Sleet TTPs",
+    "version": "4.5",
+    "domain": "enterprise-attack",
+    "description": "TTPs used by the Onyx Sleet group",
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "color": "",
+            "comment": "Onyx Sleet historically leverages spear-phishing as a means of compromising target environments.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1190",
+            "color": "",
+            "comment": "In October 2023, Onyx Sleet exploited the TeamCity CVE-2023-42793 vulnerability as a part of a targeted attack. This allowed them to perform a remote code execution attack and gain administrative control of the server.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1094",
+            "color": "",
+            "comment": "Onyx Sleet regularly uses leased virtual private servers (VPS) and compromised cloud infrastructure for command-and-control (C2).",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1219",
+            "color": "",
+            "comment": "Onyx Sleet develops and uses a spectrum of tools, including custom remote access trojans (RATs) such as Dtrack, TigerRAT, LightHand, and ValidAlpha. They constantly develop new variants of these RATs to add new functionality and implement new ways of evading detection.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "color": "",
+            "comment": "Onyx Sleet uses payloads signed with an invalid certificate masquerading as legitimate software to evade detection. For example, Dtrack RAT uses this technique.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1203",
+            "color": "",
+            "comment": "Onyx Sleet exploited the Log4j 2 CVE-2021-44228 vulnerability for initial access.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1486",
+            "color": "",
+            "comment": "Onyx Sleet has been involved in the development and use of ransomware in attacks in late 2021 and 2022.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1498",
+            "color": "",
+            "comment": "Onyx Sleet has been involved in the development and use of ransomware in attacks in late 2021 and 2022, which could potentially lead to denial of service conditions.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "color": "",
+            "comment": "Onyx Sleet avoids common detection techniques by heavily using custom encryption and obfuscation algorithms.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1045",
+            "color": "",
+            "comment": "Onyx Sleet has been observed using commercial packers like Themida and VMProtect to obfuscate their malware.",
+            "enabled": true,
+            "metadata": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "hideDisabled": false,
+    "metadata": [],
+    "enabled": true,
+    "showNavigator": true,
+    "filterTechniquesByName": "",
+    "filterTechniquesByScore": "",
+    "techniqueLookup": "",
+    "metadataTemplates": [],
+    "platforms": [
+        "windows"
+    ]
+}
