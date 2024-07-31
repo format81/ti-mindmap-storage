@@ -1,0 +1,91 @@
+{
+    "name": "Onyx Sleet TTPs",
+    "description": "TTPs identified in Onyx Sleet's cyber operations",
+    "domain": "enterprise-attack",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "techniques": [
+        {
+            "score": 100,
+            "techniqueID": "T1203",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet has been known to exploit existing vulnerabilities for client execution. The report provides an example whereby the threat actor exploited the TeamCity CVE-2023-42793 vulnerability, which allowed for remote code execution and administrative control of the affected server.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1068",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet has used exploits as a primarily means of gaining initial access to target environments, focusing notably on N-day vulnerabilities.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1059",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet executes arbitrary commands via command shell using malware such as the 'LightHand' backdoor which can also perform file manipulations.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1071",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet uses remote access trojans (RATs) and employs the flexible command and control strategy of using leased virtual private servers (VPS) and compromised cloud infrastructure.",
+            "enabled": true
+        },
+        {
+            "score": 75,
+            "techniqueID": "T1078",
+            "color": "#ff6666",
+            "comment": "The threat actor may have gained access by leveraging improperly managed legitimate credentials, but this was not explicitly mentioned in the text.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1027",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet uses heavy custom encryption and obfuscation to avoid detection. Commercial packers like Themida and VMProtect are used to obfuscate their malware.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1036",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet has been known to sign payloads with an invalid certificate masquerading as legitimate software to evade detection.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1055",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet's tactics involve launching as much of its code in memory as possible to avoid common detection techniques which could be considered indicative of a form of process injection.",
+            "enabled": true
+        },
+        {
+            "score": 50,
+            "techniqueID": "T1566.001",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet has historically leveraged spear-phishing as a means of compromise, though this approach is mentioned to now be more limited in its recent campaigns.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1024",
+            "color": "#ff6666",
+            "comment": "Onyx Sleet uses its own encryption algorithm. Appears to have been done to evade detection or avoid decryption.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    }
+}
