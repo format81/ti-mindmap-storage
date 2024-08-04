@@ -1,0 +1,109 @@
+{
+    "name": "Onyx Sleet TTPs",
+    "description": "TTPs identified in Onyx Sleet's campaigns",
+    "domain": "enterprise-attack",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1219",
+            "color": "#4A4A4A",
+            "comment": "This technique is used by Onyx Sleet in campaigns. They routinely develop new variants of these RATs to add new functionality and implement new ways of evading detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1192",
+            "color": "#4A4A4A",
+            "comment": "Onyx Sleet has historically leveraged spear-phishing as a means of compromising target environments.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1068",
+            "color": "#4A4A4A",
+            "comment": "In recent campaigns, Onyx Sleet has mostly exploited N-day vulnerabilities, leveraging publicly available and custom exploits to gain initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027",
+            "color": "#4A4A4A",
+            "comment": "The actor creates an extensive set of custom tools and malware in order to enable effective infiltration, persistence and evasion in target networks.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1134",
+            "color": "#4A4A4A",
+            "comment": "The threat actor manipulates access tokens to make itself appear as a legitimate user, thereby bypassing authentication mechanisms and evading detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1094",
+            "color": "#4A4A4A",
+            "comment": "Onyx Sleet often uses leased virtual private servers (VPS) and compromised cloud infrastructure for command-and-control (C2).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027",
+            "color": "#4A4A4A",
+            "comment": "Onyx Sleet heavily uses custom encryption and obfuscation algorithms to avoid detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1072",
+            "color": "#4A4A4A",
+            "comment": "Onyx Sleet has been observed to use several off-the-shelf tools, like Sliver, remote monitoring and management (RMM) tools SOCKS proxy tools, Ngrok, and masscan to navigate and exfiltrate data from the compromised networks.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1073",
+            "color": "#4A4A4A",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1074",
+            "color": "#4A4A4A",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1068",
+            "color": "#4A4A4A",
+            "comment": "Onyx Sleet has shown the capability of exploiting publicly disclosed (N-day) vulnerabilities to gain access to target environments.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1020",
+            "color": "#4A4A4A",
+            "comment": "In past campaigns, Onxy Sleet was involved in the exfiltration of sensitive data from targeted organizations.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.001",
+            "color": "#4A4A4A",
+            "comment": "Onyx Sleet has used custom malware families like Dtrack, Dora RAT, SmallTiger, and many more in their operations.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 3
+    },
+    "legendItems": [
+        {
+            "label": "Observed",
+            "color": "#4A4A4A"
+        }
+    ],
+    "metadata": [
+        {
+            "name": "Created By",
+            "value": "Microsoft Threat Intelligence"
+        }
+    ]
+}
