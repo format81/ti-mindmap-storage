@@ -1,0 +1,43 @@
+{
+    "name": "Enterprise ATT&CK Matrix for Enterprise Layer",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques observed in specified cybersecurity breaches and phishing attempts.",
+    "filters": {
+        "stages": [
+            "act"
+        ]
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1598",
+            "tactic": "reconnaissance",
+            "color": "#ff6666",
+            "comment": "Mention of \"Contact Us\" suggests collecting or soliciting emails, possibly as part of initial reconnaissance efforts.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1485",
+            "tactic": "impact",
+            "color": "#ff6666",
+            "comment": "Inferred from \"treatment\" and \"clean\", there's a potential implication of data destruction or impact role in disguising attacks such as timber decking systems that ostensibly seem legitimate.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffffff"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
