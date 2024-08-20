@@ -1,0 +1,96 @@
+{
+    "name": "APT Trends Report Q3 2023",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "APT activity and trends as observed in Q3 2023 detailing extensive global cyber operations and indicators.",
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "comment": "Russian APT, spear-phishing emails with malicious Office documents initiating multi-level infection",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "comment": "Tools like RATs e.g. Quasar RAT, njRAT and Agent Tesla uploaded after gaining access via phishing",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "comment": "Activities include searching for files on victim machines, meant for data exfiltration",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "Reported use of obfuscation in .NET binaries and tools to disguise malware",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1016",
+            "tactic": "discovery",
+            "comment": "Acts such as accessing victim email accounts via stolen cookies from browsers illustrate initial discovery attempts within compromised systems.",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "comment": "Usage of legitimate names and functionalities (e.g., posing as OpenVPN binaries) to avoid detection",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Execution of malicious Python scripts as a part of multi-staged infection chains",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1189",
+            "tactic": "initial-access",
+            "comment": "Watering-hole attacks delivering payloads like Promethium affecting various regional targets",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1106",
+            "tactic": "execution",
+            "comment": "Use of Windows API calls to execute and control malware components and payloads",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1008",
+            "tactic": "command-and-control",
+            "comment": "Use of various C2 channels, including mainstream cloud services, for managing infiltrated systems",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1080",
+            "tactic": "lateral-movement",
+            "comment": "Includes self-replication through connected secure USB drives to compromise air-gapped systems",
+            "color": "#ff6666",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "comment": "BlindEagle's activity includes searching and extracting financial data from targeted systems",
+            "color": "#ff6666",
+            "enabled": true
+        }
+    ]
+}
