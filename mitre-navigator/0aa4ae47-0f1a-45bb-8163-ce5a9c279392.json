@@ -1,0 +1,183 @@
+{
+    "name": "Lazarus Group TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Lazarus Group's Operation Blacksmith",
+    "techniques": [
+        {
+            "techniqueID": "T1090.003",
+            "score": 1,
+            "color": "",
+            "comment": "The group Lazarus uses HazyLoad, a custom-made proxy tool. This helps establish direct access to the infected system without having to repeatedly exploit CVE-2021-44228."
+        },
+        {
+            "techniqueID": "T1098.001",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers create an additional user account on the system, granting it administrative privileges."
+        },
+        {
+            "techniqueID": "T1003.001",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers downloaded and used credential dumping utilities such as ProcDump and MimiKatz, which resulted in unauthorized credential access."
+        },
+        {
+            "techniqueID": "T1219",
+            "score": 1,
+            "color": "",
+            "comment": "The campaign used remote access trojans (RATs) where one of them used as a medium of command and control (C2) communications. They tracked this Telegram-based RAT as \u201cNineRAT\u201d. It was written in DLang and showed a definitive shift in the Lazarus Group's tactics."
+        },
+        {
+            "techniqueID": "T1190",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers exploited CVE-2021-44228, also known as Log4Shell, on publicly facing VMWare Horizon servers as an initial access means to vulnerable public-facing servers."
+        },
+        {
+            "techniqueID": "T1071",
+            "score": 1,
+            "color": "",
+            "comment": "NineRAT uses Telegram as its C2 channel for accepting commands and communicating their outputs. The use of this service aids in evading network detection."
+        },
+        {
+            "techniqueID": "T1043",
+            "score": 1,
+            "color": "",
+            "comment": "Some activities targeted specific ports. This is likely to avoid raising suspicion."
+        },
+        {
+            "techniqueID": "T1005",
+            "score": 1,
+            "color": "",
+            "comment": "The malware interacts with the local system to collect data and exfiltrate it."
+        },
+        {
+            "techniqueID": "T1105",
+            "score": 1,
+            "color": "",
+            "comment": "Tools were transferred into the compromised environment to effect exploitation."
+        },
+        {
+            "techniqueID": "T1112",
+            "score": 1,
+            "color": "",
+            "comment": "Attackers modified the registry as part of their process."
+        },
+        {
+            "techniqueID": "T1083",
+            "score": 1,
+            "color": "",
+            "comment": "Observed commands indicate the attackers were manually identifying files and directories of interest on the compromised systems."
+        },
+        {
+            "techniqueID": "T1016",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers ran commands to enumerate network configuration data."
+        },
+        {
+            "techniqueID": "T1489",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers stopped certain processes, likely as a means of evasion."
+        },
+        {
+            "techniqueID": "T1204.002",
+            "score": 1,
+            "color": "",
+            "comment": "The delivery of an executable file onto a system ran successfully."
+        },
+        {
+            "techniqueID": "T1518",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers ran commands to identify software installed on the system."
+        },
+        {
+            "techniqueID": "T1082",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers ran several commands to enumerate information about the device hardware in order to determine the capabilities of the system."
+        },
+        {
+            "techniqueID": "T1068",
+            "score": 1,
+            "color": "",
+            "comment": "Lazarus Group was able to exploit a vulnerability to elevate privileges."
+        },
+        {
+            "techniqueID": "T1078",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers added new Windows accounts to maintain persistence within the environment."
+        },
+        {
+            "techniqueID": "T1547.001",
+            "score": 1,
+            "color": "",
+            "comment": "BottomLoader can create persistence for newer versions or completely new follow-up payloads by creating a \u201c.URL\u201d file in the Startup directory to run the PowerShell command to download the payload."
+        },
+        {
+            "techniqueID": "T1083.001",
+            "score": 1,
+            "color": "",
+            "comment": "The attackers checked for specific software installed on the system."
+        },
+        {
+            "techniqueID": "T1125",
+            "score": 1,
+            "color": "",
+            "comment": "This technique was used by the attackers to view activities on the system."
+        },
+        {
+            "techniqueID": "T1059.001",
+            "score": 1,
+            "color": "",
+            "comment": "The Lazarus Group used PowerShell commands to download and execute payloads."
+        },
+        {
+            "techniqueID": "T1132.001",
+            "score": 1,
+            "color": "",
+            "comment": "The malware used binary padding to encode its data."
+        },
+        {
+            "techniqueID": "T1562.001",
+            "score": 1,
+            "color": "",
+            "comment": "The malware has a built-in capability to disable or modify security tools."
+        },
+        {
+            "techniqueID": "T1547.009",
+            "score": 1,
+            "color": "",
+            "comment": "NineRAT interacts with the Telegram channel using DLang-based libraries implemented to talk to Telegram\u2019s APIs. This allows the malware to execute various commands through API interaction."
+        },
+        {
+            "techniqueID": "T1210",
+            "score": 1,
+            "color": "",
+            "comment": "Lazarus was successful in exploiting a vulnerability in a remote service to gain access."
+        },
+        {
+            "techniqueID": "T1105",
+            "score": 1,
+            "color": "",
+            "comment": "Lazarus Group transferred tools into the compromised environment to facilitate their activities."
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    }
+}
