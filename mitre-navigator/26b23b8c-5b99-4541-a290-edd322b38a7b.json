@@ -1,0 +1,74 @@
+{
+    "name": "Citrine Sleet Campaign",
+    "version": "4.1",
+    "domain": "enterprise-attack",
+    "description": "ATT&CK Layer for the tactics and techniques used by Citrine Sleet in their campaign exploiting Chromium zero-day vulnerability",
+    "techniques": [
+        {
+            "techniqueID": "T1203",
+            "score": 50,
+            "color": "",
+            "comment": "CVE-2024-7971 identified as a zero-day vulnerability in Chromium that was exploited by North Korean threat actor, Citrine Sleet for remote code execution (RCE)."
+        },
+        {
+            "techniqueID": "T1059.007",
+            "score": 50,
+            "color": "",
+            "comment": "The vulnerability exploits a type confusion in the V8 JavaScript and WebAssembly engine in Chromium."
+        },
+        {
+            "techniqueID": "T1219",
+            "score": 50,
+            "color": "",
+            "comment": "The FudModule rootkit was downloaded after the RCE exploit was successful. This malware allowed for the threat actor to gain control over the compromised systems."
+        },
+        {
+            "techniqueID": "T1053.004",
+            "score": 50,
+            "color": "",
+            "comment": "The FudModule rootkit was loaded into memory and performed Direct Kernel Object Manipulation (DKOM)."
+        },
+        {
+            "techniqueID": "T1542",
+            "score": 50,
+            "color": "",
+            "comment": "The FudModule rootkit ran in memory, disrupted kernel security mechanisms, and performed kernel tampering through a kernel read/write primitive."
+        },
+        {
+            "techniqueID": "T3",
+            "score": 50,
+            "color": "",
+            "comment": "The threat actor used social engineering tactics to direct targets to a controlled domain where the zero-day RCE exploit was served."
+        },
+        {
+            "techniqueID": "T1005",
+            "score": 50,
+            "color": "",
+            "comment": "The trojan malware, AppleJeus, developed by Citrine Sleet, was commonly used to infect targets and collect information necessary to control the target's cryptocurrency assets."
+        },
+        {
+            "techniqueID": "T1614",
+            "score": 50,
+            "color": "",
+            "comment": "The FudModule rootkit targeted the kernel access, evading detection by performing Direct Kernel Object Manipulation (DKOM Techniques)."
+        },
+        {
+            "techniqueID": "T1190",
+            "score": 50,
+            "color": "",
+            "comment": "JPEG and PDF images were loaded with code to exploit the MagentoCore skimmer."
+        },
+        {
+            "techniqueID": "T1552",
+            "score": 50,
+            "color": "",
+            "comment": "The threat actors targeted and collected private keys."
+        },
+        {
+            "techniqueID": "T1110.001",
+            "score": 50,
+            "color": "",
+            "comment": "Attackers on a mission to find any weak Magento admin panel passwords."
+        }
+    ]
+}
