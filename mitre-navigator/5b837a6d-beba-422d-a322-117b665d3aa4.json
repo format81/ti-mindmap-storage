@@ -1,0 +1,101 @@
+{
+    "name": "North Korean threat actor Citrine Sleet TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in the attack by Citrine Sleet",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "layout": {
+        "layout": "side"
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1203",
+            "color": "",
+            "comment": "The threat actors exploited a zero-day vulnerability in Chromium identified as CVE-2024-7971 for remote code execution (RCE) targeting the cryptocurrency sector for financial gain. The exploitation was attributed to Citrine Sleet, a North Korean threat actor.",
+            "enabled": true,
+            "score": 100,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1210",
+            "color": "",
+            "comment": "The exploitation of remote services is seen in the tactics used by Citrine Sleet by using the RCE exploit in the sandboxed Chromium renderer process.",
+            "enabled": true,
+            "score": 50,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1489",
+            "color": "",
+            "comment": "The stop of a service is indirectly seen in Citrine Sleet's tactics.",
+            "enabled": true,
+            "score": 50,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1005",
+            "color": "",
+            "comment": "Citrine Sleet was observed conducting extensive reconnaissance of the cryptocurrency industry and individuals associated with it, as part of its social engineering tactics. This can be seen as an attempt to gather data from a local system.",
+            "enabled": true,
+            "score": 80,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1329",
+            "color": "",
+            "comment": "In Citrine Sleet's tactic of extensive reconnaissance, it is likely they used social media intelligence techniques to gather more information about the cryptocurrency industry and its associated individuals.",
+            "enabled": true,
+            "score": 80,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1190",
+            "color": "",
+            "comment": "The zero-day exploit was used as an initial means of access, with the targets being directed to the Citrine Sleet-controlled exploit domain.",
+            "enabled": true,
+            "score": 100,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "The FudModule rootkit employed by Citrine Sleet used a process injection tactic. Its shellcode containing a Windows sandbox escape exploit and the FudModule rootkit were downloaded and then loaded into memory.",
+            "enabled": true,
+            "score": 100,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1215",
+            "color": "",
+            "comment": "The FudModule rootkit was designed with persistence in mind; it disrupts kernel security mechanisms via direct kernel object manipulation (DKOM) techniques.",
+            "enabled": true,
+            "score": 80,
+            "metadata": []
+        },
+        {
+            "techniqueID": "T1140",
+            "color": "",
+            "comment": "Citrine Sleet's FudModule rootkit executed exclusively from user mode while performing kernel tampering through a kernel read/write primitive; this suggests deobfuscation or decoding techniques could have been used as part of their strategy.",
+            "enabled": true,
+            "score": 80,
+            "metadata": []
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#92d400"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "hideDisabled": false
+}
