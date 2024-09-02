@@ -1,0 +1,71 @@
+{
+    "version": "4.5",
+    "name": "Citrine Sleet ATT&CK Tactics & Techniques",
+    "domain": "enterprise-attack",
+    "description": "Observed techniques used by Citrine Sleet during analysis of intrusion set's operations.",
+    "techniques": [
+        {
+            "score": 75,
+            "color": "#c6ff4a",
+            "comment": "Observed with threat actor exploiting vulnerability CVE-2024-38106 in the Windows kernel to achieve sandbox escape post-exploitation of primary payload (CVE-2024-7971).",
+            "techniqueID": "T1068",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "score": 75,
+            "color": "#c6ff4a",
+            "comment": "Citrine Sleet used this technique to identify software that has CVE-2024-7971 to target for exploitation.",
+            "techniqueID": "T1046",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "score": 75,
+            "color": "#c6ff4a",
+            "comment": "According to Microsoft, the suspected way targets were lured to the exploit site voyagorclub[.]space was via social engineering tactics which is a common tactic used by the Citrine Sleet group.",
+            "techniqueID": "T1189",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "score": 75,
+            "color": "#c6ff4a",
+            "comment": "Citrine Sleet communicates with the command and control (C2) server through AES-encrypted connections initiated by the observed loader and remote access trojan (RAT), Kaolin RAT.",
+            "techniqueID": "T1071",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "score": 75,
+            "color": "#c6ff4a",
+            "comment": "The FudModule rootkit was believed to be used by both Citrine Sleet and Diamond Sleet threat actors to establish admin-to-kernel access to Windows devices.",
+            "techniqueID": "T1014",
+            "enabled": true,
+            "metadata": []
+        },
+        {
+            "score": 75,
+            "color": "#c6ff4a",
+            "comment": "The Diamond Sleet threat group has been observed exploiting known vulnerable drivers to establish admin-to-kernel access to collect sensitive data, using a technique known as Bring Your Own Vulnerable Driver (BYOVD).",
+            "techniqueID": "T1005",
+            "enabled": true,
+            "metadata": []
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#66ff66",
+            "#0000ff"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "metadata": [],
+    "enabled": true,
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "legendItems": []
+}
