@@ -1,0 +1,88 @@
+{
+    "name": "Citrine Sleet TTPs",
+    "version": "4.5",
+    "domain": "enterprise-attack",
+    "description": "TTPs used by North Korean threat actor, Citrine Sleet exploiting Chromium zero-day (CVE-2024-7971).",
+    "techniques": [
+        {
+            "score": 100,
+            "techniqueID": "T1203",
+            "color": "#ff6666",
+            "comment": "The North Korean threat actor, Citrine Sleet, exploited a zero-day vulnerability in Chromium (CVE-2024-7971) to gain remote code execution (RCE).",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1082",
+            "color": "#ff6666",
+            "comment": "The actor used the FudModule rootkit to perform system reconnaissance activities.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1036",
+            "color": "#ff6666",
+            "comment": "The actor created fake websites masquerading as legitimate cryptocurrency trading platforms.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1192",
+            "color": "#ff6666",
+            "comment": "Potential targets may have been directed to the exploit domain via a spearphishing link.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1056",
+            "color": "#ff6666",
+            "comment": "Citrine Sleet used AppleJeus malware to capture information from infected targets.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1055",
+            "color": "#ff6666",
+            "comment": "Used to load the FudModule rootkit into memory and start execution.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1068",
+            "color": "#ff6666",
+            "comment": "A sandboxed escape exploit was used to gain higher privileges.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1014",
+            "color": "#ff6666",
+            "comment": "The actor deployed FudModule, a sophisticated rootkit malware that specifically targets kernel access while evading detection.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1208",
+            "color": "#ff6666",
+            "comment": "Citrine Sleet exploited a number of known vulnerabilities (including CVE-2024-7971 and CVE-2024-38106) in order to gain initial access, evade detection and escalate privileges.",
+            "enabled": true
+        },
+        {
+            "score": 100,
+            "techniqueID": "T1204",
+            "color": "#ff6666",
+            "comment": "Citrine Sleet has conducted extensive reconnaissance of the cryptocurrency industry and individuals associated with it, using social engineering tactics.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#ff6666"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "metadata": [],
+    "hideDisabled": false
+}
