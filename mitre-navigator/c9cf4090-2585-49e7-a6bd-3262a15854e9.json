@@ -1,0 +1,50 @@
+{
+    "name": "Citrine Sleet TTPs",
+    "domain": "enterprise-attack",
+    "version": "4.5",
+    "description": "Mitigating indicators for Citrine Sleet according to ATT&CK v14 & Navigator v4.9.1",
+    "techniques": [
+        {
+            "techniqueID": "T1055",
+            "color": "#4e5d6c",
+            "comment": "The text mentioned that threat actors downloaded shellcode containing a sandbox escape exploit and the FudModule rootkit, which indicates process injection.",
+            "score": 1,
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1190",
+            "color": "#4e5d6c",
+            "comment": "The threat actor exploited a Chromium vulnerability (CVE-2024-7971) to gain initial access by directing targets to a controlled domain.",
+            "score": 1,
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1092",
+            "color": "#4e5d6c",
+            "comment": "Microsoft noted that the threat actor used a secure AES-encrypted connection with the command and control server",
+            "score": 1,
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1601",
+            "color": "#4e5d6c",
+            "comment": "The text mentioned that the FudModule rootkit performs kernel tampering through a kernel read/write primitive indicating a system image modification.",
+            "score": 1,
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1315",
+            "color": "#4e5d6c",
+            "comment": "The text describes how the threat group engaged in extensive reconnaissance of the cryptocurrency industry and individuals associated with it, creating fake websites masquerading as legitimate cryptocurrency trading platforms.",
+            "score": 1,
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1195",
+            "color": "#4e5d6c",
+            "comment": "Microsoft mentioned that Citrine Sleet used social engineering tactics to lure targets into downloading a weaponized cryptocurrency wallet or trading application based on legitimate applications.",
+            "score": 1,
+            "enabled": true
+        }
+    ]
+}
