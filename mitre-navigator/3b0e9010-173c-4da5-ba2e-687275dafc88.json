@@ -1,0 +1,84 @@
+{
+    "name": "Enterprise ATT&CK Matrix",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Citrine Sleet's Operation Blacksmith",
+    "techniques": [
+        {
+            "techniqueID": "T1213",
+            "color": "",
+            "comment": "The threat actor conducts extensive reconnaissance of the cryptocurrency industry and individuals associated with it.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1539",
+            "color": "",
+            "comment": "The threat actor creates fake websites masquerading as legitimate cryptocurrency trading platforms and uses them to distribute fake job applications or lure targets into downloading a weaponized cryptocurrency wallet or trading application based on legitimate applications.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1518",
+            "color": "",
+            "comment": "The group is known to specifically target Windows-based systems.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.002",
+            "color": "",
+            "comment": "The primary method of rootkit delivery is via a spearphishing link.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1014",
+            "color": "",
+            "comment": "The rootkit deploys primarily as a driver but also spreads its activity to user-mode binaries to enhance persistence.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "color": "",
+            "comment": "The rootkit modifies system registry settings to establish persistence.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1211",
+            "color": "",
+            "comment": "The group employed the rootkit to evade detection by endpoint protection tools.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071",
+            "color": "",
+            "comment": "The threat actor uses standard application layer protocols to establish command and control channels.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1585",
+            "color": "",
+            "comment": "The group generates fraudulent financial transactions to appease victim financial systems.",
+            "enabled": true,
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    }
+}
