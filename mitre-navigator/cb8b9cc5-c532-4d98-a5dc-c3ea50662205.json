@@ -1,0 +1,123 @@
+{
+    "name": "Citrine Sleet TTPs",
+    "description": "TTPs used by the threat actor Citrine Sleet",
+    "domain": "enterprise-attack",
+    "version": "14",
+    "navigatorVersion": "4.9.1",
+    "templateVersion": "4.5",
+    "techniques": [
+        {
+            "techniqueID": "T1203",
+            "score": 100,
+            "color": "",
+            "comment": "The North Korean threat actor, Citrine Sleet, was exploiting a zero-day vulnerability in Chromium, identified as CVE-2024-7971, to gain remote code execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204",
+            "score": 100,
+            "color": "",
+            "comment": "Targets were directed to the Citrine Sleet-controlled exploit domain to serve the zero-day RCE exploit for CVE-2024-7971.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1106",
+            "score": 100,
+            "color": "",
+            "comment": "Once the sandbox escape exploit was successful, the main FudModule rootkit ran in memory, which disrupted kernel security mechanisms and performed kernel tampering through a kernel read/write primitive.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1601",
+            "score": 100,
+            "color": "",
+            "comment": "The FudModule rootkit employs direct kernel object manipulation (DKOM) techniques to disrupt kernel security mechanisms.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1033",
+            "score": 100,
+            "color": "",
+            "comment": "In its social engineering tactics, Citrine Sleet conducted extensive reconnaissance of the cryptocurrency industry.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "score": 100,
+            "color": "",
+            "comment": "Once a target connected to the domain, the zero-day RCE exploit for CVE-2024-7971 was served.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1505",
+            "score": 100,
+            "color": "",
+            "comment": "After the RCE exploit achieved code execution, shellcode containing a Windows sandbox escape exploit and the FudModule rootkit was downloaded.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1068",
+            "score": 100,
+            "color": "",
+            "comment": "The sandbox escape exploited CVE-2024-38106, a vulnerability in the Windows kernel, to achieve privilege escalation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1189",
+            "score": 100,
+            "color": "",
+            "comment": "Targets were directed to the exploit domain to initiate the exploitation chain.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1192",
+            "score": 100,
+            "color": "",
+            "comment": "Although unconfirmed by the text, it suggests that social engineering, likely spearphishing, is a common tactic used by Citrine Sleet to direct targets to the exploit domain.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1072",
+            "score": 100,
+            "color": "",
+            "comment": "The attackers used FudModule, third-party software, to maintain persistence on the victim systems.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1215",
+            "score": 100,
+            "color": "",
+            "comment": "FudModule is a rootkit malware that targets kernel access while evading detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1480",
+            "score": 100,
+            "color": "",
+            "comment": "FudModule performs kernel tampering through a kernel read/write primitive, potentially to evade detection mechanisms.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#ff6666"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "filters": {
+        "stages": [
+            "act"
+        ],
+        "platforms": [
+            "windows"
+        ]
+    },
+    "hidden": [],
+    "disabledTechniques": []
+}
