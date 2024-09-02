@@ -1,0 +1,80 @@
+{
+    "name": "Citrine Sleet TTPs",
+    "description": "TTPs used by the North Korean threat actor group Citrine Sleet during a campaign exploiting a zero-day vulnerability in Chromium (CVE-2024-7971).",
+    "domain": "enterprise-attack",
+    "version": "14",
+    "navigatorVersion": "4.9.1",
+    "layerVersion": "4.5",
+    "techniques": [
+        {
+            "techniqueID": "T1203",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "The North Korean threat actor Citrine Sleet exploited a zero-day vulnerability in Chromium, designated as CVE-2024-7971, to enable remote code execution (RCE).",
+            "tactic": "execution"
+        },
+        {
+            "techniqueID": "T1105",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "After achieving code execution in the sandboxed Chromium renderer process through CVE-2024-7971 exploit, Citrine Sleet downloaded and loaded shellcode containing a Windows sandbox escape exploit and the FudModule rootkit into memory.",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1068",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "Citrine Sleet exploited a Windows kernel vulnerability, designated as CVE-2024-38106, for sandbox escape to enable running the main FudModule rootkit in memory.",
+            "tactic": "privilege-escalation"
+        },
+        {
+            "techniqueID": "T1535",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "Citrine Sleet used Direct Kernel Object Manipulation (DKOM) techniques in FudModule rootkit to disrupt kernel security mechanisms.",
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1566.002",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "Citrine Sleet directed targets to the exploit domain voyagorclub[.]space, possibly using spearphishing link as a common tactic, where the zero-day RCE exploit for CVE-2024-7971 was served.",
+            "tactic": "initial-access"
+        },
+        {
+            "techniqueID": "T1071",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "The FudModule rootkit which was used in this attack employs user mode execution and performs kernel tampering through a kernel read/write primitive.",
+            "tactic": "command-and-control"
+        },
+        {
+            "techniqueID": "T1584",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "Citrine Sleet uses social engineering tactics to distribute fake job applications or lure targets into downloading a weaponized cryptocurrency wallet or trading application based on legitimate applications.",
+            "tactic": "resource-development"
+        },
+        {
+            "techniqueID": "T1601",
+            "score": 1,
+            "color": "#32CD32",
+            "comment": "Once the sandbox escape exploit was successful, the main FudModule rootkit ran in memory. This rootkit employs direct kernel object manipulation (DKOM) techniques to disrupt kernel security mechanisms, executes exclusively from user mode, and performs kernel tampering through a kernel read/write primitive.",
+            "tactic": "defense-evasion"
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#66ff66",
+            "#32CD32"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    },
+    "metadata": [],
+    "showSubtechniques": true,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "legendItems": []
+}
