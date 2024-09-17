@@ -1,0 +1,204 @@
+{
+    "name": "UNC2970 TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in UNC2970's Operation, using modified SumatraPDF and MISTPEN backdoor",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "UNC2970 engaged with the victim over email and WhatsApp and ultimately shared a malicious archive that contained a job description in PDF file format",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "UNC2970 sent an email masquerading as a job opening that contained an encrypted PDF file and a trojanized version of SumatraPDF",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Encrypted PDF file containing the job description was delivered in a password-protected ZIP archive",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "In order for MISTPEN to execute the backdoor daily, BURNBOOK created a scheduled task named Sumatra Launcher in the system's registry",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "The trojanized entity, SumatraPDF.exe, was modified to look like the legitimate SumatraPDF.exe",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1497",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "BURNBOOK included a network connectivity check to deter analysis of samples",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "MISTPEN is a trojanized version of a legitimate Notepad++ plugin",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1574.001",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "TEARPAGE was loaded through DLL search order hijacking by the legitimate BdeUISrv.exe binary",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "The legitimate windows binary BdeUISrv.exe loads the wtsapi32.dll file through powershell",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1550",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "MISTPEN used a token to access a Microsoft API endpoint",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1116",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "DLL files that were loaded by the executable, SumatraPDF.exe, included a trojanized libmupdf.dll file",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1569.002",
+            "tactic": "execution",
+            "subtechnique": "T1059.003",
+            "color": "",
+            "comment": "A scheduled task named Sumatra Launcher was created to execute the backdoor daily using the legitimate Windows binary BdeUISrv.exe",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1573.003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "SumatraPDF binaries were leveraged to communicate to C2 servers over HTTP.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1049",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "BURNBOOK did a network connectivity check to google.com as an evasion technique.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1039",
+            "tactic": "collection",
+            "color": "",
+            "comment": "MISTPEN downloaded and executed Portable Executable (PE) files.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "BURNBOOK uses an encrypted PDF file containing MISTPEN payload as input.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "selectedTechniques": [],
+    "comments": [],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd"
+}
