@@ -1,0 +1,99 @@
+{
+    "name": "UNC2970",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Access, evasion, and execution tactics of UNC2970",
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "color": "",
+            "comment": "UNC2970 uses phishing lures masquerading as job recruitment for prominent companies to target victims.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204",
+            "color": "",
+            "comment": "Victims are tricked into downloading a malicious file through WhatsApp chat.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "color": "",
+            "comment": "A malicious file is delivered in a password-protected ZIP archive containing an encrypted PDF file and a modified version of an open source PDF viewer application.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1036",
+            "color": "",
+            "comment": "The group leverages legitimate email accounts and turns SumatraPDF code into a trojanized PDF viewer to trick targets.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1565",
+            "color": "",
+            "comment": "The threat actors pose as recruiters, modify job descriptions to better fit the targets' profiles, and target senior employees for privileged access to sensitive information.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1072",
+            "color": "",
+            "comment": "Malicious actors use the SumatraPDF.exe executable to load malicious DLL files.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "color": "",
+            "comment": "The group uses encrypted PDF files to complete tasks.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "color": "",
+            "comment": "They create a scheduled task named Sumatra Launcher to execute the backdoor daily when the user logs in, ensuring persistence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "color": "",
+            "comment": "The backdoor supports various commands for different operations, including execution of received PE payloads, and process termination.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1574",
+            "color": "",
+            "comment": "They use DLL search-order hijacking for persistence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "color": "",
+            "comment": "The backdoor also downloads and executes PE files.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1043",
+            "color": "",
+            "comment": "MISTPEN communicates with C2 servers through HTTP.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562",
+            "color": "",
+            "comment": "The threat actor implements a network connectivity check that prevents the trojanized reader from displaying the decrypted PDF lure if it cannot reach google.com.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#66ff66"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": []
+}
