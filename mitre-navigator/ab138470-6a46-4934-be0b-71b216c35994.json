@@ -1,0 +1,120 @@
+{
+    "name": "UNC2970 Operation MISTPEN",
+    "description": "TTPs identified from Operation MISTPEN of UNC2970",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "techniques": [
+        {
+            "techniqueID": "T1566.002",
+            "color": "",
+            "comment": "Mandiant noticed an intrusion leveraging a job-themed phishing email from WhatsApp to social engineer a victim to download a malicious archive.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "color": "",
+            "comment": "The attackers masqueraded as a recruiter for prominent companies, copying and tailoring job descriptions.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071",
+            "color": "",
+            "comment": "The backdoor communicates using HTTP with compromised WordPress websites belonging to small businesses from across the world.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "color": "",
+            "comment": "UNC2970 used a job description in PDF file format shared with the victim to execute the MISTPEN backdoor through a trojanized version of SumatraPDF.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "color": "",
+            "comment": "The trojanized dynamic-link library (DLL) file libmupdf.dll creates a scheduled task to execute the backdoor daily using the Windows binary BdeUISrv.exe.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1573",
+            "color": "",
+            "comment": "The attackers used encryption (in this case, ChaCha20) to protect the command and control channel.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "The backdoor DLL is decrypted and then reflectively loaded into the memory space of SumatraPDF.exe and executed.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "color": "",
+            "comment": "UNC2970 relied on legitimate job description content to target victims employed in U.S. critical infrastructure.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053",
+            "color": "",
+            "comment": "UNC2970 uses a scheduled task named \"Sumatra Launcher\" for persistence which executes the backdoor daily when the user logs in.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1560",
+            "color": "",
+            "comment": "An encrypted ZIP archive was used to deliver the job description to the victim and to extract specific required information.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1134",
+            "color": "",
+            "comment": "MISTPEN decrypts a token using AES to access the Microsoft API endpoint.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1562",
+            "color": "",
+            "comment": "UNC2970 modifies the open-source code of an older SumatraPDF version, using it to avoid detection by security measures.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074",
+            "color": "",
+            "comment": "UNC2970 uses a trojanized version of a legitimate Notepad++ plugin to download and execute Portable Executable (PE) files.",
+            "enabled": true,
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "The backdoor DLL MISTPEN is decrypted and loaded into the memory space of SumatraPDF.exe and executed.",
+            "enabled": true,
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "showLegend": false
+}
