@@ -1,0 +1,109 @@
+{
+    "name": "MITRE ATT&CK Layer",
+    "version": "4.5",
+    "domain": "enterprise-attack",
+    "description": "Showing techniques used by Citrine Sleet.",
+    "filters": {
+        "stages": [
+            "act"
+        ],
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "flat",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1204",
+            "color": "",
+            "comment": "Citrine Sleet targeted cryptocurrency managed organizations with weaponized documents in the form of fake job applications",
+            "enabled": true,
+            "tactic": "execution"
+        },
+        {
+            "techniqueID": "T1193",
+            "color": "",
+            "comment": "Citrine Sleet utilized spearphishing techniques and lured targets to thier FUDModule rootkit using weaponized applications",
+            "enabled": true,
+            "tactic": "initial-access"
+        },
+        {
+            "techniqueID": "T1190",
+            "color": "",
+            "comment": "Citrine Sleet exploited the Chromium zero-day vulnerability (CVE-2024-7971) to gain remote code execution",
+            "enabled": true,
+            "tactic": "initial-access"
+        },
+        {
+            "techniqueID": "T1074",
+            "color": "",
+            "comment": "The FudModule rootkit was used for collecting information necessary to seize control of the targets\u2019 cryptocurrency assets",
+            "enabled": true,
+            "tactic": "collection"
+        },
+        {
+            "techniqueID": "T1014",
+            "color": "",
+            "comment": "FudModule is a rootkit malware used by both Citrine Sleet and Diamond Sleet",
+            "enabled": true,
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "Shellcode was injected into the Chromium rendering process to further deliver the FudModule rootkit",
+            "enabled": true,
+            "tactic": "privilege-escalation"
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "",
+            "comment": "Shellcode was injected into the Chromium rendering process to further deliver the FudModule rootkit",
+            "enabled": true,
+            "tactic": "defense-evasion"
+        },
+        {
+            "techniqueID": "T1098",
+            "color": "",
+            "comment": "AppleJeus malware was used to gather necessary credentials to gain control of targets' cryptocurrency assets",
+            "enabled": true,
+            "tactic": "credential-access"
+        },
+        {
+            "techniqueID": "T1072",
+            "color": "",
+            "comment": "An unknown deployment tool was used to exploit the zero-day vulnerability and deploy the FudModule rootkit",
+            "enabled": true,
+            "tactic": "lateral-movement"
+        },
+        {
+            "techniqueID": "T1110",
+            "color": "",
+            "comment": "Possible brute force or other hacking techniques relying on gathered information from AppleJeus malware",
+            "enabled": true,
+            "tactic": "credential-access"
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#92d5e7",
+            "#06c"
+        ],
+        "minValue": 0,
+        "maxValue": 5
+    },
+    "legendItems": [],
+    "metadata": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
