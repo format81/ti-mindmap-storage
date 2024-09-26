@@ -1,0 +1,130 @@
+{
+    "name": "SnipBot Enterprise Techniques",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in SnipBot's recent enterprise attacks",
+    "techniques": [
+        {
+            "techniqueID": "T1106",
+            "color": "#CE603D",
+            "comment": "SnipBot malware was observed doing execution through API.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1211",
+            "color": "#CE603D",
+            "comment": "SnipBot malware hides its tracks by using a window message-based control-flow obfuscation algorithm.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1574",
+            "color": "#CE603D",
+            "comment": "Registry key hijacking via COM Hijacking was seen in SnipBot malware for dropping DLL payload and executing it into Explorer.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1036",
+            "color": "#CE603D",
+            "comment": "SnipBot malware uses masquerading, pretending the original payload is a PDF file in an email link, or a downloader masked as a PDF file.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027",
+            "color": "#CE603D",
+            "comment": "SnipBot uses control-flow obfuscation and encrypts command and control names to hinder malware analysis and static detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055",
+            "color": "#CE603D",
+            "comment": "SnipBot uses process injection to run its code in the address space of another process by injecting the code directly into the process.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "color": "#CE603D",
+            "comment": "SnipBot uses the Windows task scheduler to perform a variety of actions such as restarting the computer or downloading additional files.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1134",
+            "color": "#CE603D",
+            "comment": "It was observed from the article that SnipBot malware has the capability to do access token manipulation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "color": "#CE603D",
+            "comment": "SnipBot uses a command interpreter to execute commands, scripts or binaries.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "color": "#CE603D",
+            "comment": "SnipBot was able to collect information about the victim's system in the form of computer/domain name, MAC address, Windows build number etc.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1001",
+            "color": "#CE603D",
+            "comment": "It was observed that SnipBot malware uses the technique of data obfuscation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070",
+            "color": "#CE603D",
+            "comment": "SnipBot eradicates evidence of its presence by deleting registry keys and files.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1591",
+            "color": "#CE603D",
+            "comment": "SnipBot installation process suspiciously involves a valid code signing certificate, likely obtained through certificate theft or fraud to purchase a new certificate.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1094",
+            "color": "#CE603D",
+            "comment": "SnipBot uses a custom protocol for command and control.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "color": "#CE603D",
+            "comment": "SnipBot was seen trying to archive data for exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1005",
+            "color": "#CE603D",
+            "comment": "SnipBot collects data from local system",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1114",
+            "color": "#CE603D",
+            "comment": "The initial infection vector for SnipBot is through email that includes a link that redirects to the SnipBot downloader.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1060",
+            "color": "#CE603D",
+            "comment": "The Initial DLL payload (config-pdf.dll) used COM hijacking to register a file as the thumbnail cache library in the registry hive of the current user.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#ff6666"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "disableAutoSelect": false
+}
