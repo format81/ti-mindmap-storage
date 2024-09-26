@@ -1,0 +1,114 @@
+{
+    "name": "Iranian Counterintelligence Operation TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Iranian counterintelligence operations.",
+    "filters": {
+        "platforms": [
+            "windows",
+            "linux",
+            "macOS"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Use of multiple fake social media accounts to promote fake recruitment websites.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.002",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Dissemination of links to fake recruitment websites to target individuals.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1102.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Use of websites to collect personal and professional details under false pretenses.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1583.001",
+            "tactic": "resource-development",
+            "color": "",
+            "comment": "Registration and use of domains for fake recruitment websites.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1598.002",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Use of Israel-related decoy content to lure targets into providing information.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Gathering of personal and professional details via forms on fake websites.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Collection of personal details including email addresses and professional experience.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
