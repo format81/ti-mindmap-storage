@@ -1,0 +1,101 @@
+{
+    "name": "Suspected Iranian Counterintelligence Operation",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in alleged Iranian counterintelligence operation",
+    "filters": {
+        "stages": [
+            "act"
+        ]
+    },
+    "sorting": 0,
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1598",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "The attacker used a network of over 35 fake recruiting websites containing extensive Farsi decoy content, including job offers and Israel-related lures. Upon entry, the targeted users were required to enter their personal details as well as their professional and academic experience, which were subsequently sent to the attackers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1568",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "The campaign used multiple fake domains to run its operations. Some of these include beparas[.]com, parasil[.]me, darakeh[.]me, and kandovani[.]org. This can be associated with the use of DGAs to create new domains for command and control servers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1596.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "The campaign used social media platforms to disseminate links to the fake recruitment websites.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "color": "",
+            "comment": "The suspected counterintelligence operations collected data on Iranians and domestic threats who may be collaborating with intelligence and security agencies abroad, particularly in Israel.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1598.002",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "The campaign used personal websites to lure its targets. It posed as a recruitment firm looking for employees and required targets to fill out a form with personal and professional details.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "This involves the attackers' activities being blocked and disrupted, their accounts being terminated, and measures being put in place to protect users.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1583",
+            "tactic": "pre-compromise",
+            "color": "",
+            "comment": "From as early as 2017 the suspected counterintelligence operations have been running campaigns that featured a network of fake recruitment websites.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1592.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "The websites contained Telegram contact links, which were likely used for communication.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1563.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "The websites contained forms that when filled out, sent information back to the attackers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1580.002",
+            "tactic": "pre-compromise",
+            "color": "",
+            "comment": "The domain beparas[.]com had publicly available WordPress user data. The username listed may have provided insights into the identity of the campaign operators.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
