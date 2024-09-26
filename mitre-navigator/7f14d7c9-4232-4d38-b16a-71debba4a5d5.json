@@ -1,0 +1,103 @@
+{
+    "name": "Iranian Counterintelligence Operation",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Details of a suspected Iran-nexus counterintelligence operation using fake recruitment websites and social media accounts.",
+    "filters": {
+        "platforms": [
+            "windows",
+            "linux"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "all"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "The campaign used fake recruiting websites and social media accounts to trick targets into entering personal details.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1589",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Fake websites required users to fill in personal, professional, and academic information that attackers could exploit.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1598",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Personalized recruitment lures aimed at Farsi speakers and people of interest to Iranian intelligence were used to engage the targets.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Fake recruitment websites posed as legitimate HR firms, leveraging Israel-related themes to increase credibility.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1585.001",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Multiple fake social media accounts were detected promoting the malicious websites.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1592",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Employed fake job listings and decoy content to manipulate individuals into submitting sensitive information.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
