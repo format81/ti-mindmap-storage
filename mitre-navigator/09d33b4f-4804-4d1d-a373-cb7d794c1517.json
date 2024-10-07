@@ -1,0 +1,111 @@
+{
+    "name": "BlackSuit Ransomware MITRE ATT&CK Matrix",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "description": "Techniques used by the threat actor deploying BlackSuit ransomware",
+    "domain": "enterprise-attack",
+    "techniques": [
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "score": 1,
+            "comment": "Threat actor copied BlackSuit ransomware files over SMB to admin shares.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1106",
+            "tactic": "execution",
+            "score": 1,
+            "comment": "BlackSuit ransomware was executed through API.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1497",
+            "tactic": "defense-evasion",
+            "score": 1,
+            "comment": "BlackSuit ransomware used evasion techniques to avoid detection.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "discovery",
+            "score": 1,
+            "comment": "Threat actor used various tools, including Sharphound and ADFind, for account discovery.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "score": 1,
+            "comment": "The threat actor used systeminfo and nltest for system and environment enumeration.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1016",
+            "tactic": "discovery",
+            "score": 1,
+            "comment": "SystemBC was used for network configuration discovery.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "score": 1,
+            "comment": "Cobalt Strike beacons were used for process injection to evade detection.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "discovery",
+            "score": 1,
+            "comment": "Threat actor used SMB to discover network shares.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "score": 1,
+            "comment": "Command and control traffic was proxied through CloudFlare to conceal the Cobalt Strike server.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "score": 1,
+            "comment": "Threat actor utilized Rubeus for credential access through AS-REP roasting and Kerberoasting attacks.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1047",
+            "tactic": "execution",
+            "score": 1,
+            "comment": "The threat actor used WMI for execution.",
+            "color": "#ff6666"
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "score": 1,
+            "comment": "The threat actor used 7z to archive collected data.",
+            "color": "#ff6666"
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffffff",
+            "#ff6666"
+        ],
+        "minValue": 0,
+        "maxValue": 1
+    },
+    "metadata": [],
+    "showTacticRowBackground": true,
+    "tacticRowBackground": "#dddddd",
+    "selectTechniquesAcrossTactics": true,
+    "platforms": [
+        "windows"
+    ]
+}
