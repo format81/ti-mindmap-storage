@@ -1,0 +1,172 @@
+{
+    "name": "BlackSuit Ransomware TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in the BlackSuit Ransomware intrusion",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1569.002",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Remote process execution using Cobalt Strike PsExec.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Modified registry with encoded PowerShell to enable RDP.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Process injection using Cobalt Strike beacons.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1558.004",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "AS-REP Roasting with Rubeus against domain controllers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1558.003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Kerberoasting using Rubeus with RC4 encryption.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003.001",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Accessed LSASS memory to obtain credentials.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1550.002",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Pass the Hash attacks encountered.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1021.001",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Used RDP for further access and to execute ransomware.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1021.002",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Used SMB to copy files to admin shares.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1069.002",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Sharphound used to enumerate domain groups.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "PowerShell scripts used for deploying Cobalt Strike beacons.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1490",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Deleted shadow copies with vssadmin before encryption.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1486",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Deployed BlackSuit ransomware for encryption.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
