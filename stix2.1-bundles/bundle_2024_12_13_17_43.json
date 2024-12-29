@@ -1,0 +1,361 @@
+{
+    "type": "bundle",
+    "id": "bundle--9e4b6a0b-8c44-4093-97d7-672a772fbd04",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--5ba6c8e1-4660-405e-a35c-99ff9b617d46",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "name": "Midnight Blizzard",
+            "description": "Midnight Blizzard, also known as NOBELIUM, is a Russian threat actor attributed to the Foreign Intelligence Service of the Russian Federation (SVR). This actor primarily targets governments, diplomatic entities, non-governmental organizations (NGOs), and IT service providers, mainly in the United States and Europe, for intelligence collection.",
+            "aliases": [
+                "NOBELIUM",
+                "APT29",
+                "UNC2452",
+                "Cozy Bear"
+            ],
+            "labels": [
+                "nation-state",
+                "espionage"
+            ]
+        },
+        {
+            "type": "campaign",
+            "id": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "name": "Midnight Blizzard Spear-Phishing Campaign",
+            "description": "Since October 22, 2024, Midnight Blizzard has been conducting a large-scale spear-phishing campaign using signed Remote Desktop Protocol (RDP) configuration files to gain access to target systems."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--3ad12dd7-70e0-426c-a445-fae49fc4d1d3",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "name": "Spear Phishing",
+            "description": "Sending highly targeted phishing emails to trick recipients into divulging confidential information or installing malware.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "url": "https://attack.mitre.org/techniques/T1566/001",
+                    "external_id": "T1566.001"
+                }
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--e11877e8-f53d-4504-89bc-5aabc7ff6266",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "name": "FOGGYWEB",
+            "description": "FOGGYWEB is a malware used by Midnight Blizzard to target Active Directory Federation Services (AD FS) for persistent backdoor access.",
+            "is_family": "false",
+            "labels": [
+                "backdoor",
+                "malware"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--c590b401-3cff-41a1-8d5f-817e95f0c9f6",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "name": "MAGICWEB",
+            "description": "MAGICWEB is a malware used by Midnight Blizzard to compromise authentication mechanisms within an organization, allowing the actor to authenticate as any user.",
+            "is_family": "false",
+            "labels": [
+                "backdoor",
+                "malware"
+            ]
+        },
+        {
+            "type": "file",
+            "id": "file--240cc662-a2a2-4591-bbb6-a8ce107af70b",
+            "name": "AWS IAM Compliance Check.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--531d7c28-5197-404c-b064-267903255423",
+            "name": "AWS IAM Configuration.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--6b4cb59c-d7ec-43bb-bc3c-2e17939ce562",
+            "name": "AWS IAM Quick Start.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--2838d31f-ffeb-4182-967d-060132270471",
+            "name": "AWS SDE Compliance Check.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--2f08c5ea-04fd-4c9f-a4be-8027323626a5",
+            "name": "AWS SDE Environment Check.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--9fea0389-2fb1-468a-853f-606fa1a677c5",
+            "name": "AWS Secure Data Exchange - Compliance Check.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--afe82a6d-8594-4e58-9c9b-97d580f9f9cb",
+            "name": "AWS Secure Data Exchange Compliance.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--55d89b03-3258-442a-b694-52ea1a25e527",
+            "name": "Device Configuration Verification.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--ad8364a0-fd02-4dd1-ac1f-58192f315113",
+            "name": "Device Security Requirements Check.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--faf7d0ee-178b-42c6-a2e2-e2e1e5dc0cf9",
+            "name": "IAM Identity Center Access.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--86703368-bf29-4bd9-9437-dac116534c23",
+            "name": "IAM Identity Center Application Access.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--21630ce6-c70a-4a7e-acb4-da3fc69d4fbd",
+            "name": "Zero Trust Architecture Configuration.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--2ca5fa07-5cfe-4408-a665-f2ca82f97160",
+            "name": "Zero Trust Security Environment Compliance Check.rdp"
+        },
+        {
+            "type": "file",
+            "id": "file--1d1bcef7-d48a-4a19-b825-d1736d831d5a",
+            "name": "ZTS Device Compatibility Test.rdp"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--45feed0f-08ff-4dbb-9fa0-a3067be566b4",
+            "value": "ap-northeast-1-aws.s3-ua.cloud"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--ccdfa8e7-fb9b-4ed2-840d-596f7b5bf5bd",
+            "value": "ap-northeast-1-aws.ukrainesec.cloud"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--e1de1a39-d526-427a-8f35-16577ffd2a64",
+            "value": "ca-central-1.gov-ua.cloud"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--96252890-73f4-4334-a3bc-e9e64c21a6f0",
+            "value": "ca-central-1.ua-gov.cloud"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3537ba19-7637-45f1-9f70-535351aecf8d",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--5ba6c8e1-4660-405e-a35c-99ff9b617d46",
+            "target_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9f248463-388c-49bd-b656-07ea95f6d494",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "attack-pattern--3ad12dd7-70e0-426c-a445-fae49fc4d1d3"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a9ec372f-36be-47f6-b6ac-33282978f688",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--5ba6c8e1-4660-405e-a35c-99ff9b617d46",
+            "target_ref": "malware--e11877e8-f53d-4504-89bc-5aabc7ff6266"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--77a51c20-9344-463e-b19f-50761733d208",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--5ba6c8e1-4660-405e-a35c-99ff9b617d46",
+            "target_ref": "malware--c590b401-3cff-41a1-8d5f-817e95f0c9f6"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--e68d982b-bab5-46de-b8b7-3a2771a7c6d0",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--240cc662-a2a2-4591-bbb6-a8ce107af70b"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cfbf78dc-31bb-411f-bb1f-1d462f93ffef",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--531d7c28-5197-404c-b064-267903255423"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--762aa09a-e710-4cb2-be6e-fd138d9313ea",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--6b4cb59c-d7ec-43bb-bc3c-2e17939ce562"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2173ce15-e351-4fc9-b6b2-b29e6f6b6ac9",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--2838d31f-ffeb-4182-967d-060132270471"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--e56c58d0-7227-4f61-a070-1eb4e6454d8c",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--2f08c5ea-04fd-4c9f-a4be-8027323626a5"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--dd9e61f2-b533-4a39-9a15-d44545025035",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--9fea0389-2fb1-468a-853f-606fa1a677c5"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--97e96a2f-71ae-4e01-9516-04a7fef62faa",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--afe82a6d-8594-4e58-9c9b-97d580f9f9cb"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4192ab37-25b6-43b1-b799-5f3cdb059268",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--55d89b03-3258-442a-b694-52ea1a25e527"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--27836c6d-d3b9-4b7b-b06f-cc2d40349983",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--ad8364a0-fd02-4dd1-ac1f-58192f315113"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bd3763ba-567e-42cc-ad48-648912124e90",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--faf7d0ee-178b-42c6-a2e2-e2e1e5dc0cf9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--320d99b9-995c-4284-8f13-e6d564f1287c",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--86703368-bf29-4bd9-9437-dac116534c23"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--73e7e78f-2b6f-4bde-b562-8cc4e9c8dcb8",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--21630ce6-c70a-4a7e-acb4-da3fc69d4fbd"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4f64db8d-669d-4d62-ac7c-2c3317e5b530",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--2ca5fa07-5cfe-4408-a665-f2ca82f97160"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--e8890337-947f-4b00-b639-db4a36f8e01a",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "file--1d1bcef7-d48a-4a19-b825-d1736d831d5a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--24a0936b-6650-4b4c-98bc-c57f90edf4cf",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "domain-name--45feed0f-08ff-4dbb-9fa0-a3067be566b4"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--acd11f7e-7812-4429-8b17-da5e6557edfa",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "domain-name--ccdfa8e7-fb9b-4ed2-840d-596f7b5bf5bd"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--944f8c63-ee11-477c-b5c5-a5a00013bdc8",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "domain-name--e1de1a39-d526-427a-8f35-16577ffd2a64"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2a3dc1ef-83e5-4cee-9012-1cdf7d121b98",
+            "created": "2024-10-29T00:00:00Z",
+            "modified": "2024-10-29T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--70ff811b-57a8-471c-9c0f-77f8798d6ffb",
+            "target_ref": "domain-name--96252890-73f4-4334-a3bc-e9e64c21a6f0"
+        }
+    ]
+}
