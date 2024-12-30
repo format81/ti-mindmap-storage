@@ -1,0 +1,272 @@
+{
+    "type": "bundle",
+    "id": "bundle--6419f574-88ac-4710-b7e5-4f9e97829dbb",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--12becc87-aa34-4603-873f-96c8e5adbf3a",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "PHPsert",
+            "description": "A PHP-based webshell used in Operation Digital Eye. Utilizes the assert function to execute attacker-provided PHP code.",
+            "is_family": "false",
+            "labels": [
+                "webshell",
+                "php"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--e57b7fca-cc05-4bae-ab91-3b6b9fbd0674",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "bK2o.exe",
+            "description": "Custom modified version of Mimikatz used for pass-the-hash attacks in Operation Digital Eye.",
+            "is_family": "false",
+            "labels": [
+                "credential-theft",
+                "mimicatz"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--288bb8d9-2008-4b1b-b248-fd9da73a1b58",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "China-nexus Threat Actor",
+            "description": "Suspected Chinese cyberespionage group involved in Operation Digital Eye.",
+            "labels": [
+                "nation-state",
+                "cyberespionage"
+            ]
+        },
+        {
+            "type": "intrusion-set",
+            "spec_version": "2.1",
+            "id": "intrusion-set--c1b6868b-c8f1-4b3f-b8dc-9cef1ffbc67a",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "Operation Digital Eye",
+            "description": "Attack campaign targeting large business-to-business IT service providers in Southern Europe from late June to mid-July 2024. Suspected Chinese APT group used Visual Studio Code tunnels for C2 purposes.",
+            "labels": [
+                "cyberespionage"
+            ]
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--dc448a41-f303-45e0-86e7-1f1a5df36bb4",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "GetUserInfo",
+            "description": "Third-party tool used by attackers for reconnaissance and probing GetUserInfo.",
+            "labels": [
+                "reconnaissance"
+            ]
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--34b55a39-5bac-4ffb-b1f5-3915cfafdc99",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "CreateDump",
+            "description": "Tool used by attackers to extract credentials from the LSASS process memory.",
+            "labels": [
+                "credential-theft"
+            ]
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--1562de6b-f610-4faa-ab94-37c93e013532",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "code.exe",
+            "description": "Digitally signed Visual Studio Code executable used by attackers to create dev tunnels for remote access.",
+            "labels": [
+                "remote-access"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3cd7258b-9819-4462-83be-466ac3331303",
+            "created": "2024-12-10T00:00:00Z",
+            "name": "IP Indicator",
+            "description": "IP addresses used by Operation Digital Eye for initial access and C2 communication.",
+            "pattern": "[ipv4-addr:value IN ('146.70.161.78', '185.76.78.117', '20.103.221.187', '4.232.170.137')]",
+            "pattern_type": "stix",
+            "valid_from": "2024-06-01T00:00:00Z"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--a9e677da-9aba-44e9-a82e-50a968f7ef14",
+            "value": "sentinelone.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--f12ea0f3-b662-4c3e-b261-a09c893c3657",
+            "value": "devtunnels.ms"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--956aac5c-8674-424e-93b6-41c7ec08687f",
+            "value": "146.70.161.78"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--5b5e9a5d-4c99-4bef-b32f-201ee37acd08",
+            "value": "185.76.78.117"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2edc30ca-5905-4dff-981e-dcc056b485a5",
+            "value": "20.103.221.187"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--1b18b03d-c087-467e-b613-e400242cc743",
+            "value": "4.232.170.137"
+        },
+        {
+            "type": "software",
+            "id": "software--f85eb717-2c4f-41aa-96b8-67f5b9be4c90",
+            "name": "Visual Studio Code"
+        },
+        {
+            "type": "software",
+            "id": "software--ac2b7ecd-0b3f-456a-acc8-76d3c22980f3",
+            "name": "sqlmap"
+        },
+        {
+            "type": "software",
+            "id": "software--a7682305-2903-4266-af66-852a03b3c119",
+            "name": "Windows"
+        },
+        {
+            "type": "file",
+            "id": "file--eb10cf6e-7af5-42cd-a115-ad839bafda61",
+            "hashes": {
+                "SHA-1": "0be9dd709d7d68887a92c793881dd4a010796e95"
+            },
+            "name": "do.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--eca9b269-760a-4312-8d36-e757a474d0a3",
+            "hashes": {
+                "SHA-1": "a9d6d0c47728094feb794ad7e25c253737633140"
+            },
+            "name": "code.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--3c9c8581-43b3-4de4-bfd8-ad9ead776fb2",
+            "hashes": {
+                "SHA-1": "7941909fd5c1277c6f7baf21e484c9e59ea454ee"
+            },
+            "name": "bK2o.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--b06c105c-48ab-4fcc-aa98-edbd3d5a22e5",
+            "hashes": {
+                "SHA-1": "82b1cb9b69d5f05bb20852322fb3c2c00bce9134"
+            },
+            "name": "wsx.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--c164cc3d-2e80-4c23-a8b0-ba62f16bf4b7",
+            "hashes": {
+                "SHA-1": "e8a8d8fa7122c1592a314343b45bac2c213bb57d"
+            },
+            "name": "wsx1.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--8a7a2289-da57-4bd1-b627-bdf58557be86",
+            "hashes": {
+                "SHA-1": "7cb7bcb9187f8faf47fd77cf1213ab3fe2350a77"
+            },
+            "name": "simplify_32.exe"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7fdddb75-f315-4e56-b6a9-5711ed0a12eb",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c1b6868b-c8f1-4b3f-b8dc-9cef1ffbc67a",
+            "target_ref": "malware--12becc87-aa34-4603-873f-96c8e5adbf3a",
+            "description": "Operation Digital Eye uses the PHPsert webshell."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--14edf2e4-7ad7-4e77-82c1-f51cbc29dcde",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c1b6868b-c8f1-4b3f-b8dc-9cef1ffbc67a",
+            "target_ref": "malware--e57b7fca-cc05-4bae-ab91-3b6b9fbd0674",
+            "description": "Operation Digital Eye uses the bK2o.exe custom Mimikatz for pass-the-hash attacks."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0e8c3c33-e4d0-438c-8565-1f8a3d5a286e",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "intrusion-set--c1b6868b-c8f1-4b3f-b8dc-9cef1ffbc67a",
+            "target_ref": "threat-actor--288bb8d9-2008-4b1b-b248-fd9da73a1b58",
+            "description": "Operation Digital Eye is attributed to the China-nexus Threat Actor."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2addfd81-f6c2-4a23-a425-a1553e6cf4fd",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--12becc87-aa34-4603-873f-96c8e5adbf3a",
+            "target_ref": "tool--34b55a39-5bac-4ffb-b1f5-3915cfafdc99",
+            "description": "PHPsert webshell executes code using the CreateDump tool."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--357ea645-c7cf-48cd-b7cf-e873100e7c66",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c1b6868b-c8f1-4b3f-b8dc-9cef1ffbc67a",
+            "target_ref": "tool--34b55a39-5bac-4ffb-b1f5-3915cfafdc99",
+            "description": "Operation Digital Eye uses CreateDump to steal credentials."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--974ec40a-54f5-414e-a48b-2fe66ba412cb",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c1b6868b-c8f1-4b3f-b8dc-9cef1ffbc67a",
+            "target_ref": "tool--dc448a41-f303-45e0-86e7-1f1a5df36bb4",
+            "description": "Operation Digital Eye uses GetUserInfo to gather system information."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--18af8c3b-58fd-4863-b5b6-b2b7995af6f9",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--c1b6868b-c8f1-4b3f-b8dc-9cef1ffbc67a",
+            "target_ref": "tool--1562de6b-f610-4faa-ab94-37c93e013532",
+            "description": "Operation Digital Eye uses code.exe for remote command execution and creating dev tunnels."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--79cdf0b7-2c5e-4cdb-bacc-3b4baa3a7d13",
+            "created": "2024-12-10T00:00:00Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--12becc87-aa34-4603-873f-96c8e5adbf3a",
+            "target_ref": "domain-name--f12ea0f3-b662-4c3e-b261-a09c893c3657",
+            "description": "PHPsert webshell communicates with devtunnels.ms domain."
+        }
+    ]
+}
