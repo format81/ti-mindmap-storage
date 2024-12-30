@@ -1,0 +1,252 @@
+{
+    "type": "bundle",
+    "id": "bundle--8e29f674-b3eb-485f-bb81-e4798a0e3ac4",
+    "objects": [
+        {
+            "type": "campaign",
+            "spec_version": "2.1",
+            "id": "campaign--25b0a964-43ec-4e1b-b234-c8d40bb18306",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "Operation Digital Eye",
+            "description": "Chinese APT targets large business-to-business IT service providers in Southern Europe.",
+            "first_seen": "2024-06-30T00:00:00Z",
+            "last_seen": "2024-07-15T23:59:59Z",
+            "objective": "Establish strategic footholds and compromise downstream entities."
+        },
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--eb92482d-7ce2-4a6f-8ada-0dc81847c97d",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "China-nexus Cyberespionage Group",
+            "description": "China-nexus threat actor involved in Operation Digital Eye.",
+            "labels": [
+                "nation-state",
+                "APT",
+                "cyberespionage"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--01ad3c88-baf0-4ae3-a0bf-3c1cd630f24c",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "SQL Injection",
+            "description": "Using SQL injection to infiltrate Internet-facing web and database servers."
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--fdee978f-88c5-460d-9692-dcc5027aedbd",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "mimCN",
+            "is_family": "true",
+            "labels": [
+                "tooling",
+                "lateral-movement"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--53af64b2-5ca7-4f0b-ab6f-2fb16fbc68e3",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "PHPsert",
+            "is_family": "false",
+            "labels": [
+                "webshell"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--82fd44bf-97a8-4491-b4f2-6548c87a0f0a",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "Command and Control Infrastructure",
+            "description": "Servers and network infrastructure used for managing compromised systems in Operation Digital Eye.",
+            "infrastructure_type": [
+                "command-and-control"
+            ]
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--dfb3564a-71d4-4974-a180-ab777f40283e",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "sqlmap",
+            "description": "Tool used to automate the detection and exploitation of SQL injection vulnerabilities."
+        },
+        {
+            "type": "file",
+            "id": "file--8b2ccefb-3e50-411f-beb0-6bc448167ce8",
+            "name": "bK2o.exe",
+            "hashes": {
+                "SHA-1": "7941909fd5c1277c6f7baf21e484c9e59ea454ee"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--fb620c3d-b73a-4079-be70-eb1cb70cdfe5",
+            "name": "code.exe",
+            "hashes": {
+                "SHA-1": "a9d6d0c47728094feb794ad7e25c253737633140"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--344ee5f2-e22c-4c3d-b348-a06ac12ae04f",
+            "name": "do.exe",
+            "hashes": {
+                "SHA-1": "0be9dd709d7d68887a92c793881dd4a010796e95"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--ff8b6faf-01ac-462a-9e53-06035ce5bd97",
+            "name": "do.bat",
+            "hashes": {
+                "SHA-1": "e572380ab95c4ab5a87f701d4654d3386911b387"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--5741dc47-3a7b-4366-b689-0361a09b74db",
+            "name": "wsx.exe",
+            "hashes": {
+                "SHA-1": "82b1cb9b69d5f05bb20852322fb3c2c00bce9134"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--04d83f2c-f770-4e51-9e82-d54b30fd66a9",
+            "name": "wsx1.exe",
+            "hashes": {
+                "SHA-1": "e8a8d8fa7122c1592a314343b45bac2c213bb57d"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--90eae940-ba27-4e32-954c-3d63c07da7f1",
+            "name": "simplify_32.exe",
+            "hashes": {
+                "SHA-1": "7cb7bcb9187f8faf47fd77cf1213ab3fe2350a77"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--0564d605-872f-4eef-ab21-10c15ed642e9",
+            "name": "PHPsert",
+            "hashes": {
+                "SHA-1": "2e2cf8a4a0e7decceb8e22536b13173479da0d13"
+            }
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--f6893af4-1717-4a4b-9d41-ccf1d01daf57",
+            "value": "146.70.161.78"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--e1b47d7b-dc02-4b10-8d66-d6870c1af55f",
+            "value": "185.76.78.117"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--b3c0fb0f-8017-41e6-985e-55cd7a495aa7",
+            "value": "20.103.221.187"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--4e451e00-cc99-4988-9556-0329ebc120e7",
+            "value": "4.232.170.137"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--89b76ca7-4b04-4e84-9a83-260a42a31d1c",
+            "value": "[REDACTED].euw.devtunnels.ms"
+        },
+        {
+            "type": "file",
+            "id": "file--44f86cc7-0970-47be-9bce-579ddc15d203",
+            "name": "GetUserInfo",
+            "hashes": {
+                "SHA-1": "213f06ed5ac9e688816b4bbe73bf507994949964"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--3a379eb4-16ea-40b1-ba2a-09251c913108",
+            "name": "local.exe",
+            "hashes": {
+                "SHA-1": "289f3bfe297923507cf4c26ca500ae01819c6a95"
+            }
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--02f8e9b6-260c-495d-858a-63f3519bf201",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--25b0a964-43ec-4e1b-b234-c8d40bb18306",
+            "target_ref": "threat-actor--eb92482d-7ce2-4a6f-8ada-0dc81847c97d"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6ca737f6-7995-4e5d-89cd-ba0206653455",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--eb92482d-7ce2-4a6f-8ada-0dc81847c97d",
+            "target_ref": "attack-pattern--01ad3c88-baf0-4ae3-a0bf-3c1cd630f24c"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--68554516-e846-4586-aaba-3a75ee222e9e",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--eb92482d-7ce2-4a6f-8ada-0dc81847c97d",
+            "target_ref": "malware--fdee978f-88c5-460d-9692-dcc5027aedbd"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d85dbbbd-3653-4895-ad36-9ed3578a9037",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--eb92482d-7ce2-4a6f-8ada-0dc81847c97d",
+            "target_ref": "malware--53af64b2-5ca7-4f0b-ab6f-2fb16fbc68e3"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d334c83c-d5ad-477b-83d8-58102e342921",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--eb92482d-7ce2-4a6f-8ada-0dc81847c97d",
+            "target_ref": "infrastructure--82fd44bf-97a8-4491-b4f2-6548c87a0f0a"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--794d8f3d-f7af-4f1e-a624-4020e441a7ec",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--eb92482d-7ce2-4a6f-8ada-0dc81847c97d",
+            "target_ref": "tool--dfb3564a-71d4-4974-a180-ab777f40283e"
+        }
+    ]
+}
