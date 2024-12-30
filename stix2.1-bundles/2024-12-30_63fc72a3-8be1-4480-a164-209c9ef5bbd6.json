@@ -1,0 +1,52 @@
+{
+    "type": "bundle",
+    "id": "bundle--7a61aff5-6a51-4c09-9f53-27464156d5bb",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--f84f255a-90ed-4737-aa04-3e8e0d155564",
+            "created": "2023-10-08T00:00:00Z",
+            "modified": "2023-10-08T00:00:00Z",
+            "name": "Godfather",
+            "is_family": "true",
+            "labels": [
+                "trojan"
+            ]
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--47e5d67d-c615-4994-ab40-3a25b0c94b6e",
+            "created": "2023-10-08T00:00:00Z",
+            "modified": "2023-10-08T00:00:00Z",
+            "name": "Group-IB",
+            "identity_class": "organization"
+        },
+        {
+            "type": "url",
+            "id": "url--ba368730-f0bf-4269-91a6-f9f8c53885f7",
+            "value": "https://www.group-ib.com/blog/godfather-trojan/"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a31947b1-5578-479c-a0e1-609c1aca3e64",
+            "created": "2023-10-08T00:00:00Z",
+            "modified": "2023-10-08T00:00:00Z",
+            "relationship_type": "related-to",
+            "source_ref": "malware--f84f255a-90ed-4737-aa04-3e8e0d155564",
+            "target_ref": "url--ba368730-f0bf-4269-91a6-f9f8c53885f7"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--119fec42-d8e8-4b49-bd09-c545ea33d938",
+            "created": "2023-10-08T00:00:00Z",
+            "modified": "2023-10-08T00:00:00Z",
+            "relationship_type": "related-to",
+            "source_ref": "identity--47e5d67d-c615-4994-ab40-3a25b0c94b6e",
+            "target_ref": "url--ba368730-f0bf-4269-91a6-f9f8c53885f7"
+        }
+    ]
+}
