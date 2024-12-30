@@ -1,0 +1,274 @@
+{
+    "type": "bundle",
+    "id": "bundle--403fdd74-bf2f-4498-904c-696d42c0d17c",
+    "objects": [
+        {
+            "type": "campaign",
+            "spec_version": "2.1",
+            "id": "campaign--cd38ce0e-e6fa-43e4-9ed8-dfdcb04a1ca0",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "Operation Digital Eye",
+            "description": "A cyberespionage campaign conducted by a China-nexus threat actor targeting large business-to-business IT service providers in Southern Europe from late June to mid-July 2024.",
+            "aliases": [
+                "Operation Digital Eye"
+            ],
+            "first_seen": "2024-06-01T00:00:00Z",
+            "last_seen": "2024-07-15T00:00:00Z",
+            "objective": "To establish strategic footholds and compromise downstream entities for cyberespionage purposes."
+        },
+        {
+            "type": "intrusion-set",
+            "spec_version": "2.1",
+            "id": "intrusion-set--85496368-b1aa-46c7-b283-d942352fb31c",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "Chinese APT group",
+            "aliases": [
+                "Chinese APT"
+            ],
+            "goals": [
+                "Cyberespionage",
+                "Strategic intelligence collection"
+            ],
+            "resource_level": "government",
+            "primary_motivation": "espionage"
+        },
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--9b5dcbbf-859a-475e-a0f2-13be6c43054c",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "China-nexus threat actor",
+            "description": "A suspected China-nexus threat actor involved in cyberespionage.",
+            "labels": [
+                "state-sponsored",
+                "espionage",
+                "Chinese APT"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--dd7c8971-7f6c-411a-bad0-852540593474",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "PHPsert",
+            "is_family": "false",
+            "description": "A PHP-based webshell that uses the assert function to execute attacker-provided PHP code.",
+            "labels": [
+                "webshell",
+                "PHPsert"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--0b289336-687d-4b05-9078-d93c1f08e9b1",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "name": "mimCN",
+            "is_family": "true",
+            "description": "A collection of custom Mimikatz modifications used by China-nexus APT groups for credential theft and lateral movement.",
+            "labels": [
+                "Mimikatz",
+                "pass-the-hash",
+                "mimCN"
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--62e9c082-d1cd-4ca5-94f7-546e5d2b96a8",
+            "value": "sentinelone.com"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--805af915-ba13-412e-80a1-734fd8dfbcb1",
+            "value": "146.70.161.78"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--28ca4bb4-810b-4283-b261-fb73080c78c7",
+            "value": "185.76.78.117"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--125d32aa-81b1-42f6-aca7-b4e107cc4cb9",
+            "value": "4.232.170.137"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--598f0a25-6db4-483b-8aa8-2b43c69186b4",
+            "value": "20.103.221.187"
+        },
+        {
+            "type": "file",
+            "id": "file--ccea8070-d4fe-4980-8ba1-b5a78e696e41",
+            "hashes": {
+                "SHA-1": "a9d6d0c47728094feb794ad7e25c253737633140"
+            },
+            "name": "code.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--bd303979-0e87-4f46-9885-6e61c2db6f96",
+            "hashes": {
+                "SHA-1": "7941909fd5c1277c6f7baf21e484c9e59ea454ee"
+            },
+            "name": "bK2o.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--b9cbff53-347a-4ed1-8cc9-d83741dc491c",
+            "hashes": {
+                "SHA-1": "63cea28d927f8e629377399fa08a9cb4fd0c6238"
+            },
+            "name": "PHPsert variant"
+        },
+        {
+            "type": "file",
+            "id": "file--646a8734-d0f2-42bc-a067-090f0e9cbf09",
+            "hashes": {
+                "SHA-1": "82b1cb9b69d5f05bb20852322fb3c2c00bce9134"
+            },
+            "name": "wsx.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--4286b487-0772-411e-93a4-68057dc939de",
+            "hashes": {
+                "SHA-1": "e8a8d8fa7122c1592a314343b45bac2c213bb57d"
+            },
+            "name": "wsx1.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--d63d7970-e9f5-4742-a8d6-70d90c072bee",
+            "hashes": {
+                "SHA-1": "7cb7bcb9187f8faf47fd77cf1213ab3fe2350a77"
+            },
+            "name": "simplify_32.exe"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--15cedf4c-5027-4edb-b5d5-2044c9b3af08",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--cd38ce0e-e6fa-43e4-9ed8-dfdcb04a1ca0",
+            "target_ref": "intrusion-set--85496368-b1aa-46c7-b283-d942352fb31c"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1660c66f-99a2-4e65-869a-92afa75fb093",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--85496368-b1aa-46c7-b283-d942352fb31c",
+            "target_ref": "malware--dd7c8971-7f6c-411a-bad0-852540593474"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1bedeafe-d90b-44ec-a74c-adf80cb366ad",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--85496368-b1aa-46c7-b283-d942352fb31c",
+            "target_ref": "malware--0b289336-687d-4b05-9078-d93c1f08e9b1"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--05d765e2-c8da-4c91-8af9-d828394be004",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--0b289336-687d-4b05-9078-d93c1f08e9b1",
+            "target_ref": "file--bd303979-0e87-4f46-9885-6e61c2db6f96"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0343d9ff-5e2b-4d12-af19-3a0205a193fc",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--0b289336-687d-4b05-9078-d93c1f08e9b1",
+            "target_ref": "file--646a8734-d0f2-42bc-a067-090f0e9cbf09"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--eee70b1e-10db-4d07-a9fa-db33111f154b",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--0b289336-687d-4b05-9078-d93c1f08e9b1",
+            "target_ref": "file--4286b487-0772-411e-93a4-68057dc939de"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3649db43-6377-4807-80de-d8277e1fe525",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--0b289336-687d-4b05-9078-d93c1f08e9b1",
+            "target_ref": "file--d63d7970-e9f5-4742-a8d6-70d90c072bee"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e65f8aff-21e3-486a-801c-a4c6cab98fdf",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--9b5dcbbf-859a-475e-a0f2-13be6c43054c",
+            "target_ref": "ipv4-addr--805af915-ba13-412e-80a1-734fd8dfbcb1"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b2eca004-954b-44af-80c7-701b00ba9f32",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--9b5dcbbf-859a-475e-a0f2-13be6c43054c",
+            "target_ref": "ipv4-addr--28ca4bb4-810b-4283-b261-fb73080c78c7"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--035aebe3-aa4f-4a80-beb7-7a5ba8ad8377",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--9b5dcbbf-859a-475e-a0f2-13be6c43054c",
+            "target_ref": "ipv4-addr--125d32aa-81b1-42f6-aca7-b4e107cc4cb9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3a95c840-4763-4329-a1e7-5f3101dc580e",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--9b5dcbbf-859a-475e-a0f2-13be6c43054c",
+            "target_ref": "ipv4-addr--598f0a25-6db4-483b-8aa8-2b43c69186b4"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--55c72281-e509-4ba5-a875-c2b57a527d93",
+            "created": "2024-12-10T00:00:00Z",
+            "modified": "2024-12-10T00:00:00Z",
+            "relationship_type": "belongs-to",
+            "source_ref": "file--ccea8070-d4fe-4980-8ba1-b5a78e696e41",
+            "target_ref": "domain-name--62e9c082-d1cd-4ca5-94f7-546e5d2b96a8"
+        }
+    ]
+}
