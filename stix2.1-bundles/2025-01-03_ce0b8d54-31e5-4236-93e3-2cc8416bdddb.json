@@ -1,0 +1,153 @@
+{
+    "type": "bundle",
+    "id": "bundle--62081636-60c6-49e8-a749-c2609f8bb8e1",
+    "objects": [
+        {
+            "type": "malware",
+            "id": "malware--b0014701-d9d6-433c-9ad1-494997952082",
+            "created": "2024-12-02T00:00:00Z",
+            "name": "SmokeLoader",
+            "is_family": "true",
+            "labels": [
+                "downloader",
+                "modular",
+                "evasion"
+            ]
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--d07bf716-33c5-443d-a438-ed33b4d868a1",
+            "created": "2024-12-02T00:00:00Z",
+            "name": "SmokeLoader Attack Targeting Taiwan",
+            "aliases": [
+                "SmokeLoader Campaign"
+            ],
+            "goals": [
+                "Target companies in Taiwan",
+                "Steal information for future attacks"
+            ],
+            "first_seen": "2024-09-01T00:00:00Z",
+            "primary_motivation": "intrusion",
+            "secondary_motivations": [
+                "espionage"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--3cbfbc74-4e5c-4476-886d-d4290794cdb0",
+            "created": "2024-12-02T00:00:00Z",
+            "name": "Phishing",
+            "description": "Use of phishing emails to deliver malicious payloads."
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--9e669dd2-2277-40a8-866c-6f811ebc3459",
+            "created": "2024-12-02T00:00:00Z",
+            "name": "CVE-2017-0199",
+            "description": "OLE2-embedded link vulnerability in Microsoft Office allowing remote code execution."
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--ebf09b2d-bb60-4963-9b9a-5fda1c4260f4",
+            "created": "2024-12-02T00:00:00Z",
+            "name": "CVE-2017-11882",
+            "description": "Remote code execution vulnerability in Microsoft Office equation editor."
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--4a6a6728-65de-4b4a-a9e5-a3ae588c0313",
+            "created": "2024-12-02T00:00:00Z",
+            "name": "Unknown Threat Actor",
+            "threat_actor_types": [
+                "intrusion-set"
+            ],
+            "roles": [
+                "malware developer",
+                "intruder"
+            ],
+            "goals": [
+                "data theft",
+                "maintain persistence"
+            ],
+            "sophistication": "advanced",
+            "resource_level": "high",
+            "primary_motivation": "financial",
+            "secondary_motivations": [
+                "espionage"
+            ],
+            "labels": [
+                "nation-state"
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--af2c4f94-0e94-4906-b577-2d1ad7616757",
+            "value": "fortinet.com"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--ebe26443-09c0-470b-92c6-5c208436d420",
+            "value": "198.23.188.147"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--9a581628-94d8-49cc-b14b-5512edb07916",
+            "value": "77.232.41.29"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--591540b5-9c58-46cc-80a4-a53517593dcb",
+            "value": "91.183.104.24"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--e8d09ce4-bf3f-4b85-aae8-64f640dc84cd",
+            "value": "185.228.234.237"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0ed5c733-afcb-4360-bda6-df20de18c6d7",
+            "relationship_type": "uses",
+            "created": "2024-12-02T00:00:00Z",
+            "source_ref": "intrusion-set--d07bf716-33c5-443d-a438-ed33b4d868a1",
+            "target_ref": "malware--b0014701-d9d6-433c-9ad1-494997952082",
+            "description": "The SmokeLoader attack targeting Taiwan uses the SmokeLoader malware."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--78e95c22-8c28-4312-a966-fc1fe8c883e8",
+            "relationship_type": "uses",
+            "created": "2024-12-02T00:00:00Z",
+            "source_ref": "intrusion-set--d07bf716-33c5-443d-a438-ed33b4d868a1",
+            "target_ref": "attack-pattern--3cbfbc74-4e5c-4476-886d-d4290794cdb0",
+            "description": "The SmokeLoader campaign uses phishing tactics to deliver malicious content."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--33e0ec05-d4e7-43ed-aa58-52fb3456ab34",
+            "relationship_type": "targets",
+            "created": "2024-12-02T00:00:00Z",
+            "source_ref": "malware--b0014701-d9d6-433c-9ad1-494997952082",
+            "target_ref": "vulnerability--9e669dd2-2277-40a8-866c-6f811ebc3459",
+            "description": "SmokeLoader exploits the CVE-2017-0199 vulnerability in Microsoft Office."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4112ba74-8acf-46d7-9e3d-f4fc39795f5f",
+            "relationship_type": "targets",
+            "created": "2024-12-02T00:00:00Z",
+            "source_ref": "malware--b0014701-d9d6-433c-9ad1-494997952082",
+            "target_ref": "vulnerability--ebf09b2d-bb60-4963-9b9a-5fda1c4260f4",
+            "description": "SmokeLoader exploits the CVE-2017-11882 vulnerability in Microsoft Office."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bae245c7-120f-4dd6-8967-642921e448ac",
+            "relationship_type": "uses",
+            "created": "2024-12-02T00:00:00Z",
+            "source_ref": "threat-actor--4a6a6728-65de-4b4a-a9e5-a3ae588c0313",
+            "target_ref": "intrusion-set--d07bf716-33c5-443d-a438-ed33b4d868a1",
+            "description": "The unknown threat actor orchestrates the SmokeLoader attack targeting Taiwan."
+        }
+    ]
+}
