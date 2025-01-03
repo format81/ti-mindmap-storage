@@ -1,0 +1,240 @@
+{
+    "type": "bundle",
+    "id": "bundle--c30a25ec-4837-47aa-bce8-83b5b9ff67fa",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--cc0173d2-a762-492a-8083-f2dc6d55d896",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "name": "Secret Blizzard",
+            "description": "Secret Blizzard is a Russian nation-state threat actor attributed to Center 16 of Russia\u2019s Federal Security Service (FSB). They have been known to target ministries of foreign affairs, embassies, government offices, and defense departments to gain long-term access for intelligence collection.",
+            "labels": [
+                "nation-state",
+                "espionage",
+                "Russia"
+            ]
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--62a1a1f5-a978-4be0-900d-5939bbca6301",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "name": "Storm-0156",
+            "description": "Storm-0156 is a Pakistan-based espionage cluster overlapping with threat actors known as SideCopy, Transparent Tribe, and APT36. They have been used by Secret Blizzard to deploy backdoors and conduct espionage operations in South Asia.",
+            "aliases": [
+                "SideCopy",
+                "Transparent Tribe",
+                "APT36"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--7ab63e74-4612-42c2-bfca-a0fb95cbe1ef",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "name": "TinyTurla Variant",
+            "description": "A variant of the TinyTurla backdoor used by Secret Blizzard, disguises itself as a Windows-based service and establishes C2 communication.",
+            "is_family": "false",
+            "labels": [
+                "backdoor",
+                "trojan",
+                "TinyTurla"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--993181bb-deb9-4784-bc82-25cde72182d6",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "name": "TwoDash",
+            "description": "TwoDash is a .NET backdoor used by Secret Blizzard that conducts device surveys and connects to C2 servers for further instructions.",
+            "is_family": "false",
+            "labels": [
+                "backdoor",
+                "trojan",
+                ".NET"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--e6946f1f-64c2-4eb2-94c0-4ec2ec9599e6",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "name": "Statuezy",
+            "description": "Statuezy is a clipboard monitoring tool used by Secret Blizzard to monitor and log clipboard data for exfiltration.",
+            "is_family": "false",
+            "labels": [
+                "trojan",
+                "spyware",
+                "monitoring"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--f31b6f63-b979-4780-a988-588e2d006c0c",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "name": "Wainscot",
+            "description": "Wainscot is a Golang-based backdoor used by Storm-0156, capable of downloading files, launching commands, and taking screenshots.",
+            "is_family": "false",
+            "labels": [
+                "backdoor",
+                "Golang"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--d742eecc-c20f-4b9e-bbb8-1cf0ea3138b3",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "name": "CrimsonRAT",
+            "description": "CrimsonRAT is a .NET-based backdoor employed by Storm-0156 with capabilities to gather information, download or upload files, and execute commands.",
+            "is_family": "false",
+            "labels": [
+                "backdoor",
+                ".NET"
+            ]
+        },
+        {
+            "type": "url",
+            "id": "url--64fdbadb-4850-4a25-b8a9-af2885f3a637",
+            "value": "https://www.microsoft.com/en-us/security/blog/threat-intelligence/attacker-techniques-tools-and-infrastructure/"
+        },
+        {
+            "type": "url",
+            "id": "url--a9d99c73-81b3-4cfc-8a8d-4d61df58a166",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender-for-endpoint/"
+        },
+        {
+            "type": "url",
+            "id": "url--264ef60c-b25c-4643-86a3-e1c8e45c01d3",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender-xdr/"
+        },
+        {
+            "type": "url",
+            "id": "url--972de90d-a5ae-4755-ac60-3a3a24cd242f",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-sentinel/"
+        },
+        {
+            "type": "url",
+            "id": "url--3cc66105-a324-4c03-b753-f0218b00bc2b",
+            "value": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-129a"
+        },
+        {
+            "type": "url",
+            "id": "url--229d4860-3c3b-465b-beca-de34a312b940",
+            "value": "https://media.defense.gov/2019/Oct/18/2002197242/-1/-1/0/NSA_CSA_Turla_20191021 ver 4 - nsa.gov.pdf"
+        },
+        {
+            "type": "url",
+            "id": "url--d2f58cb4-bd6c-4e2f-a724-803622b79732",
+            "value": "https://attack.mitre.org/groups/G1008/"
+        },
+        {
+            "type": "url",
+            "id": "url--e9c03f10-b57a-4174-be88-f08f1c9a103d",
+            "value": "https://attack.mitre.org/groups/G0134/"
+        },
+        {
+            "type": "url",
+            "id": "url--4f78f8c1-0144-449e-9d86-a75d258f7401",
+            "value": "ur253.duckdns.org"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--92c1fa74-66ac-4610-a24b-8d2c7fef0110",
+            "value": "45.14.194.253"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3f279aa8-eed9-4d4b-b8d2-fd553329e3a6",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--62a1a1f5-a978-4be0-900d-5939bbca6301",
+            "target_ref": "malware--d742eecc-c20f-4b9e-bbb8-1cf0ea3138b3",
+            "description": "Storm-0156 uses CrimsonRAT to gather information, download or upload files, and execute commands."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cda3cd5d-2d79-4baf-b4dd-bebc353361a4",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--cc0173d2-a762-492a-8083-f2dc6d55d896",
+            "target_ref": "intrusion-set--62a1a1f5-a978-4be0-900d-5939bbca6301",
+            "description": "Secret Blizzard uses the infrastructure of Storm-0156 to deploy backdoors and conduct espionage operations."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9996dd0b-a3bc-47b6-964c-a54f50269575",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--cc0173d2-a762-492a-8083-f2dc6d55d896",
+            "target_ref": "malware--993181bb-deb9-4784-bc82-25cde72182d6",
+            "description": "Secret Blizzard uses TwoDash as a .NET backdoor for device surveys and C2 communications."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3b3808f0-b00e-44aa-8aa8-595fc62b70e2",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--cc0173d2-a762-492a-8083-f2dc6d55d896",
+            "target_ref": "malware--7ab63e74-4612-42c2-bfca-a0fb95cbe1ef",
+            "description": "Secret Blizzard uses the TinyTurla Variant to disguise as a Windows service and establish C2 communication."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--456f9eda-5b90-4ae2-81d9-0cf05e78a17b",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--cc0173d2-a762-492a-8083-f2dc6d55d896",
+            "target_ref": "malware--e6946f1f-64c2-4eb2-94c0-4ec2ec9599e6",
+            "description": "Secret Blizzard uses Statuezy to monitor and log clipboard data for exfiltration."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--aca3fd2f-9008-4ee2-947a-5fd21e703806",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "related-to",
+            "source_ref": "malware--f31b6f63-b979-4780-a988-588e2d006c0c",
+            "target_ref": "malware--d742eecc-c20f-4b9e-bbb8-1cf0ea3138b3",
+            "description": "Both Wainscot and CrimsonRAT are backdoors used by Storm-0156."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b2f656e0-d40e-42d1-a369-50997c5c9e9d",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--d742eecc-c20f-4b9e-bbb8-1cf0ea3138b3",
+            "target_ref": "ipv4-addr--92c1fa74-66ac-4610-a24b-8d2c7fef0110",
+            "description": "CrimsonRAT communicates with C2 infrastructure located at 45.14.194.253."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9ee3e2cf-868a-40db-82c1-a11946caa78a",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--f31b6f63-b979-4780-a988-588e2d006c0c",
+            "target_ref": "ipv4-addr--92c1fa74-66ac-4610-a24b-8d2c7fef0110",
+            "description": "Wainscot communicates with C2 infrastructure located at 45.14.194.253."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--23f042dc-807e-471d-a756-e710f793c3c5",
+            "created": "2024-12-04T00:00:00Z",
+            "modified": "2024-12-04T00:00:00Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--f31b6f63-b979-4780-a988-588e2d006c0c",
+            "target_ref": "malware--d742eecc-c20f-4b9e-bbb8-1cf0ea3138b3",
+            "description": "Wainscot shares communication channels with CrimsonRAT during operations by Storm-0156."
+        }
+    ]
+}
