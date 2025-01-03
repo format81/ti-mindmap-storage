@@ -1,0 +1,193 @@
+{
+    "type": "bundle",
+    "id": "bundle--cb58196d-9b4b-4235-a5b2-ad4fb79da45c",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--f428da5c-52b4-4157-9cc5-1ed98501f8c7",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "name": "Autonomous SOC Vision",
+            "description": "This document elaborates on the vision of an Autonomous Security Operations Center (SOC) and the various stages of maturity involved. It revolves around the integration of AI and automation in cybersecurity.",
+            "labels": [
+                "research",
+                "innovation",
+                "cybersecurity"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "spec_version": "2.1",
+            "id": "course-of-action--466b299d-8faf-4691-a08c-d68f141ae34e",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "name": "Adopt Autonomous SOC",
+            "description": "Organizations are recommended to adopt the Autonomous SOC maturity model to improve their security operations through incremental stages integrating AI and automation."
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--f773cba5-1740-4238-8bd7-163f92adabdf",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "name": "SentinelOne Static AI",
+            "description": "A security engine that uses static AI models to predict whether a file or object is malware based on its characteristics.",
+            "is_family": "false",
+            "labels": [
+                "AI",
+                "static-analysis",
+                "detection"
+            ]
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--e8dc7daf-be33-446b-9b00-6806a223575a",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "name": "Purple AI",
+            "description": "An AI security analyst tool that simplifies essential tasks like detection engineering, triage, investigation, and response using generative AI.",
+            "labels": [
+                "AI",
+                "automation",
+                "response"
+            ]
+        },
+        {
+            "type": "url",
+            "id": "url--f1313a6d-d664-4b29-9f3c-6563db91970c",
+            "value": "https://www.sentinelone.com/blog/"
+        },
+        {
+            "type": "url",
+            "id": "url--5a71ce95-878c-4ffb-ad91-e693d07650fc",
+            "value": "https://www.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--15de2861-9b59-45f5-96db-5ba9d60cdca4",
+            "value": "https://jp.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--6511fb94-a304-42dc-94ec-14a775c7b972",
+            "value": "https://de.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--57f15df4-0154-43f3-a704-19fcb19fa86a",
+            "value": "https://es.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--3ba1bb5f-8120-423c-bc16-9dd3f8d00a45",
+            "value": "https://fr.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--028fe06c-d68e-4ce8-91ac-05e4af83bfcb",
+            "value": "https://it.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--53894c1a-1053-4ae7-b2bf-758a7aea7ff5",
+            "value": "https://nl.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--20604f68-f7ab-40b9-b95b-2948d4b2b99d",
+            "value": "https://kr.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--df47983c-0394-4b14-8402-bfce7eeaf894",
+            "value": "https://www.sentinelone.com/wp-content/uploads/pdf-gen/1734542358/autonomous-soc-is-a-journey-not-a-destination-introducing-the-autonomous-soc-maturity-model.pdf"
+        },
+        {
+            "type": "email-addr",
+            "id": "email-addr--9d823d9d-ed6e-4671-83d1-310367cc6439",
+            "value": "info@sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--04ea20f4-baf3-47e4-9900-2d9ee923c56a",
+            "value": "https://www.sentinelone.com/blog/the-best-the-worst-and-the-ugliest-in-cybersecurity-2024-edition/"
+        },
+        {
+            "type": "url",
+            "id": "url--e5f2e44c-4687-4bd3-82ee-407d46ac6bd2",
+            "value": "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-51-7/"
+        },
+        {
+            "type": "url",
+            "id": "url--6ccd4bf6-f94f-463e-a7bc-db6b8940f81e",
+            "value": "https://www.sentinelone.com/blog/the-good-the-bad-and-the-ugly-in-cybersecurity-week-50-6/"
+        },
+        {
+            "type": "url",
+            "id": "url--1addd43d-89cf-46d4-92e8-1f8c09e7ac0a",
+            "value": "https://www.sentinelone.com/blog/aws-reinvent-2024-highlights-empowering-customers-through-innovations-security-in-cloud/"
+        },
+        {
+            "type": "url",
+            "id": "url--dca9496b-a7a2-4f72-8ff4-ad4c70dee9d0",
+            "value": "https://www.sentinelone.com/blog/integrating-chatgpt-generative-ai-within-cybersecurity-best-practices/"
+        },
+        {
+            "type": "url",
+            "id": "url--99b9a76f-fd0f-4776-85e5-5783c09752aa",
+            "value": "https://www.sentinelone.com/blog/the-cybersecurity-journey-pathways-to-becoming-a-top-tier-soc-analyst/"
+        },
+        {
+            "type": "url",
+            "id": "url--988808cd-1703-4b08-87dc-00123cdf3c91",
+            "value": "https://www.sentinelone.com/blog/first-things-first-sentinelone-is-a-fortune-best-workplace-for-parents/"
+        },
+        {
+            "type": "url",
+            "id": "url--0e245900-3149-433d-b500-e03c1a129a67",
+            "value": "https://www.sentinelone.com/blog/a-cyberwar-on-financial-institutions-why-banks-are-caught-in-the-crosshairs/"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--90286e3d-a7e8-4a63-88de-dbb2b7d7f650",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--f428da5c-52b4-4157-9cc5-1ed98501f8c7",
+            "target_ref": "malware--f773cba5-1740-4238-8bd7-163f92adabdf"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--24180640-17a5-469c-822b-7ef6ce8c9548",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--f428da5c-52b4-4157-9cc5-1ed98501f8c7",
+            "target_ref": "tool--e8dc7daf-be33-446b-9b00-6806a223575a"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a63be09b-2bc4-44fd-ab46-106aaea8427d",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "relationship_type": "related-to",
+            "source_ref": "threat-actor--f428da5c-52b4-4157-9cc5-1ed98501f8c7",
+            "target_ref": "course-of-action--466b299d-8faf-4691-a08c-d68f141ae34e"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8c8db341-68e7-4225-bd39-296a93b139a1",
+            "created": "2024-12-18T00:00:00Z",
+            "modified": "2024-12-18T00:00:00Z",
+            "relationship_type": "indicates",
+            "source_ref": "url--df47983c-0394-4b14-8402-bfce7eeaf894",
+            "target_ref": "threat-actor--f428da5c-52b4-4157-9cc5-1ed98501f8c7"
+        }
+    ]
+}
