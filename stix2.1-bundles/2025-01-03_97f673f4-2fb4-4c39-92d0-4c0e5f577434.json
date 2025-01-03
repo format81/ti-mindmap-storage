@@ -1,0 +1,301 @@
+{
+    "type": "bundle",
+    "id": "bundle--0342504c-66fb-49a0-9a05-5ddea8c0b6cb",
+    "objects": [
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--2a58fc54-77b4-45ba-ad9b-244c5d7257cd",
+            "name": "CVE-2024-55956",
+            "description": "Zero-day vulnerability in 3 Cleo products allowing unauthenticated users to import and execute arbitrary Bash or PowerShell commands.",
+            "created": "2024-12-13T00:00:00Z",
+            "labels": [
+                "zero-day",
+                "remote code execution"
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--1ebfac1b-b6a1-46f1-b086-71fe08f1d580",
+            "name": "CVE-2024-50623",
+            "description": "Vulnerability in Cleo products enabling unrestricted file upload and download, potentially leading to RCE.",
+            "created": "2024-10-27T00:00:00Z",
+            "labels": [
+                "remote code execution",
+                "file upload restriction bypass"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--5bb8e016-db21-47cf-80ba-c53bd34f0ef9",
+            "name": "CL0P",
+            "description": "Threat actor group responsible for exploiting CVE-2024-55956 with data theft objectives.",
+            "created": "2024-12-13T00:00:00Z",
+            "threat_actor_types": [
+                "cybercrime"
+            ],
+            "labels": [
+                "data theft",
+                "vulnerability exploitation"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--d736d446-6380-4694-beca-8160f538f7fc",
+            "pattern": "[url:value = 'http://45.182.189.102/dpixel']",
+            "pattern_type": "stix",
+            "description": "C2 server hosting Cobalt Strike payload.",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2",
+                "malware"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--828cb95c-8cff-4a43-8938-f7625f8936b6",
+            "pattern": "[file:hashes.'SHA-256' = '6705eea898ef1155417361fa71b1078b7aaab61e7597d2a080aa38df4ad87b1c']",
+            "pattern_type": "stix",
+            "description": "Java Loader used in conjunction with the CVE-2024-55956 exploitation.",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "loader",
+                "malware"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--a1687ba3-e816-498b-b140-ad4c6974860f",
+            "pattern": "[ipv4-addr:value = '45.182.189.102']",
+            "pattern_type": "stix",
+            "description": "Cobalt Strike Server IP address used by threat actors.",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2",
+                "malware"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--e1da9ebe-a982-4cf3-a220-e362f90328ab",
+            "name": "Upgrade Cleo products to version 5.8.0.24",
+            "description": "Patch Cleo Harmony, VLTrader, and LexiCom to their latest version to mitigate CVE-2024-55956.",
+            "created": "2024-12-13T00:00:00Z",
+            "labels": [
+                "patch management",
+                "vulnerability mitigation"
+            ]
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--9864acf6-fd1f-4687-a448-c78780132e43",
+            "value": "45.182.189.102"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--c031d1e1-ab40-4214-9995-7cdbd712c7fa",
+            "value": "216.245.221.83"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--5b9fcb16-650e-4df2-ad88-e3e4d8186ad6",
+            "value": "92.51.2.221"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--ab80e28e-0c51-4509-b4ad-baf897e6c0c2",
+            "value": "67.220.94.173"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--de55a42e-2de9-4150-be5c-15ef47f1c7a3",
+            "value": "184.107.3.70"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--1ce1bc1a-240d-4394-8504-0d30598d6255",
+            "value": "186.162.118.133"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--0a7fc1ca-4f16-4efd-b240-8f6ce5c1ad1f",
+            "value": "186.128.224.0"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--249172ec-e154-4bd5-81c4-9244c6c75598",
+            "value": "186.136.204.137"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--a2b021f2-7180-4b59-9b19-6f8e0bb8e321",
+            "value": "58.180.61.138"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--57792f6f-6c03-4833-9c4a-49da096a98cb",
+            "value": "45.140.145.68"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--064da386-3cdc-411b-837a-40c310ff3a81",
+            "value": "6.149.249.226"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--ac790e42-e3a6-4e42-812d-6ec15aa4d00b",
+            "value": "192.119.99.42"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--55da6076-ec8e-4a48-a6ea-787ddd6ba07f",
+            "value": "176.123.4.226"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--3f6cbce0-388b-434e-b550-9b907345dd8f",
+            "value": "80.82.78.42"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--4358b8bc-7993-4c24-a801-2d9a82ff7185",
+            "value": "176.125.101.115"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--5ff87f97-a142-4b01-8ebc-f25f0c64de73",
+            "value": "45.182.189.226"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--07e8f446-401b-4e8a-8ae0-5b328e3d8077",
+            "value": "185.162.128.100"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--705f050f-218a-4e2b-99bd-b02b38369d96",
+            "value": "185.162.128.219"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--911a4c82-2243-410a-a0ae-0081e605b277",
+            "value": "6.184.168.25"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--53933a29-2a3e-4af0-9849-4a1132d6c939",
+            "value": "181.214.147.164"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--fdb9764f-02cc-4b25-b2ef-426ff662b26b",
+            "value": "209.127.121.38"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--fe1eb158-dc7b-4f1b-805e-8f05bb21d4f0",
+            "value": "89.248.172.139"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--a76f8a6d-de2c-467e-a58a-5017a08345cd",
+            "value": "5.149.228.109"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--025fb203-e811-4479-bd54-a1669d633668",
+            "value": "176.123.4.146"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--7ee7cbd5-7754-4962-8549-b69f0684b0af",
+            "value": "45.182.189.102"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--b7783f85-75c7-44e7-bacb-571571c510b4",
+            "value": "176.123.5.126"
+        },
+        {
+            "type": "url",
+            "id": "url--572739d6-7e28-4597-aabc-0ce510a07ac8",
+            "value": "http://45.182.189.102/dpixel"
+        },
+        {
+            "type": "file",
+            "id": "file--0764b776-3abd-4214-aef7-932ee2afa745",
+            "hashes": {
+                "SHA-256": "6705eea898ef1155417361fa71b1078b7aaab61e7597d2a080aa38df4ad87b1c"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--8ad6738a-8279-4d58-b3ca-c8a35e1cd2de",
+            "name": "healthcheck.txt"
+        },
+        {
+            "type": "file",
+            "id": "file--218071e2-44b4-429d-a38a-0d1f41f3fc50",
+            "name": "healthchecktemplate.txt"
+        },
+        {
+            "type": "file",
+            "id": "file--58addf57-835c-4e81-9b3e-0dca09b5cd6f",
+            "name": "60282967-dc91-40ef-a34c-38e992509c2c.xml"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ffb4ba8e-843e-4244-83ff-72006a3f2a31",
+            "source_ref": "threat-actor--5bb8e016-db21-47cf-80ba-c53bd34f0ef9",
+            "target_ref": "vulnerability--2a58fc54-77b4-45ba-ad9b-244c5d7257cd",
+            "relationship_type": "exploits",
+            "created": "2024-12-13T00:00:00Z",
+            "labels": [
+                "exploitation activity"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9e7d2584-22a6-4e67-896b-cbcb6a16a970",
+            "source_ref": "indicator--d736d446-6380-4694-beca-8160f538f7fc",
+            "target_ref": "ipv4-addr--9864acf6-fd1f-4687-a448-c78780132e43",
+            "relationship_type": "indicates",
+            "created": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2 communication"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--acfe12e1-938e-4de5-ba78-b558c0eb00a5",
+            "source_ref": "indicator--828cb95c-8cff-4a43-8938-f7625f8936b6",
+            "target_ref": "file--0764b776-3abd-4214-aef7-932ee2afa745",
+            "relationship_type": "indicates",
+            "created": "2024-12-13T00:00:00Z",
+            "labels": [
+                "malicious file"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--84ad06ad-c5c5-4fe5-a935-b018a5b6a6a0",
+            "source_ref": "indicator--a1687ba3-e816-498b-b140-ad4c6974860f",
+            "target_ref": "ipv4-addr--9864acf6-fd1f-4687-a448-c78780132e43",
+            "relationship_type": "indicates",
+            "created": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2 server"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4c239a19-1f15-4fd7-a1a5-93687bf82de8",
+            "source_ref": "course-of-action--e1da9ebe-a982-4cf3-a220-e362f90328ab",
+            "target_ref": "vulnerability--2a58fc54-77b4-45ba-ad9b-244c5d7257cd",
+            "relationship_type": "mitigates",
+            "created": "2024-12-13T00:00:00Z",
+            "labels": [
+                "patching"
+            ]
+        }
+    ]
+}
