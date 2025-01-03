@@ -1,0 +1,363 @@
+{
+    "type": "bundle",
+    "id": "bundle--5a32ea6c-eae0-4ae7-b232-5fa64fe2a4df",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--a872ca5f-cb2b-4be2-b868-55a5fcaeeb65",
+            "name": "Operation Blacksmith",
+            "description": "A campaign conducted by the Lazarus Group employing novel Telegram-based malware written in DLang, targeting organizations worldwide.",
+            "objective": "Target enterprises globally by exploiting vulnerabilities to deploy malware for espionage and data exfiltration.",
+            "first_seen": "2023-03-01T00:00:00Z",
+            "last_seen": "2023-09-30T00:00:00Z",
+            "labels": [
+                "cyberespionage",
+                "state-sponsored"
+            ]
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--26472d90-211c-472f-b380-077d018d7e5e",
+            "name": "Lazarus Group",
+            "description": "A North Korean state-sponsored threat group known for targeting global organizations using advanced malware and techniques.",
+            "aliases": [
+                "Onyx Sleet",
+                "PLUTIONIUM",
+                "Andariel"
+            ],
+            "labels": [
+                "state-sponsored",
+                "cybercrime"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--f6c206ef-e3d7-44f6-b05e-12feed10bdea",
+            "name": "Andariel",
+            "description": "An APT subgroup under Lazarus, focused on initial access, reconnaissance, and establishing long-term access for espionage.",
+            "aliases": [
+                "silent_chollima"
+            ],
+            "roles": [
+                "spy"
+            ],
+            "goals": [
+                "espionage",
+                "data exfiltration"
+            ],
+            "sophistication": "advanced",
+            "resource_level": "state",
+            "primary_motivation": "government-espionage",
+            "labels": [
+                "sub-group",
+                "APT",
+                "cyberespionage"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--3227e4a9-9415-4138-84b0-4f0bd5aaec1c",
+            "name": "NineRAT",
+            "description": "A DLang-based remote access Trojan using Telegram for C2 communications.",
+            "is_family": "true",
+            "labels": [
+                "RAT",
+                "DLang",
+                "Telegram"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--fc3a7c4e-ad8c-489b-9d08-b67639e2376b",
+            "name": "DLRAT",
+            "description": "A DLang-based malware that acts as both a downloader and a RAT to deploy and execute commands from C2.",
+            "is_family": "true",
+            "labels": [
+                "RAT",
+                "DLang"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--9eecb95d-1226-49d7-8a46-d603306c7bd0",
+            "name": "BottomLoader",
+            "description": "A DLang-based downloader used by Lazarus to fetch additional payloads like HazyLoad.",
+            "is_family": "true",
+            "labels": [
+                "downloader",
+                "DLang"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--408d32ff-115d-4b26-b254-cfac16c14d1a",
+            "name": "HazyLoad",
+            "description": "A custom proxy tool used for establishing persistent access in compromised systems.",
+            "is_family": "false",
+            "labels": [
+                "proxy",
+                "backdoor"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--bf1f00ca-c714-4c30-bd33-5516e1fd6e21",
+            "name": "Exploitation of CVE-2021-44228",
+            "description": "Exploitation of the Log4j vulnerability for initial access.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "initial-access"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2021-44228"
+                }
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--e4ea0d83-230f-4664-a131-f2946b12ea1a",
+            "value": "tech.micrsofts.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--bc1b8cce-d4da-40d0-909a-24712e922ae8",
+            "value": "tech.micrsofts.tech"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--387621f1-55fc-45fd-9d68-c84fc3aba595",
+            "value": "27.102.113.93"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--4b7845b8-9bfb-4057-aeb5-8207d795abeb",
+            "value": "185.29.8.53"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--eb8ca6f5-69c0-46da-8344-d31fecb470a8",
+            "value": "155.94.208.209"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--04a5d43c-ea2e-4822-991b-8a3c1468ce47",
+            "value": "162.19.71.175"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--f64a7d4f-1ed5-459d-9c7a-b959d5ecfd82",
+            "value": "201.77.179.66"
+        },
+        {
+            "type": "url",
+            "id": "url--83563dc0-0af2-42f7-a972-38ac29193405",
+            "value": "http://27.102.113.93/inet.txt"
+        },
+        {
+            "type": "url",
+            "id": "url--3993c4d7-e4d4-4c14-9196-df3986ea6cf1",
+            "value": "http://162.19.71.175:7443/sonic/bottom.gif"
+        },
+        {
+            "type": "url",
+            "id": "url--0ae97918-dab2-4ed3-af2c-651b87c74dd3",
+            "value": "http://201.77.179.66:8082/img/lndex.php"
+        },
+        {
+            "type": "url",
+            "id": "url--2b091d47-a53c-4ad9-8559-112ec85380ac",
+            "value": "http://201.77.179.66:8082/img/images/header/B691646991EBAEEC.gif"
+        },
+        {
+            "type": "url",
+            "id": "url--114939ae-f0c4-42b1-ab4d-ec0ade51d987",
+            "value": "http://201.77.179.66:8082/img/images/header/7AEBC320998FD5E5.gif"
+        },
+        {
+            "type": "file",
+            "id": "file--732f70ab-4fe5-4208-a063-062e3a5c20ba",
+            "hashes": {
+                "SHA-256": "000752074544950ae9020a35ccd77de277f1cd5026b4b9559279dc3b86965eee"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--caaadd7a-f6d5-4183-97fa-dfdc91388946",
+            "hashes": {
+                "SHA-256": "534f5612954db99c86baa67ef51a3ad88bc21735bce7bb591afa8a4317c35433"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--33b48df8-d4c7-47cc-afe3-2224468c0ac1",
+            "hashes": {
+                "SHA-256": "ba8cd92cc059232203bcadee260ddbae273fc4c89b18424974955607476982c4"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--02402840-2892-4b31-a758-353bbd7bf9eb",
+            "hashes": {
+                "SHA-256": "47e017b40d418374c0889e4d22aa48633b1d41b16b61b1f2897a39112a435d30"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--882a42ec-3206-4d70-824f-9ad01e99f0b7",
+            "hashes": {
+                "SHA-256": "f91188d23b14526676706a5c9ead05c1a91ea0b9d6ac902623bc565e1c200a59"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--31b73c13-7615-4b4c-91f0-1ae0367ca295",
+            "hashes": {
+                "SHA-256": "5b02fc3cfb5d74c09cab724b5b54c53a7c07e5766bffe5b1adf782c9e86a8541"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--6154ee08-baa4-4e1b-b0f5-f27a28879a53",
+            "hashes": {
+                "SHA-256": "82d4a0fef550af4f01a07041c16d851f262d859a3352475c62630e2c16a21def"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--7c53fa33-4a58-441e-9176-61ed572f4843",
+            "hashes": {
+                "SHA-256": "0e416e3cc1673d8fc3e7b2469e491c005152b9328515ea9bbd7cf96f1d23a99f"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--8a9dd465-29f3-4d5e-be8f-e7da6a3a9ffb",
+            "hashes": {
+                "SHA-256": "e615ea30dd37644526060689544c1a1d263b6bb77fe3084aa7883669c1fde12f"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--cb3edb14-4563-4944-b15c-68a0d6bb0a2b",
+            "hashes": {
+                "SHA-256": "9a48357c06758217b3a99cdf4ab83263c04bdea98c347dd14b254cab6c81b13a"
+            }
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f1563e0d-e289-4203-9f27-b0c2a132bf67",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--26472d90-211c-472f-b380-077d018d7e5e",
+            "target_ref": "malware--3227e4a9-9415-4138-84b0-4f0bd5aaec1c",
+            "description": "Lazarus Group uses NineRAT for C2 communications."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a8605a24-35ac-4b8a-b762-e32f0f2fe7b2",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--26472d90-211c-472f-b380-077d018d7e5e",
+            "target_ref": "malware--fc3a7c4e-ad8c-489b-9d08-b67639e2376b",
+            "description": "Lazarus Group uses DLRAT for malware deployment and command execution."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bd492aa2-9101-42df-8f7f-7181a2155892",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--26472d90-211c-472f-b380-077d018d7e5e",
+            "target_ref": "malware--9eecb95d-1226-49d7-8a46-d603306c7bd0",
+            "description": "Lazarus Group uses BottomLoader to download additional payloads."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9cb2a6f1-a29f-43b9-8097-001f321f0b31",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--26472d90-211c-472f-b380-077d018d7e5e",
+            "target_ref": "attack-pattern--bf1f00ca-c714-4c30-bd33-5516e1fd6e21",
+            "description": "Lazarus Group exploits CVE-2021-44228 for initial access."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b564a46c-aad2-4cee-b147-d11c0ccec433",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--26472d90-211c-472f-b380-077d018d7e5e",
+            "target_ref": "malware--408d32ff-115d-4b26-b254-cfac16c14d1a",
+            "description": "Lazarus Group uses HazyLoad to establish persistent access."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b19d3e32-e845-45ab-8aeb-13d2159518b2",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a872ca5f-cb2b-4be2-b868-55a5fcaeeb65",
+            "target_ref": "malware--3227e4a9-9415-4138-84b0-4f0bd5aaec1c",
+            "description": "Operation Blacksmith employs NineRAT."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--732bcc9c-d7d3-49e2-a41a-381e65c36d68",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a872ca5f-cb2b-4be2-b868-55a5fcaeeb65",
+            "target_ref": "malware--fc3a7c4e-ad8c-489b-9d08-b67639e2376b",
+            "description": "Operation Blacksmith employs DLRAT."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6eaf3ae4-deb1-4d3e-a4d8-d1e971f1bcd2",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a872ca5f-cb2b-4be2-b868-55a5fcaeeb65",
+            "target_ref": "malware--9eecb95d-1226-49d7-8a46-d603306c7bd0",
+            "description": "Operation Blacksmith employs BottomLoader."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--45a72326-1a65-45d9-bb6c-84632976144e",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a872ca5f-cb2b-4be2-b868-55a5fcaeeb65",
+            "target_ref": "attack-pattern--bf1f00ca-c714-4c30-bd33-5516e1fd6e21",
+            "description": "Operation Blacksmith exploits CVE-2021-44228."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--38c233ae-038b-4887-9e85-f1563539efd0",
+            "relationship_type": "uses",
+            "source_ref": "campaign--a872ca5f-cb2b-4be2-b868-55a5fcaeeb65",
+            "target_ref": "malware--408d32ff-115d-4b26-b254-cfac16c14d1a",
+            "description": "Operation Blacksmith employs HazyLoad."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--08081ac3-6c44-439a-9351-781b7e308996",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--a872ca5f-cb2b-4be2-b868-55a5fcaeeb65",
+            "target_ref": "intrusion-set--26472d90-211c-472f-b380-077d018d7e5e",
+            "description": "Operation Blacksmith is attributed to the Lazarus Group."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c184a0fc-d033-44d7-92e1-a1e620063c10",
+            "relationship_type": "uses",
+            "source_ref": "malware--3227e4a9-9415-4138-84b0-4f0bd5aaec1c",
+            "target_ref": "domain-name--e4ea0d83-230f-4664-a131-f2946b12ea1a",
+            "description": "NineRAT uses the domain for command and control."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0211dad3-461f-4acb-8e25-2220fc571e3c",
+            "relationship_type": "uses",
+            "source_ref": "malware--3227e4a9-9415-4138-84b0-4f0bd5aaec1c",
+            "target_ref": "domain-name--bc1b8cce-d4da-40d0-909a-24712e922ae8",
+            "description": "NineRAT uses the domain for command and control."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--13d2d439-39cc-431b-a1a3-c4e3481a22ab",
+            "relationship_type": "uses",
+            "source_ref": "malware--3227e4a9-9415-4138-84b0-4f0bd5aaec1c",
+            "target_ref": "url--3993c4d7-e4d4-4c14-9196-df3986ea6cf1",
+            "description": "NineRAT uses the URL for command and control."
+        }
+    ]
+}
