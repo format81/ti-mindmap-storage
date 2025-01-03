@@ -1,0 +1,120 @@
+{
+    "type": "bundle",
+    "id": "bundle--8ed664ae-1478-43e5-ac07-598bd8866104",
+    "objects": [
+        {
+            "type": "malware",
+            "id": "malware--3f681597-a0f6-4d80-a57a-0f0fe3968a2c",
+            "name": "Purple AI",
+            "description": "Your AI security analyst. Detect earlier, respond faster, and stay ahead of attacks.",
+            "labels": [
+                "AI-security-analyst"
+            ],
+            "created": "2024-12-18T00:00:00.000Z",
+            "is_family": "false"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--086bd6f6-5375-4a2a-b100-fbb0a9378791",
+            "value": "sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--82a61a1f-32b3-4f37-bfe9-191165de633c",
+            "value": "https://www.sentinelone.com/blog/"
+        },
+        {
+            "type": "url",
+            "id": "url--86df1b06-e3ce-4df3-b68b-e9d324586dca",
+            "value": "https://www.sentinelone.com/blog/2024/12/"
+        },
+        {
+            "type": "url",
+            "id": "url--fb3d501b-e537-4991-94c5-1822fbf2a676",
+            "value": "https://www.sentinelone.com/wp-content/uploads/pdf-gen/1734542358/autonomous-soc-is-a-journey-not-a-destination-introducing-the-autonomous-soc-maturity-model.pdf"
+        },
+        {
+            "type": "url",
+            "id": "url--977fe6fb-e40e-48a6-a81f-2dc5caac76f9",
+            "value": "https://jp.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--fe757c8b-f388-49aa-97fd-8ab354da8364",
+            "value": "https://de.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--ab176cef-d804-4ebd-9082-31c7eb377635",
+            "value": "https://es.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--09d7d3d9-f4b3-4e84-b20d-5578fed8176e",
+            "value": "https://fr.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--df71b4e0-933c-4bf5-9656-51b3964e72d7",
+            "value": "https://it.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--ef236949-bc85-4db4-b9e9-8a1e60507205",
+            "value": "https://nl.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--edc28df4-4219-41df-89fd-de78ee7f27ee",
+            "value": "https://kr.sentinelone.com"
+        },
+        {
+            "type": "url",
+            "id": "url--2e5d02c2-99c7-4ae4-b89b-dd22ddaac93e",
+            "value": "https://www.sentinelone.com/labs"
+        },
+        {
+            "type": "url",
+            "id": "url--de7601ef-80e8-420d-832d-d98d718142ae",
+            "value": "https://www.sentinelone.com/request-demo/"
+        },
+        {
+            "type": "url",
+            "id": "url--a879aa7a-dd9a-4e6e-a7ae-5872d5e62358",
+            "value": "https://www.sentinelone.com/company/"
+        },
+        {
+            "type": "url",
+            "id": "url--e29d77f2-cd12-4055-ba27-11803d936025",
+            "value": "https://www.sentinelone.com/contact/"
+        },
+        {
+            "type": "url",
+            "id": "url--b837fa7c-958f-414a-9d36-4e00ff9a5716",
+            "value": "https://www.sentinelone.com/platform/"
+        },
+        {
+            "type": "url",
+            "id": "url--0d91e03c-c666-44d8-9f17-56ab4d034b03",
+            "value": "https://www.sentinelone.com/blog/2024/12/autonomous-soc-is-a-journey-not-a-destination-introducing-the-autonomous-soc-maturity-model/"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0c28fbcd-ab08-4190-9604-7af9a1f0b718",
+            "relationship_type": "uses",
+            "source_ref": "malware--3f681597-a0f6-4d80-a57a-0f0fe3968a2c",
+            "target_ref": "domain-name--086bd6f6-5375-4a2a-b100-fbb0a9378791",
+            "created": "2024-12-18T00:00:00.000Z",
+            "modified": "2024-12-18T00:00:00.000Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fedf5576-f457-4c3c-af4f-548b36f69a51",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--3f681597-a0f6-4d80-a57a-0f0fe3968a2c",
+            "target_ref": "url--2e5d02c2-99c7-4ae4-b89b-dd22ddaac93e",
+            "created": "2024-12-18T00:00:00.000Z",
+            "modified": "2024-12-18T00:00:00.000Z"
+        }
+    ]
+}
