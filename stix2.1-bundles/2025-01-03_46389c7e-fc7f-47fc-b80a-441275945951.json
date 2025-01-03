@@ -1,0 +1,436 @@
+{
+    "type": "bundle",
+    "id": "bundle--58859cd7-b1d6-47c4-b4bc-dd68c6cb0ed3",
+    "objects": [
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--f91b764f-7716-487a-882a-bf994deec711",
+            "created": "2024-12-13T00:00:00Z",
+            "description": "Zero-day vulnerability in Cleo Software allowing unauthenticated users to import and execute arbitrary Bash or PowerShell commands via Autorun directory in Cleo Harmony, VLTrader, and LexiCom (before 5.8.0.24).",
+            "labels": [
+                "zero-day",
+                "remote-code-execution",
+                "unauthenticated"
+            ],
+            "name": "CVE-2024-55956",
+            "external_references": [
+                {
+                    "source_name": "NVD",
+                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55956"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--a5d35f2a-48ad-4c65-94f6-978f2812d810",
+            "created": "2024-10-27T00:00:00Z",
+            "description": "Unrestricted file upload and download vulnerability in Cleo managed file transfer products leading to RCE, patched with version 5.8.0.21.",
+            "labels": [
+                "remote-code-execution"
+            ],
+            "name": "CVE-2024-50623",
+            "external_references": [
+                {
+                    "source_name": "NVD",
+                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-50623"
+                }
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6",
+            "created": "2024-12-13T00:00:00Z",
+            "name": "CL0P",
+            "description": "Threat actor group responsible for the exploitation of CVE-2024-55956, primarily engaged in data theft.",
+            "labels": [
+                "cyber-criminal",
+                "data-theft"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--9df35414-b02d-4bbd-8765-7fa7c4783205",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[url:value = '45.182.189.102/dpixel']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "cobalt-strike"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--54005282-1330-4eca-a62d-b80badcb46ac",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[file:hashes.'SHA-256' = '6705eea898ef1155417361fa71b1078b7aaab61e7597d2a080aa38df4ad87b1c']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "java-loader"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--41dd9dd5-2e52-4907-acd6-7fc3f8767d83",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[file:name = 'healthcheck.txt']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "autorun-file"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--9c01031b-8d4c-4766-87f2-cd3f663d558d",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[file:name = 'healthchecktemplate.txt']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "autorun-file"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--560b9c00-1a6b-469a-af56-142c5d7f5658",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[file:name = '60282967-dc91-40ef-a34c-38e992509c2c.xml']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "xml-file"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--1ab5af6f-a775-4ee5-af5e-37db87655b8a",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '45.182.189.102']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "cobalt-strike-server"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--f26095bf-33af-427a-8a56-1a0bb2056ad0",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '216.245.221.83']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--f66a247f-3ed9-49e6-bec8-a31305f9f8e1",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '92.51.2.221']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--ef734bd1-95f5-4878-a061-47cf56696818",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '67.220.94.173']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--5792629a-09a3-4cc0-a386-94fe8f9c7c9f",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '184.107.3.70']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--d7fa3ca7-bd78-4628-97c8-539806220201",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '186.162.118.133']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--e74755eb-5ba7-4fa9-a975-2577a36002e6",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '186.128.224.0']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--11755a0d-2924-4277-bbf6-e597284047e7",
+            "created": "2024-12-13T00:00:00Z",
+            "pattern_type": "stix",
+            "pattern": "[ipv4-addr:value = '186.136.204.137']",
+            "valid_from": "2024-12-13T00:00:00Z",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--65dfb912-fbd4-4092-b2c7-e8e0176b2076",
+            "name": "CVE-2024-55956",
+            "description": "Zero-day vulnerability in Cleo's managed file transfer platforms: Cleo Harmony, VLTrader, and LexiCom allowing unauthenticated users to import and execute arbitrary Bash or PowerShell commands by leveraging default settings of the Autorun directory.",
+            "external_references": [
+                {
+                    "source_name": "nvd",
+                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55956",
+                    "external_id": "CVE-2024-55956"
+                }
+            ]
+        },
+        {
+            "type": "software",
+            "id": "software--fec845f2-0e01-418f-81ff-e73bf88adb6b",
+            "name": "Cleo Harmony",
+            "version": "5.8.0.24"
+        },
+        {
+            "type": "software",
+            "id": "software--082a283a-abaf-4a1e-a279-b890f8912539",
+            "name": "VLTrader",
+            "version": "5.8.0.24"
+        },
+        {
+            "type": "software",
+            "id": "software--12f59b6c-b1dd-482e-a077-c13ead4f0ff3",
+            "name": "LexiCom",
+            "version": "5.8.0.24"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--e09c0838-91ca-4200-9ce9-21f1d97bfdda",
+            "value": "45.182.189.102"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--6df370f0-2b3e-42bc-92e8-f1fb679122d6",
+            "value": "216.245.221.83"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--c51c6654-d790-4c2d-b87d-8aa8cecb20b2",
+            "value": "92.51.2.221"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--799e5384-ae7f-4373-922b-ac7a90284fb6",
+            "value": "67.220.94.173"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--449f4ab9-df56-47c3-9111-e677a3eab97e",
+            "value": "184.107.3.70"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--fcc25bed-fbd3-4918-ae98-282074d3d80b",
+            "value": "186.162.118.133"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--5e5db6ea-1a77-4825-9a25-14a6579f1bd3",
+            "value": "186.128.224.0"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--5f60b262-9524-4d0e-ad35-24561291e955",
+            "value": "186.136.204.137"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--f2e39bd5-ec9d-41e9-9d0a-b06ca2965428",
+            "value": "58.180.61.138"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--ab7637f4-06d1-47b6-a8d6-feda0fe568b5",
+            "value": "45.140.145.68"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--bb0b8172-82e5-4c7c-8f05-52fdea4562f9",
+            "value": "6.149.249.226"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--16b86047-27ad-43dd-bfb8-d653ab5f972a",
+            "value": "192.119.99.42"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--956af73a-f8b9-4233-97c4-5f9ab69e4924",
+            "value": "176.123.4.226"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--8cb69882-1327-4ee3-93c6-4c2c7355fb20",
+            "value": "80.82.78.42"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--47e078cc-76d0-471f-b6d3-5e8c5e49ae2a",
+            "value": "176.125.101.115"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--838424d1-c7e4-4280-bba9-ac6ff3239cf7",
+            "value": "45.182.189.226"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--b18f24af-14c6-4f6e-83a9-c5fd780c9315",
+            "value": "185.162.128.100"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--fd9c2de7-e036-4f37-b8b8-c3a45415a51b",
+            "value": "185.162.128.219"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--f113c62a-e4d0-4e39-90f3-9c66f73d106e",
+            "value": "6.184.168.25"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--5cf4dc90-1b1f-437c-9ce4-efc25a9fb663",
+            "value": "181.214.147.164"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--614e98bd-db82-43e6-b3f2-a42783735526",
+            "value": "209.127.121.38"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--b742d827-76b3-4d55-a51f-fde8af040a9e",
+            "value": "89.248.172.139"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--366d507c-21ab-4811-83ab-892cd57cfdc6",
+            "value": "5.149.228.109"
+        },
+        {
+            "type": "ip-address",
+            "id": "ip-address--85ac4ee5-e47a-4958-97ce-30704913cc05",
+            "value": "176.123.4.146"
+        },
+        {
+            "type": "file",
+            "id": "file--a0be84cf-e24c-475c-aaaf-6bbe74974073",
+            "name": "healthcheck.txt"
+        },
+        {
+            "type": "file",
+            "id": "file--b7ba99d4-2c84-42ae-a24a-6a926b084001",
+            "name": "healthchecktemplate.txt"
+        },
+        {
+            "type": "file",
+            "id": "file--b0c2dfd3-c891-48f7-92dc-77451c8ce86d",
+            "name": "60282967-dc91-40ef-a34c-38e992509c2c.xml"
+        },
+        {
+            "type": "file",
+            "id": "file--5d7a8557-51f9-4d5a-b8af-e483564bdcbd",
+            "hashes": {
+                "SHA-256": "6705eea898ef1155417361fa71b1078b7aaab61e7597d2a080aa38df4ad87b1c"
+            }
+        },
+        {
+            "type": "url",
+            "id": "url--3d3ccd76-c6c7-4d05-8cc1-6de09e1181f5",
+            "value": "http://45.182.189.102/dpixel"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c23d7c89-36b7-4137-bd1d-17c8aefe5465",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "vulnerability--f91b764f-7716-487a-882a-bf994deec711",
+            "target_ref": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6549ed70-d0da-4de3-aab6-1ed058a59c97",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6",
+            "target_ref": "indicator--9df35414-b02d-4bbd-8765-7fa7c4783205"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c1c55e3d-1ea3-43ac-993a-fd5aa020f911",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6",
+            "target_ref": "indicator--54005282-1330-4eca-a62d-b80badcb46ac"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f4970f6e-aeef-455f-bfd7-05439bdd9cfc",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6",
+            "target_ref": "indicator--41dd9dd5-2e52-4907-acd6-7fc3f8767d83"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7b77b2ee-b475-4fe5-8b24-43ad8e289ca5",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6",
+            "target_ref": "indicator--9c01031b-8d4c-4766-87f2-cd3f663d558d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a8052971-5de3-41a1-b455-86e896b39116",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6",
+            "target_ref": "indicator--560b9c00-1a6b-469a-af56-142c5d7f5658"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d3c1afc9-a993-48b4-88c4-5097a6f7524d",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--816b6541-7a42-4da9-af2a-6cd3ecbe33c6",
+            "target_ref": "indicator--1ab5af6f-a775-4ee5-af5e-37db87655b8a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3c9293a4-181c-4adc-9d30-e398be48aeec",
+            "created": "2024-12-13T00:00:00Z",
+            "relationship_type": "mitigates",
+            "source_ref": "vulnerability--f91b764f-7716-487a-882a-bf994deec711",
+            "target_ref": "vulnerability--a5d35f2a-48ad-4c65-94f6-978f2812d810"
+        }
+    ]
+}
