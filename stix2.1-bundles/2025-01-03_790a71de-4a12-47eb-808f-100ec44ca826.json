@@ -1,0 +1,228 @@
+{
+    "type": "bundle",
+    "id": "bundle--beb84180-13e4-4e77-9bf4-5033c4f5d245",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--3008a749-2dab-47b6-a7ef-5a52c0d48273",
+            "name": "Howling Scorpius",
+            "description": "Howling Scorpius is the entity behind the Akira ransomware, operating as a Ransomware-as-a-Service (RaaS) group. They employ a double extortion strategy, primarily targeting small to medium-sized businesses across North America, Europe, and Australia.",
+            "threat_actor_types": [
+                "group"
+            ],
+            "aliases": [
+                "Akira Ransomware"
+            ],
+            "roles": [
+                "ransomware group"
+            ],
+            "goals": [
+                "Financial gain through ransom payments"
+            ],
+            "sophistication": "advanced",
+            "resource_level": "high",
+            "primary_motivation": "financial",
+            "labels": [
+                "cybercrime",
+                "ransomware",
+                "RaaS",
+                "extortion"
+            ],
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--ff89d13e-adfc-4929-a6a5-06915e3f9fb9",
+            "name": "Akira Ransomware",
+            "description": "Akira is a ransomware variant operated by the Howling Scorpius group, targeting Windows and Linux systems with a focus on double extortion tactics.",
+            "labels": [
+                "ransomware",
+                "extortion",
+                "malware"
+            ],
+            "is_family": "true",
+            "operating_system_refs": [
+                "windows",
+                "linux",
+                "esxi"
+            ],
+            "first_seen": "2023-03-01T00:00:00Z",
+            "last_seen": "2024-11-01T00:00:00Z",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--c0574bd1-0212-493d-8e2c-081c80c07cc1",
+            "name": "CVE-2020-3259",
+            "description": "CVE-2020-3259 is a vulnerability in Cisco products exploited by various threat actors, including Howling Scorpius, to gain unauthorized access.",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--d13983a8-fa2b-4890-afb8-8d7247bebfda",
+            "name": "CVE-2023-20269",
+            "description": "CVE-2023-20269 is a vulnerability in Cisco products that has been exploited by threat actors, including Howling Scorpius, as an initial access vector.",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--d5aff3c7-122e-409e-acee-60b61d38fe85",
+            "name": "Megazord",
+            "description": "Megazord is a ransomware strain associated with Howling Scorpius, featuring characteristics similar to Akira but written in Rust.",
+            "labels": [
+                "ransomware",
+                "megazord",
+                "rust"
+            ],
+            "is_family": "true",
+            "operating_system_refs": [
+                "windows"
+            ],
+            "first_seen": "2023-08-01T00:00:00Z",
+            "last_seen": "2024-11-01T00:00:00Z",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "url",
+            "id": "url--c9481d5b-8a8f-4164-891a-43ceaa5c4950",
+            "value": "https://unit42.paloaltonetworks.com/threat-assessment-howling-scorpius-akira-ransomware/"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--175810b0-9a6e-4335-bf55-2de35570c493",
+            "value": "unit42.paloaltonetworks.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--5987b9e0-af71-42da-bcb4-542eb00eb19b",
+            "value": "cortex.paloaltonetworks.com"
+        },
+        {
+            "type": "url",
+            "id": "url--122899f7-3683-4afe-9f3e-d6a73053623f",
+            "value": "https://www.paloaltonetworks.com/cortex/cortex-xdr"
+        },
+        {
+            "type": "url",
+            "id": "url--49f3e642-1a7a-4adf-a4ff-eef807a27fe0",
+            "value": "https://docs-cortex.paloaltonetworks.com/p/XSIAM"
+        },
+        {
+            "type": "url",
+            "id": "url--be8533e2-94c2-4eee-94aa-867504386dc1",
+            "value": "https://docs.paloaltonetworks.com/cdss"
+        },
+        {
+            "type": "url",
+            "id": "url--652b69f3-9f84-46cf-bb67-37a5d0270a60",
+            "value": "https://docs.paloaltonetworks.com/ngfw"
+        },
+        {
+            "type": "software",
+            "id": "software--404f7243-4038-4305-9de1-86e195d8d9fa",
+            "name": "WinRAR",
+            "description": "A standalone software utility for compressing and extracting file archives. It is often misused by threat actors for data exfiltration."
+        },
+        {
+            "type": "software",
+            "id": "software--7f407706-274f-424a-b5f1-4cbbb5e3ef0e",
+            "name": "FileZilla",
+            "description": "An FTP client used for transferring files over the internet. It can be misused by threat actors for unauthorized data transmission."
+        },
+        {
+            "type": "software",
+            "id": "software--ae88dbce-c479-489e-ac21-557d7da29870",
+            "name": "Cortex XDR",
+            "description": "Security service by Palo Alto Networks designed to prevent, detect, and respond to cybersecurity threats."
+        },
+        {
+            "type": "software",
+            "id": "software--81ee8baa-d594-4ff0-bd81-f867522b92bd",
+            "name": "PsExec",
+            "description": "A command-line tool that security professionals use to execute commands on remote systems. It is sometimes exploited for lateral movement by threat actors."
+        },
+        {
+            "type": "software",
+            "id": "software--12b0a29e-e40d-450e-abef-3c2b9e559c18",
+            "name": "RClone",
+            "description": "An open-source command line program to manage files on cloud storage. It can be used by attackers to exfiltrate data."
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--43520b15-781a-46d1-8ea7-a89f91d4e184",
+            "value": "softperfect.com"
+        },
+        {
+            "type": "software",
+            "id": "software--68e0411c-78c0-4d5a-9943-33f922c5a512",
+            "name": "Mimikatz",
+            "description": "A tool often used for obtaining authentication credentials in memory on Windows systems. Originally developed for legitimate security testing."
+        },
+        {
+            "type": "software",
+            "id": "software--f4bbac16-5e30-4095-b50d-3c142c13174e",
+            "name": "LaZagne",
+            "description": "A tool used to retrieve passwords stored on a local computer. Frequently leveraged in cyber attacks for credential dumping."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--35d849b0-90b1-4893-8afe-a90e6f8b2be0",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--3008a749-2dab-47b6-a7ef-5a52c0d48273",
+            "target_ref": "malware--ff89d13e-adfc-4929-a6a5-06915e3f9fb9",
+            "confidence": 75,
+            "description": "Howling Scorpius uses Akira Ransomware.",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2bd12d12-9875-4075-a1f4-d229e30144f7",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--3008a749-2dab-47b6-a7ef-5a52c0d48273",
+            "target_ref": "vulnerability--c0574bd1-0212-493d-8e2c-081c80c07cc1",
+            "confidence": 75,
+            "description": "Howling Scorpius exploits CVE-2020-3259.",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--14941c3f-1660-45b3-86eb-e321c3cb7a63",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--3008a749-2dab-47b6-a7ef-5a52c0d48273",
+            "target_ref": "vulnerability--d13983a8-fa2b-4890-afb8-8d7247bebfda",
+            "confidence": 75,
+            "description": "Howling Scorpius exploits CVE-2023-20269.",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2a3caaaa-6568-4538-a585-e6f57c883bd3",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--3008a749-2dab-47b6-a7ef-5a52c0d48273",
+            "target_ref": "malware--d5aff3c7-122e-409e-acee-60b61d38fe85",
+            "confidence": 75,
+            "description": "Howling Scorpius uses Megazord ransomware.",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--560b61b2-3d39-4a6b-a9c1-106faa089f9d",
+            "relationship_type": "related-to",
+            "source_ref": "malware--ff89d13e-adfc-4929-a6a5-06915e3f9fb9",
+            "target_ref": "malware--d5aff3c7-122e-409e-acee-60b61d38fe85",
+            "confidence": 75,
+            "description": "Akira Ransomware is related to Megazord by shared operational patterns.",
+            "created": "2024-12-02T00:00:00Z",
+            "modified": "2024-12-02T00:00:00Z"
+        }
+    ]
+}
