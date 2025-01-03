@@ -1,0 +1,114 @@
+{
+    "type": "bundle",
+    "id": "bundle--dbbfe670-c848-4cd8-bd3b-35c68bb4a74c",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--a129f92b-d65b-4469-acf4-a4f238a72bd7",
+            "name": "Targeting ESXi Server with Ransomware",
+            "description": "Akira ransomware targets ESXi bare metal hypervisor servers with its Rust version, leveraging control flow and unique features.",
+            "created": "2024-12-03T00:00:00Z",
+            "external_references": [
+                {
+                    "source_name": "Check Point Research",
+                    "url": "https://research.checkpoint.com/2024/inside-akira-ransomwares-rust-experiment/"
+                }
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--5e35df81-4db4-46f7-b5cf-e116b2eb1ef5",
+            "name": "Akira v2",
+            "is_family": "false",
+            "labels": [
+                "ransomware",
+                "cross-platform",
+                "Rust"
+            ],
+            "description": "A cross-platform variant of Akira ransomware written in Rust, capable of targeting ESXi bare metal hypervisor servers.",
+            "created": "2024-12-03T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--e37cff4d-84c9-4d72-84a6-ba8c3c4b4ee5",
+            "name": "Akira Ransomware",
+            "is_family": "true",
+            "labels": [
+                "ransomware",
+                "Rust"
+            ],
+            "description": "A ransomware family utilizing Rust language for its latest iterations, evolving with cross-platform capabilities.",
+            "created": "2024-12-03T00:00:00Z"
+        },
+        {
+            "type": "tool",
+            "id": "tool--f4608bc3-cc59-4cc5-a04f-167abd8bc9c6",
+            "name": "indicatif",
+            "description": "A Rust library for indicating progress in command line applications to users, used by Akira ransomware for user feedback.",
+            "labels": [
+                "Rust",
+                "CLI",
+                "progress indicator"
+            ],
+            "created": "2024-12-03T00:00:00Z"
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--ff2d9fa8-2c81-4e04-b8eb-9e1f65f8ffda",
+            "name": "Akira Affiliates",
+            "description": "Affiliates involved in the distribution and operation of the Akira ransomware-as-a-service (RaaS).",
+            "labels": [
+                "criminal",
+                "ransomware operator",
+                "RaaS"
+            ],
+            "created": "2024-12-03T00:00:00Z"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--27437d1b-b516-4159-bd9a-a5ed8786f421",
+            "value": "checkpoint.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--8cf310e2-206a-44d4-ba97-f94ebb78d86b",
+            "value": "research.checkpoint.com"
+        },
+        {
+            "type": "url",
+            "id": "url--76642b8c-4a99-494c-a4b0-eb5e4759fb68",
+            "value": "https://research.checkpoint.com/2024/inside-akira-ransomwares-rust-experiment/"
+        },
+        {
+            "type": "file",
+            "id": "file--ead35e2a-9c8f-4d50-8752-70924c953e67",
+            "hashes": {
+                "SHA-256": "3298d203c2acb68c474e5fdad8379181890b4403d6491c523c13730129be3f75"
+            }
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f9af2d76-b4bb-4275-b8e5-b2a1cc268c91",
+            "relationship_type": "uses",
+            "created": "2024-12-03T00:00:00Z",
+            "source_ref": "malware--5e35df81-4db4-46f7-b5cf-e116b2eb1ef5",
+            "target_ref": "tool--f4608bc3-cc59-4cc5-a04f-167abd8bc9c6"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--eb75152d-511c-476d-b42a-a1b33c463e5a",
+            "relationship_type": "targets",
+            "created": "2024-12-03T00:00:00Z",
+            "source_ref": "malware--5e35df81-4db4-46f7-b5cf-e116b2eb1ef5",
+            "target_ref": "attack-pattern--a129f92b-d65b-4469-acf4-a4f238a72bd7"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8518e6ca-6497-4573-ad1b-93410c13eae4",
+            "relationship_type": "authored-by",
+            "created": "2024-12-03T00:00:00Z",
+            "source_ref": "malware--5e35df81-4db4-46f7-b5cf-e116b2eb1ef5",
+            "target_ref": "threat-actor--ff2d9fa8-2c81-4e04-b8eb-9e1f65f8ffda"
+        }
+    ]
+}
