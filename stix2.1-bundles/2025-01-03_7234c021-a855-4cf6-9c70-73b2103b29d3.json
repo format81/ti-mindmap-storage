@@ -1,0 +1,284 @@
+{
+    "type": "bundle",
+    "id": "bundle--92d965c0-fd70-485b-a067-c735a03a40e9",
+    "objects": [
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--9fdbb7be-760d-44a6-b819-90dad738cdeb",
+            "created": "2024-12-13T00:00:00Z",
+            "modified": "2024-12-13T00:00:00Z",
+            "name": "CVE-2024-55956",
+            "description": "CVE-2024-55956 allows unauthenticated users to import and execute arbitrary Bash or PowerShell commands on host systems by leveraging default settings of the Autorun directory.",
+            "labels": [
+                "zero-day",
+                "RCE"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Cleo",
+                    "url": "https://support.cleo.com/hc/en-us/articles/28408134019735-Cleo-Product-Security-Update-CVE-2024-55956"
+                },
+                {
+                    "source_name": "NVD",
+                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55956"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--d2934fb8-4635-4615-af4a-1d2d8f29e2d4",
+            "created": "2024-10-27T00:00:00Z",
+            "modified": "2024-10-27T00:00:00Z",
+            "name": "CVE-2024-50623",
+            "description": "CVE-2024-50623 could allow unrestricted upload and download that could lead to remote code execution.",
+            "labels": [
+                "RCE"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Cleo",
+                    "url": "https://support.cleo.com/hc/en-us/articles/27140294267799-Cleo-Product-Security-Advisory-CVE-2024-50623"
+                },
+                {
+                    "source_name": "NVD",
+                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-50623"
+                }
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--15ab05a6-d23b-4fed-ba58-e4f66f657389",
+            "created": "2024-12-13T00:00:00Z",
+            "modified": "2024-12-13T00:00:00Z",
+            "name": "Cobalt Strike",
+            "is_family": "false",
+            "labels": [
+                "c2"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--2e2d7ec7-40e4-4e74-a90f-7b4537ade194",
+            "created": "2024-12-13T00:00:00Z",
+            "modified": "2024-12-13T00:00:00Z",
+            "name": "Cobalt Strike Command and Control IPs",
+            "labels": [
+                "c2"
+            ],
+            "pattern": "[ipv4-addr:value = '45.182.189.102' OR ipv4-addr:value = '216.245.221.83' OR ipv4-addr:value = '92.51.2.221' OR ipv4-addr:value = '67.220.94.173' OR ipv4-addr:value = '184.107.3.70' OR ipv4-addr:value = '186.162.118.133' OR ipv4-addr:value = '186.128.224.0' OR ipv4-addr:value = '186.136.204.137' OR ipv4-addr:value = '58.180.61.138' OR ipv4-addr:value = '45.140.145.68' OR ipv4-addr:value = '6.149.249.226' OR ipv4-addr:value = '192.119.99.42' OR ipv4-addr:value = '176.123.4.226' OR ipv4-addr:value = '80.82.78.42' OR ipv4-addr:value = '176.125.101.115' OR ipv4-addr:value = '45.182.189.226' OR ipv4-addr:value = '185.162.128.100' OR ipv4-addr:value = '185.162.128.219' OR ipv4-addr:value = '6.184.168.25' OR ipv4-addr:value = '181.214.147.164' OR ipv4-addr:value = '209.127.121.38' OR ipv4-addr:value = '89.248.172.139' OR ipv4-addr:value = '5.149.228.109' OR ipv4-addr:value = '176.123.4.146' OR ipv4-addr:value = '45.182.189.102' OR ipv4-addr:value = '176.123.5.126']",
+            "pattern_type": "stix",
+            "valid_from": "2024-12-13T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--bd822363-e275-4008-ada2-96090304e787",
+            "created": "2024-12-13T00:00:00Z",
+            "modified": "2024-12-13T00:00:00Z",
+            "name": "Java Loader",
+            "is_family": "false",
+            "labels": [
+                "loader"
+            ],
+            "hashes": {
+                "SHA-256": "6705eea898ef1155417361fa71b1078b7aaab61e7597d2a080aa38df4ad87b1c"
+            }
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--563d45aa-22bd-4110-853b-44217ff96593",
+            "created": "2024-12-13T00:00:00Z",
+            "modified": "2024-12-13T00:00:00Z",
+            "name": "CL0P",
+            "description": "The threat actor group CL0P claimed responsibility for exploiting the CVE-2024-55956 vulnerability with the goal of data theft.",
+            "labels": [
+                "cybercrime"
+            ]
+        },
+        {
+            "type": "url",
+            "id": "url--4a64ed31-0a89-4cad-9bb8-95a409831fb9",
+            "value": "https://nvd.nist.gov/vuln/detail/CVE-2024-55956"
+        },
+        {
+            "type": "url",
+            "id": "url--32c4101d-bb29-4820-a81f-7831d0e087cf",
+            "value": "https://support.cleo.com/hc/en-us/articles/28408134019735-Cleo-Product-Security-Update-CVE-2024-55956"
+        },
+        {
+            "type": "url",
+            "id": "url--e4f4bac0-6fd0-4a2e-8d98-2a11fb31f67f",
+            "value": "https://nvd.nist.gov/vuln/detail/CVE-2024-50623"
+        },
+        {
+            "type": "url",
+            "id": "url--83ea9386-c2df-4ca7-a216-3a54ce174293",
+            "value": "https://support.cleo.com/hc/en-us/articles/27140294267799-Cleo-Product-Security-Advisory-CVE-2024-50623"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--f65b5389-f10d-4c9c-baed-4d7c46ef5a31",
+            "value": "45.182.189.102"
+        },
+        {
+            "type": "file",
+            "id": "file--454cf4d8-8619-400c-82fd-3385b00114e4",
+            "hashes": {
+                "SHA-256": "6705eea898ef1155417361fa71b1078b7aaab61e7597d2a080aa38df4ad87b1c"
+            },
+            "name": "Java Loader"
+        },
+        {
+            "type": "file",
+            "id": "file--60e40480-43bb-4af4-bef1-5f6562349611",
+            "name": "healthcheck.txt"
+        },
+        {
+            "type": "file",
+            "id": "file--65120ab7-e86c-47f8-8c1f-60d1129e83fa",
+            "name": "healthchecktemplate.txt"
+        },
+        {
+            "type": "file",
+            "id": "file--0bb8aeb0-e36f-40f5-952e-9c184be71725",
+            "name": "60282967-dc91-40ef-a34c-38e992509c2c.xml"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--ed0f5073-55f8-438e-9469-a28488752d67",
+            "value": "216.245.221.83"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--07742897-60d4-457e-8255-242fe30b7818",
+            "value": "92.51.2.221"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--3078b5ab-6569-4747-9113-b096fe49ed8a",
+            "value": "67.220.94.173"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--eda6264b-85c2-478e-b06c-7ecb428a157d",
+            "value": "184.107.3.70"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2364cc99-fe65-42ec-8e35-9df70a712297",
+            "value": "186.162.118.133"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--c9121d07-56f9-4bca-b970-9e921cbe8278",
+            "value": "186.128.224.0"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--52149471-294e-4182-b6a7-e602c6b87dff",
+            "value": "186.136.204.137"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--75b8cf5c-eccd-4af8-9330-f47535e17961",
+            "value": "58.180.61.138"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--1250d9f8-8420-4e3d-891b-4dc407fff7ff",
+            "value": "45.140.145.68"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--f3bd4a32-8a62-472d-a363-48a10458e60a",
+            "value": "6.149.249.226"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--e98bcbb3-e41c-4f9e-ab57-940a19c2fed0",
+            "value": "192.119.99.42"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--f0aba113-707a-4659-b9e5-2074c25f4e42",
+            "value": "176.123.4.226"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--75e1a980-5467-442e-823c-6e483ad6e0e2",
+            "value": "80.82.78.42"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--99c92721-d63c-43b6-9a45-8d4dd50cd928",
+            "value": "176.125.101.115"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--aa3e4bf5-44d7-45dc-b742-9cc40c470f73",
+            "value": "45.182.189.226"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--acba648c-41b9-45bf-9a46-562593c55884",
+            "value": "185.162.128.100"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--d7d52a79-03cd-4b2f-9c2b-a02b7486e318",
+            "value": "185.162.128.219"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--c422444f-cb22-4b47-acb4-9ccab22db2b9",
+            "value": "6.184.168.25"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--14a3cbfe-3314-41b8-ae67-62b7fb1ecccf",
+            "value": "181.214.147.164"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--7d23c0fd-f203-4b63-b48a-a001a3450798",
+            "value": "209.127.121.38"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--c43e8572-ce85-40c7-84e2-c76bb7abfaa5",
+            "value": "89.248.172.139"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--a08e1d22-e091-44a8-8668-ebdd119314e5",
+            "value": "5.149.228.109"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--aceb9eca-0223-4992-b49f-df79f003c2c2",
+            "value": "176.123.4.146"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--7661f150-1c10-4785-b542-64ef217507fa",
+            "value": "176.123.5.126"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--604ccb04-0ee5-456e-8667-bf303f12a7c4",
+            "created": "2024-12-13T00:00:00Z",
+            "modified": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--15ab05a6-d23b-4fed-ba58-e4f66f657389",
+            "target_ref": "indicator--2e2d7ec7-40e4-4e74-a90f-7b4537ade194"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--abaed450-25b7-4e70-b44a-d6f382324a5d",
+            "created": "2024-12-13T00:00:00Z",
+            "modified": "2024-12-13T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--563d45aa-22bd-4110-853b-44217ff96593",
+            "target_ref": "vulnerability--9fdbb7be-760d-44a6-b819-90dad738cdeb"
+        }
+    ]
+}
