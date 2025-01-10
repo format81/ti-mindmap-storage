@@ -1,0 +1,379 @@
+{
+    "type": "bundle",
+    "id": "bundle--9cba49c4-9d64-46e8-9629-d6226e40b311",
+    "objects": [
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--39ccb040-3a68-4cf9-acf8-9984a0790a59",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "CVE-2025-0282",
+            "description": "Unauthenticated stack-based buffer overflow in Ivanti Connect Secure VPN appliances, could result in unauthenticated remote code execution.",
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "url": "https://www.virustotal.com/gui/collection/vulnerability--cve-2025-0282"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--4655023e-06a3-48ed-8d3a-6741c212d235",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "CVE-2025-0283",
+            "description": "Vulnerability impacting Ivanti Connect Secure VPN appliances.",
+            "external_references": [
+                {
+                    "source_name": "VirusTotal",
+                    "url": "https://www.virustotal.com/gui/collection/vulnerability--cve-2025-0283"
+                }
+            ]
+        },
+        {
+            "type": "campaign",
+            "id": "campaign--515ba681-de9b-472e-9723-d97b8132f054",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "Zero-Day Exploitation of Ivanti Connect Secure",
+            "description": "Active exploitation of zero-day vulnerabilities impacting Ivanti Connect Secure VPN appliances."
+        },
+        {
+            "type": "malware",
+            "id": "malware--be67d45b-3d83-4261-a1bb-6db8eb3c34c9",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "DRYHOOK",
+            "is_family": "true",
+            "labels": [
+                "credential-theft"
+            ],
+            "description": "Previously unobserved malware family associated with compromised appliances, designed for credential theft."
+        },
+        {
+            "type": "malware",
+            "id": "malware--b57f52de-9e62-4e02-95b9-4adaf52b011b",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "PHASEJAM",
+            "is_family": "true",
+            "labels": [
+                "dropper",
+                "web shell"
+            ],
+            "description": "Previously unobserved malware family designed as a dropper and for inserting Perl-based web shells into appliances."
+        },
+        {
+            "type": "malware",
+            "id": "malware--8fd70fb4-ae3c-4bff-8280-0c93e4485997",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "SPAWNSNAIL",
+            "is_family": "false",
+            "labels": [
+                "ssh-backdoor"
+            ],
+            "description": "SSH backdoor component of the SPAWN ecosystem of malware."
+        },
+        {
+            "type": "malware",
+            "id": "malware--13002c3f-81f1-4e10-8093-18f1b96b39d6",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "SPAWNMOLE",
+            "is_family": "false",
+            "labels": [
+                "tunneler"
+            ],
+            "description": "Tunneler component of the SPAWN ecosystem of malware, used for malicious traffic filtering and tunneling."
+        },
+        {
+            "type": "malware",
+            "id": "malware--13e4c943-8b80-40c2-ab06-dc0b53483673",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "SPAWNANT",
+            "is_family": "false",
+            "labels": [
+                "installer"
+            ],
+            "description": "Installer component of the SPAWN ecosystem of malware, ensures the persistence of its components."
+        },
+        {
+            "type": "malware",
+            "id": "malware--572247c6-53cc-4bf1-b80e-828e4b8304d7",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "SPAWNSLOTH",
+            "is_family": "false",
+            "labels": [
+                "log-tampering-utility"
+            ],
+            "description": "Log tampering utility component of the SPAWN ecosystem of malware."
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--8b7642f3-b532-4755-b8fe-19eab9a4cfad",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "UNC5337",
+            "threat_actor_types": [
+                "apt"
+            ],
+            "labels": [
+                "china-nexus",
+                "espionage"
+            ],
+            "description": "China-nexus espionage cluster of activity involved in exploiting Ivanti Connect Secure VPN appliances."
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--9eb1d0fc-7356-4a71-a6ee-9c547e922665",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "UNC5221",
+            "threat_actor_types": [
+                "apt"
+            ],
+            "labels": [
+                "china-nexus",
+                "espionage"
+            ],
+            "description": "Suspected China-nexus espionage actor previously involved in exploiting Ivanti Connect Secure VPN and conducting espionage operations."
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--5ad55e03-5378-4a78-8b55-9fd26ed0a618",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "Ivanti Security Advisory for CVE-2025-0282 and CVE-2025-0283",
+            "description": "Ivanti has released patches for vulnerabilities CVE-2025-0282 and CVE-2025-0283. Customers are urged to secure their systems by following the security advisory.",
+            "external_references": [
+                {
+                    "source_name": "Ivanti",
+                    "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-Policy-Secure-ZTA-Gateways-CVE-2025-0282-CVE-2025-0283"
+                }
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--9294eb98-6065-494d-9621-de48e90b9bf1",
+            "value": "virustotal.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--c89cebc6-87d3-4459-a923-707af620326d",
+            "value": "forums.ivanti.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--6d4d9769-1541-4721-b72d-90febf1907f5",
+            "value": "cloud.google.com"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--14d4534a-7c2a-4d16-be40-3815964c1103",
+            "value": "<IP ADDRESS>"
+        },
+        {
+            "type": "file",
+            "id": "file--24112cda-9420-4fb7-8b41-0bbaa412138b",
+            "name": "/tmp/s",
+            "x_mitre_impact": "PHASEJAM Web Shell dropper"
+        },
+        {
+            "type": "file",
+            "id": "file--227f7a58-fffa-43bf-9ffa-351af150ef22",
+            "name": "/home/webserver/htdocs/dana-na/jam/getComponent.cgi",
+            "x_mitre_impact": "PHASEJAM Web Shell"
+        },
+        {
+            "type": "file",
+            "id": "file--f4ab3755-efe1-4189-b017-674b5ae6002d",
+            "name": "/home/webserver/htdocs/dana-na/auth/restAuth.cgi",
+            "x_mitre_impact": "PHASEJAM Web Shell"
+        },
+        {
+            "type": "file",
+            "id": "file--2de42909-0eaa-4776-adfa-feafaabccbf8",
+            "name": "/root/home/lib/libsshd.so",
+            "x_mitre_impact": "SPAWNSNAIL SSH backdoor"
+        },
+        {
+            "type": "file",
+            "id": "file--d1552810-f7e9-4c00-95b6-faec3f543fb3",
+            "name": "/root/home/lib/libsocks5.so",
+            "x_mitre_impact": "SPAWNMOLE Tunneler"
+        },
+        {
+            "type": "file",
+            "id": "file--f2becf3c-f586-46cf-b5cf-ba2faaebdd4a",
+            "name": "/root/lib/libupgrade.so",
+            "x_mitre_impact": "SPAWNANT Installer"
+        },
+        {
+            "type": "file",
+            "id": "file--691eb7db-af5a-4591-81f1-74c34fc56014",
+            "name": "/tmp/.liblogblock.so",
+            "x_mitre_impact": "SPAWNSLOTH Log tampering utility"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--b26e6248-259b-4f3c-8ae4-5b37bfc6ab52",
+            "value": "api-[redacted].duosecurity.com"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--e920e323-1704-456e-8058-0575ee18b323",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "exploits",
+            "source_ref": "malware--be67d45b-3d83-4261-a1bb-6db8eb3c34c9",
+            "target_ref": "vulnerability--39ccb040-3a68-4cf9-acf8-9984a0790a59"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ab89489b-2a0d-40f4-a1a1-1505c6fedcc9",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "exploits",
+            "source_ref": "malware--b57f52de-9e62-4e02-95b9-4adaf52b011b",
+            "target_ref": "vulnerability--39ccb040-3a68-4cf9-acf8-9984a0790a59"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--801ad1ba-5a4e-45c5-9f2f-2a66d73018e5",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--8b7642f3-b532-4755-b8fe-19eab9a4cfad",
+            "target_ref": "malware--8fd70fb4-ae3c-4bff-8280-0c93e4485997"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--822a58f3-117f-4016-9285-f0f134950b69",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--8b7642f3-b532-4755-b8fe-19eab9a4cfad",
+            "target_ref": "malware--13002c3f-81f1-4e10-8093-18f1b96b39d6"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--de1894fc-b366-41e7-b5fc-678bd6e8d283",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--8b7642f3-b532-4755-b8fe-19eab9a4cfad",
+            "target_ref": "malware--13e4c943-8b80-40c2-ab06-dc0b53483673"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--df6c0436-ccd6-40a7-990a-3cfc0f38288b",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--8b7642f3-b532-4755-b8fe-19eab9a4cfad",
+            "target_ref": "malware--572247c6-53cc-4bf1-b80e-828e4b8304d7"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ad01f2a7-b30f-46d2-b994-e93d18d46482",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--515ba681-de9b-472e-9723-d97b8132f054",
+            "target_ref": "threat-actor--8b7642f3-b532-4755-b8fe-19eab9a4cfad"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--37c30456-980a-4c33-8ff7-29a9e0a9bf6b",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--5ad55e03-5378-4a78-8b55-9fd26ed0a618",
+            "target_ref": "vulnerability--39ccb040-3a68-4cf9-acf8-9984a0790a59"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6214c6c7-5d15-440c-9958-77d4df22c8a1",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--5ad55e03-5378-4a78-8b55-9fd26ed0a618",
+            "target_ref": "vulnerability--4655023e-06a3-48ed-8d3a-6741c212d235"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--abd6ff7b-af99-41c1-8bae-53335bb820a6",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "malware--b57f52de-9e62-4e02-95b9-4adaf52b011b",
+            "target_ref": "file--24112cda-9420-4fb7-8b41-0bbaa412138b"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b1104441-0088-4862-b594-2e16591e3f2a",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "consists-of",
+            "source_ref": "malware--b57f52de-9e62-4e02-95b9-4adaf52b011b",
+            "target_ref": "file--227f7a58-fffa-43bf-9ffa-351af150ef22"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d42f194a-9858-4d69-a85e-2c2eb672ebaf",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "consists-of",
+            "source_ref": "malware--b57f52de-9e62-4e02-95b9-4adaf52b011b",
+            "target_ref": "file--f4ab3755-efe1-4189-b017-674b5ae6002d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--39b6edd1-990a-462a-b0ad-73a8bbcbdc5d",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "consists-of",
+            "source_ref": "malware--8fd70fb4-ae3c-4bff-8280-0c93e4485997",
+            "target_ref": "file--2de42909-0eaa-4776-adfa-feafaabccbf8"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5ab9f893-6296-4e57-97fc-c0f8362d5b6b",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "consists-of",
+            "source_ref": "malware--13002c3f-81f1-4e10-8093-18f1b96b39d6",
+            "target_ref": "file--d1552810-f7e9-4c00-95b6-faec3f543fb3"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--98d6fe62-9ea8-4f6e-95b1-e76ac45f6345",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "consists-of",
+            "source_ref": "malware--13e4c943-8b80-40c2-ab06-dc0b53483673",
+            "target_ref": "file--f2becf3c-f586-46cf-b5cf-ba2faaebdd4a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--e5e0c785-444d-47b7-81cb-0ec03677aec5",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "consists-of",
+            "source_ref": "malware--572247c6-53cc-4bf1-b80e-828e4b8304d7",
+            "target_ref": "file--691eb7db-af5a-4591-81f1-74c34fc56014"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fd654a89-cbc5-4ac8-9aea-c350ebba7632",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "malware--13002c3f-81f1-4e10-8093-18f1b96b39d6",
+            "target_ref": "threat-actor--8b7642f3-b532-4755-b8fe-19eab9a4cfad"
+        }
+    ]
+}
