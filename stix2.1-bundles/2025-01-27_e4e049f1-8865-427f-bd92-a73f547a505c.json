@@ -1,0 +1,188 @@
+{
+    "type": "bundle",
+    "id": "bundle--18591c10-5617-4853-85b5-4302c2fe26d9",
+    "objects": [
+        {
+            "type": "malware",
+            "id": "malware--7fba8e3e-bae2-487f-80db-c30ea76b9c85",
+            "name": "Gootloader",
+            "description": "Gootloader is an SEO-driven malware family that uses compromised WordPress sites to deliver malicious payloads through simulated message boards.",
+            "is_family": "true",
+            "labels": [
+                "malware",
+                "SEO",
+                "obfuscation",
+                "JScript"
+            ]
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--c96360c2-e832-4a11-8891-4d1329d2dd71",
+            "name": "Gootloader Operations",
+            "description": "This intrusion set is characterized by its use of compromised WordPress sites and sophisticated obfuscation techniques to deliver malware via misleading search engine results and simulated forums.",
+            "first_seen": "2018-01-01T00:00:00Z",
+            "labels": [
+                "organized",
+                "persistent",
+                "malicious"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--a600a501-aa9a-4e2c-a925-301b7f20bfb4",
+            "pattern": "[url:value = 'my-game[.]biz']",
+            "valid_from": "2025-01-16T00:00:00Z",
+            "labels": [
+                "C2",
+                "malware-delivery"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--ab889c46-9891-46c2-8439-e73041908d9e",
+            "name": "The Mothership",
+            "description": "The Mothership orchestrates the delivery of fake forum pages and first-stage payloads in the Gootloader campaign.",
+            "first_seen": "2018-01-01T00:00:00Z",
+            "last_seen": "2025-01-16T00:00:00Z",
+            "labels": [
+                "C2",
+                "server-side"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--9dd4fa19-a2c3-4879-b5dd-b3869d397ebb",
+            "name": "Gootloader Operators",
+            "description": "Threat actors responsible for operating the Gootloader malware, using SEO poisoning to compromise legitimate WordPress websites and spread malware.",
+            "roles": [
+                "operator"
+            ],
+            "goals": [
+                "data theft",
+                "malware distribution"
+            ],
+            "labels": [
+                "criminal",
+                "advanced"
+            ]
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--5cdaf30e-8091-42a0-80a2-e9718d8f973c",
+            "value": "5.8.18.7"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--e282caed-4e4d-487f-8ed1-3aa3fa2c1dd8",
+            "value": "5.8.18.159"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2d4071bb-df12-400b-b027-d564d8840444",
+            "value": "91.215.85.52"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--b5cee3cf-1407-4d7f-97a3-3133a060c57e",
+            "value": "my-game.biz"
+        },
+        {
+            "type": "file",
+            "id": "file--60d7a3b5-3a82-43ac-b123-ab8f3c78fe9a",
+            "hashes": {
+                "SHA-256": "c20a040acb10e820cfaaa086bdc807ffed6241bc5d0fc9e11a02a5d355125df0"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--ee002944-8567-4e1e-af0a-8a0d35e9831b",
+            "hashes": {
+                "SHA-256": "5b5652c6ea0c0c88105baf6a700324bdf2cd8f47772a3215f721dccdce9141c4"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--2d7faa70-4152-4a98-9b77-0abeaa849149",
+            "hashes": {
+                "SHA-256": "744951acfd9456fc59086b81d494c7092cda9968073d32ded64ac09291644bd9"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--6e925e8b-4b54-46f1-b81a-7d76c16433ca",
+            "hashes": {
+                "SHA-256": "361fab9858a9bc4a120e67baa01fd5bc4918d20b32bb918a8faacb143f418ac8"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--19c7db67-d799-4236-8371-d8bcbdc77fb6",
+            "hashes": {
+                "SHA-256": "5441f3a90d862041a8b6b9d02bf178ca9fe552e8111cff27706fd0201a2cbacf"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--545075ea-e0b1-45ca-a40b-b715ee950773",
+            "hashes": {
+                "SHA-256": "390372494af42685a506976614a5d5dfc65e982b98dbe794e3d2c3fef9b9f595"
+            }
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fa70eb12-40ff-41ef-8c5c-cf0260c18704",
+            "relationship_type": "uses",
+            "source_ref": "malware--7fba8e3e-bae2-487f-80db-c30ea76b9c85",
+            "target_ref": "infrastructure--ab889c46-9891-46c2-8439-e73041908d9e"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4347585a-cd69-40f2-b8aa-4c86a451bca3",
+            "relationship_type": "has",
+            "source_ref": "infrastructure--ab889c46-9891-46c2-8439-e73041908d9e",
+            "target_ref": "ipv4-addr--5cdaf30e-8091-42a0-80a2-e9718d8f973c"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--de4f8a08-f5bf-4a80-a8b7-404d2a6ba0b0",
+            "relationship_type": "has",
+            "source_ref": "infrastructure--ab889c46-9891-46c2-8439-e73041908d9e",
+            "target_ref": "domain-name--b5cee3cf-1407-4d7f-97a3-3133a060c57e"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--1d930396-c822-450c-ba6e-46946a113e56",
+            "relationship_type": "delivers",
+            "source_ref": "infrastructure--ab889c46-9891-46c2-8439-e73041908d9e",
+            "target_ref": "file--60d7a3b5-3a82-43ac-b123-ab8f3c78fe9a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ab133c2b-c170-42da-8e9b-0e0c4ca7c785",
+            "relationship_type": "delivers",
+            "source_ref": "malware--7fba8e3e-bae2-487f-80db-c30ea76b9c85",
+            "target_ref": "file--6e925e8b-4b54-46f1-b81a-7d76c16433ca"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6e444a29-c24f-4bbb-9305-b8d0d94a7c40",
+            "relationship_type": "authored-by",
+            "source_ref": "intrusion-set--c96360c2-e832-4a11-8891-4d1329d2dd71",
+            "target_ref": "threat-actor--9dd4fa19-a2c3-4879-b5dd-b3869d397ebb"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--1aecb990-b2eb-40a6-9919-2644aa4980a9",
+            "relationship_type": "observed-at",
+            "source_ref": "indicator--a600a501-aa9a-4e2c-a925-301b7f20bfb4",
+            "target_ref": "ipv4-addr--2d4071bb-df12-400b-b027-d564d8840444"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--04d78b55-9cc9-419a-a52b-5fd8f1b02e5e",
+            "relationship_type": "delivers",
+            "source_ref": "malware--7fba8e3e-bae2-487f-80db-c30ea76b9c85",
+            "target_ref": "file--2d7faa70-4152-4a98-9b77-0abeaa849149"
+        }
+    ]
+}
