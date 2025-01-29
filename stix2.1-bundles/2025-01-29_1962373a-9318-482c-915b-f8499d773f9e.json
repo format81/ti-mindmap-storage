@@ -1,0 +1,363 @@
+{
+    "type": "bundle",
+    "id": "bundle--ad843960-0aff-41db-ae96-649655a5ba43",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--4ef21ee8-5a14-416e-b960-9c72e9e0a03d",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "name": "UNC5337",
+            "description": "Threat actor reported to have overlaps with CL-UNK-0979",
+            "labels": [
+                "threat-group",
+                "APTs"
+            ]
+        },
+        {
+            "type": "campaign",
+            "spec_version": "2.1",
+            "id": "campaign--d69a87b0-10b9-4203-aeed-3e6e20faced1",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "Attack Using CVE-2025-0282",
+            "description": "Threat campaign exploiting CVE-2025-0282 allowing remote code execution.",
+            "labels": [
+                "buffer-overflow",
+                "vulnerability-exploitation"
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--9e9b2b72-b569-4e3d-9bba-a5ae6b3402f0",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "CVE-2025-0282",
+            "description": "Stack-based buffer overflow in Ivanti Connect Secure before version 22.7R2.5, Policy Secure before version 22.7R1.2, and Neurons for ZTA gateways before version 22.7R2.3 that allows remote unauthenticated attacker to achieve remote code execution. CVSS Score: 9.0 (Critical)"
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--3eb55dac-bd7e-4512-97f6-c73e5b9ea7e8",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "CVE-2025-0283",
+            "description": "Stack-based buffer overflow in Ivanti Connect Secure before version 22.7R2.5, Policy Secure before version 22.7R1.2, and Neurons for ZTA gateways before version 22.7R2.3 that allows a local authenticated attacker to escalate privileges. CVSS Score: 7.0 (High)"
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--9e8da4a1-7c39-4e1f-ba5a-9d5660c91176",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "ldap.pl",
+            "description": "A custom Perl script utilized for credential harvesting from Ivanti appliances",
+            "labels": [
+                "credential-harvester"
+            ]
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--b34645fc-8c5e-4fdc-851c-500d0bef9ab4",
+            "created": "2025-01-08T00:00:00Z",
+            "modified": "2025-01-08T00:00:00Z",
+            "name": "package.dll",
+            "description": "A simple memory dumping tool compiling and using application code for potential LSASS memory dump for credential harvesting",
+            "labels": [
+                "memory-dumper"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--439493b3-e146-42dc-b291-cfec722f39f6",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "name": "SPAWNSNAIL",
+            "description": "An SSH backdoor used by the threat actors for persistence on compromised Ivanti appliances.",
+            "labels": [
+                "backdoor"
+            ],
+            "is_family": "false"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--1a322f28-1412-4da5-a3cd-4662ea3cfacf",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "name": "SPAWNSLOTH",
+            "description": "A log tampering utility used by attackers to cover their tracks on compromised Ivanti appliances.",
+            "labels": [
+                "anti-forensics"
+            ],
+            "is_family": "false"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--eb910f1f-5ea2-4960-b3e8-02c5cc42c3ca",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "name": "SPAWNMOLE",
+            "description": "A tunneling mechanism employed for persistence on compromised Ivanti appliances.",
+            "labels": [
+                "tunneler"
+            ],
+            "is_family": "false"
+        },
+        {
+            "type": "url",
+            "id": "url--055455f9-a1f5-4cec-838d-3be95fc076f1",
+            "value": "https://unit42.paloaltonetworks.com"
+        },
+        {
+            "type": "url",
+            "id": "url--0c9d17ed-0f30-4f30-8d98-bb5a49c6ee82",
+            "value": "https://unit42.paloaltonetworks.com/category/top-cyberthreats/"
+        },
+        {
+            "type": "url",
+            "id": "url--37168aad-5976-48c0-93fe-38ea6d8075b1",
+            "value": "https://unit42.paloaltonetworks.com/category/vulnerabilities/"
+        },
+        {
+            "type": "url",
+            "id": "url--8e9770bd-11d1-4453-9766-e253b9338a67",
+            "value": "https://unit42.paloaltonetworks.com/threat-brief-ivanti-cve-2025-0282-cve-2025-0283/"
+        },
+        {
+            "type": "url",
+            "id": "url--b46ef971-bd20-4147-8a53-b64d96395249",
+            "value": "https://www.ivanti.com/blog/security-update-ivanti-connect-secure-policy-secure-and-neurons-for-zta-gateways"
+        },
+        {
+            "type": "url",
+            "id": "url--3b734365-0473-45d2-96f0-51873e372fbb",
+            "value": "https://nvd.nist.gov/vuln/detail/CVE-2025-0282"
+        },
+        {
+            "type": "url",
+            "id": "url--128f9729-b658-424b-b020-5e18915f3c9a",
+            "value": "https://nvd.nist.gov/vuln/detail/CVE-2025-0283"
+        },
+        {
+            "type": "url",
+            "id": "url--fd514fcc-2b46-4207-b1cc-915e4491f819",
+            "value": "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day"
+        },
+        {
+            "type": "url",
+            "id": "url--4d5872d5-39e4-4825-9309-fa63ece0e1f6",
+            "value": "https://labs.watchtowr.com/do-secure-by-design-pledges-come-with-stickers-ivanti-connect-secure-rce-cve-2025-0282/"
+        },
+        {
+            "type": "file",
+            "id": "file--a8fba5b2-89e6-4d2f-a3ed-b497a9a3be41",
+            "hashes": {
+                "SHA-256": "7144B8C77D261985205AE2621EB6242F43D6244E18B8D01D05048337346B6EFD"
+            },
+            "name": "ldap.pl"
+        },
+        {
+            "type": "file",
+            "id": "file--b8de120f-69e2-4737-b189-4ff93e474c16",
+            "hashes": {
+                "SHA-256": "AAE291AC5767CFE93676DACB67BA50C98D8FD520F5821FB050FD63E38B000B18"
+            },
+            "name": "SPAWNMOLE"
+        },
+        {
+            "type": "file",
+            "id": "file--4e271690-fc83-4aec-bef5-497a5854b48b",
+            "hashes": {
+                "SHA-256": "366635c00b8e6f749a4d948574a0f1e7b4c842ca443176de27af45debbc14f71"
+            },
+            "name": "SPAWNSNAIL"
+        },
+        {
+            "type": "file",
+            "id": "file--10406b9b-3618-4c28-b439-d47040684820",
+            "hashes": {
+                "SHA-256": "3526af9189533470bc0e90d54bafb0db7bda784be82a372ce112e361f7c7b104"
+            },
+            "name": "SPAWNSLOTH"
+        },
+        {
+            "type": "file",
+            "id": "file--ac04f520-d950-45a3-acd0-c8a9b5ff7c0a",
+            "hashes": {
+                "SHA-256": "43363AA0D1FDAB0174D94BD5A9E16D47CBB08B4B089C5A12E370133AB8E640A6"
+            },
+            "name": "vixDisklib.dll"
+        },
+        {
+            "type": "file",
+            "id": "file--90b933cc-84b5-4fef-b0a2-4a43d6b2b29f",
+            "hashes": {
+                "SHA-256": "1dc0a3a5904ec35103538a018ef069fbe95b0a3c26cb0ff9ba0d1c268d1aaf98"
+            },
+            "name": "package.dll"
+        },
+        {
+            "type": "file",
+            "id": "file--6eda69c3-d636-48b0-8514-5b0095275b45",
+            "hashes": {
+                "SHA-256": "f9ca95119b32a18491e3cc28c7020ee00f6e7a45ae089c876d87252e754e5a2e"
+            },
+            "name": "error.dat"
+        },
+        {
+            "type": "file",
+            "id": "file--94c5849a-7ab2-4bf8-b243-defd497d07e2",
+            "hashes": {
+                "SHA-256": "723711ccbb3eaf1daea3d5b00aa6aaee48a359be395d9500d8a56609ec5238e9"
+            },
+            "name": "msbuild.lnk"
+        },
+        {
+            "type": "file",
+            "id": "file--b7f53ca7-08ed-4d9d-9f71-00cd2f9161ef",
+            "hashes": {
+                "SHA-256": "75a3d53c1d63ecb338d4b2d6f5b3d980b0caceb77808ed81ab73b49138cc0a26"
+            },
+            "name": "mini.xml"
+        },
+        {
+            "type": "file",
+            "id": "file--3b550630-c90a-4958-aeb3-f048abafd37d",
+            "hashes": {
+                "SHA-256": "a6b24fcef2e018c9ef634aa21e26a74ff94ea508a8b132fad38d48f5ab10fcd3"
+            },
+            "name": "deelevator64.dll"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--8be8c5dc-cdc2-444e-bd41-2a5114737f01",
+            "value": "185.219.141.95"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--75de6b62-fadf-4d59-9805-ebeb9c60ba66",
+            "value": "185.195.71.244"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--8634cc53-51ad-4c04-b834-e9ff6c161199",
+            "value": "193.149.180.128"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--6d09d9c4-ecd3-4c70-8c18-f6836842e3a2",
+            "value": "168.100.8.144"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--6b324967-5b4d-40d6-bf48-c5201b6ddc63",
+            "value": "labs.watchtowr.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--914ded3a-0801-41f5-838d-3e6f8ceb233a",
+            "value": "cloud.google.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--a40c9510-be1b-4743-918f-fc0d8dc43cba",
+            "value": "unit42.paloaltonetworks.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--f930f01a-bfb4-4146-8292-2ae685dffae1",
+            "value": "ivanti.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--52d2a35e-7779-4973-8fe9-46f0fbbced35",
+            "value": "nvd.nist.gov"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--11a49939-b240-4920-ac75-a0b0595132bd",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "exploits",
+            "source_ref": "campaign--d69a87b0-10b9-4203-aeed-3e6e20faced1",
+            "target_ref": "vulnerability--9e9b2b72-b569-4e3d-9bba-a5ae6b3402f0"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--33d74b11-d2c7-4404-82b3-f684cb9440ed",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--d69a87b0-10b9-4203-aeed-3e6e20faced1",
+            "target_ref": "tool--9e8da4a1-7c39-4e1f-ba5a-9d5660c91176"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7ad53754-d7dd-4ae4-b9ec-f6613e6f996c",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--d69a87b0-10b9-4203-aeed-3e6e20faced1",
+            "target_ref": "tool--b34645fc-8c5e-4fdc-851c-500d0bef9ab4"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--40c83cab-84fa-45b2-81bc-54db043564e9",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "tool--b34645fc-8c5e-4fdc-851c-500d0bef9ab4",
+            "target_ref": "file--90b933cc-84b5-4fef-b0a2-4a43d6b2b29f"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c6fefae2-c2d9-48af-be0e-8b96bfc39943",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--d69a87b0-10b9-4203-aeed-3e6e20faced1",
+            "target_ref": "malware--439493b3-e146-42dc-b291-cfec722f39f6"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--872895ae-485a-4d4a-8c5e-2fe1360ddd59",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--d69a87b0-10b9-4203-aeed-3e6e20faced1",
+            "target_ref": "malware--1a322f28-1412-4da5-a3cd-4662ea3cfacf"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d9e2d18d-3396-4596-b2a2-9552e0726a6f",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--d69a87b0-10b9-4203-aeed-3e6e20faced1",
+            "target_ref": "malware--eb910f1f-5ea2-4960-b3e8-02c5cc42c3ca"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7059b5ee-abf5-40a0-86e2-69d91931a413",
+            "created": "2025-01-16T00:00:00Z",
+            "modified": "2025-01-16T00:00:00Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--4ef21ee8-5a14-416e-b960-9c72e9e0a03d",
+            "target_ref": "vulnerability--9e9b2b72-b569-4e3d-9bba-a5ae6b3402f0"
+        }
+    ]
+}
