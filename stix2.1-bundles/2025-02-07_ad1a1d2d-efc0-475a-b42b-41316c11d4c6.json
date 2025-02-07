@@ -1,0 +1,194 @@
+{
+    "type": "bundle",
+    "id": "bundle--1997311c-a35d-4a23-8b65-465d8c15c0c2",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--d94fa549-de37-424e-98da-6972ac51aa49",
+            "name": "Hyper-Volumetric DDoS Attack Campaign",
+            "description": "A campaign of hyper-volumetric Layer 3/4 DDoS attacks targeting multiple sectors such as financial services, Internet, and telecommunication industries.",
+            "first_seen": "2023-09-01T00:00:00Z",
+            "goals": [
+                "Bandwidth saturation",
+                "Resource exhaustion of in-line applications and devices"
+            ],
+            "aliases": [
+                "3.8 Tbps DDoS attack"
+            ],
+            "targeted_sectors": [
+                "Financial services",
+                "Internet",
+                "Telecommunication"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--03f25b69-21c1-4e18-9ffe-1ad47420a28b",
+            "name": "UDP Flood",
+            "description": "DDoS attack leveraging UDP on a fixed port to saturate bandwidth and exhaust resources of targeted applications and devices.",
+            "x_mitre_platforms": [
+                "Linux",
+                "Windows",
+                "MacOS"
+            ],
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "resource-development"
+                }
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--0df850aa-c858-471e-97ed-deba628c725d",
+            "name": "MikroTik Botnet",
+            "description": "A threat actor group using compromised MikroTik devices as part of their botnet to execute large-scale DDoS attacks.",
+            "threat_actor_types": [
+                "botnet"
+            ],
+            "aliases": [
+                "MikroTik DDoS Botnet"
+            ],
+            "roles": [
+                "malware_controller"
+            ],
+            "sophistication": "high",
+            "resource_level": "organization",
+            "primary_motivation": "ideology",
+            "secondary_motivations": [
+                "personal_satification"
+            ],
+            "labels": [
+                "network_infrastructure",
+                "malware_distributor"
+            ],
+            "regions": [
+                "Vietnam",
+                "Russia",
+                "Brazil",
+                "Spain",
+                "US"
+            ],
+            "goals": [
+                "Disruption of services",
+                "Denial of service"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--e0684ee7-c24a-40d3-b9da-b06ba92de640",
+            "name": "Compromised ASUS Routers",
+            "description": "A large number of compromised ASUS home routers used to generate high bitrate attacks, likely exploited using a CVE 9.8 (Critical) vulnerability.",
+            "infrastructure_types": [
+                "botnet"
+            ],
+            "aliases": [
+                "ASUS Router Botnet"
+            ],
+            "first_seen": "2023-09-01T00:00:00Z",
+            "last_seen": "2023-10-01T23:59:59Z",
+            "labels": [
+                "network_device",
+                "zombie_device"
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--5d73047b-e342-44ea-b6ae-604e33c327bb",
+            "name": "Improper Authentication in ASUS Routers",
+            "description": "A critical CVE (9.8) vulnerability in ASUS routers that is exploited to create a botnet for launching DDoS attacks.",
+            "labels": [
+                "asus",
+                "router",
+                "critical",
+                "improper_authentication"
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--618226b3-6627-449c-9f0b-3840e596c56f",
+            "value": "cloudflare.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--ad291f7c-3777-4949-823e-33eebb42ee61",
+            "value": "developers.cloudflare.com"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--af2fbbb3-2c33-4213-994e-cbddc4f91c1b",
+            "value": "1.1.1.1"
+        },
+        {
+            "type": "software",
+            "id": "software--6fbf305b-fa52-462e-aae3-4b95f83646f3",
+            "name": "MikroTik Router OS"
+        },
+        {
+            "type": "software",
+            "id": "software--c44e2982-7490-40d8-aae1-3e5cce30b070",
+            "name": "ASUS Router Firmware",
+            "cpe": "cpe:2.3:o:asus:router_firmware:-:*:*:*:*:*:*:*"
+        },
+        {
+            "type": "software",
+            "id": "software--c07bc463-5c1c-4385-9dfa-9b2b660d1727",
+            "name": "DVR",
+            "cpe": "cpe:2.3:o:dvr:-:*:*:*:*:*:*:*"
+        },
+        {
+            "type": "software",
+            "id": "software--c262846f-49e8-4240-b10f-3e6a68628034",
+            "name": "Web Server",
+            "cpe": "cpe:2.3:a:general:web_server:-:*:*:*:*:*:*:*"
+        },
+        {
+            "type": "software",
+            "id": "software--77f62fa5-6fa5-4667-ad1f-62cce5eadb17",
+            "name": "Cloudflare DDoS Protection",
+            "cpe": "cpe:2.3:a:cloudflare:ddos_protection:-:*:*:*:*:*:*:*"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a9de7924-061e-4231-bd7b-6cd7d225a0fb",
+            "relationship_type": "uses",
+            "source_ref": "campaign--d94fa549-de37-424e-98da-6972ac51aa49",
+            "target_ref": "attack-pattern--03f25b69-21c1-4e18-9ffe-1ad47420a28b"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--03661073-4d66-4ba4-a586-59eac496fc2f",
+            "relationship_type": "attributed-to",
+            "source_ref": "attack-pattern--03f25b69-21c1-4e18-9ffe-1ad47420a28b",
+            "target_ref": "threat-actor--0df850aa-c858-471e-97ed-deba628c725d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--73d184d6-4d31-42d3-8c82-54ddb9a67658",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--d94fa549-de37-424e-98da-6972ac51aa49",
+            "target_ref": "threat-actor--0df850aa-c858-471e-97ed-deba628c725d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9b41a5d8-083e-495a-a5c9-71c26c5a071e",
+            "relationship_type": "targets",
+            "source_ref": "campaign--d94fa549-de37-424e-98da-6972ac51aa49",
+            "target_ref": "infrastructure--e0684ee7-c24a-40d3-b9da-b06ba92de640"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5e6ecb6d-979d-4e86-82fe-6ade00bc3f77",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--0df850aa-c858-471e-97ed-deba628c725d",
+            "target_ref": "vulnerability--5d73047b-e342-44ea-b6ae-604e33c327bb"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--70763112-efe2-4b95-96c3-53d6ef004c75",
+            "relationship_type": "hosts",
+            "source_ref": "infrastructure--e0684ee7-c24a-40d3-b9da-b06ba92de640",
+            "target_ref": "vulnerability--5d73047b-e342-44ea-b6ae-604e33c327bb"
+        }
+    ]
+}
