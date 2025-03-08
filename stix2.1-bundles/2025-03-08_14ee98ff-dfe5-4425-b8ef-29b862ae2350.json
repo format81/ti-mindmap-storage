@@ -1,0 +1,221 @@
+{
+    "type": "bundle",
+    "id": "bundle--6fa267e9-52ed-4ec2-a3ec-2d3f1976823e",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--f4e4bcc3-d8cf-495a-9da9-4e8e6dea05fc",
+            "name": "Malvertising Campaign with Info Stealers",
+            "description": "A large-scale malvertising campaign detected by Microsoft Threat Intelligence in December 2024. It leveraged illegal streaming websites embedded with malvertising redirectors to lead users to GitHub, Discord, and Dropbox for information theft. The campaign used modular and multi-stage approaches to deploy malware, collect system information, and exfiltrate data.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-01-31T00:00:00Z",
+            "objective": "Stealing information from nearly one million devices globally across various industries."
+        },
+        {
+            "type": "malware",
+            "id": "malware--5ecec4d9-3ca8-46f6-bfd3-aa15232468c7",
+            "name": "Lumma Stealer",
+            "is_family": "false",
+            "labels": [
+                "info-stealer"
+            ],
+            "description": "Malware used in the campaign for collecting system information and credentials, including memory size, graphic details, screen resolution, OS, and user paths."
+        },
+        {
+            "type": "malware",
+            "id": "malware--53cb59de-a6a0-4939-bc41-b27f099a1084",
+            "name": "Doenerium",
+            "is_family": "true",
+            "labels": [
+                "info-stealer"
+            ],
+            "description": "An updated version of Doenerium used alongside Lumma stealer for collecting browser and system information."
+        },
+        {
+            "type": "malware",
+            "id": "malware--f3b52f4b-16fd-4a21-870e-d8e4ab675740",
+            "name": "NetSupport RAT",
+            "is_family": "false",
+            "labels": [
+                "remote-access-tool"
+            ],
+            "description": "Remote monitoring and management software deployed with information stealers to facilitate remote access and further data exfiltration."
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--906f5a45-6a13-4358-8bed-41f9381bdf1f",
+            "name": "GitHub Repository Hosting",
+            "infrastructure_type": "hosting",
+            "description": "GitHub repositories used to host initial access payloads for malware delivery in the malvertising campaign."
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--4732588d-b4e9-40d6-bd03-ea75591d4fe5",
+            "name": "Discord and Dropbox Hosting",
+            "infrastructure_type": "hosting",
+            "description": "Discord and Dropbox platforms used as alternative malware delivery points alongside GitHub in the campaign."
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--532e04d9-2d0f-4219-958f-ccb8f6244d37",
+            "name": "Storm-0408",
+            "labels": [
+                "financially-motivated"
+            ],
+            "description": "Threat actor tracked by Microsoft, involved in spreading remote access and information-stealing malware using phishing, SEO, or malvertising campaigns."
+        },
+        {
+            "type": "url",
+            "id": "url--1e898fe5-2dd4-4d0d-835a-c82fb7c71b80",
+            "value": "https://www.microsoft.com/en-us/security/blog/"
+        },
+        {
+            "type": "url",
+            "id": "url--d9be57b4-8632-445a-81de-5426b3702442",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/Featured-image-1024x572.webp"
+        },
+        {
+            "type": "url",
+            "id": "url--9ceedf9b-b4eb-4e33-af6e-48c01f19fc2b",
+            "value": "https://www.microsoft.com/en-us/security/blog/content-type/research/"
+        },
+        {
+            "type": "url",
+            "id": "url--f7687b46-5666-4988-b86a-5991b5d3a404",
+            "value": "https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/"
+        },
+        {
+            "type": "url",
+            "id": "url--9e3eaaef-440c-4d26-8244-9f067c7578d8",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender/"
+        },
+        {
+            "type": "url",
+            "id": "url--eafd89ad-08d1-4a6b-95e0-45d0cf00d78c",
+            "value": "https://www.microsoft.com/en-us/security/blog/threat-intelligence/attacker-techniques-tools-and-infrastructure/"
+        },
+        {
+            "type": "url",
+            "id": "url--d5acf92b-c954-4a3c-961b-4e36b31cdbb2",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender-experts-for-hunting/"
+        },
+        {
+            "type": "url",
+            "id": "url--3f377b30-23d8-41a6-b98e-a1e6ac9b0560",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender-for-cloud/"
+        },
+        {
+            "type": "url",
+            "id": "url--5060bf44-9d18-4b7f-8854-3c2ef4538c5b",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender-for-endpoint/"
+        },
+        {
+            "type": "url",
+            "id": "url--e0f49d1f-ecea-4cc4-8c84-536226807783",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender-threat-intelligence/"
+        },
+        {
+            "type": "url",
+            "id": "url--412d0c0f-3b08-42f2-a7de-b1b6801e3bc5",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender-xdr/"
+        },
+        {
+            "type": "url",
+            "id": "url--1e787a42-c521-4495-8065-c0b28a83caa0",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-security-experts/"
+        },
+        {
+            "type": "url",
+            "id": "url--d0f724fe-26f9-4549-8870-5e0ef660dc3b",
+            "value": "https://www.microsoft.com/en-us/security/blog/threat-intelligence/social-engineering-phishing/"
+        },
+        {
+            "type": "url",
+            "id": "url--e00b5964-164e-490a-9065-c70c751dec19",
+            "value": "https://www.microsoft.com/en-us/security/blog/tag/credential-theft/"
+        },
+        {
+            "type": "url",
+            "id": "url--50c9d93f-a862-46f8-bf67-d40ab7f2f765",
+            "value": "https://www.microsoft.com/en-us/security/blog/tag/cryptojacking/"
+        },
+        {
+            "type": "url",
+            "id": "url--d202b031-6d1b-4bb8-8739-245501617056",
+            "value": "https://www.microsoft.com/en-us/security/blog/tag/living-off-the-land/"
+        },
+        {
+            "type": "url",
+            "id": "url--9b95d4fa-b78b-43b4-8d4b-d6706894cf99",
+            "value": "https://www.microsoft.com/en-us/security/blog/tag/storm/"
+        },
+        {
+            "type": "url",
+            "id": "url--6b281a2e-3e9c-4fb6-ad64-c9be4624d2eb",
+            "value": "https://www.microsoft.com/en-us/security/blog/tag/windows/"
+        },
+        {
+            "type": "url",
+            "id": "url--54e313db-db85-406f-af24-df8e7a7aac44",
+            "value": "https://thecyberwire.com/podcasts/microsoft-threat-intelligence/39/notes"
+        },
+        {
+            "type": "url",
+            "id": "url--e663141b-ce0e-41e5-9c7c-35126f2de0c3",
+            "value": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"
+        },
+        {
+            "type": "url",
+            "id": "url--f0531474-1636-4902-afc5-cf44981283eb",
+            "value": "https://thecyberwire.com/podcasts/microsoft-threat-intelligence"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ba0d3921-bad4-4931-84d8-64f0783f2e90",
+            "relationship_type": "uses",
+            "source_ref": "campaign--f4e4bcc3-d8cf-495a-9da9-4e8e6dea05fc",
+            "target_ref": "malware--5ecec4d9-3ca8-46f6-bfd3-aa15232468c7",
+            "description": "The malvertising campaign uses Lumma Stealer malware to collect system information and credentials."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a1e97b84-0b52-4649-95bf-ed701e0afb01",
+            "relationship_type": "uses",
+            "source_ref": "campaign--f4e4bcc3-d8cf-495a-9da9-4e8e6dea05fc",
+            "target_ref": "malware--53cb59de-a6a0-4939-bc41-b27f099a1084",
+            "description": "The campaign deploys an updated version of Doenerium alongside Lumma Stealer to collect browser and system information."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a81ec972-d220-47e0-8c7c-833c3da90c14",
+            "relationship_type": "uses",
+            "source_ref": "campaign--f4e4bcc3-d8cf-495a-9da9-4e8e6dea05fc",
+            "target_ref": "malware--f3b52f4b-16fd-4a21-870e-d8e4ab675740",
+            "description": "NetSupport RAT is deployed with information stealers during the campaign to facilitate remote access and further data exfiltration."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9530e850-b6d5-4d2a-aefa-c51d2efc1519",
+            "relationship_type": "uses",
+            "source_ref": "campaign--f4e4bcc3-d8cf-495a-9da9-4e8e6dea05fc",
+            "target_ref": "infrastructure--906f5a45-6a13-4358-8bed-41f9381bdf1f",
+            "description": "GitHub repositories are used to host initial access payloads for malware delivery in the malvertising campaign."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b7fdeea3-4936-4281-af68-7f78702d4087",
+            "relationship_type": "uses",
+            "source_ref": "campaign--f4e4bcc3-d8cf-495a-9da9-4e8e6dea05fc",
+            "target_ref": "infrastructure--4732588d-b4e9-40d6-bd03-ea75591d4fe5",
+            "description": "Discord and Dropbox platforms are used as alternative malware delivery points alongside GitHub in the campaign."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9e875850-9dbf-4f01-adec-41d1a120989c",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--f4e4bcc3-d8cf-495a-9da9-4e8e6dea05fc",
+            "target_ref": "threat-actor--532e04d9-2d0f-4219-958f-ccb8f6244d37",
+            "description": "The campaign is attributed to the threat actor Storm-0408, known for spreading remote access and information-stealing malware."
+        }
+    ]
+}
