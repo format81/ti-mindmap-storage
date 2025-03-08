@@ -1,0 +1,217 @@
+{
+    "type": "bundle",
+    "id": "bundle--0bd523e2-c42f-4a75-b4ce-5d1c2797aa64",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--5f7416cc-3667-4f9e-abad-ce8ec2354839",
+            "name": "Malvertising campaign",
+            "description": "A large-scale malvertising campaign detected by Microsoft Threat Intelligence in December 2024 that impacted nearly one million devices globally in an opportunistic attack to steal information.",
+            "start_time": "2024-12-01T00:00:00Z",
+            "objective": "Information theft through malvertising redirectors leading users to malicious content hosted on GitHub, Discord, and Dropbox."
+        },
+        {
+            "type": "malware",
+            "id": "malware--f300092f-65ba-4721-99f3-25407de1740f",
+            "name": "Lumma Stealer",
+            "description": "Used in malvertising campaign to collect system and browser information.",
+            "is_family": "false",
+            "labels": [
+                "info-stealer",
+                "credential-stealing"
+            ],
+            "first_seen": "2024-12-01T00:00:00Z",
+            "architecture_execution_envs": [
+                "x86-64"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--4000ff77-23f4-4c68-8eb5-4c7ebcfff1c4",
+            "name": "Storm-0408",
+            "labels": [
+                "remote-access",
+                "information-stealing",
+                "phishing",
+                "malvertising"
+            ],
+            "aliases": [
+                "Storm"
+            ],
+            "description": "Threat actor associated with remote access or information-stealing malware using phishing, SEO, or malvertising campaigns."
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--65686ae4-e707-44e5-ac8f-57e90918ed3f",
+            "name": "Malvertising Platform",
+            "infrastructure_types": [
+                "ad-delivery",
+                "redirector"
+            ],
+            "description": "Used in a malvertising campaign to redirect users from illegal streaming websites to platforms hosting malware.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-03-01T00:00:00Z"
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--368b0355-f573-4bb9-b7d6-9e351c6c2a08",
+            "name": "Storm-0408 Operation",
+            "aliases": [
+                "Storm"
+            ],
+            "description": "Operation by Storm-0408 involving malvertising campaigns, remote access, and information-stealing malware.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "goals": [
+                "Access consumer and enterprise devices indiscriminately.",
+                "Steal and exfiltrate system and browser data."
+            ]
+        },
+        {
+            "type": "url",
+            "id": "url--a37fe289-b7ed-4352-a6d1-02cdb1fff0d6",
+            "value": "https://www.microsoft.com/en-us/security/blog/"
+        },
+        {
+            "type": "url",
+            "id": "url--22ab3f49-437b-49f8-b34e-8ab7e82f566c",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/Featured-image-1024x572.webp"
+        },
+        {
+            "type": "url",
+            "id": "url--a4cdcc6a-0f2c-47b5-be25-a9e317250e04",
+            "value": "https://www.microsoft.com/en-us/security/blog/content-type/research/"
+        },
+        {
+            "type": "url",
+            "id": "url--276e0ad5-6bed-48fa-8aeb-c979b983a8d5",
+            "value": "https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/"
+        },
+        {
+            "type": "url",
+            "id": "url--254e5bb7-21c2-4e5a-88e2-2b3570cc8966",
+            "value": "https://www.microsoft.com/en-us/security/blog/products/microsoft-defender/"
+        },
+        {
+            "type": "url",
+            "id": "url--810ac33d-b0a9-4cb9-a2f1-00f85d4b9abf",
+            "value": "https://www.microsoft.com/en-us/security/blog/threat-intelligence/attacker-techniques-tools-and-infrastructure/"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--b949cdce-588a-4161-8548-7382b5d48409",
+            "value": "github.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--9dc9db80-cf24-445c-a799-c263c6643a5b",
+            "value": "discordapp.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--e2c94ead-45d4-4f04-9aa4-a940cc4d5824",
+            "value": "dropbox.com"
+        },
+        {
+            "type": "url",
+            "id": "url--3565d603-fb2f-4051-b65c-4a7a8e17a256",
+            "value": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--caa06bd3-67c1-4dfa-9b60-459753600c09",
+            "value": "movies7.net"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--8aa4d5f6-a4df-440a-8bfd-06f450e18925",
+            "value": "0123movie.art"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--20f13245-de97-4f14-81e7-1231298d0d15",
+            "value": "fle-rvd0i9o8-moo.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--7df2a756-3012-4e14-b22f-671bf923a706",
+            "value": "0cbcq8mu.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--196382a9-5302-469b-b055-d116ce7c26a2",
+            "value": "widiaoexhe.top"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--d543ad80-0f65-49c2-b748-bc17625cd963",
+            "value": "predictivdisplay.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--e4f27e99-0adc-4826-8bf7-07987287c821",
+            "value": "buzzonclick.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--7d3df66c-2ae9-4780-801c-1e64caa71f6d",
+            "value": "pulseadnetwork.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--67ffcc37-e53c-4cde-9e6d-03537cee7e83",
+            "value": "onclickalgo.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--46c14a4b-6fd7-4cd6-89e8-e4230e104378",
+            "value": "liveadexchanger.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--de36bf33-1d0c-4a5f-a2ec-f601503b322c",
+            "value": "greatdexchange.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--22a2e9b1-061a-4d15-a4fd-480cdf49095e",
+            "value": "dexpredict.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--1dc737fd-3e7a-4bac-a82a-f54ded6b3e8b",
+            "value": "onclickperformance.com"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ac237264-a52c-4017-9635-f53a447f3926",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--5f7416cc-3667-4f9e-abad-ce8ec2354839",
+            "target_ref": "threat-actor--4000ff77-23f4-4c68-8eb5-4c7ebcfff1c4",
+            "description": "The malvertising campaign is attributed to the threat actor Storm-0408."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2c9cdc8d-5853-4e58-8d6a-361ec69b8dac",
+            "relationship_type": "uses",
+            "source_ref": "campaign--5f7416cc-3667-4f9e-abad-ce8ec2354839",
+            "target_ref": "infrastructure--65686ae4-e707-44e5-ac8f-57e90918ed3f",
+            "description": "The malvertising campaign uses a malvertising platform to redirect users to malware-hosting sites."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--730a1e4b-3adb-417a-97a7-8f96860e02fa",
+            "relationship_type": "uses",
+            "source_ref": "campaign--5f7416cc-3667-4f9e-abad-ce8ec2354839",
+            "target_ref": "malware--f300092f-65ba-4721-99f3-25407de1740f",
+            "description": "The malvertising campaign uses Lumma stealer to collect system and browser information."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f61f1c05-1792-4ab2-9d33-8e065c18a168",
+            "relationship_type": "related-to",
+            "source_ref": "intrusion-set--368b0355-f573-4bb9-b7d6-9e351c6c2a08",
+            "target_ref": "campaign--5f7416cc-3667-4f9e-abad-ce8ec2354839",
+            "description": "Storm-0408 Operation involves the malvertising campaign and other related malicious activities."
+        }
+    ]
+}
