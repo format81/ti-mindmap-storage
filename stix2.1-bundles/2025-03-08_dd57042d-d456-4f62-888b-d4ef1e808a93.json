@@ -1,0 +1,261 @@
+{
+    "type": "bundle",
+    "id": "bundle--db024b16-c99e-4c68-a910-b0f35df53ba1",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--cfe0a584-1342-46c5-ac2f-f6a15124ebd8",
+            "name": "Malvertising Campaign",
+            "description": "Large-scale malvertising campaign detected in December 2024, impacting nearly one million devices globally to steal information via illegal streaming websites.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-01-31T00:00:00Z",
+            "objective": "Steal information from both consumer and enterprise devices using a multi-stage attack chain originating from illegal streaming websites.",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z"
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--b02e8b7a-9692-4913-ab0b-6eb22c1227b7",
+            "name": "Storm-0408",
+            "description": "Threat actors tracked by Microsoft Threat Intelligence who use remote access or information-stealing malware, employing phishing, SEO, or malvertising campaigns to distribute malicious payloads.",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "aliases": [
+                "Storm-0408"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--097844e5-19c1-44c2-9b68-cbb27683d200",
+            "name": "Lumma Stealer",
+            "labels": [
+                "infostealer"
+            ],
+            "is_family": "true",
+            "description": "A type of malware deployed during the campaign to collect and exfiltrate system and browser information from the compromised devices.",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z"
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--b128167c-2adf-49a4-a18c-841586b7e804",
+            "name": "Unknown Threat Actor",
+            "description": "Threat actor behind the large-scale malvertising campaign tracked under Storm-0408.",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z",
+            "labels": [
+                "malvertising",
+                "infostealer"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--8eaeb713-dae0-4fe4-8cdd-4dd405f4a7f8",
+            "name": "Mitigation Strategies for Malvertising Campaign",
+            "description": "Recommendations include enabling tamper protection, network protection, and web protection in Microsoft Defender for Endpoint, as well as use of multifactor authentication and attack surface reduction rules.",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z"
+        },
+        {
+            "type": "url",
+            "id": "url--5c2e884d-771f-40f2-b01c-2ddafa8aeb07",
+            "value": "https://github.com/down4up/"
+        },
+        {
+            "type": "url",
+            "id": "url--fb87ed3e-bbdd-4ee9-a45f-0cc149e9fe52",
+            "value": "https://github.com/g1lsetup/iln77"
+        },
+        {
+            "type": "url",
+            "id": "url--08ce545c-4f98-4c86-94ba-36267ee8b93d",
+            "value": "https://github.com/g1lsetup/v2025"
+        },
+        {
+            "type": "url",
+            "id": "url--09264614-1f4f-4c0d-ad4d-22d774366428",
+            "value": "https://github.com/git2312now/DownNew152/"
+        },
+        {
+            "type": "url",
+            "id": "url--35fc8733-54e5-4951-ab49-070ceaeeee52",
+            "value": "https://github.com/muhammadshahblis/"
+        },
+        {
+            "type": "url",
+            "id": "url--7573fcb7-dc7f-4d1e-a7e1-34dbd9d43037",
+            "value": "https://github.com/Jimelecar"
+        },
+        {
+            "type": "url",
+            "id": "url--81b82b2c-b587-45bd-bf3d-c27f1c84d7dd",
+            "value": "https://github.com/kloserw"
+        },
+        {
+            "type": "url",
+            "id": "url--7adad1a1-176b-4882-8c2e-ca9289979a58",
+            "value": "https://github.com/kopersparan/"
+        },
+        {
+            "type": "url",
+            "id": "url--8bf62efc-c738-40db-b734-600256dad1d4",
+            "value": "https://github.com/zotokilowa"
+        },
+        {
+            "type": "url",
+            "id": "url--34bd9ebe-8dae-447e-a1e3-61ed90ad57a2",
+            "value": "https://github.com/colvfile/bmx84542"
+        },
+        {
+            "type": "url",
+            "id": "url--95553f22-9adf-4654-b982-80116c0cf8a5",
+            "value": "https://github.com/colvfile/yesyes333"
+        },
+        {
+            "type": "url",
+            "id": "url--fc3ee3e5-cf12-4698-8aa5-62cfd0975491",
+            "value": "https://github.com/mp3andmovies/"
+        },
+        {
+            "type": "url",
+            "id": "url--390fa5e7-529a-4354-95f0-72131bd8627e",
+            "value": "https://github.com/anatfile/newl"
+        },
+        {
+            "type": "url",
+            "id": "url--d1fbb53a-be35-41ca-8a2f-e829212c34c6",
+            "value": "https://github.com/downloadprov/www"
+        },
+        {
+            "type": "url",
+            "id": "url--1925ac2e-930a-4279-b90b-d3ae8e7cde65",
+            "value": "https://github.com/abdfilesup/readyyes"
+        },
+        {
+            "type": "url",
+            "id": "url--05d62627-e9ae-4cca-b516-89049f6da320",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/898537481"
+        },
+        {
+            "type": "url",
+            "id": "url--465b6b59-e295-4bfa-b13d-3bcdae150657",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/898072392/"
+        },
+        {
+            "type": "url",
+            "id": "url--3de7fa2d-b543-4e2c-8c61-d46b9cdab641",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/902107140"
+        },
+        {
+            "type": "url",
+            "id": "url--83d5e52f-ddae-48e6-a292-c09cd7818d49",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/902405338"
+        },
+        {
+            "type": "url",
+            "id": "url--afbfc6cf-efd9-493c-a258-4374316ae1c4",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/901430321/"
+        },
+        {
+            "type": "url",
+            "id": "url--df8ffefe-93ac-438b-983a-dcecd76def60",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/903047306/"
+        },
+        {
+            "type": "url",
+            "id": "url--b7e9eb5c-7323-4e00-98e1-48c46382850c",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/899121225"
+        },
+        {
+            "type": "url",
+            "id": "url--619ae138-9e1b-4a28-b232-b7a6dd7fc9c3",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/899472962/"
+        },
+        {
+            "type": "url",
+            "id": "url--761cb080-f01f-41f7-b1a4-e7a59ab46307",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/900979287/"
+        },
+        {
+            "type": "url",
+            "id": "url--d45c7f99-2b97-48fe-9916-462e80fe422f",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/901553970"
+        },
+        {
+            "type": "url",
+            "id": "url--2ccb2524-10bf-4fb8-920a-619111fcd05b",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/901617842/"
+        },
+        {
+            "type": "url",
+            "id": "url--5419cd9c-2066-491b-ac43-26856721dcef",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/897657726"
+        },
+        {
+            "type": "url",
+            "id": "url--2fc8883f-962a-4861-83e4-48252903adc4",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/903499100/"
+        },
+        {
+            "type": "url",
+            "id": "url--08334b9f-0827-4f0d-bf10-aa41c40c2041",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/903509708/"
+        },
+        {
+            "type": "url",
+            "id": "url--f59cb270-4aba-44b8-ac9f-ebce09bae4f9",
+            "value": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/915668132/"
+        },
+        {
+            "type": "url",
+            "id": "url--50682b20-7a56-4608-8c3b-d91a70bffda7",
+            "value": "https://uc8ce1a0cf2efa109cd4540c0c22.dl.dropboxusercontent.com/cd/0/get/CgHUWBzFWtX1ZE6CwwKXVb1EvW4tnDYYhbX8Iqj70VZ5e2uwYlkAq6V-xQcjX0NMjbOJrN3_FjuanOjW66WdjPHNw2ptSNdXZi4Sey6511OjeNGuzMwxtagHQe5qFOFpY2xyt1sWeMfLwwHkvGGFzcKY/file?dl=1#"
+        },
+        {
+            "type": "url",
+            "id": "url--b9242d5a-a2f1-4696-abaf-f749fe2f569f",
+            "value": "https://cdn.discordapp.com/attachments/1316109420995809283/1316112071376769165/NativeApp_G4QLIQRa.exe"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6c9ed872-6988-4669-b7dd-2f6f0d9c50c8",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z",
+            "relationship_type": "used",
+            "source_ref": "intrusion-set--b02e8b7a-9692-4913-ab0b-6eb22c1227b7",
+            "target_ref": "malware--097844e5-19c1-44c2-9b68-cbb27683d200",
+            "description": "Storm-0408 uses Lumma Stealer malware to collect and exfiltrate system and browser information."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d762feb6-ce96-403b-8dbd-b806d10529d4",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--cfe0a584-1342-46c5-ac2f-f6a15124ebd8",
+            "target_ref": "intrusion-set--b02e8b7a-9692-4913-ab0b-6eb22c1227b7",
+            "description": "The Malvertising Campaign is attributed to the Storm-0408 intrusion set."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a364f6d7-ffac-4b0b-962c-de20aad1a627",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z",
+            "relationship_type": "participated-in",
+            "source_ref": "threat-actor--b128167c-2adf-49a4-a18c-841586b7e804",
+            "target_ref": "campaign--cfe0a584-1342-46c5-ac2f-f6a15124ebd8",
+            "description": "Unknown Threat Actor participated in the Malvertising Campaign, tracked under Storm-0408."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--1ff957eb-48a2-4045-8977-ce8beb553e98",
+            "created": "2025-03-06T00:00:00Z",
+            "modified": "2025-03-06T00:00:00Z",
+            "relationship_type": "hosts",
+            "source_ref": "url--5c2e884d-771f-40f2-b01c-2ddafa8aeb07",
+            "target_ref": "malware--097844e5-19c1-44c2-9b68-cbb27683d200",
+            "description": "URL hosted Lumma Stealer malware during the campaign."
+        }
+    ]
+}
