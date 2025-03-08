@@ -1,0 +1,210 @@
+{
+    "type": "bundle",
+    "id": "bundle--cc4fbcfc-8305-4aa5-b8e7-1df0f9e1010c",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--1d6140f6-add5-45c6-80c6-fae5efe1f865",
+            "name": "Malvertising campaign leading to info stealers",
+            "description": "A large-scale malvertising campaign detected in December 2024, impacting nearly one million devices globally. The attack originated from illegal streaming websites with embedded malvertising redirectors, redirecting users to GitHub, Discord, and Dropbox where info stealer malware was hosted.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-01-15T00:00:00Z",
+            "aliases": [
+                "Storm-0408"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--13a336d7-8547-46f8-9846-88bcc2ab52fd",
+            "name": "Lumma",
+            "malware_types": [
+                "info-stealer"
+            ],
+            "description": "Lumma Stealer is a type of info-stealing malware that collects system information and user credentials, often found in this malvertising campaign hosted on GitHub.",
+            "is_family": "true",
+            "labels": [
+                "stealer"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--07b63a4c-ffbd-41ea-be5b-d063983e8efe",
+            "name": "Doenerium",
+            "malware_types": [
+                "info-stealer"
+            ],
+            "description": "An updated version of Doenerium used in the malicious campaign which is capable of collecting system and browser information.",
+            "is_family": "false",
+            "labels": [
+                "stealer"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--f87db2ac-66e1-473f-bc4d-e55282245a9a",
+            "name": "Storm-0408",
+            "description": "Threat actor group associated with malvertising campaigns and information-stealing malware. Known for using platforms like GitHub and Dropbox to host malware.",
+            "threat_actor_types": [
+                "group"
+            ],
+            "aliases": [
+                "Storm-0408"
+            ],
+            "first_seen": "2024-12-01T00:00:00Z",
+            "resource_level": "organization",
+            "labels": [
+                "criminal",
+                "financially-motivated"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--8f7c0cbd-9090-47a5-97ac-98d52cfcfac9",
+            "name": "GitHub-hosted payload infrastructure",
+            "description": "GitHub repositories used to host initial payloads in the campaign, effectively serving as a distribution platform for the malware.",
+            "infrastructure_types": [
+                "hosting"
+            ],
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-01-15T00:00:00Z"
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--5cbb66bf-b327-4fdb-8d3e-85375e4f7a74",
+            "name": "Dropbox-hosted payload infrastructure",
+            "description": "Dropbox accounts used to host payloads as part of the multi-stage attack chain.",
+            "infrastructure_types": [
+                "hosting"
+            ],
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-01-15T00:00:00Z"
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--7be3567a-638f-4893-a591-347a3f49ef10",
+            "name": "Discord-hosted payload infrastructure",
+            "description": "Discord platform used to host one of the payloads in the campaign, aiding the delivery of malware.",
+            "infrastructure_types": [
+                "hosting"
+            ],
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-01-15T00:00:00Z"
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--ece659a0-5e47-41c6-88a4-7dbfa4801581",
+            "name": "Mitigation strategies for Malvertising Campaign",
+            "description": "A set of recommended actions provided by Microsoft to mitigate and protect systems against the malvertising campaign, including attack surface reduction and strengthening endpoint security configurations.",
+            "action_surfaces": [
+                "endpoint",
+                "network",
+                "user"
+            ]
+        },
+        {
+            "type": "url",
+            "id": "url--539e374a-aaee-4963-9122-68b57c413cec",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/Featured-image-1024x572.webp"
+        },
+        {
+            "type": "url",
+            "id": "url--811b8890-0911-479f-8edd-7a96126e1ab7",
+            "value": "https://www.microsoft.com/en-us/security/blog/threat-intelligence/attacker-techniques-tools-and-infrastructure/"
+        },
+        {
+            "type": "url",
+            "id": "url--c781e83d-722c-472a-8883-1086758bce80",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/image-2.webp"
+        },
+        {
+            "type": "url",
+            "id": "url--fe8b6553-3ed6-4fd6-82a3-6a030a50ae18",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/image.jpg"
+        },
+        {
+            "type": "url",
+            "id": "url--1528bb9c-610a-4067-a85d-9491cf02b752",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/General-depiction-of-the-four-stages-diagram.webp"
+        },
+        {
+            "type": "url",
+            "id": "url--d3255a38-3740-437a-8467-d5f995786d1d",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/image.webp"
+        },
+        {
+            "type": "url",
+            "id": "url--9ba5d474-7d22-4476-9757-a0d616a05b27",
+            "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/03/image-1.webp"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--04b16d4d-dc24-45f9-b726-03e23d5ea2c5",
+            "relationship_type": "uses",
+            "source_ref": "malware--13a336d7-8547-46f8-9846-88bcc2ab52fd",
+            "target_ref": "infrastructure--8f7c0cbd-9090-47a5-97ac-98d52cfcfac9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cc163c45-a278-40a9-8858-e2f669c168af",
+            "relationship_type": "uses",
+            "source_ref": "malware--07b63a4c-ffbd-41ea-be5b-d063983e8efe",
+            "target_ref": "infrastructure--5cbb66bf-b327-4fdb-8d3e-85375e4f7a74"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bebc05c0-2e07-48c8-b1c4-97dc6b9f5176",
+            "relationship_type": "uses",
+            "source_ref": "malware--07b63a4c-ffbd-41ea-be5b-d063983e8efe",
+            "target_ref": "infrastructure--7be3567a-638f-4893-a591-347a3f49ef10"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fe614e4e-5473-44b2-aed0-f5107b2917ae",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--1d6140f6-add5-45c6-80c6-fae5efe1f865",
+            "target_ref": "threat-actor--f87db2ac-66e1-473f-bc4d-e55282245a9a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a45525b5-b821-4d22-bbca-34ca94671c1e",
+            "relationship_type": "uses",
+            "source_ref": "campaign--1d6140f6-add5-45c6-80c6-fae5efe1f865",
+            "target_ref": "malware--13a336d7-8547-46f8-9846-88bcc2ab52fd"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0ca1eee1-91ff-4ccb-bc5e-75cf078f7e72",
+            "relationship_type": "uses",
+            "source_ref": "campaign--1d6140f6-add5-45c6-80c6-fae5efe1f865",
+            "target_ref": "malware--07b63a4c-ffbd-41ea-be5b-d063983e8efe"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7127dd61-46dd-4e3e-93ac-f0eca2421993",
+            "relationship_type": "mitigates",
+            "source_ref": "course-of-action--ece659a0-5e47-41c6-88a4-7dbfa4801581",
+            "target_ref": "campaign--1d6140f6-add5-45c6-80c6-fae5efe1f865"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--68e71fe6-6263-42c3-8a14-cf99957bf28d",
+            "relationship_type": "controls",
+            "source_ref": "threat-actor--f87db2ac-66e1-473f-bc4d-e55282245a9a",
+            "target_ref": "infrastructure--8f7c0cbd-9090-47a5-97ac-98d52cfcfac9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9bb83e9f-7ad0-4651-a634-07b6b2c126b3",
+            "relationship_type": "controls",
+            "source_ref": "threat-actor--f87db2ac-66e1-473f-bc4d-e55282245a9a",
+            "target_ref": "infrastructure--5cbb66bf-b327-4fdb-8d3e-85375e4f7a74"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8bf773a9-0b6f-4fae-a011-48a6919f4b74",
+            "relationship_type": "controls",
+            "source_ref": "threat-actor--f87db2ac-66e1-473f-bc4d-e55282245a9a",
+            "target_ref": "infrastructure--7be3567a-638f-4893-a591-347a3f49ef10"
+        }
+    ]
+}
