@@ -1,0 +1,277 @@
+{
+    "type": "bundle",
+    "id": "bundle--794f584d-55ad-4da4-aa78-3fe93adf22cb",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--8f43ba45-4cf1-434d-873a-2788c3c61c2f",
+            "name": "APT44",
+            "description": "APT44 (aka Sandworm or Seashell Blizzard) is a Russian state-aligned threat actor attributed to the Main Centre for Special Technologies (GTsST) within the Main Directorate of the General Staff of the Armed Forces of the Russian Federation (GRU).",
+            "aliases": [
+                "Sandworm",
+                "Seashell Blizzard"
+            ],
+            "first_seen": "2025-02-19T00:00:00Z",
+            "labels": [
+                "state-aligned",
+                "russian"
+            ],
+            "roles": [
+                "intrusion-set",
+                "malware"
+            ],
+            "goals": [
+                "compromise Signal Messenger accounts",
+                "gain access to sensitive government and military communications"
+            ]
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--08bbd288-4d6e-4ef5-9b40-ea339cc7c1c7",
+            "name": "UNC5792",
+            "aliases": [
+                "UAC-0195"
+            ],
+            "description": "UNC5792 is a suspected Russian espionage cluster that has been observed altering legitimate Signal group invite pages for phishing campaigns, redirecting victims to malicious URLs crafted to link victim accounts to actor-controlled devices.",
+            "first_seen": "2025-02-19T00:00:00Z",
+            "goals": [
+                "compromise Signal Messenger accounts",
+                "link actor-controlled devices to victim's Signal accounts"
+            ]
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--2ca7eb17-bab5-4416-8400-e56f31ff09b4",
+            "name": "UNC4221",
+            "aliases": [
+                "UAC-0185"
+            ],
+            "description": "UNC4221 is a Russian-linked threat actor targeting Signal accounts of Ukrainian military personnel using a tailored phishing kit designed to mimic components of the Kropyva application.",
+            "first_seen": "2025-02-19T00:00:00Z",
+            "goals": [
+                "compromise Signal Messenger accounts",
+                "link actor-controlled devices to victim's Signal accounts"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--09f7711e-2113-4c72-ba41-be954156a945",
+            "name": "Infamous Chisel",
+            "description": "Infamous Chisel is an Android malware designed to recursively search for and exfiltrate Signal database files and other sensitive data from Android devices.",
+            "labels": [
+                "malware",
+                "android"
+            ],
+            "is_family": "true",
+            "first_seen": "2025-02-19T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--ae8e6b78-7c49-41cc-975a-00fa3ccaede8",
+            "name": "WAVESIGN",
+            "description": "WAVESIGN is a lightweight Windows Batch script used by APT44 to periodically query and exfiltrate recent Signal messages from a victim's Signal database using Rclone.",
+            "labels": [
+                "batch-script",
+                "windows"
+            ],
+            "is_family": "false",
+            "first_seen": "2025-02-19T00:00:00Z"
+        },
+        {
+            "type": "tool",
+            "id": "tool--2c616810-0113-4f54-9140-917ee08e9d6f",
+            "name": "PINPOINT",
+            "description": "PINPOINT is a lightweight JavaScript payload used by UNC4221 to collect basic user information and geolocation data using the browser's GeoLocation API.",
+            "labels": [
+                "javascript",
+                "geolocation"
+            ],
+            "first_seen": "2025-02-19T00:00:00Z"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--57004f1b-68fa-40d7-9c5d-08cb7f581b99",
+            "value": "signal-groups.tech"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--e6ce9d11-f2ca-4348-a2a4-d687115c7adf",
+            "value": "signal-confirm.site"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--5f8bfa26-578e-45e7-8574-78cf857d18a9",
+            "value": "signal-protect.host"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--8210ba32-6c6f-4110-925c-a02a10283a4e",
+            "value": "teneta.add-group.site"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--0ff9ba40-7f4a-41ce-8a0c-d53b14414af2",
+            "value": "signal-group.tech"
+        },
+        {
+            "type": "software",
+            "id": "software--dc74bc59-5f67-4201-a7f7-d93cbd587782",
+            "name": "Signal",
+            "cpe": "cpe:2.3:a:openwhisper:signal:0.30.0.0:*:*:*:*:android:*:*"
+        },
+        {
+            "type": "url",
+            "id": "url--c51849f1-9de0-4d8a-af04-6d862a47f5a3",
+            "value": "https://github.com/signalapp/Signal-Android/commit/112874c08019a40b6f8f1dbbf84eb0ab4d796582"
+        },
+        {
+            "type": "url",
+            "id": "url--f4bab2ac-6b9e-442e-a89b-ee7fb82ef446",
+            "value": "https://github.com/signalapp/Signal-iOS/commit/498b97033254c514404345efc1d4c29c1b076f6c"
+        },
+        {
+            "type": "url",
+            "id": "url--b6a7986c-5bf2-4602-aae3-e96147ed86a6",
+            "value": "https://support.signal.org/hc/en-us/articles/360007059212-How-do-I-ensure-Signal-is-up-to-date"
+        },
+        {
+            "type": "url",
+            "id": "url--e6e7a7b6-ca0e-4be0-b1cf-a444936bd6e9",
+            "value": "https://support.signal.org/hc/en-us/articles/360007320551-Linked-Devices"
+        },
+        {
+            "type": "url",
+            "id": "url--8e829f0f-b94d-4743-8a55-da3237cd4380",
+            "value": "https://support.signal.org/hc/en-us/articles/360051086971-Group-Link-or-QR-code"
+        },
+        {
+            "type": "url",
+            "id": "url--c6e4ab6a-051f-4be1-bb27-09de8536f8f4",
+            "value": "https://cloud.google.com/blog/topics/threat-intelligence/apt44-unearthing-sandworm"
+        },
+        {
+            "type": "url",
+            "id": "url--883bf2a6-9574-4803-ab7d-eb5a82840f2c",
+            "value": "https://cert.gov.ua/article/6278735"
+        },
+        {
+            "type": "url",
+            "id": "url--13073774-0f72-434c-8e8a-b9433604b847",
+            "value": "https://www.justice.gov/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and"
+        },
+        {
+            "type": "url",
+            "id": "url--6527e2c6-75aa-410a-9f0c-248801db4993",
+            "value": "https://cert.gov.ua/article/6281632"
+        },
+        {
+            "type": "url",
+            "id": "url--d3587629-84ee-43fe-81ec-686a27172fae",
+            "value": "https://united24media.com/war-in-ukraine/ukraines-secret-weapon-kropyva-software-4026#:~:text=Kropyva%27s%20impact&text=Amongst%20the%20Ukrainian%20Armed%20Forces,applications%20across%20Ukraine%27s%20armed%20forces."
+        },
+        {
+            "type": "url",
+            "id": "url--5fbbb184-777f-4ef1-a755-96eac004d66d",
+            "value": "https://ssu.gov.ua/en/novyny/sbu-exposes-russian-intelligence-attempts-to-penetrate-armed-forces-planning-operations-system"
+        },
+        {
+            "type": "url",
+            "id": "url--154f72a3-ecc7-468a-83e9-15526611de03",
+            "value": "https://www.ncsc.gov.uk/static-assets/documents/malware-analysis-reports/infamous-chisel/NCSC-MAR-Infamous-Chisel.pdf"
+        },
+        {
+            "type": "url",
+            "id": "url--9c7d2c06-49d2-437d-bbcf-5f2b4c6cc870",
+            "value": "https://www.justice.gov/opa/pr/justice-department-announces-court-authorized-disruption-snake-malware-network-controlled"
+        },
+        {
+            "type": "url",
+            "id": "url--8e41f7c1-a096-4c39-9ec7-24210f57f189",
+            "value": "https://www.gov.uk/government/publications/russias-fsb-malign-cyber-activity-factsheet/russias-fsb-malign-activity-factsheet"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b17acba6-bbaf-4afb-97be-94f66f840ada",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--8f43ba45-4cf1-434d-873a-2788c3c61c2f",
+            "target_ref": "malware--ae8e6b78-7c49-41cc-975a-00fa3ccaede8"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--43a488bf-e615-4bb5-8b66-35ec7f1e16c4",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--8f43ba45-4cf1-434d-873a-2788c3c61c2f",
+            "target_ref": "malware--09f7711e-2113-4c72-ba41-be954156a945"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b1c4b6c6-3e20-471a-b879-a29f57f03e45",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--08bbd288-4d6e-4ef5-9b40-ea339cc7c1c7",
+            "target_ref": "tool--2c616810-0113-4f54-9140-917ee08e9d6f"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--22dee66b-2b1c-4127-8b3b-5bde3e1e510d",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--08bbd288-4d6e-4ef5-9b40-ea339cc7c1c7",
+            "target_ref": "domain-name--57004f1b-68fa-40d7-9c5d-08cb7f581b99"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a9973041-249b-422b-8455-9caa43081e96",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ca7eb17-bab5-4416-8400-e56f31ff09b4",
+            "target_ref": "domain-name--e6ce9d11-f2ca-4348-a2a4-d687115c7adf"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9037e78a-1265-4fcb-b939-da7812f4b18d",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ca7eb17-bab5-4416-8400-e56f31ff09b4",
+            "target_ref": "domain-name--5f8bfa26-578e-45e7-8574-78cf857d18a9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d415c07b-cc67-457f-b5e9-d45370ccb548",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ca7eb17-bab5-4416-8400-e56f31ff09b4",
+            "target_ref": "domain-name--8210ba32-6c6f-4110-925c-a02a10283a4e"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--43ab10ef-bb78-4c26-ad36-68997cea0ef4",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--08bbd288-4d6e-4ef5-9b40-ea339cc7c1c7",
+            "target_ref": "software--dc74bc59-5f67-4201-a7f7-d93cbd587782"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b3d6df3e-e2f6-4121-905a-7d4011fad6c9",
+            "relationship_type": "targets",
+            "source_ref": "intrusion-set--2ca7eb17-bab5-4416-8400-e56f31ff09b4",
+            "target_ref": "software--dc74bc59-5f67-4201-a7f7-d93cbd587782"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--60ee30b9-f71d-49ae-b6a9-c1b4fc2f269f",
+            "relationship_type": "uses",
+            "source_ref": "malware--ae8e6b78-7c49-41cc-975a-00fa3ccaede8",
+            "target_ref": "software--dc74bc59-5f67-4201-a7f7-d93cbd587782"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--64701114-8eb3-455c-9b4c-d53328578d72",
+            "source_ref": "malware--09f7711e-2113-4c72-ba41-be954156a945",
+            "relationship_type": "targets",
+            "target_ref": "software--dc74bc59-5f67-4201-a7f7-d93cbd587782"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--537d74e2-3bf3-4609-87b8-bd9a5a9c9e90",
+            "relationship_type": "uses",
+            "source_ref": "tool--2c616810-0113-4f54-9140-917ee08e9d6f",
+            "target_ref": "software--dc74bc59-5f67-4201-a7f7-d93cbd587782"
+        }
+    ]
+}
