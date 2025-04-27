@@ -1,0 +1,196 @@
+{
+    "name": "Operation Blacksmith: Lazarus Group DLang & Telegram TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "MITRE ATT&CK techniques observed in Operation Blacksmith (Lazarus Group, 2023-2024): DLang-based NineRAT, DLRAT, BottomLoader, HazyLoad reverse proxy, CVE-2021-44228 exploitation, Telegram-based C2, multi-layer persistence, credential dumping, multi-phase recon, and overlapping backdoors.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Exploited CVE-2021-44228 (Log4Shell) on public-facing servers for initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Used PowerShell, BAT, and cmd scripts for all stages: payload delivery, system discovery, defense evasion, and data transfer.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Ingress tool transfer: Downloaded payloads (HazyLoad, RATs) via PowerShell/Invoke-WebRequest. RATs upload/download files over PowerShell and Telegram.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "HazyLoad: Custom reverse proxy for persistent C2; facilitated redundant direct access and relayed traffic to C2 infrastructure.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1090/003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Proxy/Reverse Proxy: Maintained persistent and alternate access points via HazyLoad deployments.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1102",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Used Telegram bots/channels as C2 (NineRAT), leveraging public and private bot tokens, API methods such as /sendDocument and /getFile for evasion.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071/003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Application Layer Protocol: Web Service (Telegram API) for C2 and file exfil/infiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Created Windows service via BAT for persistence (NineRAT), using the Instrumentor binary.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053/005",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Scheduled Task/Job: Created Startup .URL files and scheduled jobs to persist downloader and RAT execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547/001",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Registry Run Keys/Startup Folder: Used .URL shortcut in Startup to maintain persistence with downloaders (BottomLoader).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "privilege-escalation",
+            "color": "",
+            "comment": "Account Manipulation: Created local user 'krtbgt' (admin); shifted to this account for post-exploitation activity.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1098",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Account Manipulation: Added newly created user to Administrators group for persistent and privileged access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "System Information Discovery: Multiple rounds (whoami, ver, getmac, ipconfig, netstat, systeminfo); via both initial- and post-implant.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Software Discovery: Queried installed/running security software (WMIC AntiVirusProduct, tasklist | findstr Secu).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "User Discovery: net user, net localgroup, and similar utilities to enumerate accounts and groups.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Credential Dumping: Used ProcDump/MimiKatz, credential harvesting from LSASS and via registry modifications.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003/005",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "OS Credential Dumping: Queried and modified WDigest UseLogonCredential for credential harvesting.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Modify Registry: Registry modification for enabling WDigest credential collection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "File and Directory Discovery: Enumerated user directories via dir commands.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1567",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Exfiltration to C2 via application layer protocols (Telegram, PowerShell); uploaded files and beaconed system data.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Deobfuscate/Decode Files or Information: NineRAT dropper writes components to disk and deletes itself for stealth; modular infection chain.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070/004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "File Deletion: Droppers and RATs (NineRAT, DLRAT) support self-deletion/uninstall via BAT.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
