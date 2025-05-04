@@ -1,0 +1,180 @@
+{
+    "name": "ToyMaker & Cactus TTPs (Cisco Talos, April 2025)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Primary MITRE ATT&CK techniques and context as observed for ToyMaker and Cactus (April 2025, Cisco Talos)",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "ToyMaker exploited public-facing/unpatched servers (often via known vulns, e.g., Log4j) for initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "ToyMaker (e.g., support) and Cactus (e.g., whiteninja) created unauthorized/fake user accounts for persistence and access hand-off.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "privilege-escalation",
+            "comment": "ToyMaker (e.g., support) and Cactus (e.g., whiteninja) created unauthorized/fake user accounts for privilege escalation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "ToyMaker used Magnet RAM Capture to dump memory and extract credentials.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "ToyMaker used recon commands (whoami, net user, net localgroup, tasklist, ipconfig, quser). Cactus repeated endpoint/server/user/file enumeration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1590",
+            "tactic": "reconnaissance",
+            "comment": "ToyMaker: Gather Victim Network Information (ipconfig /all).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "comment": "Cactus: Remote System Discovery via PowerShell WSMAN scripts to map PowerShell Remoting endpoints.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Both actors abused command and scripting interpreters (cmd.exe, PowerShell, BAT) for payload and tool execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1095",
+            "tactic": "command-and-control",
+            "comment": "ToyMaker's LAGTOY/HOLERUN backdoor used custom raw socket C2 (port 443, not TLS) for command execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "comment": "ToyMaker persisted LAGTOY by creating system service (e.g., sc create WmiPrvSV ...).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Cactus created scheduled tasks to launch reverse shells or OpenSSH connections.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "execution",
+            "comment": "Scheduled tasks were also abused for repeated execution of reverse shells or admin utilities.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "comment": "Attackers used 7za.exe (ToyMaker) and 7z.exe (Cactus) to compress/archive data or memory dumps for exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1048",
+            "tactic": "exfiltration",
+            "comment": "Both actors used PuTTY's SCP (pscp), curl, and WinSCP over ports 53 and 8443 for exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.003",
+            "tactic": "defense-evasion",
+            "comment": "Cactus deleted command history using reg.exe to hinder forensics.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.007",
+            "tactic": "defense-evasion",
+            "comment": "Registry/network-history cleaning by Cactus to cover terminal & connection activity.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.009",
+            "tactic": "defense-evasion",
+            "comment": "Cactus deleted fake user accounts (e.g., support) to remove persistence evidence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1222.001",
+            "tactic": "defense-evasion",
+            "comment": "Cactus restricted access (icacls) to files such as SSH Private Key used in lateral movement/exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021.004",
+            "tactic": "lateral-movement",
+            "comment": "Cactus deployed OpenSSH and created SSH listeners for remote control, lateral movement.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "comment": "Cactus rebooted systems into Safe Mode to disable or evade defensive controls before ransomware deployment.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "defense-evasion",
+            "comment": "Cactus used msiexec to install admin tools (eHorus, RMS) via downloaded MSI installers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "execution",
+            "comment": "Cactus used msiexec.exe to proxy the execution of legitimate remote admin tools, evading standard process monitoring.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1608.001",
+            "tactic": "resource-development",
+            "comment": "Cactus staged/uploaded payloads (malware, tools) to victim endpoints using PowerShell and Impacket.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
