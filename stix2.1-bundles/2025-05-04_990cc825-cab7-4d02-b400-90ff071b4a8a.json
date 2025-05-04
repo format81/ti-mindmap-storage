@@ -1,0 +1,775 @@
+{
+    "type": "bundle",
+    "id": "bundle--1db5a1f3-bec2-480f-8bb0-0be7f057a95b",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "ToyMaker",
+            "labels": [
+                "initial-access-broker",
+                "financially-motivated"
+            ],
+            "description": "ToyMaker is a financially-motivated initial access broker (IAB) tracking by Cisco Talos, known for exploiting vulnerable internet-facing systems, performing credential theft, rapid reconnaissance, and deploying the LAGTOY malware family. ToyMaker is assessed to specialize in establishing access to high-value organizations, then transferring that access to secondary threat actors such as ransomware gangs. No evidence of direct data exfiltration or espionage activities was reported.",
+            "goals": [
+                "Initial access procurement",
+                "Credential theft",
+                "Network reconnaissance",
+                "Access resale to ransomware operators"
+            ],
+            "primary_motivation": "financial-gain",
+            "aliases": []
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Cactus",
+            "labels": [
+                "ransomware-group",
+                "double-extortion"
+            ],
+            "description": "Cactus is a ransomware group known for double extortion operations including data theft, network proliferation, persistence establishment, and ransomware deployment. The group utilizes compromised credentials from initial access brokers like ToyMaker to access victim environments and deploys a variety of remote administration and file transfer tools.",
+            "goals": [
+                "Data theft",
+                "Proliferation within victim network",
+                "Deployment of ransomware",
+                "Extortion"
+            ],
+            "primary_motivation": "financial-gain",
+            "aliases": []
+        },
+        {
+            "type": "malware",
+            "id": "malware--084b6db0-bd19-42b8-b0fe-8e7eeaa46e33",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "LAGTOY",
+            "labels": [
+                "backdoor",
+                "custom",
+                "implant"
+            ],
+            "is_family": "true",
+            "description": "LAGTOY is a custom backdoor malware family deployed by ToyMaker. It allows for reverse shell creation, command execution, persistence as a system service ('WmiPrvSV'), and performs periodic C2 beaconing for administration commands over port 443 without TLS. LAGTOY features anti-debugging mechanisms and unique time-based execution logic with watchdog routines. Known also as HOLERUN by Mandiant.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "command-and-control"
+                },
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "persistence"
+                }
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Metasploit Shells",
+            "labels": [
+                "shell",
+                "trojan",
+                "meterpreter"
+            ],
+            "is_family": "true",
+            "description": "Metasploit shellcode-injected variants of PuTTY, ApacheBench, and ELF binaries, used by the Cactus group to execute code and establish access on target systems, communicating with remote C2 infrastructure over multiple ports (53, 443, 8343, 9232)."
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--ecd0e43c-b305-42e8-a832-26a8314f2ea6",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "ToyMaker - Cactus Access-Brokered Intrusion Set",
+            "aliases": [],
+            "description": "This intrusion set represents the sequential compromise operations wherein ToyMaker, an initial access broker, infiltrates critical infrastructure via vulnerabilities, conducts reconnaissance and credential theft (deploying LAGTOY), then hands over access to the Cactus ransomware group for subsequent extortion operations.",
+            "first_seen": "2023-01-01T00:00:00Z",
+            "goals": [
+                "Initial access acquisition",
+                "Credential theft",
+                "Access resale to ransomware operators",
+                "Double extortion"
+            ]
+        },
+        {
+            "type": "tool",
+            "id": "tool--9d308e31-a1a4-4786-a5c5-a821e3e1b7fc",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Magnet RAM Capture",
+            "labels": [
+                "credential-access",
+                "memory-dump"
+            ],
+            "description": "A freely available forensic tool used to obtain memory dumps from Windows systems, enabling credential extraction. Used by ToyMaker to collect sensitive credentials for lateral movement and access resale."
+        },
+        {
+            "type": "tool",
+            "id": "tool--41ea2f79-8f1b-41bf-9b1e-40152b4124dc",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "eHorus Agent",
+            "labels": [
+                "remote-access",
+                "remote-control"
+            ],
+            "description": "Also known as Pandora RC, a remote control software package used by Cactus for lateral movement and remote administration."
+        },
+        {
+            "type": "tool",
+            "id": "tool--c91426d0-c620-432f-9a20-5f64fc0607f6",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "AnyDesk",
+            "labels": [
+                "remote-desktop",
+                "remote-access"
+            ],
+            "description": "A widely used remote desktop application employed by Cactus for persistence and lateral movement."
+        },
+        {
+            "type": "tool",
+            "id": "tool--046a3907-8ebe-4700-bd78-e0c74603e3d8",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "RMS Remote Admin",
+            "labels": [
+                "remote-management",
+                "remote-access"
+            ],
+            "description": "Remote Utilities for Windows Admin, a Russian-origin remote administration platform used by Cactus group for remote operations."
+        },
+        {
+            "type": "tool",
+            "id": "tool--5217c43e-46aa-4a96-a2c8-7e5cf687d141",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "OpenSSH",
+            "labels": [
+                "ssh",
+                "remote-access",
+                "file-transfer"
+            ],
+            "description": "Standard SSH package for Windows, used to establish SSH listeners and SFTP servers for credential extraction, remote shell creation, and lateral movement by both threat actors."
+        },
+        {
+            "type": "tool",
+            "id": "tool--e001c58c-44f9-47c1-b3f8-982628b60599",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "7-Zip (7za.exe)",
+            "labels": [
+                "archiver",
+                "exfiltration",
+                "compress"
+            ],
+            "description": "An open-source file archiver used to compress data prior to exfiltration. Utilized by both ToyMaker and Cactus for packaging stolen files, memory dumps, and other valuable data for transfer."
+        },
+        {
+            "type": "tool",
+            "id": "tool--323cdf7e-5de5-4b7d-9f1a-f0cd8ba26eb4",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "PuTTY SCP (pscp.exe)",
+            "labels": [
+                "file-transfer",
+                "exfiltration"
+            ],
+            "description": "Secure file copy tool from the PuTTY suite, used for exfiltrating archives and memory dumps from compromised endpoints."
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--247f7e10-c827-44a5-9c5b-5322dfa44a65",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "LAGTOY sample hash",
+            "labels": [
+                "malware-hash",
+                "LAGTOY"
+            ],
+            "pattern": "[file:hashes.'SHA-256' = 'fdf977f0c20e7f42dd620db42d20c561208f85684d3c9efd12499a3549be3826']",
+            "pattern_type": "stix",
+            "valid_from": "2023-01-01T00:00:00Z",
+            "description": "SHA-256 hash for a sample of the LAGTOY backdoor malware family."
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--8eeeabe6-94ad-481a-8ce2-34cae110b2e2",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Metasploit shells hashes",
+            "labels": [
+                "malware-hash",
+                "metasploit"
+            ],
+            "pattern": "[file:hashes.'SHA-256' = '0a367cc7e7e297248fad57e27f83316b7606788db9468f59031fed811cfe4867' OR file:hashes.'SHA-256' = '0bcfea4983cfc2a55a8ac339384ecd0988a470af444ea8f3b597d5fe5f6067fb' OR file:hashes.'SHA-256' = '5831b09c93f305e7d0a49d4936478fac3890b97e065141f82cda9a0d75b1066d' OR file:hashes.'SHA-256' = '691cc4a12fbada29d093e57bd02ca372bc10968b706c95370daeee43054f06e3' OR file:hashes.'SHA-256' = '70077fde6c5fc5e4d607c75ff5312cc2fdf61ea08cae75f162d30fa7475880de' OR file:hashes.'SHA-256' = 'a95930ff02a0d13e4dbe603a33175dc73c0286cd53ae4a141baf99ae664f4132' OR file:hashes.'SHA-256' = 'c1bd624e83382668939535d47082c0a6de1981ef2194bb4272b62ecc7be1ff6b']",
+            "pattern_type": "stix",
+            "valid_from": "2023-01-01T00:00:00Z",
+            "description": "SHA-256 hashes for Metasploit shell payload binaries used during Cactus intrusions."
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--ffc6f084-57b2-4588-8ffb-7a3f5274a150",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "ToyMaker C2 IPs",
+            "labels": [
+                "ip-address",
+                "C2",
+                "ToyMaker"
+            ],
+            "pattern": "[ipv4-addr:value = '209.141.43.37' OR ipv4-addr:value = '194.156.98.155' OR ipv4-addr:value = '158.247.211.51' OR ipv4-addr:value = '39.106.141.68' OR ipv4-addr:value = '47.117.165.166' OR ipv4-addr:value = '195.123.240.2' OR ipv4-addr:value = '75.127.0.235' OR ipv4-addr:value = '149.102.243.100']",
+            "pattern_type": "stix",
+            "valid_from": "2023-01-01T00:00:00Z",
+            "description": "Network infrastructure IP addresses associated with ToyMaker C2 activity."
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--f887bcf0-c174-4f97-a70d-5546cae43da8",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Cactus C2 IPs",
+            "labels": [
+                "ip-address",
+                "C2",
+                "Cactus"
+            ],
+            "pattern": "[ipv4-addr:value = '206.188.196.20' OR ipv4-addr:value = '51.81.42.234' OR ipv4-addr:value = '178.175.134.52' OR ipv4-addr:value = '162.33.177.56' OR ipv4-addr:value = '64.52.80.252' OR ipv4-addr:value = '162.33.178.196' OR ipv4-addr:value = '103.199.16.92']",
+            "pattern_type": "stix",
+            "valid_from": "2023-01-01T00:00:00Z",
+            "description": "Network infrastructure IP addresses associated with Cactus ransomware C2 activity."
+        },
+        {
+            "type": "file",
+            "id": "file--f8fdb158-8789-4ec3-ad92-796bfa14c37b",
+            "hashes": {
+                "SHA-256": "fdf977f0c20e7f42dd620db42d20c561208f85684d3c9efd12499a3549be3826"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--b8266563-e211-42a6-a0d0-b49555e7a4cf",
+            "hashes": {
+                "SHA-256": "0a367cc7e7e297248fad57e27f83316b7606788db9468f59031fed811cfe4867"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--c0d7f65a-d1ec-4362-a828-e096ef412139",
+            "hashes": {
+                "SHA-256": "0bcfea4983cfc2a55a8ac339384ecd0988a470af444ea8f3b597d5fe5f6067fb"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--aa8967aa-32ea-4a28-9a80-95a5576556b0",
+            "hashes": {
+                "SHA-256": "5831b09c93f305e7d0a49d4936478fac3890b97e065141f82cda9a0d75b1066d"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--26a6d5ca-1c53-4082-8d4b-003b73fe4f0e",
+            "hashes": {
+                "SHA-256": "691cc4a12fbada29d093e57bd02ca372bc10968b706c95370daeee43054f06e3"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--fbfdcfe9-22d6-46dc-96c9-372a21d3f96b",
+            "hashes": {
+                "SHA-256": "70077fde6c5fc5e4d607c75ff5312cc2fdf61ea08cae75f162d30fa7475880de"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--902a2fbf-38e0-4670-979a-e8305c841096",
+            "hashes": {
+                "SHA-256": "a95930ff02a0d13e4dbe603a33175dc73c0286cd53ae4a141baf99ae664f4132"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--6bd619c0-1b1b-43cc-80b0-ad033cac8b7a",
+            "hashes": {
+                "SHA-256": "c1bd624e83382668939535d47082c0a6de1981ef2194bb4272b62ecc7be1ff6b"
+            }
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--21c6fb9b-fd7d-4fd8-affd-7adcef5fd3dc",
+            "value": "209.141.43.37"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--a2654c3a-f8f1-4592-a811-c1e6bb03245d",
+            "value": "194.156.98.155"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--df08ab44-ef2d-4c40-a604-5f8d8e82ddf8",
+            "value": "158.247.211.51"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--0ce56378-2025-49a3-84c6-e87aede7f1f8",
+            "value": "39.106.141.68"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--9fca2bd0-5783-4de0-978c-9e063586ab5c",
+            "value": "47.117.165.166"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--e4d0da0a-0ef8-4d6d-aea6-5aef41d48efc",
+            "value": "195.123.240.2"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--8eb3e1f3-4a3c-4d6f-bb84-922f09c7eeba",
+            "value": "75.127.0.235"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--806acdb7-8c5a-44aa-bbab-5b5a9feebd7d",
+            "value": "149.102.243.100"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--f7eb1da3-50bf-4719-881b-0c67983adc86",
+            "value": "206.188.196.20"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--8983a158-701a-4785-a461-6cf6208b11d5",
+            "value": "51.81.42.234"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--69dce581-12d9-4313-991b-9f2d9131a8de",
+            "value": "178.175.134.52"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--9d65e1f8-d538-45f2-adfd-ef3f25498ca1",
+            "value": "162.33.177.56"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--a23af054-4a04-4d85-afc8-e0d6d20dafdb",
+            "value": "64.52.80.252"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--7f3c9928-b0a8-47db-92e2-5bb3ae64f9cf",
+            "value": "162.33.178.196"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2fd9f956-6945-4149-9a81-a834644ca77f",
+            "value": "103.199.16.92"
+        },
+        {
+            "type": "user-account",
+            "id": "user-account--857013b2-a8b1-46b1-b7a7-956fbccfd462",
+            "user_id": "support",
+            "account_type": "windows"
+        },
+        {
+            "type": "user-account",
+            "id": "user-account--09f441c7-686a-45e5-8dfe-b4beae58b38a",
+            "user_id": "whiteninja",
+            "account_type": "windows"
+        },
+        {
+            "type": "software",
+            "id": "software--f5d3f2a2-e2cf-466f-a120-9bf51a5492d8",
+            "name": "LAGTOY"
+        },
+        {
+            "type": "software",
+            "id": "software--1fc7ce6d-8ff0-4c0b-af1b-3f850cf6431c",
+            "name": "Magnet RAM Capture"
+        },
+        {
+            "type": "software",
+            "id": "software--fa45668d-11b3-4ab8-9991-511fa43c6a0f",
+            "name": "eHorus Agent"
+        },
+        {
+            "type": "software",
+            "id": "software--be77385d-be1b-434f-adb2-51de3fd3525f",
+            "name": "AnyDesk"
+        },
+        {
+            "type": "software",
+            "id": "software--cfba2413-8bc9-4d7a-ad6c-ce9520f29638",
+            "name": "Remote Utilities for Windows Admin (RMS Remote Admin)"
+        },
+        {
+            "type": "software",
+            "id": "software--99c4807a-e377-4d4f-9b42-7390c45e15a4",
+            "name": "OpenSSH"
+        },
+        {
+            "type": "file",
+            "id": "file--6fdbb5c7-5d02-492e-88a6-f3372daac4f0",
+            "name": "WmiPrvSV.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--663d7756-e904-42e3-84c6-1ee0f1ec13a4",
+            "name": "sftp-server.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--6bbcebab-9161-481e-9e5d-386b753f4f77",
+            "name": "pscp.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--21e93576-22b9-4be3-94a3-adbde20e074a",
+            "name": "7za.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--18306ed4-90dc-4dad-a2c6-7e422d0bb15a",
+            "name": "curl.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--9a95eecf-8063-4883-8448-c16dd4d33804",
+            "name": "MRCv120.exe"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--64c175e2-e3fd-4011-918b-c00e3b659656",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "file--f8fdb158-8789-4ec3-ad92-796bfa14c37b"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--96f31a32-32f8-4679-a908-25552409bdb3",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--084b6db0-bd19-42b8-b0fe-8e7eeaa46e33",
+            "target_ref": "file--f8fdb158-8789-4ec3-ad92-796bfa14c37b"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cec8b772-55d5-4fe9-9bec-482aaa592e42",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "target_ref": "file--b8266563-e211-42a6-a0d0-b49555e7a4cf"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7d236994-65ce-4d66-9bc9-862303b733da",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "target_ref": "file--c0d7f65a-d1ec-4362-a828-e096ef412139"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--12279222-ca66-41db-9cdd-f4995de4c0be",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "target_ref": "file--aa8967aa-32ea-4a28-9a80-95a5576556b0"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f71a37ee-f07f-46d7-a5c8-c6327ab90f3d",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "target_ref": "file--26a6d5ca-1c53-4082-8d4b-003b73fe4f0e"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5de6dda0-e8fe-4259-ab02-cd3bf17880a9",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "target_ref": "file--fbfdcfe9-22d6-46dc-96c9-372a21d3f96b"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f9a5d662-580f-4133-8e4f-b632d2c74c25",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "target_ref": "file--902a2fbf-38e0-4670-979a-e8305c841096"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b889390c-c4bf-4ec2-bf18-e668579f4f6e",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--d5f77f62-f6c9-4ba4-b459-8db4ba47eb2d",
+            "target_ref": "file--6bd619c0-1b1b-43cc-80b0-ad033cac8b7a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--01723e8f-0fd8-4d48-9669-9a523d07656b",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--21c6fb9b-fd7d-4fd8-affd-7adcef5fd3dc"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--11eebc2b-16bd-4363-bdc9-281321cced84",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--a2654c3a-f8f1-4592-a811-c1e6bb03245d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--58c7fbe3-ab90-4510-9d66-4726712ac42b",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--df08ab44-ef2d-4c40-a604-5f8d8e82ddf8"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0dfb0bbc-539b-438a-8fcb-3fd5aa3d8acb",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--0ce56378-2025-49a3-84c6-e87aede7f1f8"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--362d1213-4e6d-4036-9054-c11c1b0492eb",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--9fca2bd0-5783-4de0-978c-9e063586ab5c"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--113f839b-a074-4965-a791-ce15954530c0",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--e4d0da0a-0ef8-4d6d-aea6-5aef41d48efc"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9cb165a3-e8a4-4144-b20e-eaed05b8e438",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--8eb3e1f3-4a3c-4d6f-bb84-922f09c7eeba"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5c718db3-511b-4336-b773-49a4581ba85e",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "ipv4-addr--806acdb7-8c5a-44aa-bbab-5b5a9feebd7d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c0809958-09fe-437b-9a2e-38196462f906",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "ipv4-addr--f7eb1da3-50bf-4719-881b-0c67983adc86"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f1b9d11d-0bb9-424f-957f-8e1837538af2",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "ipv4-addr--8983a158-701a-4785-a461-6cf6208b11d5"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--14d88d29-78b3-4ab8-8924-287f3946f4ff",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "ipv4-addr--69dce581-12d9-4313-991b-9f2d9131a8de"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--53688b70-77d7-4c9e-9ecf-829f5643ee77",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "ipv4-addr--9d65e1f8-d538-45f2-adfd-ef3f25498ca1"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--912e338f-faa9-46d7-8111-91ecbd4c00f9",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "ipv4-addr--a23af054-4a04-4d85-afc8-e0d6d20dafdb"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2534ac6a-7efd-4e35-937e-26b23e706e1f",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "ipv4-addr--7f3c9928-b0a8-47db-92e2-5bb3ae64f9cf"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--38a57b31-a696-4121-b522-7da89f92492e",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "ipv4-addr--2fd9f956-6945-4149-9a81-a834644ca77f"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2f35c8ad-f193-46b7-9236-9713731a0c97",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--084b6db0-bd19-42b8-b0fe-8e7eeaa46e33",
+            "target_ref": "file--6fdbb5c7-5d02-492e-88a6-f3372daac4f0"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ea9552e7-f48e-4f27-b82b-0afbbb5d7cc6",
+            "relationship_type": "creates",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--084b6db0-bd19-42b8-b0fe-8e7eeaa46e33",
+            "target_ref": "file--6fdbb5c7-5d02-492e-88a6-f3372daac4f0"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d0a7cd2b-d4fe-4bd9-ba07-cf0d7e6f3851",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "file--663d7756-e904-42e3-84c6-1ee0f1ec13a4"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--646f8d76-b05c-493f-b7dc-482b77c15919",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "malware--084b6db0-bd19-42b8-b0fe-8e7eeaa46e33",
+            "target_ref": "file--663d7756-e904-42e3-84c6-1ee0f1ec13a4"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--39108dce-7b3b-4251-b0a6-53a67c71efaf",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "file--6bbcebab-9161-481e-9e5d-386b753f4f77"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7171bedf-d024-4544-a03c-902e8dcf7777",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "file--6bbcebab-9161-481e-9e5d-386b753f4f77"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0487a8f0-ed33-4962-b1e9-33764d26ba61",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "file--21e93576-22b9-4be3-94a3-adbde20e074a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--97a5ca31-2135-4d3c-ad6c-bcd5cefcda30",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "file--21e93576-22b9-4be3-94a3-adbde20e074a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d6d51c25-96de-4e81-9797-593c7775ecef",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "file--18306ed4-90dc-4dad-a2c6-7e422d0bb15a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bbadb390-8154-4c6a-b761-a0ad6f2303f9",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "file--9a95eecf-8063-4883-8448-c16dd4d33804"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--e8f6bf80-062d-4b1c-b9e4-62b34457b54d",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--91140243-9a48-458f-a08f-11acb5720ef6",
+            "target_ref": "user-account--857013b2-a8b1-46b1-b7a7-956fbccfd462"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5d3850d9-5058-4e4d-987b-7c098e772c0c",
+            "relationship_type": "uses",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "source_ref": "threat-actor--b6c92b94-5845-4510-b0eb-e14ff5af74d6",
+            "target_ref": "user-account--09f441c7-686a-45e5-8dfe-b4beae58b38a"
+        }
+    ]
+}
