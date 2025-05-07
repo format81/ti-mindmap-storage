@@ -1,0 +1,101 @@
+{
+    "name": "Enterprise Obfuscation Techniques in .NET Malware (.NET/AES/KoiVM)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Obfuscation and evasion TTPs employed by malware families such as Agent Tesla, XWorm, and FormBook/XLoader, as explored in Unit 42's analysis. Includes encryption, virtualization, fileless execution, and common defense bypass approaches.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "Malware uses strong obfuscation, including AES encryption and code virtualization (KoiVM) to hinder analysis and evade detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1497",
+            "tactic": "defense-evasion",
+            "comment": "Obfuscation via virtualization/sandbox evasion: Code is virtualized using KoiVM, requiring analysis of a custom interpreter, defeating static and sandbox analysis.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1620",
+            "tactic": "defense-evasion",
+            "comment": ".NET malware abuses reflection to load/decode/execute code at runtime, including deobfuscated payloads stored/resources, bypassing signature and perimeter controls.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "comment": "Stages and config stored encrypted (AES), extraction requires staged decryption and decoding; markers and strategic padding help evade detection and signature matches.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027.002",
+            "tactic": "defense-evasion",
+            "comment": "Implements staged/multi-stage payloads: Encrypted and virtualized droppers that sequentially decode and deploy next-stage payloads.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1564.004",
+            "tactic": "defense-evasion",
+            "comment": "Payloads, config, and AES keys/IVs stored in PE overlay, which many static analysis tools skip, hiding artifacts from detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "comment": "Final payload is decrypted and executed in-memory via .NET reflection: achieves a fileless execution stage (process injection or in-memory execution).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "comment": "Techniques to bypass the Antimalware Scan Interface (AMSI) detected: tokens such as 'AmsiScanBuffer' and 'AmsiOpenSession' present in overlay data.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "comment": "C2 communication for payload delivery, configuration or exfiltration: Some samples retrieve further payloads via HTTP/SMTP, e.g., Agent Tesla and XWorm.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [
+        {
+            "name": "Unit 42 report",
+            "value": "https://unit42.paloaltonetworks.com/malware-obfuscation-techniques/"
+        }
+    ],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
