@@ -1,0 +1,469 @@
+{
+    "type": "bundle",
+    "id": "bundle--e5d87b48-19c0-4f86-95d0-330ce0bfb8fd",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--5c270c17-58e9-417e-8024-8425b2f73581",
+            "name": "Agent Tesla",
+            "description": "Agent Tesla is a .NET-based infostealer and remote access trojan (RAT) family commonly distributed via obfuscated multi-stage payloads with advanced anti-analysis and evasion techniques such as AES encryption, code virtualization (e.g. KoiVM), staged payload delivery, and dynamic code loading.",
+            "is_family": "true",
+            "labels": [
+                "trojan",
+                "infostealer",
+                "rat",
+                ".net",
+                "keylogger"
+            ],
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--d48cbd72-ef1e-47a2-8849-6ba24cedcd27",
+            "name": "XWorm",
+            "description": "XWorm is a .NET-based malware family focused on information stealing and remote control. It leverages multi-stage, AES-encrypted payloads and obfuscation, utilizing code virtualization (e.g., KoiVM), payload encryption (both CBC and ECB), and in-memory execution via reflection.",
+            "is_family": "true",
+            "labels": [
+                "rat",
+                "infostealer",
+                "trojan",
+                ".net"
+            ],
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--9ef319ad-2062-4de6-851e-678d91e9cafb",
+            "name": "FormBook",
+            "description": "FormBook is an infostealer that collects credentials and other sensitive data. In observed campaigns, it was delivered as a final payload, sometimes associated with XLoader, via multi-layered, AES-encrypted, and virtualized dropper chains aimed at evading detection.",
+            "is_family": "true",
+            "labels": [
+                "infostealer",
+                "stealer",
+                "trojan"
+            ],
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--b83f4b07-3456-410d-b70c-047a2341c827",
+            "name": "XLoader",
+            "description": "XLoader is an infostealer and malware family used to deliver other malicious payloads, including FormBook, utilizing advanced multi-stage delivery, encryption, and obfuscation techniques for evasion.",
+            "is_family": "true",
+            "labels": [
+                "infostealer",
+                "loader",
+                "stealer"
+            ],
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--68c820c3-5a53-4529-9d88-89558b44b16f",
+            "name": "Use of multi-stage payloads with encryption and virtualization",
+            "description": "This attack pattern involves using multiple payload stages, each protected by AES encryption (typically CBC for payload and ECB for configuration), supported by obfuscation methods like code virtualization (e.g., KoiVM) and in-memory execution via .NET reflection, designed to evade static and dynamic analysis.",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--25c49822-d3b9-45bd-b033-67adf3f90013",
+            "name": "mail.iaa-airferight.com SMTP server",
+            "description": "SMTP email server used by Agent Tesla samples for exfiltrating stolen information and supporting command-and-control communication. Observed in multiple samples with credentials for admin@iaa-airferight.com and web@iaa-airferight.com.",
+            "infrastructure_types": [
+                "hosting-target-lists",
+                "command-and-control"
+            ],
+            "first_seen": "2025-03-03T00:00:00Z",
+            "last_seen": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--0f74cd76-cd59-4dd1-a8fd-152156f5baf8",
+            "name": "XWorm C2 nodes",
+            "description": "C2 servers used for XWorm remote access and infostealing operations. Currently identified endpoints: 66.63.168.133:7000 and weidmachane.zapto.org:7000.",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "first_seen": "2025-03-03T00:00:00Z",
+            "last_seen": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--eab93a74-33e6-4970-b41a-7e36c1d41f06",
+            "name": "Agent Tesla Sample - a02bdd3db4dfede3d6d8db554a266bf9f87f4fa55ee6cde5cbe1ed77c514cdee",
+            "description": "SHA-256 hash of Agent Tesla malware sample; associated with lrfRT.exe process and observed sending SMTP traffic via mail.iaa-airferight.com",
+            "pattern": "[file:hashes.'SHA-256' = 'a02bdd3db4dfede3d6d8db554a266bf9f87f4fa55ee6cde5cbe1ed77c514cdee']",
+            "pattern_type": "stix",
+            "valid_from": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--6b2c1733-6ded-48bc-b9b1-7c2bf939bafd",
+            "name": "Agent Tesla Sample - 3d8187853d481c74408d56759f427e2c3446e9310c2d109fd38a0f200696c32d",
+            "description": "SHA-256 hash of Agent Tesla malware sample; associated with uaAWu.exe process and SMTP usage.",
+            "pattern": "[file:hashes.'SHA-256' = '3d8187853d481c74408d56759f427e2c3446e9310c2d109fd38a0f200696c32d']",
+            "pattern_type": "stix",
+            "valid_from": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d54aff94-0106-4176-8e04-8ae500250e5a",
+            "name": "XWorm Sample - 098a18e96c4fb250ffadb3f01d601240c74a4d9f5df94cb72bd44cc81b80b2af",
+            "description": "SHA-256 hash of XWorm malware sample.",
+            "pattern": "[file:hashes.'SHA-256' = '098a18e96c4fb250ffadb3f01d601240c74a4d9f5df94cb72bd44cc81b80b2af']",
+            "pattern_type": "stix",
+            "valid_from": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--72d1769b-46df-42bc-847a-bd2e8cad7cf3",
+            "name": "XWorm Sample - 695e038452a656d58471f284edb8d81754b78258a6afd3d8f62ae8a47c3130d9",
+            "description": "SHA-256 hash of XWorm malware sample.",
+            "pattern": "[file:hashes.'SHA-256' = '695e038452a656d58471f284edb8d81754b78258a6afd3d8f62ae8a47c3130d9']",
+            "pattern_type": "stix",
+            "valid_from": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ff3f529c-5308-4463-93ce-8232890d3a34",
+            "name": "FormBook/XLoader Sample - d72f4ef2e5caea42749d542384b6634e65e29f3aef5d09a9c231cc09e76e4988",
+            "description": "SHA-256 hash of FormBook/XLoader malware sample.",
+            "pattern": "[file:hashes.'SHA-256' = 'd72f4ef2e5caea42749d542384b6634e65e29f3aef5d09a9c231cc09e76e4988']",
+            "pattern_type": "stix",
+            "valid_from": "2025-03-03T00:00:00Z",
+            "confidence": 100
+        },
+        {
+            "type": "file",
+            "id": "file--4b00f49a-f093-401b-931f-e86faad9be77",
+            "hashes": {
+                "SHA-256": "a02bdd3db4dfede3d6d8db554a266bf9f87f4fa55ee6cde5cbe1ed77c514cdee"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--7d3f95d7-e72d-4415-94b3-cec233e84261",
+            "hashes": {
+                "SHA-256": "3d8187853d481c74408d56759f427e2c3446e9310c2d109fd38a0f200696c32d"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--5e3af464-f9ed-43cc-8f88-53040ea17b53",
+            "hashes": {
+                "SHA-256": "098a18e96c4fb250ffadb3f01d601240c74a4d9f5df94cb72bd44cc81b80b2af"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--112c13c1-55ed-4722-a6a5-240c66ac43e2",
+            "hashes": {
+                "SHA-256": "695e038452a656d58471f284edb8d81754b78258a6afd3d8f62ae8a47c3130d9"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--725907da-7056-481c-a7de-251aa8c1dc1b",
+            "hashes": {
+                "SHA-256": "d72f4ef2e5caea42749d542384b6634e65e29f3aef5d09a9c231cc09e76e4988"
+            }
+        },
+        {
+            "type": "process",
+            "id": "process--9b4aa81a-acd4-4602-8c77-71e03b350df7",
+            "command_line": "lrfRT.exe"
+        },
+        {
+            "type": "process",
+            "id": "process--ac61cdc0-9616-4356-b253-0ac22b7868cb",
+            "command_line": "uaAWu.exe"
+        },
+        {
+            "type": "network-traffic",
+            "id": "network-traffic--067ee65b-8fee-425e-83ca-3012e9a01d73",
+            "src_ref": "domain-name--cfc9114b-d19e-4a8e-bdf7-bfd4b0189712",
+            "dst_ref": "ipv4-addr--aabc08f0-0b38-42c6-affa-4a2dabbd3235",
+            "protocols": [
+                "smtp"
+            ],
+            "src_port": 25
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--b3f8be96-03dd-41b4-85d3-9a815ab9930b",
+            "value": "mail.iaa-airferight.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--5fd1c25d-0a37-475b-95ce-8a8f645a9def",
+            "value": "iaa-airferight.com"
+        },
+        {
+            "type": "email-addr",
+            "id": "email-addr--cf0f099b-4da7-46d0-b3b0-d6096bf18992",
+            "value": "admin@iaa-airferight.com"
+        },
+        {
+            "type": "email-addr",
+            "id": "email-addr--1fa88f95-3e46-4aaa-89fd-f6779577c9d0",
+            "value": "web@iaa-airferight.com"
+        },
+        {
+            "type": "email-addr",
+            "id": "email-addr--81fe37d7-e568-4404-8939-1cf5c27025ef",
+            "value": "mail@iaa-airferight.com"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--722d3dd7-fdb7-49d4-85ef-4a71145b0915",
+            "value": "66.63.168.133"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--a2651c46-1294-4839-a43a-5958c4012d00",
+            "value": "weidmachane.zapto.org"
+        },
+        {
+            "type": "user-agent",
+            "id": "user-agent--26aa82fb-9307-4d09-8146-92aff9d56e06",
+            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5e17dac2-a5aa-4dd1-91ce-0f8f1a43f46c",
+            "relationship_type": "indicates",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "indicator--eab93a74-33e6-4970-b41a-7e36c1d41f06",
+            "target_ref": "file--4b00f49a-f093-401b-931f-e86faad9be77",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c6b803b7-88c5-46bb-ac8d-318963525fea",
+            "relationship_type": "indicates",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "indicator--6b2c1733-6ded-48bc-b9b1-7c2bf939bafd",
+            "target_ref": "file--7d3f95d7-e72d-4415-94b3-cec233e84261",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--74789749-a162-43cc-a164-404ce865ec42",
+            "relationship_type": "indicates",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "indicator--d54aff94-0106-4176-8e04-8ae500250e5a",
+            "target_ref": "file--5e3af464-f9ed-43cc-8f88-53040ea17b53",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f1da107e-0559-490e-8881-a3cb3235ce6e",
+            "relationship_type": "indicates",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "indicator--72d1769b-46df-42bc-847a-bd2e8cad7cf3",
+            "target_ref": "file--112c13c1-55ed-4722-a6a5-240c66ac43e2",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2d75f332-381f-4a9c-9547-47997179584d",
+            "relationship_type": "indicates",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "indicator--ff3f529c-5308-4463-93ce-8232890d3a34",
+            "target_ref": "file--725907da-7056-481c-a7de-251aa8c1dc1b",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ff302b70-bde8-4a31-b9d0-3ea2ea1a8822",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--5c270c17-58e9-417e-8024-8425b2f73581",
+            "target_ref": "file--4b00f49a-f093-401b-931f-e86faad9be77",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--273f598f-679a-405e-a628-3c9457210af9",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--5c270c17-58e9-417e-8024-8425b2f73581",
+            "target_ref": "file--7d3f95d7-e72d-4415-94b3-cec233e84261",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6e70d611-608d-4fcb-8a1d-184bf9038b3d",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--d48cbd72-ef1e-47a2-8849-6ba24cedcd27",
+            "target_ref": "file--5e3af464-f9ed-43cc-8f88-53040ea17b53",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c2427dec-fc2c-4c7f-a7b1-3d79661e9971",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--d48cbd72-ef1e-47a2-8849-6ba24cedcd27",
+            "target_ref": "file--112c13c1-55ed-4722-a6a5-240c66ac43e2",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b36ece52-7401-4111-b825-3b3725accae7",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--9ef319ad-2062-4de6-851e-678d91e9cafb",
+            "target_ref": "file--725907da-7056-481c-a7de-251aa8c1dc1b",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--595dffec-d414-4038-8df8-7dea440a1e8e",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--b83f4b07-3456-410d-b70c-047a2341c827",
+            "target_ref": "file--725907da-7056-481c-a7de-251aa8c1dc1b",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9dcd161d-6090-49f3-acc5-0b16dcb68ea1",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--5c270c17-58e9-417e-8024-8425b2f73581",
+            "target_ref": "process--9b4aa81a-acd4-4602-8c77-71e03b350df7",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f89322d8-397a-4b44-aa2a-e3afc7031736",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--5c270c17-58e9-417e-8024-8425b2f73581",
+            "target_ref": "process--ac61cdc0-9616-4356-b253-0ac22b7868cb",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--820ff31c-b4dd-490a-b004-4da1c229e15e",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--5c270c17-58e9-417e-8024-8425b2f73581",
+            "target_ref": "infrastructure--25c49822-d3b9-45bd-b033-67adf3f90013",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e9dda832-805a-45f3-afd3-13ccd8b4b973",
+            "relationship_type": "communicates-with",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "process--9b4aa81a-acd4-4602-8c77-71e03b350df7",
+            "target_ref": "domain-name--b3f8be96-03dd-41b4-85d3-9a815ab9930b",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5e04544f-8a84-41c9-bfe1-df9f9e8087a1",
+            "relationship_type": "communicates-with",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "process--ac61cdc0-9616-4356-b253-0ac22b7868cb",
+            "target_ref": "domain-name--b3f8be96-03dd-41b4-85d3-9a815ab9930b",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--98ab85ab-9e48-421d-8e60-8dd6a3a69023",
+            "relationship_type": "uses",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--d48cbd72-ef1e-47a2-8849-6ba24cedcd27",
+            "target_ref": "infrastructure--0f74cd76-cd59-4dd1-a8fd-152156f5baf8",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d5c02c3a-31a0-43a8-978f-16bac9ade27a",
+            "relationship_type": "communicates-with",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--d48cbd72-ef1e-47a2-8849-6ba24cedcd27",
+            "target_ref": "domain-name--a2651c46-1294-4839-a43a-5958c4012d00",
+            "confidence": 100
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--284316e0-8232-4c5f-a0f7-1dccf22db3d9",
+            "relationship_type": "communicates-with",
+            "created": "2025-03-03T00:00:00Z",
+            "modified": "2025-03-03T00:00:00Z",
+            "source_ref": "malware--d48cbd72-ef1e-47a2-8849-6ba24cedcd27",
+            "target_ref": "ipv4-addr--722d3dd7-fdb7-49d4-85ef-4a71145b0915",
+            "confidence": 100
+        }
+    ]
+}
