@@ -1,0 +1,147 @@
+{
+    "name": ".NET Malware Obfuscation Techniques (Unit 42, Mar 2025)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Key MITRE ATT&CK techniques observed in .NET malware strains using advanced encryption and virtualization (Agent Tesla, XWorm, XLoader/FormBook) as analyzed by Unit 42 (Palo Alto Networks, Mar 2025).",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1027.002",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Obfuscated Files or Information: Encryption. Layered AES CBC/ECB encryption at each stage for payload concealment. Key/IV and ciphertext markers and custom padding (e.g., PAPADDINGXX) evade static detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027.004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Obfuscated Files or Information: Virtualization/Obfuscators. VM-based code obfuscation with KoiVM (ConfuserEx) for virtual instruction rewriting; code only decodable via custom interpreter.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Command and Scripting Interpreter. Staged payload execution (multi-layered loaders); heavily leverages dynamic execution environments.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1620",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Reflective Code Loading. .NET reflection to dynamically deobfuscate/load and execute payloads in memory at runtime, bypassing static/disk detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1564.004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Hide Artifacts: Overlay Data. Payloads and config are stored in the Portable Executable (PE) overlay, an area missed by many static analysis tools.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Deobfuscate/Decode Files or Information. Keys/parameters (e.g., AES key for Stage 3) embedded as Base64 strings, requiring runtime deobfuscation/decoding.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Process Injection (in-memory execution). Final payload decrypted and executed in memory (fileless), further complicating static/disk-based defense.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Impair Defenses: Disable or Modify System Tools. AMSI API method names (AmsiInitialize, AmsiScanBuffer) indicate capability to perform AMSI bypass.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Application Layer Protocol: Email (SMTP). Agent Tesla uses SMTP to communicate with C2 for data exfiltration.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Application Layer Protocol: Web Protocols. XWorm/XLoader communicate with C2 servers via custom domains/IP over non-standard TCP port 7000.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [
+        {
+            "label": "Original Unit 42 Article",
+            "url": "https://unit42.paloaltonetworks.com/malware-obfuscation-techniques/"
+        }
+    ],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
