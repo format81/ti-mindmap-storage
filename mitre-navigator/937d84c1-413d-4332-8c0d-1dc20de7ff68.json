@@ -1,0 +1,204 @@
+{
+    "name": "Operation Blacksmith: Lazarus Group Telegram-based DLang Malware TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Most relevant ATT&CK Enterprise techniques observed in Operation Blacksmith, including NineRAT, DLRAT, BottomLoader, HazyLoad, and associated hands-on-kayboard activity.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "Exploited CVE-2021-44228 (Log4Shell) on public-facing VMWare Horizon servers for initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "comment": "Used Windows Command Shell (cmd.exe) for system discovery, user/account manipulation, file operations.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "comment": "Used PowerShell for downloading (BottomLoader), uploading files, persistence, payload execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "comment": "Ingress Tool Transfer - Download and transfer of NineRAT, DLRAT, BottomLoader, and staging files (e.g., via PowerShell and cmd).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "comment": "NineRAT persistence by creating service (via 'sc create ...'), typically using a BAT script.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547.001",
+            "tactic": "persistence",
+            "comment": "BottomLoader adds .URL file to Windows Startup folder for payload persistence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Created new local admin user account ('net user krtbgt <password> /add') and added to Administrators.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "defense-evasion",
+            "comment": "Switched to newly created valid account (local admin) for hands-on activity and tool execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "comment": "NineRAT dropper deletes itself after extracting embedded components to disk.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "comment": "Modified registry to enable Wdigest credential harvesting (set UseLogonCredential = 1).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "discovery",
+            "comment": "Software discovery: Queried AV products using WMIC and process listings.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "System Information Discovery using commands (whoami, ver, getmac, ipconfig, netstat, dir, systeminfo, wmic, etc.), including post-compromise (NineRAT/others).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "discovery",
+            "comment": "User Discovery via 'net localgroup administrators' to enumerate local admin users.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "discovery",
+            "comment": "Network Service Discovery via netstat to identify open ports/connections.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "comment": "File and Directory Discovery: Used dir to enumerate users dir and files.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Dumped credentials with tools such as ProcDump, Mimikatz, pwdump, including dump of LSASS memory.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003.005",
+            "tactic": "credential-access",
+            "comment": "Queried and leveraged Wdigest for plaintext credential retrieval (and enabled registry setting).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003.002",
+            "tactic": "credential-access",
+            "comment": "Targeted Security Account Manager (SAM) database with credential dumping tools.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "comment": "NineRAT, DLRAT used for local data collection and file staging for exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "collection",
+            "comment": "DLRAT creates 'SynUnst.ini' as an initialization/data staging file.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547.009",
+            "tactic": "persistence",
+            "comment": "BottomLoader creates a .URL for persistence in Startup (shortcut modification).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Creation of persistent artifacts (.URL and service) with similar behavioral objective to scheduled tasks/jobs.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1090.002",
+            "tactic": "command-and-control",
+            "comment": "HazyLoad employed for external proxy reverse proxy backdoor access and C2.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "comment": "Application Layer Protocol: Web protocols (HTTP/HTTPS) used for C2 (HazyLoad, BottomLoader, DLRAT).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071.003",
+            "tactic": "command-and-control",
+            "comment": "Application Layer Protocol: Web Service - NineRAT uses Telegram (Telegram API) for C2, file upload/download, tasking.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "comment": "Exfiltration over C2 channel: File uploads via Telegram (NineRAT), HTTP(S) (DLRAT), and PowerShell.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1568.002",
+            "tactic": "command-and-control",
+            "comment": "Use of legitimate communication service (Telegram API) to mask C2 and evade detection.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
