@@ -1,0 +1,216 @@
+{
+    "name": "ToyMaker and Cactus Ransomware - Enterprise Techniques",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "ATT&CK techniques used in the ToyMaker initial access and access handoff to Cactus ransomware/double extortion operators in critical infrastructure enterprise compromises (2023).",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "ToyMaker exploited vulnerable, unpatched internet-facing servers to gain initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Commands like whoami, net user, net group, nltest, tasklist, quser, and ipconfig /all were used for local and enterprise recon.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1590",
+            "tactic": "reconnaissance",
+            "comment": "Use of ipconfig /all as part of post-compromise local network reconnaissance.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "ToyMaker and Cactus created fake and malicious user accounts (e.g., net user support, net user whiteninja).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "defense-evasion",
+            "comment": "ToyMaker and Cactus created fake and malicious user accounts (e.g., net user support, net user whiteninja).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Magnet RAM Capture used to dump memory and extract credentials from endpoints.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "comment": "Use of 7za.exe and 7z.exe to archive memory dumps and other files for exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1048",
+            "tactic": "exfiltration",
+            "comment": "Use of PuTTY SCP, curl.exe, and SFTP/OpenSSH to exfiltrate archives over network to remote attacker servers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543",
+            "tactic": "persistence",
+            "comment": "LAGTOY implant persisted by creating a new Windows service (sc create WmiPrvSV).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "comment": "LAGTOY implant persisted by creating a new Windows service (sc create WmiPrvSV).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "comment": "LAGTOY and other tools used cmd.exe and batch scripts (e.g., scheduled tasks, downloader commands).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Cactus used SCHTASKS to create tasks that maintain access/reverse shells.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021.004",
+            "tactic": "lateral-movement",
+            "comment": "OpenSSH used to enable SSH/SFTP for remote access and lateral movement.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1222.001",
+            "tactic": "defense-evasion",
+            "comment": "icacls used to restrict access to SSH private key files, preventing detection or remediation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.003",
+            "tactic": "defense-evasion",
+            "comment": "reg.exe used to delete RunMRU keys to remove evidence of command execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.007",
+            "tactic": "defense-evasion",
+            "comment": "reg.exe and attrib.exe used to clear RDP/terminal server client connection histories or attributes.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.009",
+            "tactic": "defense-evasion",
+            "comment": "net user support /delete removes malicious accounts after use.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "defense-evasion",
+            "comment": "msiexec.exe abused for stealthy installation of remote administration tools (e.g., eHorus).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "execution",
+            "comment": "msiexec.exe abused for stealthy installation of remote administration tools (e.g., eHorus).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1608.001",
+            "tactic": "resource-development",
+            "comment": "PowerShell used to download and stage remote admin tools (e.g., eHorus, RMS) from attacker-controlled servers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "comment": "Use of eHorus, RMS, AnyDesk, WinSCP\u2014dual-use tools for remote access and control.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "comment": "bcdedit and shutdown used to boot into Safe Mode, possibly to disable endpoint protection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "comment": "sftp-server.exe and other methods (SCP, PowerShell) used to transfer tools and payloads between systems and from C2.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control",
+            "comment": "LAGTOY uses port 443 (not TLS) with raw sockets for C2 communications.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1095",
+            "tactic": "command-and-control",
+            "comment": "LAGTOY communicates with its C2 using a custom protocol (e.g., admin codes like #pt, #pd, #ps).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055.001",
+            "tactic": "defense-evasion",
+            "comment": "Metasploit-injected binaries for PuTTY and ApacheBench used to execute code (leveraging process injection).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055.001",
+            "tactic": "privilege-escalation",
+            "comment": "Metasploit-injected binaries for PuTTY and ApacheBench used to execute code (leveraging process injection).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "comment": "WSMAN discovery via PowerShell scripts to enumerate endpoints supporting PowerShell remoting.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547.001",
+            "tactic": "persistence",
+            "comment": "reg add commands to set Winlogon values for new users, enabling auto logon (e.g., whiteninja).",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
