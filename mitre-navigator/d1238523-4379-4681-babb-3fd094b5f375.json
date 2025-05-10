@@ -1,0 +1,189 @@
+{
+    "name": "ToyMaker & Cactus: ATT&CK Enterprise Layer",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "ATT&CK TTPs used by ToyMaker (IAB) and Cactus ransomware group in the 2023 double extortion campaign, including technical context and tool usage.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "ToyMaker employs exploitation of vulnerable, unpatched internet-facing servers to gain initial access to victim networks."
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "discovery",
+            "comment": "ToyMaker conducts user enumeration as part of initial compromise (e.g., \"net user\", \"net group\", \"whoami\" commands)."
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Multiple commands observed: \"whoami\", \"tasklist\", \"quser\", etc., for discovering host/system information."
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "comment": "Cactus performs endpoint and network enumeration, e.g., PowerShell scripts to discover remote systems."
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "ToyMaker and Cactus create new local user accounts (e.g., 'support', 'whiteninja') for persistence or escalation."
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "defense-evasion",
+            "comment": "ToyMaker and Cactus create new local user accounts (e.g., 'support', 'whiteninja') for persistence or escalation."
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Magnet RAM Capture used to extract credentials from memory."
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "comment": "Both ToyMaker and Cactus archive data (memory dumps, sensitive files) using 7zip prior to exfiltration."
+        },
+        {
+            "techniqueID": "T1048",
+            "tactic": "exfiltration",
+            "comment": "Exfiltration via tools like PuTTY pscp, WinSCP, and curl over non-standard protocols/ports."
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Scheduled tasks created for recurring actions or persistence (e.g., OpenSSH reverse shell, scheduled command execution)."
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "comment": "LAGTOY is installed as a service for persistence (e.g., sc create WmiPrvSV)."
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "privilege-escalation",
+            "comment": "LAGTOY is installed as a service for persistence (e.g., sc create WmiPrvSV)."
+        },
+        {
+            "techniqueID": "T1021.004",
+            "tactic": "lateral-movement",
+            "comment": "Lateral movement and C2 via SSH connections, sometimes automated via scheduled tasks and use of private key file."
+        },
+        {
+            "techniqueID": "T1222.001",
+            "tactic": "defense-evasion",
+            "comment": "Modification of permissions on SSH key file (syslog.txt) to limit victim access and avoid detection."
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "comment": "Attackers reboot into Safe Mode to disable/evade AV and security solutions."
+        },
+        {
+            "techniqueID": "T1070.003",
+            "tactic": "defense-evasion",
+            "comment": "Cactus uses reg.exe to delete command history."
+        },
+        {
+            "techniqueID": "T1070.007",
+            "tactic": "defense-evasion",
+            "comment": "Registry keys and RDP connection history cleared by attackers."
+        },
+        {
+            "techniqueID": "T1070.009",
+            "tactic": "defense-evasion",
+            "comment": "Deletion of persistence mechanisms, e.g., removing fake support account after use."
+        },
+        {
+            "techniqueID": "T1608.001",
+            "tactic": "resource-development",
+            "comment": "Use of powershell and Impacket to download/install malware and remote administration utilities."
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "defense-evasion",
+            "comment": "Installers deployed silently via msiexec.exe to execute malware (e.g., eHorus agent)."
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "execution",
+            "comment": "Installers deployed silently via msiexec.exe to execute malware (e.g., eHorus agent)."
+        },
+        {
+            "techniqueID": "T1550.004",
+            "tactic": "defense-evasion",
+            "comment": "Attackers use SSH key files with altered permissions (icacls) for automated access and evasion."
+        },
+        {
+            "techniqueID": "T1550.004",
+            "tactic": "persistence",
+            "comment": "Attackers use SSH key files with altered permissions (icacls) for automated access and evasion."
+        },
+        {
+            "techniqueID": "T1095",
+            "tactic": "command-and-control",
+            "comment": "LAGTOY C2 communication over raw socket on port 443 (no TLS); custom protocol logic."
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "comment": "PowerShell used for various tasks including downloading tools and performing scans."
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "comment": "Widespread use of legitimate tools (e.g., 7zip, AnyDesk, RMS, OpenSSH, WinSCP, curl, Magnet RAM Capture, Metasploit payloads) for lateral movement, exfiltration, and defense evasion."
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "defense-evasion",
+            "comment": "Widespread use of legitimate tools (e.g., 7zip, AnyDesk, RMS, OpenSSH, WinSCP, curl, Magnet RAM Capture, Metasploit payloads) for lateral movement, exfiltration, and defense evasion."
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "execution",
+            "comment": "Widespread use of legitimate tools (e.g., 7zip, AnyDesk, RMS, OpenSSH, WinSCP, curl, Magnet RAM Capture, Metasploit payloads) for lateral movement, exfiltration, and defense evasion."
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "comment": "Use of Metasploit shellcode-injected legitimate binaries for malicious code execution."
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "execution",
+            "comment": "Use of Metasploit shellcode-injected legitimate binaries for malicious code execution."
+        }
+    ],
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": true,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "all"
+    },
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
