@@ -1,0 +1,246 @@
+{
+    "name": "Operation Blacksmith \u2013 Lazarus/Andariel TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "ATT&CK Matrix - Enterprise layer describing the key techniques, tactics, and procedures (TTPs) used by Lazarus/Andariel in Operation Blacksmith (2023), as detailed by Cisco Talos and aligned to MITRE ATT&CK v14.",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Exploitation of CVE-2021-44228 (Log4Shell) on public-facing VMWare Horizon and similar servers for initial access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1190/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090.003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Use of HazyLoad, a custom reverse proxy (T1090.003), to maintain persistent access after exploitation, allowing direct access and redundancy in C2.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1090/003/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Deployment of custom DLang-based RATs (NineRAT, DLRAT), including Telegram-based C2 (NineRAT), for remote access, command execution, and file transfer.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1219/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Command and control via legitimate application protocols, e.g., Telegram APIs (NineRAT), to evade detection and leverage trusted communication channels.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1071/001/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053.005",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Creation of scheduled tasks or jobs (e.g., .URL file in the Windows Startup directory via BottomLoader) and service creation for persistence.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1053/005/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Use of 'sc create' or BAT script to create Windows services for malware persistence, e.g., NineRAT instrumentor activated as a Windows service.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1543/003/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Creation of unauthorized local admin accounts (e.g., net user krtbgt + net localgroup Administrators krtbgt /add) for persistence and privilege escalation.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1136/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Use of ProcDump, MimiKatz for credential dumping from LSASS, including registry queries/changes for credential accessibility.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1003/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003.005",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "OS credential dumping specifically via Security Account Manager and WDigest registry key queries/modifications.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1003/005/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Modifies registry (e.g., WDigest 'UseLogonCredential' key) for credential access enablement; also covers part of defense evasion.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1112/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Malware and RATs (NineRAT, DLRAT) self-remove with BAT files ('uninstall', 'deleteme' commands), impairing defenses.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1562/001/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "System information discovery: commands like whoami, ipconfig, ver, systeminfo, netstat, wmic; performed by initial access scripts and RATs.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1082/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Software discovery: enumeration of installed antivirus and endpoint protection with WMIC and tasklist/findstr.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1518/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "File and Directory Discovery: listing directories via dir /a c:\\users\\ and RAT file enumeration.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1083/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "User Discovery: Enumerate users/groups (net user, net localgroup Administrators, net group /domain Domain Computers).",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1033/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Extensive use of command and scripting interpreters (PowerShell, BAT, cmd.exe) for payload delivery and execution.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1059/"
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Ingress Tool Transfer: Download tools and next-stage payloads (PowerShell 'Invoke-WebRequest', downloader like BottomLoader) and upload to C2.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                "https://attack.mitre.org/techniques/T1105/"
+            ],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
