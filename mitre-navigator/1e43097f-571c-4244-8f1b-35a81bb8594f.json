@@ -1,0 +1,182 @@
+{
+    "name": "Enterprise techniques in Node.js malware campaign (2025)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Key MITRE ATT&CK techniques observed in the April 2025 Node.js malware campaign leveraging malvertising and multi-stage payloads, as reported by Microsoft Threat Intelligence.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1189",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Drive-by Compromise: Users lured by malvertising download malicious installers from fraudulent cryptocurrency-themed websites.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053.005",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Scheduled Task/Job: Scheduled Task. Installer creates scheduled tasks to ensure persistent execution of PowerShell commands.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1564.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Hide Artifacts: Hidden Files and Directories. Payloads blend with legitimate files/systems to evade detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Obfuscated Files or Information: Obfuscated PowerShell/scripts and scheduled tasks retrieved from C2.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1497.003",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Virtualization/Sandbox Evasion: Time Based Evasion. Time and context-based evasion methods.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "System Information Discovery: Collects detailed OS, BIOS, hardware, installed software, network, and user metadata.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "OS Credential Dumping: Harvests system credentials, browser data, and accesses sensitive information.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Data from Local System: Captures browser, email, installed software, and system data for exfiltration.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Application Layer Protocol: Web Protocols. HTTP POST to attacker C2 (often via Cloudflare tunnels) for data exfiltration and command retrieval.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Ingress Tool Transfer: Additional payloads (Node.js, .jsc files, modules) downloaded from remote C2 infrastructure.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Exfiltration Over C2 Channel: Collected data structured as JSON and exfiltrated via HTTP POST.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Command and Scripting Interpreter: PowerShell used for all phases (downloading, executing, persisting, interacting with C2).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.007",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Command and Scripting Interpreter: JavaScript/Node.js. Execution of Node.js and inline JavaScript as part of the attack chain (including inline via command-line).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Modify Registry: Registry run key modifications for persistence, proxy settings disabled via registry.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
