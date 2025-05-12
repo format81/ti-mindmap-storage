@@ -1,0 +1,224 @@
+{
+    "name": "ToyMaker and Cactus Enterprise ATT&CK Layer (2023)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Enterprise techniques used by ToyMaker (IAB) and Cactus (double extortion affiliates) during an extensive 2023 compromise in a critical infrastructure enterprise. Includes TTPs from both intrusion stages, showing initial access, credential extraction, access handoff, persistence, C2, cleanup, tool abuse, and data exfiltration.",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "ToyMaker exploits unpatched/vulnerable public-facing servers (e.g., Log4Shell or other CVEs) for initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "ToyMaker creates fake user account 'support', adds to Administrators group post-compromise, for persistence and later privilege escalation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Cactus obtains access with valid credentials harvested by ToyMaker (Magnet RAM Capture, memory dumps).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "System information commands (whoami, net user, net group, quser, tasklist, etc.) for endpoint enumeration and user/group info (both actors).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1590",
+            "tactic": "reconnaissance",
+            "color": "",
+            "comment": "Gather victim network information (ipconfig /all) and domain trusts (nltest /domain_trusts) immediately post-compromise.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Memory dumping and credential extraction using Magnet RAM Capture (MRCv120.exe); credentials exfiltrated for initial and lateral access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Archiving of memory dumps, sensitive files with 7z/7za before exfiltration (via pscp, curl, WinSCP). Collection for extortion and ransom schemes.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1048",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Data exfiltrated via PuTTY SCP (pscp.exe), curl.exe, WinSCP, other standard tools on various ports (443/53/8443/8343).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "ToyMaker persists LAGTOY by creating a Windows service (WmiPrvSV).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021.004",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Remote Services: SSH. Lateral movement and C2, including OpenSSH for file transfers and reverse shells.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Ingress Tool Transfer: Downloading tools and malware (e.g., Magnet RAM Capture, remote admin agents) via sftp-server.exe, curl.exe, PowerShell.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Extensive use of command and scripting interpreters (cmd.exe, PowerShell, BAT) for payload execution, tool download, and task automation.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Scheduled Task/Job (SCHTASKS): Used to automatically run batch files and reverse SSH shells (Cactus, persistence and C2).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Remote access software deployed by Cactus (eHorus, RMS, AnyDesk) for persistence and C2.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1608.001",
+            "tactic": "resource-development",
+            "color": "",
+            "comment": "Stage Capabilities: Upload malware and admin tools (e.g., via PowerShell Download, Impacket) before deployment.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "System Binary Proxy Execution (Msiexec): Used to install remote admin tools (e.g., eHorus agent) stealthily.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Indicator Removal on Host: Registry/file/account deletion (clear RDP, command history, remove persistence, user accounts/rdp/net cleanup).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.003",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Clear Command History: reg.exe delete HKCU\\...\\RunMRU /f.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.007",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Clear Network Connection History: Registry/files/attrib.exe cleaning network/RDP traces.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.009",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Clear Persistence: net user support /delete (removes rogue user account).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1222.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "File and Directory Permissions Modification: (icacls) Remove/restrict access to SSH key file (syslog.txt), impeding forensic review.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Impair Defenses: Abuse Safe Mode (bcdedit /set safeboot) to disable security tools and facilitate later stages of the attack.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Remote System Discovery: Cactus uses PowerShell scripts to enumerate endpoints (e.g., find PowerShell Remoting enabled through WSMAN discovery).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Data staged for exfil (7z, split, password-protected, with sensitive info), ready for exfil via multiple protocols/tools.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "C2 over Application Layer Protocols: LAGTOY beacons to hardcoded C2 IPs/ports (TCP:443, raw socket, no TLS).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Process Injection: Metasploit shellcode-injected binaries (Putty, ApacheBench) for C2 and payload execution.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
