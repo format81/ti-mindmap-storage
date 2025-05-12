@@ -1,0 +1,124 @@
+{
+    "name": "Stealthy .NET Malware with Bitmap Resource Obfuscation (Palo Alto, May 2025)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "description": "Key enterprise ATT&CK techniques observed in malspam campaigns leveraging .NET steganography, resource-based loaders, and multi-stage payload delivery to deploy Agent Tesla, XLoader, or Remcos RAT. Techniques and stages supported by Palo Alto Networks Unit 42 analysis (May 2025).",
+    "domain": "enterprise-attack",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "techniques": [
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "comment": "Malicious spam (malspam) campaigns used email attachments containing malware targeting organizations.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "comment": "Malware uses deobfuscation as part of unpacking payloads from embedded bitmap resources. Also, string and payload data are XOR encrypted and decrypted at runtime during unpacking stages.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027.003",
+            "tactic": "defense-evasion",
+            "comment": "Stealthy malware hides payloads as .NET bitmap resources within executable, leveraging steganography.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "Multiple .NET obfuscation techniques used (metadata, opcode, control flow, string encryption, etc.) to hinder static and dynamic analysis.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027.002",
+            "tactic": "defense-evasion",
+            "comment": "IL code replaced with custom bytecode run by a custom interpreter within .NET apps (virtualization-based obfuscation).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.006",
+            "tactic": "defense-evasion",
+            "comment": "File creation timestamp in PE header overwritten ('timestomped') to hinder forensic analysis.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1559.001",
+            "tactic": "execution",
+            "comment": "Payloads loaded dynamically at runtime using .NET reflection; e.g., LateBinding.LateCall().",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204.002",
+            "tactic": "execution",
+            "comment": "Malware delivered as email attachment requires user to open/run it; also involved dynamic code execution at runtime via reflection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Malware unpacks, loads, and executes multiple .NET assemblies in several stages to ultimately run final payload.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071.003",
+            "tactic": "command-and-control",
+            "comment": "Agent Tesla, XLoader, and Remcos RAT exfiltrate data via SMTP (email) or HTTP/S (web C2 URLs/domains).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "comment": "Agent Tesla uses SMTP (email) accounts for data exfiltration; XLoader and Remcos RAT use HTTP/S or direct IP/domain for data exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "comment": "Legitimate-looking filenames (e.g., 'Procurement - Request for quotation') and benign application wrappers (e.g., Windows Forms OCR) to evade suspicion.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1114",
+            "tactic": "collection",
+            "comment": "Agent Tesla collects data from infected system; exfiltration is via SMTP (T1041).",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "metadata": [
+        {
+            "name": "Reference",
+            "value": "https://unit42.paloaltonetworks.com/malicious-payloads-as-bitmap-resources-hide-net-malware/"
+        }
+    ],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd",
+    "layout": {
+        "layout": "side",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "aggregateFunction": "average",
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "sorting": 0
+}
