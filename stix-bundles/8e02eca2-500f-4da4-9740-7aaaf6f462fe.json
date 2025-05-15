@@ -1,0 +1,743 @@
+{
+    "type": "bundle",
+    "id": "bundle--10662898-de10-4939-a575-0c5be2ff71b4",
+    "objects": [
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "name": "Lazarus Group",
+            "description": "Lazarus Group is a North Korean state-sponsored advanced persistent threat (APT) group active since at least 2009. The group is known for conducting cyber-espionage operations worldwide, targeting a wide range of verticals including manufacturing, agriculture, physical security, and healthcare. Lazarus often leverages custom malware and novel techniques, and acts as an umbrella for sub-groups supporting various North Korean government objectives.",
+            "aliases": [
+                "APT38",
+                "Hidden Cobra"
+            ],
+            "goals": [
+                "Espionage",
+                "Financial gain",
+                "Cyber sabotage",
+                "Long-term access"
+            ],
+            "resource_level": "organization",
+            "primary_motivation": "government",
+            "confidence": 90,
+            "labels": [
+                "state-sponsored",
+                "apt",
+                "north-korea",
+                "umbrella-group"
+            ],
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--a5925cf4-7b0c-4a05-a224-b678443086e8",
+            "name": "Andariel",
+            "description": "Andariel is a sub-group of the Lazarus Group (North Korea), primarily tasked with initial access, reconnaissance, and establishing long-term access for espionage campaigns. The group has also been known to conduct ransomware attacks against healthcare organizations.",
+            "aliases": [
+                "Onyx Sleet",
+                "PLUTONIUM",
+                "Silent Chollima"
+            ],
+            "goals": [
+                "Espionage",
+                "Reconnaissance",
+                "Initial access establishment"
+            ],
+            "resource_level": "organization",
+            "primary_motivation": "government",
+            "confidence": 90,
+            "labels": [
+                "apt",
+                "lazarus-subgroup",
+                "north-korea",
+                "reconnaissance"
+            ],
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "campaign",
+            "id": "campaign--0fbb493d-404d-4026-98a6-541ad86086a2",
+            "name": "Operation Blacksmith",
+            "description": "Operation Blacksmith is a global campaign attributed to the Lazarus Group, involving opportunistic targeting of enterprises that expose vulnerable infrastructure to n-day vulnerability exploitation, such as CVE-2021-44228 (Log4Shell). The campaign leveraged multiple DLang-based malware families including NineRAT, DLRAT, and BottomLoader, with NineRAT notably using Telegram as a C2 channel.",
+            "aliases": [],
+            "first_seen": "2023-03-01T00:00:00Z",
+            "last_seen": "2023-12-11T08:50:00Z",
+            "objective": "Espionage, persistence, and data exfiltration",
+            "confidence": 90,
+            "labels": [
+                "espionage",
+                "vulnerability-exploitation",
+                "global-targeting"
+            ],
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "name": "NineRAT",
+            "description": "NineRAT is a DLang-based remote access trojan (RAT) used by Lazarus Group. It uses Telegram bots and channels as a command and control (C2) mechanism, supporting a variety of remote access and data exfiltration capabilities. First observed in March 2023, NineRAT features multiple components, including a dropper, an instrumentor for persistence, and the main implant. It accepts commands for reconnaissance, configuration, file transfers, upgrades, and self-deletion.",
+            "is_family": "true",
+            "first_seen": "2023-03-01T00:00:00Z",
+            "last_seen": "2023-12-11T08:50:00Z",
+            "labels": [
+                "rat",
+                "remote-access",
+                "telegram-c2",
+                "dlang"
+            ],
+            "architecture_execution_envs": [
+                "x86",
+                "x64"
+            ],
+            "operating_system_refs": [
+                "windows"
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z",
+            "external_references": [
+                {
+                    "source_name": "Cisco Talos",
+                    "url": "https://blog.talosintelligence.com/operation-blacksmith/"
+                }
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--55146f97-eb11-46d0-a732-75568d5159f4",
+            "name": "DLRAT",
+            "description": "DLRAT is a DLang-based remote access trojan and downloader used by the Lazarus Group. It is capable of system reconnaissance, data exfiltration, file download/upload, file management, and self-deletion. DLRAT performs beaconing and is able to send system information to its C2 server using multipart/form-data.",
+            "is_family": "true",
+            "first_seen": "2023-09-01T00:00:00Z",
+            "labels": [
+                "rat",
+                "downloader",
+                "remote-access",
+                "dlang"
+            ],
+            "architecture_execution_envs": [
+                "x86",
+                "x64"
+            ],
+            "operating_system_refs": [
+                "windows"
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "name": "BottomLoader",
+            "description": "BottomLoader is a DLang-based downloader malware used by Lazarus Group. Its primary function is to download follow-up payloads from hard-coded URLs using PowerShell and to establish persistence via URL files placed into the Windows Startup directory. It can also upload files to a C2 via PowerShell.",
+            "is_family": "true",
+            "first_seen": "2023-09-01T00:00:00Z",
+            "labels": [
+                "downloader",
+                "dlang"
+            ],
+            "architecture_execution_envs": [
+                "x86",
+                "x64"
+            ],
+            "operating_system_refs": [
+                "windows"
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--5c479d25-280f-4e2f-b3e8-9ec84b528f59",
+            "name": "HazyLoad",
+            "description": "HazyLoad is a custom proxy and reverse proxy tool used by Lazarus Group for maintaining persistent access to compromised hosts. HazyLoad enables direct access to infected systems outside initial exploit vectors and has been observed in multiple operations including Operation Blacksmith.",
+            "is_family": "true",
+            "labels": [
+                "proxy",
+                "reverse-proxy",
+                "backdoor"
+            ],
+            "architecture_execution_envs": [
+                "x86",
+                "x64"
+            ],
+            "operating_system_refs": [
+                "windows"
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--83761d4d-6be5-4024-8c7a-e64cf49c90d7",
+            "name": "CVE-2021-44228",
+            "description": "Apache Log4j2 Remote Code Execution Vulnerability, also known as Log4Shell, allows for unauthenticated remote code execution via crafted log messages. Widely exploited since December 2021, this vulnerability has been used as an initial access vector in campaigns conducted by North Korean APT groups, including Lazarus.",
+            "external_references": [
+                {
+                    "source_name": "CVE",
+                    "external_id": "CVE-2021-44228",
+                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44228"
+                }
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "tool",
+            "id": "tool--106854a8-bd2f-48b5-9ae6-b50885699416",
+            "name": "ProcDump",
+            "description": "ProcDump is a legitimate Windows Sysinternals tool commonly abused by attackers for credential dumping by creating a memory dump of lsass.exe. Used in Lazarus Group operations for credential harvesting.",
+            "labels": [
+                "credential-dumping",
+                "sysinternals"
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "tool",
+            "id": "tool--6326a7a5-c5ff-49e9-9da3-4ccea9b14a87",
+            "name": "Mimikatz",
+            "description": "Mimikatz is an open-source tool used to extract passwords and credentials from Windows machines. Frequently utilized by numerous threat actors, including Lazarus Group, for lateral movement and privilege escalation.",
+            "labels": [
+                "credential-dumping"
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--98783cef-d2f8-4d5d-99ab-d51431e22a7e",
+            "name": "Exploit Public-Facing Application (CVE-2021-44228 / Log4Shell)",
+            "description": "Exploiting the Log4j vulnerability (CVE-2021-44228) in public-facing applications such as VMware Horizon to gain initial access into target networks. Used extensively by Lazarus Group in Operation Blacksmith.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "external_id": "T1190"
+                }
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--16ce39fd-a13d-41a0-aaab-5128d930b2f6",
+            "name": "Telegram Bots and Channels (NineRAT C2)",
+            "description": "Infrastructure leveraging Telegram bots and channels used as C2 for the NineRAT malware, allowing remote command execution, file transfer, and configuration updates through Telegram API methods.",
+            "infrastructure_types": [
+                "botnet",
+                "C2"
+            ],
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "file",
+            "id": "file--0a05cf9b-a7df-4df2-92a2-30e88f9d5261",
+            "hashes": {
+                "SHA-256": "000752074544950ae9020a35ccd77de277f1cd5026b4b9559279dc3b86965eee"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--6362b809-641d-4eff-814e-f940aca225cd",
+            "hashes": {
+                "SHA-256": "534f5612954db99c86baa67ef51a3ad88bc21735bce7bb591afa8a4317c35433"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--39dc5a28-e172-4bb0-9b2f-d45426460da7",
+            "hashes": {
+                "SHA-256": "ba8cd92cc059232203bcadee260ddbae273fc4c89b18424974955607476982c4"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--3b2ac4f2-897a-4340-85b8-6c5a9083a2c4",
+            "hashes": {
+                "SHA-256": "47e017b40d418374c0889e4d22aa48633b1d41b16b61b1f2897a39112a435d30"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--525f4af2-8edd-4a4a-8e20-0d3121a17662",
+            "hashes": {
+                "SHA-256": "f91188d23b14526676706a5c9ead05c1a91ea0b9d6ac902623bc565e1c200a59"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--e16a37e7-af70-4a65-a8b2-2496d1a35db0",
+            "hashes": {
+                "SHA-256": "5b02fc3cfb5d74c09cab724b5b54c53a7c07e5766bffe5b1adf782c9e86a8541"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--4eb5b8b5-f5c1-4713-b598-903efddff76a",
+            "hashes": {
+                "SHA-256": "82d4a0fef550af4f01a07041c16d851f262d859a3352475c62630e2c16a21def"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--e82aad11-2d30-48b5-b412-525ae7abeab4",
+            "hashes": {
+                "SHA-256": "0e416e3cc1673d8fc3e7b2469e491c005152b9328515ea9bbd7cf96f1d23a99f"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--bb872be8-b71d-4040-abfa-caa19f4e4eb1",
+            "hashes": {
+                "SHA-256": "e615ea30dd37644526060689544c1a1d263b6bb77fe3084aa7883669c1fde12f"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--df7dbb96-7644-42d8-bcad-8624d51b0b99",
+            "hashes": {
+                "SHA-256": "9a48357c06758217b3a99cdf4ab83263c04bdea98c347dd14b254cab6c81b13a"
+            }
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--3c263a6e-0fdf-4475-8389-7cf814da921f",
+            "value": "tech.micrsofts.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--b5f5d68e-c2c5-4fe1-a631-e5f2b4f8744c",
+            "value": "tech.micrsofts.tech"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--ba740330-b747-4945-93d9-443587dbd586",
+            "value": "27.102.113.93"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2ea56601-e7e9-4cbb-8cc3-67bca9b9d34b",
+            "value": "185.29.8.53"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--b4354184-d13d-4db7-a908-5324a342572f",
+            "value": "155.94.208.209"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--89af90ec-8e40-4d2a-8263-2bca4af5baaa",
+            "value": "162.19.71.175"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--e4c0ae4c-e8e8-4f18-b3ae-88d7b962b575",
+            "value": "201.77.179.66"
+        },
+        {
+            "type": "url",
+            "id": "url--986111f6-0970-40ce-b1f3-8f02ac05babe",
+            "value": "http://27.102.113.93/inet.txt"
+        },
+        {
+            "type": "url",
+            "id": "url--4e2a9038-bcf1-4d39-a2e0-16c91f3b9cd3",
+            "value": "http://162.19.71.175:7443/sonic/bottom.gif"
+        },
+        {
+            "type": "url",
+            "id": "url--f5f10e21-fb9d-4b91-b33b-426a0af328cc",
+            "value": "http://201.77.179.66:8082/img/lndex.php"
+        },
+        {
+            "type": "url",
+            "id": "url--783ae49d-2d55-4864-ad15-388eaddbc519",
+            "value": "http://201.77.179.66:8082/img/images/header/B691646991EBAEEC.gif"
+        },
+        {
+            "type": "url",
+            "id": "url--ec389699-b680-479a-b64d-8c12319d43f8",
+            "value": "http://201.77.179.66:8082/img/images/header/7AEBC320998FD5E5.gif"
+        },
+        {
+            "type": "user-account",
+            "id": "user-account--6bbb3ac4-4813-42b3-844a-90d9985d449f",
+            "account_login": "krtbgt",
+            "account_type": "local"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--faef0698-9bc7-4070-9102-bf39b635b741",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--0a05cf9b-a7df-4df2-92a2-30e88f9d5261",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4e3e95b1-c666-47fe-ba39-4f0737233fe3",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--6362b809-641d-4eff-814e-f940aca225cd",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4e582baf-83a2-4d07-b65a-2d245d00cab2",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--39dc5a28-e172-4bb0-9b2f-d45426460da7",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c7453c35-b078-4e7c-9cbc-92efe0563536",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--3b2ac4f2-897a-4340-85b8-6c5a9083a2c4",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4abeba47-4d03-48c2-b2cb-93645b8e8735",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--525f4af2-8edd-4a4a-8e20-0d3121a17662",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5c513111-beed-42d3-b7c7-8176043e4126",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--e16a37e7-af70-4a65-a8b2-2496d1a35db0",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--082e86c6-93f6-4d4e-915b-8c98857f9146",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--4eb5b8b5-f5c1-4713-b598-903efddff76a",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--933f46d1-ece8-4aef-8b36-46ae06d55296",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--e82aad11-2d30-48b5-b412-525ae7abeab4",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--65802b1c-aa5f-422b-8671-dcaf6c2309a5",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--bb872be8-b71d-4040-abfa-caa19f4e4eb1",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b4ea4c7c-4f17-4333-b210-b9399ce7e1db",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--2ab6a8fa-5f9a-410e-a11e-2df1f3ecfb47",
+            "target_ref": "file--df7dbb96-7644-42d8-bcad-8624d51b0b99",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--71431fc4-acae-4563-ac27-e484aadb0fec",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "file--6362b809-641d-4eff-814e-f940aca225cd",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0ce44f57-a74e-4be6-8ee2-bdec84b47590",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "file--39dc5a28-e172-4bb0-9b2f-d45426460da7",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--25442989-c05a-4675-94a5-457961974c71",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "file--3b2ac4f2-897a-4340-85b8-6c5a9083a2c4",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--16177135-0048-4def-963c-f13aa2f18256",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "file--525f4af2-8edd-4a4a-8e20-0d3121a17662",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--33e26653-735d-43b7-94f8-9ec3ddbca0a3",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "file--e16a37e7-af70-4a65-a8b2-2496d1a35db0",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8b0b433b-3e9b-4b8d-a6a0-f9d452ad93da",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "file--4eb5b8b5-f5c1-4713-b598-903efddff76a",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a6fd70a9-16fc-411f-b936-bf263daad21a",
+            "relationship_type": "uses",
+            "source_ref": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "target_ref": "file--e82aad11-2d30-48b5-b412-525ae7abeab4",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--433a5ed5-b20c-40e4-9757-5e5a4a36b1ff",
+            "relationship_type": "uses",
+            "source_ref": "malware--55146f97-eb11-46d0-a732-75568d5159f4",
+            "target_ref": "file--bb872be8-b71d-4040-abfa-caa19f4e4eb1",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fd94c9a9-18d2-4adf-b0cc-b1cda6b9bcee",
+            "relationship_type": "uses",
+            "source_ref": "malware--55146f97-eb11-46d0-a732-75568d5159f4",
+            "target_ref": "file--df7dbb96-7644-42d8-bcad-8624d51b0b99",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f6c16503-94da-48b8-9a93-75b1c9165711",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "infrastructure--16ce39fd-a13d-41a0-aaab-5128d930b2f6",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--58c6b370-e611-4030-9526-a98aad69087b",
+            "relationship_type": "uses",
+            "source_ref": "malware--5c479d25-280f-4e2f-b3e8-9ec84b528f59",
+            "target_ref": "file--0a05cf9b-a7df-4df2-92a2-30e88f9d5261",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f513933e-0838-43b1-8497-4ac5cff22f69",
+            "relationship_type": "uses",
+            "source_ref": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "target_ref": "url--4e2a9038-bcf1-4d39-a2e0-16c91f3b9cd3",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--aa7a5066-4de7-4411-ba17-e58544b52446",
+            "relationship_type": "uses",
+            "source_ref": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "target_ref": "url--986111f6-0970-40ce-b1f3-8f02ac05babe",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--85aab447-af82-43fa-9e6c-56be8b4108e7",
+            "relationship_type": "uses",
+            "source_ref": "malware--5c479d25-280f-4e2f-b3e8-9ec84b528f59",
+            "target_ref": "url--986111f6-0970-40ce-b1f3-8f02ac05babe",
+            "description": "HazyLoad downloaded using this URL.",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--51aea1e0-b290-4a16-a15d-1f5eceffeeb2",
+            "relationship_type": "uses",
+            "source_ref": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "target_ref": "ipv4-addr--89af90ec-8e40-4d2a-8263-2bca4af5baaa",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--307238c6-bf7c-404c-8a72-4ec4aaf4a58b",
+            "relationship_type": "uses",
+            "source_ref": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "target_ref": "url--f5f10e21-fb9d-4b91-b33b-426a0af328cc",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--10b682bb-e41e-41aa-acd4-74af19b9b4d0",
+            "relationship_type": "uses",
+            "source_ref": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "target_ref": "url--783ae49d-2d55-4864-ad15-388eaddbc519",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6dac934f-c16c-4b5b-b1ae-6f285585df2b",
+            "relationship_type": "uses",
+            "source_ref": "malware--62e46bda-29b5-4637-9b4c-af51ebc53abb",
+            "target_ref": "url--ec389699-b680-479a-b64d-8c12319d43f8",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--639b33ec-4110-4b53-a586-c3d2e00e3620",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "domain-name--3c263a6e-0fdf-4475-8389-7cf814da921f",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--02c08dce-6f24-4cab-9e0b-b623e7833363",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "domain-name--b5f5d68e-c2c5-4fe1-a631-e5f2b4f8744c",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--079a6556-770e-4663-bbda-87991888bd66",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "ipv4-addr--ba740330-b747-4945-93d9-443587dbd586",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0267c2d7-8db0-495d-b44c-b0e863d1d605",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "ipv4-addr--2ea56601-e7e9-4cbb-8cc3-67bca9b9d34b",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6be1d778-ee34-4f96-8853-fc40a4a25cd9",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "ipv4-addr--b4354184-d13d-4db7-a908-5324a342572f",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fcb8d81d-f246-4322-8924-3f1fc8d19a6e",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "ipv4-addr--89af90ec-8e40-4d2a-8263-2bca4af5baaa",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cd7601f9-d5a1-48c2-9b39-f45cd898221f",
+            "relationship_type": "uses",
+            "source_ref": "malware--554fda15-8adf-483c-a886-dc639f48a543",
+            "target_ref": "ipv4-addr--e4c0ae4c-e8e8-4f18-b3ae-88d7b962b575",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5e46f143-d93a-4859-9c98-4dab9d57f568",
+            "relationship_type": "uses",
+            "source_ref": "malware--5c479d25-280f-4e2f-b3e8-9ec84b528f59",
+            "target_ref": "user-account--6bbb3ac4-4813-42b3-844a-90d9985d449f",
+            "confidence": 90,
+            "created": "2023-12-11T08:50:00Z",
+            "modified": "2023-12-11T08:50:00Z"
+        }
+    ]
+}
