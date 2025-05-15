@@ -1,0 +1,292 @@
+{
+    "name": "Operation Blacksmith - Lazarus Group TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "MITRE ATT&CK Layer for key TTPs used by Lazarus Group during Operation Blacksmith as reported by Cisco Talos (2023\u20132024).",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "#e57373",
+            "comment": "Exploited CVE-2021-44228 (Log4Shell) on public-facing servers (e.g., VMWare Horizon) for initial access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "execution",
+            "color": "#81b29a",
+            "comment": "Custom RATs (NineRAT, DLRAT) used for remote access and execution of commands via Telegram and traditional C2.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "#f6bd60",
+            "comment": "Ingress Tool Transfer: Downloaded additional malware (HazyLoad, DLRAT, BottomLoader) and tools via PowerShell/web.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090.001",
+            "tactic": "command-and-control",
+            "color": "#ffa600",
+            "comment": "Proxy: HazyLoad custom proxy deployed for network redundancy, alternate C2, and remote access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053.005",
+            "tactic": "persistence",
+            "color": "#c2c2f0",
+            "comment": "BottomLoader creates .URL files in Startup to persist payload downloaders via PowerShell at logon.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1547",
+            "tactic": "persistence",
+            "color": "#c2c2f0",
+            "comment": "Scheduled Task/Startup Item: Startup entries for persistence using various downloaders.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "color": "#c2c2f0",
+            "comment": "Created Windows service for malware persistence (e.g., nsIookup.exe - note masquerading filename).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "#0097a7",
+            "comment": "System Information Discovery with commands like 'whoami', 'ver', 'systeminfo', 'ipconfig /all', and via RATs.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1518",
+            "tactic": "discovery",
+            "color": "#0097a7",
+            "comment": "Software Discovery using WMIC queries for antivirus and process enumeration.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003.001",
+            "tactic": "credential-access",
+            "color": "#c34a36",
+            "comment": "OS Credential Dumping (LSASS): Used procdump and mimikatz on lsass.exe to harvest credentials.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003.005",
+            "tactic": "credential-access",
+            "color": "#c34a36",
+            "comment": "OS Credential Dumping (WDigest): Modified registry and queried WDigest settings for credential access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "color": "#d9bf77",
+            "comment": "Modify Registry: e.g., reg add for WDigest UseLogonCredential.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "color": "#c2c2f0",
+            "comment": "Account Manipulation: Created local admin accounts (e.g., 'krtbgt') for persistence and privilege escalation.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1098",
+            "tactic": "privilege-escalation",
+            "color": "#c2c2f0",
+            "comment": "Account Manipulation: Added accounts to Administrators group for escalated privileges.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1033",
+            "tactic": "discovery",
+            "color": "#0097a7",
+            "comment": "User Discovery: Enumerated user/localgroup memberships post-compromise.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1567.002",
+            "tactic": "exfiltration",
+            "color": "#f195b2",
+            "comment": "Exfiltration via Web Service: PowerShell/.UploadFile, RAT upload to C2 (including Telegram).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "color": "#0097a7",
+            "comment": "File and Directory Discovery: Used 'dir /a c:\\users\\' to enumerate users and homedirs.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1007",
+            "tactic": "discovery",
+            "color": "#0097a7",
+            "comment": "Event Log Query: Queried logs via wevtutil (RDP session logs).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.004",
+            "tactic": "defense-evasion",
+            "color": "#d9bf77",
+            "comment": "File Deletion: Used BAT files (deleteme) for RAT self-removal.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.006",
+            "tactic": "defense-evasion",
+            "color": "#d9bf77",
+            "comment": "File Deletion: Malware deletes itself after execution.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "color": "#d9bf77",
+            "comment": "Masquerading: Used nsIookup.exe (capital 'i') to imitate nslookup.exe.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "#f6bd60",
+            "comment": "Application Layer Protocol: Web protocols for C2 (PowerShell over HTTP/S).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.003",
+            "tactic": "command-and-control",
+            "color": "#f6bd60",
+            "comment": "Application Layer Protocol: Used Telegram API channels/bots for C2 and file transfer (NineRAT).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "color": "#81b29a",
+            "comment": "Command and Scripting Interpreter: Used cmd for runbook/invocation, file/registry ops.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "#81b29a",
+            "comment": "Command and Scripting Interpreter: Used PowerShell for downloading, file ops, persistence.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#e84118",
+            "#fbc531",
+            "#00b894"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
