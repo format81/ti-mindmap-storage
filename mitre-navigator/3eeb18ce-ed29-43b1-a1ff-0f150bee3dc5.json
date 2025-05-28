@@ -1,0 +1,162 @@
+{
+    "name": "Enterprise techniques used by ToyMaker & Cactus (2025)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "ATT&CK techniques used by ToyMaker Initial Access Broker and Cactus ransomware group (2025), based on Cisco Talos reporting.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "ToyMaker exploits unpatched, internet-exposed servers (e.g., CVE exploitation) for initial access."
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Uses whoami, net user, net group, net user Administrator, nltest /domain_trusts, tasklist, quser, ipconfig /all to enumerate host & user info."
+        },
+        {
+            "techniqueID": "T1590",
+            "tactic": "reconnaissance",
+            "comment": "ToyMaker gathers victim network info via ipconfig /all."
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Creates fake users ('support', 'whiteninja'), adds them to Admins group for persistence, later removed as cleanup."
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Magnet RAM Capture used for OS credential dumping from memory."
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "comment": "7zip (7za.exe) used to archive memory dumps and data prior to exfiltration."
+        },
+        {
+            "techniqueID": "T1048",
+            "tactic": "exfiltration",
+            "comment": "pscp.exe (Putty SCP), WinSCP, curl.exe used for exfiltration of stolen data."
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "comment": "LAGTOY backdoor persisted using Windows service creation: sc create WmiPrvSV ..."
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Command & scripting interpreter (cmd.exe, PowerShell, BAT scripts) used across attack lifecycle."
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "comment": "Tools (e.g., eHorus agent, RMS) and payloads downloaded and staged via PowerShell/Impacket."
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "defense-evasion",
+            "comment": "Msiexec used for defense evasion and launching malicious MSI packages."
+        },
+        {
+            "techniqueID": "T1547.001",
+            "tactic": "persistence",
+            "comment": "Registry Run keys and Winlogon autologon keys altered to enable account persistence, e.g., facilitating \u2018whiteninja\u2019 auto logon."
+        },
+        {
+            "techniqueID": "T1070.003",
+            "tactic": "defense-evasion",
+            "comment": "Cleared command history: reg.exe delete RunMRU to erase PowerShell/cmd logs."
+        },
+        {
+            "techniqueID": "T1070.007",
+            "tactic": "defense-evasion",
+            "comment": "Cleans Terminal Server registry keys, RDP files to remove RDP and network traces."
+        },
+        {
+            "techniqueID": "T1070.009",
+            "tactic": "defense-evasion",
+            "comment": "net user support /delete used to clear evidence of unauthorized accounts."
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "comment": "System rebooted into Safe Mode (bcdedit/shutdown) to disable security tools for further tampering."
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "comment": "WSMAN discovery scripts enumerate endpoints for lateral movement."
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Scheduled tasks enable recurring reverse shells and SSH access (SCHTASKS scheduling hourly callbacks)."
+        },
+        {
+            "techniqueID": "T1021.004",
+            "tactic": "lateral-movement",
+            "comment": "OpenSSH server deployed for remote SSH access and propagation."
+        },
+        {
+            "techniqueID": "T1222.001",
+            "tactic": "defense-evasion",
+            "comment": "icacls used to alter Windows file/directories permissions, hiding SSH private keys from victim access."
+        },
+        {
+            "techniqueID": "T1608.001",
+            "tactic": "resource-development",
+            "comment": "Payloads/tools (eHorus, RMS Remote Admin, etc.) downloaded for later execution."
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "comment": "User Execution required for some tools/scripts with admin privileges."
+        },
+        {
+            "techniqueID": "T1622",
+            "tactic": "defense-evasion",
+            "comment": "LAGTOY anti-debug: registers custom unhandled exception filter, checks for debugger."
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "comment": "NineRAT & LAGTOY used to collect and collate files prior to exfiltration."
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
