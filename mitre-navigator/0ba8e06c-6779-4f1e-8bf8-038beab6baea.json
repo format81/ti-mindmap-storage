@@ -1,0 +1,157 @@
+{
+    "name": "ToyMaker & Cactus Attack (2023-2025): Top Enterprise Techniques",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Most important ATT&CK v14 techniques leveraged by ToyMaker and Cactus in a 2023-2025 critical infrastructure compromise, covering initial access, persistence, credential access, backdoors, lateral movement, remote administration, exfiltration, defense evasion, and impact. See original Talos research for full context.",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "ToyMaker exploited known vulnerabilities (unpatched internet-facing server) for initial access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Created fake/unauthorized user accounts: 'support' (ToyMaker) and 'whiteninja' (Cactus) to maintain access or facilitate ransomware deployment.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Used Magnet RAM Capture to extract credentials from system memory.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Used commands (whoami, tasklist, quser, net user/group) for system and domain reconnaissance.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1590",
+            "tactic": "reconnaissance",
+            "comment": "Used ipconfig /all and other commands for gathering network information.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "comment": "Used 7-Zip (7za.exe/7z.exe) to archive memory dumps, files, and customer data for exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1048",
+            "tactic": "exfiltration",
+            "comment": "Data exfiltration via non-standard protocols and ports (pscp.exe, curl.exe, WinSCP, SFTP), e.g. over port 53, 8443.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "comment": "Established LAGTOY/HOLERUN backdoor as an auto-start Windows service ('WmiPrvSV') for persistent access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1106",
+            "tactic": "defense-evasion",
+            "comment": "LAGTOY registers a custom unhandled exception filter (SetUnhandledExceptionFilter) for basic anti-debug checks.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1608.001",
+            "tactic": "resource-development",
+            "comment": "Staged, uploaded, and installed remote admin tools (eHorus, RMS, AnyDesk, OpenSSH) via PowerShell, Impacket, msiexec.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Created scheduled tasks (SCHTASKS) for periodic SSH reverse shells and automated malware re-execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021.004",
+            "tactic": "lateral-movement",
+            "comment": "Used OpenSSH and SFTP for lateral movement and persistent connections between endpoints.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "defense-evasion",
+            "comment": "Abused msiexec for remote tool installation (eHorus agent as MSI package).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1222.001",
+            "tactic": "defense-evasion",
+            "comment": "Altered file/directory permissions (icacls) on SSH private keys to prevent local recovery.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "comment": "Cactus conducted remote system and network endpoint enumeration using PowerShell scripts (WSMAN discovery).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.003",
+            "tactic": "defense-evasion",
+            "comment": "Deleted Windows run command history (reg.exe delete HKCU...RunMRU) for anti-forensics.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.007",
+            "tactic": "defense-evasion",
+            "comment": "Deleted RDP/network config registry keys to clear connection history and evidence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.009",
+            "tactic": "defense-evasion",
+            "comment": "Deleted unauthorized/persistent accounts (e.g., net user support /delete) to clear signs of persistence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "comment": "Forced boot into Safe Mode (bcdedit/safeboot) to disable security products for evasion.",
+            "enabled": true
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ffd6d6",
+            "#ffb3b3",
+            "#ff7373",
+            "#ff2626"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
