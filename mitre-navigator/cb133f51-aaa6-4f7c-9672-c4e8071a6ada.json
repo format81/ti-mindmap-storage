@@ -1,0 +1,202 @@
+{
+    "name": "Techniques Used by ToyMaker and Cactus",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs used by ToyMaker, an initial access broker, and the Cactus ransomware group",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "ToyMaker gains initial access by exploiting vulnerable systems exposed to the internet.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Commands executed by ToyMaker to gather system information include `whoami`, `net user`, and `tasklist`.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1590",
+            "tactic": "reconnaissance",
+            "color": "",
+            "comment": "ToyMaker runs `ipconfig /all` to gather network information from the victim's environment.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "ToyMaker creates fake user accounts to maintain access, such as 'support'.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "ToyMaker uses Magnet RAM Capture to extract credentials from memory.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1560",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Collected data is archived using 7za.exe command to create a compressed file.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1048",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Utilizes PuTTY\u2019s SCP utility for exfiltration of archived data.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1543.003",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "LAGTOY is persisted by creating a service called 'WmiPrvSV'.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1018",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Cactus performs network scanning using PowerShell scripts to enumerate remote systems.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.003",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Cactus deletes registry entries to remove command history from victim systems.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.009",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Deletes volume shadow copies to avoid detection and hinder system recovery.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1222",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Modifies file permissions to prevent access to sensitive files, such as the SSH private key `syslog.txt`.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1218.007",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Utilization of `msiexec.exe` for system binary proxy execution of malicious payloads.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Scheduled tasks are used to execute commands periodically using OpenSSH and reverse shells.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Tools like eHorus and AnyDesk are transferred into the victim environment using PowerShell and Impacket.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Booting systems into Safe Mode to disable security products and perform unauthorized actions.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
