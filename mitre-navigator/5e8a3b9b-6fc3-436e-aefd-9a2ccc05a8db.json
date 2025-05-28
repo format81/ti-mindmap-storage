@@ -1,0 +1,122 @@
+{
+    "name": "UAT-6382 - Cityworks Zero-Day Exploitation",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs observed in the UAT-6382 threat actor's operations leveraging Cityworks vulnerability.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Exploitation of CVE-2025-0994 in Cityworks to gain initial access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Deployment of web shells such as AntSword and chinatso/Chopper for long-term access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Use of cmd.exe and PowerShell for reconnaissance and deploying backdoors.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1016",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Using cmd.exe commands like \"ipconfig\" to gather network configuration details.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Enumerating directories like \"c:\\inetpub\\wwwroot\\\" for files of interest.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Downloading and deploying backdoors via PowerShell.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Use of HTTP/HTTPS for command-and-control communication by Cobalt Strike beacons.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074.001",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Staging identified files into directories for easy exfiltration.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
