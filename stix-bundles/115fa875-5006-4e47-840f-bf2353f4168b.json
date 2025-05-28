@@ -1,0 +1,254 @@
+{
+    "type": "bundle",
+    "id": "bundle--3015dc3f-64fc-4007-aa02-f914d1250258",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--0acd8a5a-957b-442d-86f0-e8e54cbcf7f1",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "ToyMaker",
+            "description": "An initial access broker working in collaboration with double extortion gangs, financially motivated.",
+            "threat_actor_types": [
+                "broker"
+            ],
+            "labels": [
+                "financially-motivated",
+                "initial access broker"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--59d56a25-a792-4661-bdf5-d39809a200ca",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Cactus",
+            "description": "A ransomware affiliate involved in double extortion operations.",
+            "threat_actor_types": [
+                "criminal"
+            ],
+            "labels": [
+                "ransomware",
+                "double extortion"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--1c6821b6-e840-4b7c-aed4-a463ef8c826b",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "LAGTOY",
+            "description": "ToyMaker's custom backdoor, capable of creating reverse shells and executing commands.",
+            "is_family": "true",
+            "labels": [
+                "backdoor",
+                "remote access"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--72ea47e1-f854-4c43-b1d1-4f4e947ffd66",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Cactus C2 Infrastructure",
+            "description": "Command and control infrastructure used by Cactus for coordination and data exfiltration.",
+            "infrastructure_types": [
+                "command-and-control-server"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--bc861e21-bba7-4ff1-b58e-63877fd4a621",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "name": "Metasploit Shells",
+            "description": "Windows binaries injected with Metasploit shellcode used by Cactus.",
+            "is_family": "false",
+            "labels": [
+                "shellcode",
+                "pivoting"
+            ]
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--86431608-c96e-4d19-bd4e-8d5458a5292f",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--",
+            "target_ref": "malware--",
+            "description": "ToyMaker uses the LAGTOY backdoor for initial access and persistence."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--59bcb8f0-be74-4234-87f1-04fb46790955",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "relationship_type": "compromises",
+            "source_ref": "threat-actor--",
+            "target_ref": "infrastructure--",
+            "description": "Cactus ransomware group uses their C2 infrastructure for malicious activities."
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2f3b5e5e-4556-4ce3-aa07-7abe49a1630d",
+            "value": "209.141.43.37"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--08460004-dbad-41d2-a5de-2a80961f823a",
+            "value": "194.156.98.155"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2fc7b4e1-94b9-42fd-ab49-9063b62111e8",
+            "value": "158.247.211.51"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--b7365d6c-0c07-4230-91db-3b42adc03de1",
+            "value": "39.106.141.68"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--10db8d0d-dcec-41c6-b79b-ce4bccc9023a",
+            "value": "47.117.165.166"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--429204e0-57ef-4775-b856-0d8d9858c9d5",
+            "value": "195.123.240.2"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--e19f3e12-340e-4041-b211-546aad8cc4c7",
+            "value": "75.127.0.235"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--f783130f-927f-4dfe-93d4-63152fdce7f0",
+            "value": "149.102.243.100"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--6c2b934b-d3fa-4167-bda7-23a01463ba78",
+            "value": "206.188.196.20"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2ad5768a-3f92-447f-9acd-d18173f74c17",
+            "value": "51.81.42.234"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--89d1ba03-bd65-43b7-945f-ffa18a782194",
+            "value": "178.175.134.52"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--aa539740-5d3d-4401-aeb9-c9b773dee1c4",
+            "value": "162.33.177.56"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--fb02ad0c-7104-4ca7-a281-264a8ebc0b0a",
+            "value": "64.52.80.252"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--997dd74e-ad7b-4f0e-92c6-fab920ab8ef4",
+            "value": "162.33.178.196"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--cb7a9248-2ee7-4fc6-b788-42b5c6792970",
+            "value": "103.199.16.92"
+        },
+        {
+            "type": "file",
+            "id": "file--9d3a2569-43ef-4bac-b794-0d3f59a4885f",
+            "hashes": {
+                "SHA-256": "fdf977f0c20e7f42dd620db42d20c561208f85684d3c9efd12499a3549be3826"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--580e1675-90ea-4ddc-aaa8-585b2d12c834",
+            "hashes": {
+                "SHA-256": "0a367cc7e7e297248fad57e27f83316b7606788db9468f59031fed811cfe4867"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--b054a073-ce13-4ee7-8372-736226cbef52",
+            "hashes": {
+                "SHA-256": "0bcfea4983cfc2a55a8ac339384ecd0988a470af444ea8f3b597d5fe5f6067fb"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--b4039c0f-dbea-4cd0-a138-e5f8116ccb09",
+            "hashes": {
+                "SHA-256": "5831b09c93f305e7d0a49d4936478fac3890b97e065141f82cda9a0d75b1066d"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--8928fbf9-eafd-4933-8750-6ca768ef9526",
+            "hashes": {
+                "SHA-256": "691cc4a12fbada29d093e57bd02ca372bc10968b706c95370daeee43054f06e3"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--bf76c2e9-a413-4510-9ad0-7b82504f5ae2",
+            "hashes": {
+                "SHA-256": "70077fde6c5fc5e4d607c75ff5312cc2fdf61ea08cae75f162d30fa7475880de"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--482a7c6a-4b5e-42b5-a716-14ad865e0f0a",
+            "hashes": {
+                "SHA-256": "a95930ff02a0d13e4dbe603a33175dc73c0286cd53ae4a141baf99ae664f4132"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--dbc91603-7e5f-450c-a78f-0b218b18a642",
+            "hashes": {
+                "SHA-256": "c1bd624e83382668939535d47082c0a6de1981ef2194bb4272b62ecc7be1ff6b"
+            }
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--24679bee-8cd7-41e8-828b-0e3529cc84e3",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--0acd8a5a-957b-442d-86f0-e8e54cbcf7f1",
+            "target_ref": "malware--1c6821b6-e840-4b7c-aed4-a463ef8c826b",
+            "description": "ToyMaker uses the LAGTOY backdoor for gaining and maintaining access."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--74b37693-15ab-4234-a9d6-67692e49f4a7",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "relationship_type": "compromises",
+            "source_ref": "threat-actor--59d56a25-a792-4661-bdf5-d39809a200ca",
+            "target_ref": "infrastructure--72ea47e1-f854-4c43-b1d1-4f4e947ffd66",
+            "description": "Cactus compromises and uses their own C2 infrastructure for coordinating attacks."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7bb758e6-c51e-47a5-b27d-49501740addf",
+            "created": "2025-04-23T06:00:00Z",
+            "modified": "2025-04-23T06:00:00Z",
+            "relationship_type": "delivers",
+            "source_ref": "malware--1c6821b6-e840-4b7c-aed4-a463ef8c826b",
+            "target_ref": "file--9d3a2569-43ef-4bac-b794-0d3f59a4885f",
+            "description": "LAGTOY backdoor delivered and persisted on the infected system using a service."
+        }
+    ]
+}
