@@ -1,0 +1,137 @@
+{
+    "name": "UAT-6382: Cityworks Zero-Day Exploitation Campaign (CVE-2025-0994) Techniques",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "MITRE ATT&CK Matrix layer for UAT-6382: Chinese-speaking threat actor exploiting Cityworks (CVE-2025-0994) with TetraLoader, Cobalt Strike, VShell, and web shells. Based on Cisco Talos reporting May 2025.",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "comment": "Zero-day RCE vulnerability (CVE-2025-0994) in Cityworks exploited for initial access."
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Attackers used cmd.exe and PowerShell for file system reconnaissance and to execute further commands."
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "comment": "Attackers used PowerShell for loader/backdoor download and execution (Invoke-WebRequest)."
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "discovery",
+            "comment": "Used PowerShell for enumeration, e.g., directory reconnaissance."
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Used commands such as `ipconfig`, `tasklist`, etc., to enumerate system/network info."
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "comment": "Enumerated various directories including Cityworks installation and webroot folders."
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "persistence",
+            "comment": "Deployed multiple web shells (AntSword, chinatso/Chopper, Behinder) for persistent access and C2."
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "command-and-control",
+            "comment": "Web shells maintained external C2 over HTTP/S."
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "comment": "Downloaded backdoors/loaders (e.g., LVLWPH.exe, MCUCAT.exe) via PowerShell Invoke-WebRequest."
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "comment": "Rust-based TetraLoader injects Cobalt Strike and VShell payloads into benign processes like notepad.exe."
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "privilege-escalation",
+            "comment": "Injected malicious payloads into legitimate processes (e.g., notepad.exe) for privilege escalation."
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Not directly mentioned, but Cobalt Strike commonly used for post-exploitation credential dumping."
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Cobalt Strike beacons refer to \u201cSpawnto\u201d paths (dllhost.exe, gpupdate.exe), often set as scheduled tasks."
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "comment": "Deployed VShell (GoLang RAT), enabling remote access, file management, command execution, screenshot capture, and proxying."
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "collection",
+            "comment": "Staged files for exfiltration in upload directories after enumeration."
+        },
+        {
+            "techniqueID": "T1567.002",
+            "tactic": "exfiltration",
+            "comment": "Web shells and backdoors used HTTP/S to exfiltrate or transmit files/data."
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "comment": "Cobalt Strike and VShell connect to external C2 domains (e.g., cdn.lgaircon.xyz, roomako.com, raw IP)."
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "TetraLoader/MaLoader encode payloads, use encryption/obfuscation to evade detection."
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "defense-evasion",
+            "comment": "Cobalt Strike beacons configured for stage cleanup; generally attempts to remove evidence post-infection."
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
