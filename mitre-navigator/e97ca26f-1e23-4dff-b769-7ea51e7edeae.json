@@ -1,0 +1,286 @@
+{
+    "name": "UAT-6382 Enterprise Techniques (Cityworks CVE-2025-0994 Intrusions)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "ATT&CK techniques observed in UAT-6382 activity exploiting Cityworks (CVE-2025-0994) to deliver web shells, Cobalt Strike, and VShell RAT via custom Rust-based loader (TetraLoader; MaLoader, Chinese-language tooling).",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Exploiting Cityworks (CVE-2025-0994) remote code execution vulnerability for initial compromise",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Use of cmd.exe to run commands for recon, file listing, and other tasks (e.g., dir, ipconfig, pwd, tasklist)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Use of cmd.exe to run commands for recon, file listing, and other tasks (e.g., dir, ipconfig, pwd, tasklist)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Downloading and executing backdoors with PowerShell Invoke-WebRequest",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Downloading and executing backdoors with PowerShell Invoke-WebRequest",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Deployment of web shells (AntSword, chinatso/Chopper, Behinder) for remote access and persistent foothold",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Deployment of web shells (AntSword, chinatso/Chopper, Behinder) for remote access; arbitrary command execution as IIS user",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Use of dir commands to identify and enumerate directories and files, especially inetpub\\wwwroot\\CityworksServer\\",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Use of ipconfig, pwd, etc. for host and environment information",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1057",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Use of tasklist to enumerate running processes",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Downloading implants/backdoors via PowerShell from attacker-controlled servers",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074.002",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Staging files for exfiltration in directories accessible via web shells",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1074.002",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Files prepared for exfiltration by copying data to web shell-accessible directories",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "TetraLoader injects Cobalt Strike/VShell payloads into benign processes (e.g., notepad.exe, dllhost.exe, gpupdate.exe)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "privilege-escalation",
+            "color": "",
+            "comment": "TetraLoader injects Cobalt Strike/VShell payloads into benign processes (e.g., notepad.exe, dllhost.exe, gpupdate.exe)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "execution",
+            "color": "",
+            "comment": "TetraLoader injects Cobalt Strike/VShell payloads into benign processes (e.g., notepad.exe, dllhost.exe, gpupdate.exe)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Use of Cobalt Strike beacons as payloads for remote C2 and persistence via process injection",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Use of Cobalt Strike beacons as payloads for remote C2 and persistence via process injection",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Deployment of VShell for interactive control (file management, shell, proxying, etc.)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1106",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Deployment of VShell for interactive control (file management, shell, proxying, etc.)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Cobalt Strike config: bStageCleanup=True (removes traces after use of beacon)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Rust-based loaders encode/decrypt payloads before injection; MaLoader encodes shellcode",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1573.002",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "HTTPS with custom public key for C2 communications for beacons",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "C2 communications using HTTPS over port 443 (Cobalt Strike and others)",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090.002",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "VShell supports NPS-based proxy capabilities on infected hosts",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "metadata": [
+        {
+            "name": "Reference",
+            "value": "https://blog.talosintelligence.com/uat-6382-exploits-cityworks-zero-day/"
+        }
+    ],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
