@@ -1,0 +1,222 @@
+{
+    "name": "Disrupting Malicious Uses of AI: June 2025 TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in operations against AI abuses.",
+    "filters": {
+        "platforms": [
+            "enterprise"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1556",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Threat actors used VPN, live-feed injection, and HDMI capture loops to maintain remote access and evade identity verification processes.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Use of legitimate tools (OBS Studio, Tailscale) and personas for deceptive employment schemes and influence operations.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Fabricating automated detailed resumes aligned to various tech job descriptions and templates for deceptive schemes.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Harvest browser-stored credentials via malware.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090.003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Malware uses SOCKS5 proxies to mimic victim location and avoid detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Malware with capabilities to harvest credentials, tokens, and cookies from browsers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Execution of malicious Python DLL via legitimate pythonw.exe to evade detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1132",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Malware payloads base64-encoded and padded to evade signature-based detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Use of Themida packer to obfuscate malware for hindering analysis and reverse engineering.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Use of automation loops to generate resumes at scale for fraudulent employment processes.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Use of proxies to obfuscate source IPs in malware operations.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1483",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Use of random user agent per request to ensure stealthy execution via HTTPS over port 80.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1195",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Use of a malicious repository to distribute malware impersonating legitimate software.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1090.002",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Use of HTTPS over unconventional port 80 for C2 communications.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1049",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Use of SMS and other channels to distribute recruitment-style messages globally.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Use of fake social media and news outlet personas for phishing and influence operations.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1550",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Simulating swipes and clicks on Android to manage and manipulate social media personas.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "collection",
+            "color": "",
+            "comment": "AI-assisted automation of penetration testing using LLM to analyze output and generate commands.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
