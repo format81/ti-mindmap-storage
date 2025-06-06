@@ -1,0 +1,144 @@
+{
+    "name": "Global Threat Report Analysis",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Sony Global Regional Threat Report 2025",
+    "filters": {
+        "platforms": [
+            "windows",
+            "linux",
+            "mac"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "0x001 advertised a self-developed RAT targeting Android for stealing banking credentials.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "CRUEL JACKAL phishing campaign delivered RAR files and malicious DLLs to two Palestinian government entities.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1073",
+            "tactic": "execution",
+            "color": "",
+            "comment": "FAMOUS CHOLLIMA deployed STLControl RMM tools on U.S.-based computers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1539",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "MYTHIC LEOPARD used PDFs to direct victims to spoofed login portals for credential harvesting in India.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1203",
+            "tactic": "execution",
+            "color": "",
+            "comment": "BreachForums reportedly targeted with a zero-day exploit in MyBB software, causing it to go offline.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "color": "",
+            "comment": "An unknown actor used a BITB tool for phishing to spoof a U.S.-based think tank.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1498",
+            "tactic": "impact",
+            "color": "",
+            "comment": "BOUNTY JACKAL executed DDoS attacks against critics of Russia in Europe.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "MUSTANG PANDA deployed LubanBall from USB drives at a U.S. healthcare entity.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1021.001",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "PLUMP SPIDER used RMM to deploy malware at a Brazil-based retail entity.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "A zero-day exploit targeted BreachForums leveraging MyBB vulnerabilities.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
