@@ -1,0 +1,259 @@
+{
+    "type": "bundle",
+    "id": "bundle--10144dc6-6614-4f04-b250-ec45961a65e6",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--b67cbc29-8318-40e3-8982-7595659a4146",
+            "name": "Diamond Sleet",
+            "description": "Diamond Sleet, also known as ZINC, is a North Korean nation-state threat actor that prioritizes espionage, data theft, financial gain, and network destruction.",
+            "threat_actor_types": [
+                "nation-state"
+            ],
+            "aliases": [
+                "ZINC"
+            ],
+            "first_seen": "2023-10-10T00:00:00Z",
+            "goals": [
+                "espionage",
+                "data theft",
+                "financial gain",
+                "network destruction"
+            ],
+            "sophistication": "advanced",
+            "resource_level": "national",
+            "primary_motivation": "strategic advantage",
+            "secondary_motivations": [
+                "financial gain"
+            ],
+            "labels": [
+                "state-sponsored threat actor",
+                "espionage"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--b63754b3-beac-4452-a4e1-727bdb6d5514",
+            "name": "Onyx Sleet",
+            "description": "Onyx Sleet, also known as PLUTONIUM, is a North Korean nation-state threat actor that primarily targets defense and IT services organizations.",
+            "threat_actor_types": [
+                "nation-state"
+            ],
+            "aliases": [
+                "PLUTONIUM"
+            ],
+            "first_seen": "2023-10-10T00:00:00Z",
+            "goals": [
+                "persistent access",
+                "information gathering"
+            ],
+            "sophistication": "advanced",
+            "resource_level": "national",
+            "primary_motivation": "strategic advantage",
+            "secondary_motivations": [
+                "financial gain"
+            ],
+            "labels": [
+                "state-sponsored threat actor",
+                "IT services"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--5f46855f-8095-40f6-904b-ef92f692cb56",
+            "name": "ForestTiger",
+            "description": "ForestTiger is a backdoor used by Diamond Sleet for persistent access and credential dumping.",
+            "is_family": "false",
+            "labels": [
+                "backdoor"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "first_seen": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--5b2f7108-127a-4244-9c6c-2abada4b8797",
+            "name": "HazyLoad",
+            "description": "HazyLoad is a proxy tool used by Onyx Sleet for establishing connections between compromised hosts and attacker infrastructure.",
+            "is_family": "false",
+            "labels": [
+                "proxy tool"
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "first_seen": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--9bbd753b-3421-4b7b-9145-02b1a713b764",
+            "name": "CVE-2023-42793",
+            "description": "A remote-code execution vulnerability affects multiple versions of JetBrains TeamCity server exploited by North Korean threat actors.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z",
+            "published": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7ca8cfcd-7094-4b38-bcea-a538b3168e11",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--",
+            "target_ref": "vulnerability--",
+            "description": "Diamond Sleet and Onyx Sleet exploit CVE-2023-42793 to gain initial access into systems.",
+            "start_time": "2023-10-10T00:00:00Z",
+            "stop_time": "2023-10-20T00:00:00Z"
+        },
+        {
+            "type": "software",
+            "id": "software--87945e60-eae1-4371-bef8-0c1d6ecb5aea",
+            "name": "JetBrains TeamCity",
+            "cpe": "cpe:2.3:a:jetbrains:teamcity:*:*:*:*:*:*:*:*",
+            "version": "affected versions"
+        },
+        {
+            "type": "file",
+            "id": "file--067d5a68-2cfd-4ba9-ba91-9482f31aad6b",
+            "name": "Forest64.exe",
+            "parent_directory_ref": "directory--e9113623-1306-4ba9-8b4e-7a5fbdc45452",
+            "hashes": {
+                "SHA-256": "e06f29dccfe90ae80812c2357171b5c48fba189ae103d28e972067b107e58795"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--fa115c93-cef4-45c3-9580-4f557d162e47",
+            "name": "4800-84DC-063A6A41C5C",
+            "parent_directory_ref": "directory--e9113623-1306-4ba9-8b4e-7a5fbdc45452"
+        },
+        {
+            "type": "directory",
+            "id": "directory--8e3154cb-b6b7-4457-89c7-f343b51e8939",
+            "path": "C:\\ProgramData"
+        },
+        {
+            "type": "url",
+            "id": "url--78021fbc-1167-4fb5-94e8-cd99cc50b9d2",
+            "value": "hxxp://www.bandarpowder[.]com/public/assets/img/cfg.png"
+        },
+        {
+            "type": "file",
+            "id": "file--f455d25c-d14c-4f87-8fb6-00ac49c5816b",
+            "name": "DSROLE.dll",
+            "parent_directory_ref": "directory--f463ad47-c3b8-4e18-8a45-623cc2e64290",
+            "hashes": {
+                "SHA-256": "d9add2bfdfebfa235575687de356f0cefb3e4c55964c4cb8bfdcdc58294eeaca"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--b792b3b3-eb61-4306-9a1c-4c904ddd1b37",
+            "name": "Version.dll",
+            "parent_directory_ref": "directory--f463ad47-c3b8-4e18-8a45-623cc2e64290",
+            "hashes": {
+                "SHA-256": "f251144f7ad0be0045034a1fc33fb896e8c32874e0b05869ff5783e14c062486"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--c2d0297e-6f8d-4039-9822-25d8d3edaf28",
+            "name": "readme.md",
+            "parent_directory_ref": "directory--f463ad47-c3b8-4e18-8a45-623cc2e64290",
+            "hashes": {
+                "SHA-256": "fa7f6ac04ec118dd807c1377599f9d369096c6d8fb1ed24ac7a6ec0e817eaab6"
+            }
+        },
+        {
+            "type": "directory",
+            "id": "directory--1cea432b-b920-42d5-8a1e-e14dacc920e4",
+            "path": "C:\\ProgramData"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--ca16560f-4b07-44eb-ae4a-5dff9e416a44",
+            "value": "dersmarketim[.]com"
+        },
+        {
+            "type": "url",
+            "id": "url--867a9880-6c3e-45dc-ac2f-e9eea21c9057",
+            "value": "hxxp://www.mge[.]sn/themes/classic/modules/ps_rssfeed/feed.zip"
+        },
+        {
+            "type": "user-account",
+            "id": "user-account--00407e71-29dc-4343-8f8c-f75a7e17445d",
+            "user_id": "krtbgt",
+            "account_login": "krtbgt"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ceb88c1c-45e1-417c-8221-c70375507ff1",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--b67cbc29-8318-40e3-8982-7595659a4146",
+            "target_ref": "malware--5f46855f-8095-40f6-904b-ef92f692cb56",
+            "description": "Diamond Sleet utilizes ForestTiger for persistent access and credential dumping.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f7a7762a-559f-40c6-a374-b310fa30c233",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--b63754b3-beac-4452-a4e1-727bdb6d5514",
+            "target_ref": "malware--5b2f7108-127a-4244-9c6c-2abada4b8797",
+            "description": "Onyx Sleet utilizes HazyLoad for establishing connections between compromised hosts and attacker infrastructure.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c1665950-7af1-46be-969f-89431b0e1ea6",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--b67cbc29-8318-40e3-8982-7595659a4146",
+            "target_ref": "vulnerability--9bbd753b-3421-4b7b-9145-02b1a713b764",
+            "description": "Diamond Sleet exploits CVE-2023-42793 to gain initial access.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--92a219f4-5e2e-4674-a748-9d239b85c705",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--b63754b3-beac-4452-a4e1-727bdb6d5514",
+            "target_ref": "vulnerability--9bbd753b-3421-4b7b-9145-02b1a713b764",
+            "description": "Onyx Sleet exploits CVE-2023-42793 for persistent access and information gathering.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--60504005-bbe9-4003-adf1-d2dc984c3247",
+            "relationship_type": "targets",
+            "source_ref": "malware--5f46855f-8095-40f6-904b-ef92f692cb56",
+            "target_ref": "software--87945e60-eae1-4371-bef8-0c1d6ecb5aea",
+            "description": "ForestTiger targets JetBrains TeamCity software for command and control.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--caabf850-bbd6-4f03-9abf-564720da8e11",
+            "relationship_type": "downloads",
+            "source_ref": "file--067d5a68-2cfd-4ba9-ba91-9482f31aad6b",
+            "target_ref": "url--78021fbc-1167-4fb5-94e8-cd99cc50b9d2",
+            "description": "Forest64.exe is downloaded from a potentially compromised URL for staging.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c733201b-172b-46d7-8ea1-99511932bfec",
+            "relationship_type": "based-on",
+            "source_ref": "file--fa115c93-cef4-45c3-9580-4f557d162e47",
+            "target_ref": "file--067d5a68-2cfd-4ba9-ba91-9482f31aad6b",
+            "description": "4800-84DC-063A6A41C5C configuration file is based upon Forest64.exe binary.",
+            "created": "2023-10-10T00:00:00Z",
+            "modified": "2023-10-10T00:00:00Z"
+        }
+    ]
+}
