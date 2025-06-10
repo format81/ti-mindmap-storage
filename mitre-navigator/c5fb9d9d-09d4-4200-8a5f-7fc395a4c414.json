@@ -1,0 +1,162 @@
+{
+    "name": "DarkEngine WordPress Phishing Campaign",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques used by DarkEngine campaign targeting WP Engine users to compromise WordPress sites at scale through phishing, credential theft, and backdoor deployment.",
+    "filters": {},
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "comment": "The campaign uses phishing sites that mimic WP Engine login portals to steal credentials via SEO poisoning and Google Ads sponsored placements. Over 24 phishing domains identified since June 2024.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1192",
+            "tactic": "initial-access",
+            "comment": "SEO poisoning and Google Ads are utilized to put fake WP Engine URLs above legitimate ones in search results, tricking victims into entering credentials.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204.002",
+            "tactic": "execution",
+            "comment": "Fake CAPTCHA prompts are embedded on compromised WordPress sites to socially engineer visitors into executing malicious commands (ClickFix), leading to malware infections like RATs and info stealers.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "initial-access",
+            "comment": "Credential theft enables threat actors to authenticate to WP Engine using stolen credentials via an OAuth proxy, including handling MFA flows, allowing persistent access with \u201cRemember me\u201d function enabled.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1102",
+            "tactic": "command-and-control",
+            "comment": "The threat actor uses a website management portal (custom panel) to control compromised sites, execute backdoor code remotely, and inject arbitrary scripts.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "credential-access",
+            "comment": "Use of Puppeteer automation to login to victim WP Engine accounts, scrape managed website info, and automate site compromise at scale.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1110",
+            "tactic": "credential-access",
+            "comment": "Harvested credentials are processed through automated login with headless browsers to gain access and escalate control over victim sites.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1136",
+            "tactic": "persistence",
+            "comment": "Automated creation of SFTP user accounts on victim WordPress sites to facilitate malicious code injection and persistence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070.004",
+            "tactic": "defense-evasion",
+            "comment": "Inject malicious code into legitimate file \u201cwp-cron.php\u201d to execute malicious plugin and backdoors; also perform cleanup by removing injected code to cover tracks after infection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1218",
+            "tactic": "defense-evasion",
+            "comment": "Use of standard WordPress plugin activation functions and legitimate WP cron jobs to disguise malicious persistence mechanisms.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "Encoding entire website content in base64 blobs; Unicode character substitutions in page titles to evade detection by scanners; encoded HTML/CSS/JS in fake CAPTCHA pages to avoid static detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1070",
+            "tactic": "defense-evasion",
+            "comment": "Removal of injected code from wp-cron.php and deletion of malicious SFTP user accounts to remove evidence of compromise after persistence established.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1573",
+            "tactic": "command-and-control",
+            "comment": "Backdoors use encrypted payloads within theme files, decrypted on demand with keys sent via query parameters for execution, enabling stealthy remote control.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "persistence",
+            "comment": "Malicious WordPress plugin \u201cWP-antymalwary-bot\u201d providing backdoor admin access via \u201cemergency_login\u201d endpoint, enabling persistent access to site management functions.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1534",
+            "tactic": "lateral-movement",
+            "comment": "Using compromised WP Engine credentials to access multiple websites under the victim account, thereby gaining wider access to hosted WordPress sites at scale.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1184",
+            "tactic": "defense-evasion",
+            "comment": "Threat actor proxies the Okta OAuth authorization flow to capture valid tokens and cookies, allowing access with MFA in place without detection.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "credential-access",
+            "comment": "Use of SQLite databases (database.db and wpengine_data.db) containing victim credentials, backdoors, notes, and site information accessed from exposed open directory listings.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "Execution of malicious PowerShell payloads on visitor machines delivered via fake CAPTCHA prompts (ClickFix), often leading to installation of RATs and info stealers like Lumma Stealer, DanaBot, AsyncRAT, and DarkGate3.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control",
+            "comment": "The injected malicious plugin retrieves additional malicious JavaScript (from multiple attacker-controlled domains) that are loaded into the head element of victim sites to maintain communication and payload delivery.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1197",
+            "tactic": "credential-access",
+            "comment": "Use of cloned WP Engine sites mimicking legitimate URLs and OAuth flows to trick victims into providing credentials and bypass MFA via proxying authorization.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "comment": "Use of scripts to locate \u201cwp-cron.php\u201d files in multiple common directories on victim sites to inject and later clean malicious code.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1095",
+            "tactic": "command-and-control",
+            "comment": "Communication with web backend via custom REST API endpoints like \u201c/custom/v1/admin-command\u201d for site and plugin control and executing arbitrary code on compromised sites.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1548",
+            "tactic": "privilege-escalation",
+            "comment": "Activation and use of malicious WordPress plugin to gain administrator-level backdoor access under the guise of legitimate plugin functionality.",
+            "enabled": true
+        }
+    ]
+}
