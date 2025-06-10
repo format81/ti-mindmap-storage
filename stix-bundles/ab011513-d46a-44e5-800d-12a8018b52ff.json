@@ -1,0 +1,647 @@
+{
+    "type": "bundle",
+    "id": "bundle--1e7d0bc7-72b2-4853-8136-88ef3eacd1a8",
+    "objects": [
+        {
+            "type": "malware",
+            "id": "malware--a95d0d9c-ba6d-48cc-a817-5fda58a14a8c",
+            "name": "Agent Tesla",
+            "is_family": "true",
+            "labels": [
+                "infostealer",
+                "net"
+            ],
+            "description": "Agent Tesla is a .NET malware family known for information stealing. In this campaign, it uses steganography to hide malicious payloads as bitmap resources embedded in benign-looking 32-bit .NET applications, with advanced obfuscation techniques to hinder detection and analysis.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--d545d2b3-5793-46a4-a32e-9d8a1090aed4",
+            "name": "XLoader",
+            "is_family": "true",
+            "labels": [
+                "infostealer",
+                "net"
+            ],
+            "description": "XLoader is a malware family involved in data exfiltration operations, using C2 infrastructure such as www.sixfiguredigital.group and www.yperlize.net for command-and-control activities as observed in multiple samples in 2025.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--9e297c9b-f2e2-4a63-9ee5-6a465f65697a",
+            "name": "Remcos RAT",
+            "is_family": "true",
+            "labels": [
+                "rat",
+                "remote-access",
+                "net"
+            ],
+            "description": "Remcos RAT is a remote access trojan used in cyber espionage and targeted intrusion campaigns. It uses C2 servers such as myhost001.myddns.me and various IP addresses for command and control. It is part of a multi-stage malware delivery chain employing .NET bitmap resource steganography.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--c2183910-edeb-48c8-8a19-4c9bf5a3b67c",
+            "name": "Stealthy .NET Malware Campaign 2024-2025",
+            "description": "This intrusion set represents a series of malspam campaigns active between late 2024 and early 2025 targeting financial organizations in T\u00fcrkiye and logistics sector in Asia, delivering steganographic .NET malware that utilizes bitmap resources to hide multiple-stage malicious payloads, including Agent Tesla, XLoader, and Remcos RAT.",
+            "first_seen": "2024-12-01T00:00:00Z",
+            "last_seen": "2025-05-09T00:00:00Z",
+            "primary_motivation": [
+                "financial"
+            ],
+            "resource_level": "organization",
+            "goals": [
+                "initial-access",
+                "data-exfiltration"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--de0fe7ac-8666-4cf1-9f59-4981c383806c",
+            "name": "Agent Tesla Sample SHA-256 ac5fc65ae9500c1107cdd72ae9c271ba9981d22c4d0c632d388b0d8a3acb68f4",
+            "description": "Sample of Agent Tesla malware using .NET bitmap resource steganography obfuscation technique, discovered in malspam campaign targeting financial sector.",
+            "pattern": "[file:hashes.'SHA-256' = 'ac5fc65ae9500c1107cdd72ae9c271ba9981d22c4d0c632d388b0d8a3acb68f4']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--7bc01cea-ae4a-476a-a442-7fcfd4ec625e",
+            "name": "Agent Tesla Sample SHA-256 30b7c09af884dfb7e34aa7401431cdabe6ff34983a59bec4c14915438d68d5b0",
+            "pattern": "[file:hashes.'SHA-256' = '30b7c09af884dfb7e34aa7401431cdabe6ff34983a59bec4c14915438d68d5b0']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--19406d5c-9fd9-4015-b1c2-8a3b25749460",
+            "name": "Agent Tesla Sample SHA-256 5487845b06180dfb329757254400cb8663bf92f1eca36c5474e9ce3370cadbde",
+            "pattern": "[file:hashes.'SHA-256' = '5487845b06180dfb329757254400cb8663bf92f1eca36c5474e9ce3370cadbde']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--093e7273-6511-49e0-9728-b7e45f59935b",
+            "name": "XLoader Sample SHA-256 511af3c08bd8c093029bf2926b0a1e6c8263ceba3885e3fec9b59b28cd79075d",
+            "pattern": "[file:hashes.'SHA-256' = '511af3c08bd8c093029bf2926b0a1e6c8263ceba3885e3fec9b59b28cd79075d']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--a4f54fa1-4672-48ad-856d-5e0af7f7d4a8",
+            "name": "XLoader Sample SHA-256 604cbcfa7ac46104a801a8efb7e8d50fa674964811ec7652f8d9dec123f8be1f",
+            "pattern": "[file:hashes.'SHA-256' = '604cbcfa7ac46104a801a8efb7e8d50fa674964811ec7652f8d9dec123f8be1f']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--bdff411b-c3b4-4ed7-b9b2-e4105659a87d",
+            "name": "XLoader Sample SHA-256 98195a4d27e46066b4bc5b9baea42e1e5ef04d05734c556d07e27f45cb324e80",
+            "pattern": "[file:hashes.'SHA-256' = '98195a4d27e46066b4bc5b9baea42e1e5ef04d05734c556d07e27f45cb324e80']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--627777e8-8e9c-4ea1-b580-c1329ad9518f",
+            "name": "XLoader Sample SHA-256 a4a6364d2a8ade431974b85de44906fe8abfed77ab74cc72e05e788b15c7a0cf",
+            "pattern": "[file:hashes.'SHA-256' = 'a4a6364d2a8ade431974b85de44906fe8abfed77ab74cc72e05e788b15c7a0cf']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--77ad9f67-8507-4bed-8c30-cfac68e37acd",
+            "name": "Remcos RAT Sample SHA-256 3b83739da46e20faebecf01337ee9ff4d8f81d61ecbb7e8c9d9e792bb3922b76",
+            "pattern": "[file:hashes.'SHA-256' = '3b83739da46e20faebecf01337ee9ff4d8f81d61ecbb7e8c9d9e792bb3922b76']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--fb0c19e5-7354-4e54-ae65-7f5bd075b522",
+            "name": "Remcos RAT Sample SHA-256 8146be4a98f762dce23f83619f1951e374708d17573f024f895c8bf8c68c0a75",
+            "pattern": "[file:hashes.'SHA-256' = '8146be4a98f762dce23f83619f1951e374708d17573f024f895c8bf8c68c0a75']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--a9c39ab1-366c-48ad-a9cd-d79081adabf0",
+            "name": "Remcos RAT Sample SHA-256 9ed929b60187ca4b514eb6ee8e60b4a0ac11c6d24c0b2945f70da7077b2e8c4b",
+            "pattern": "[file:hashes.'SHA-256' = '9ed929b60187ca4b514eb6ee8e60b4a0ac11c6d24c0b2945f70da7077b2e8c4b']",
+            "pattern_type": "stix",
+            "valid_from": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--58c23019-394f-45b6-803b-1af6668ee780",
+            "name": "gtpv.online SMTP Servers for Agent Tesla",
+            "description": "SMTP servers used for post-infection data exfiltration by Agent Tesla samples.",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "aliases": [
+                "hosting2.ro.hostsailor.com",
+                "mail.gtpv.online"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--7b5b8047-c3bb-4953-89c0-b1f944dae3e0",
+            "name": "nffplp.com SMTP Server for Agent Tesla",
+            "description": "SMTP server used for post-infection data exfiltration by Agent Tesla sample 5487845b06180dfb329757254400cb8663bf92f1eca36c5474e9ce3370cadbde.",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "aliases": [
+                "nffplp.com"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--48d558ee-86e3-4a2e-ba9d-a4d894a3bbdd",
+            "name": "sixfiguredigital.group C2 for XLoader",
+            "description": "C2 domains used by XLoader samples for data exfiltration.",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "aliases": [
+                "www.sixfiguredigital.group"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--9d26a1a9-0a0b-4669-bc56-4ee1d1510382",
+            "name": "yperlize.net C2 for XLoader",
+            "description": "C2 domain used by XLoader malware sample a4a6364d2a8ade431974b85de44906fe8abfed77ab74cc72e05e788b15c7a0cf.",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "aliases": [
+                "www.yperlize.net"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--734cf172-99ae-42b0-8407-0f66174bd2a6",
+            "name": "Remcos RAT C2 servers",
+            "description": "Command and control servers used by Remcos RAT samples for data exfiltration.",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "aliases": [
+                "myhost001.myddns.me",
+                "103.198.26.222",
+                "67.203.7.163",
+                "176.65.144.154"
+            ]
+        },
+        {
+            "type": "report",
+            "id": "report--acde3f08-9ebb-4cca-9d17-883d864cb1ce",
+            "name": "Stealthy .NET Malware: Hiding Malicious Payloads as Bitmap Resources",
+            "published": "2025-05-09T00:00:00Z",
+            "description": "This report covers a new obfuscation technique used by threat actors to hide malicious .NET payloads as bitmap resources embedded in benign 32-bit .NET applications. It analyzes a multi-stage malware delivery chain targeting the financial and logistics sectors, involving malware families like Agent Tesla, XLoader, and Remcos RAT.",
+            "report_types": [
+                "threat-report"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Unit42",
+                    "url": "https://unit42.paloaltonetworks.com/malicious-payloads-as-bitmap-resources-hide-net-malware/"
+                }
+            ],
+            "created": "2025-05-09T00:00:00Z",
+            "modified": "2025-05-09T00:00:00Z"
+        },
+        {
+            "type": "file",
+            "id": "file--d63135d5-caf0-4650-96ef-55d49172e706",
+            "name": "xgDV.exe",
+            "hashes": {
+                "SHA-256": "ac5fc65ae9500c1107cdd72ae9c271ba9981d22c4d0c632d388b0d8a3acb68f4"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--90331991-0e6b-433e-9f4a-f7cbe4d17995",
+            "name": "Captive.dll",
+            "hashes": {
+                "SHA-256": "5adff9ae840c6c245c0a194088a785d78d91fe734ee46a7d51605c1f64f6dadd"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--265f0e9f-8c74-4f2f-94d8-0a8d2b1995f6",
+            "name": "TL.dll"
+        },
+        {
+            "type": "file",
+            "id": "file--05b75f12-54d9-4940-834e-b3181f48fd99",
+            "name": "Montero.dll"
+        },
+        {
+            "type": "file",
+            "id": "file--bf749e59-5694-45dc-82dd-eab99de344c4",
+            "name": "Remington.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--b8d60869-8b29-4eff-b125-0b280664cc95",
+            "name": "Agent Tesla variant sample 1",
+            "hashes": {
+                "SHA-256": "30b7c09af884dfb7e34aa7401431cdabe6ff34983a59bec4c14915438d68d5b0"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--e5474c47-8f98-4b11-9f65-efa1d8409c5c",
+            "name": "Agent Tesla variant sample 2",
+            "hashes": {
+                "SHA-256": "5487845b06180dfb329757254400cb8663bf92f1eca36c5474e9ce3370cadbde"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--a22d4326-59fe-43ab-9f56-79377cb16039",
+            "name": "Agent Tesla variant sample 3",
+            "hashes": {
+                "SHA-256": "ac5fc65ae9500c1107cdd72ae9c271ba9981d22c4d0c632d388b0d8a3acb68f4"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--bd614350-87e1-4fad-b594-481985a036e9",
+            "name": "XLoader sample 1",
+            "hashes": {
+                "SHA-256": "511af3c08bd8c093029bf2926b0a1e6c8263ceba3885e3fec9b59b28cd79075d"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--672886fc-8ff0-4a8a-9571-9bcb1f84e677",
+            "name": "XLoader sample 2",
+            "hashes": {
+                "SHA-256": "604cbcfa7ac46104a801a8efb7e8d50fa674964811ec7652f8d9dec123f8be1f"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--e9b0b062-cb8b-4407-843e-c5b9d5cd309c",
+            "name": "XLoader sample 3",
+            "hashes": {
+                "SHA-256": "98195a4d27e46066b4bc5b9baea42e1e5ef04d05734c556d07e27f45cb324e80"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--ff625a0f-90ac-46f6-baa7-aedf700e6a83",
+            "name": "XLoader sample 4",
+            "hashes": {
+                "SHA-256": "a4a6364d2a8ade431974b85de44906fe8abfed77ab74cc72e05e788b15c7a0cf"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--c6437759-10a5-4385-b290-dd8274db1295",
+            "name": "Remcos RAT sample 1",
+            "hashes": {
+                "SHA-256": "3b83739da46e20faebecf01337ee9ff4d8f81d61ecbb7e8c9d9e792bb3922b76"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--dbaf09d5-013f-4c37-9690-1f2d0dad00c2",
+            "name": "Remcos RAT sample 2",
+            "hashes": {
+                "SHA-256": "8146be4a98f762dce23f83619f1951e374708d17573f024f895c8bf8c68c0a75"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--317b67f5-fa6f-4376-a0f0-11e3139ae9f6",
+            "name": "Remcos RAT sample 3",
+            "hashes": {
+                "SHA-256": "9ed929b60187ca4b514eb6ee8e60b4a0ac11c6d24c0b2945f70da7077b2e8c4b"
+            }
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--98f7e344-37a2-40d0-9b20-b09d7d249a78",
+            "value": "hosting2.ro.hostsailor.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--7598030d-8e58-4af8-b9c7-fc87086ee12d",
+            "value": "gtpv.online"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--3c894173-2096-4867-9d4f-d553655c46ae",
+            "value": "mail.gtpv.online"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--dbd96c14-e478-4a31-b1f1-5a67abeab36c",
+            "value": "nffplp.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--7b453ab9-fe59-4fc9-b68a-63e0e58ce5a9",
+            "value": "yandex.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--15106ccb-f222-4442-af0b-7a8c108c0c0f",
+            "value": "sixfiguredigital.group"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--9014b06a-0ca0-4f80-9c44-5374e5c9ba48",
+            "value": "yperlize.net"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--3b88cf28-dbeb-42e2-941a-ff8b9084d2d6",
+            "value": "myhost001.myddns.me"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--7593b608-1e72-4ae0-b78c-b509b60f3857",
+            "value": "103.198.26.222"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--59691a50-08d5-411d-b38a-44ed46d96c73",
+            "value": "67.203.7.163"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--d25eb86a-5d54-45cf-a87e-67cedee83f1d",
+            "value": "176.65.144.154"
+        },
+        {
+            "type": "url",
+            "id": "url--5f584eed-b002-4126-b977-5bffd66a9788",
+            "value": "http://www.sixfiguredigital.group/aoc3/"
+        },
+        {
+            "type": "url",
+            "id": "url--45b134c3-d245-41b6-91a3-007127ca19b5",
+            "value": "http://www.yperlize.net/aa02/"
+        },
+        {
+            "type": "email-address",
+            "id": "email-address--91719c98-7a52-400b-bd9d-82eb27180ba8",
+            "value": "packagelog@gtpv.online"
+        },
+        {
+            "type": "email-address",
+            "id": "email-address--d4e14e00-92a0-4cc3-9a24-f3ffd5b14dbd",
+            "value": "package@gtpv.online"
+        },
+        {
+            "type": "email-address",
+            "id": "email-address--20ac5a67-6a81-4ea4-9776-64c8ae33c786",
+            "value": "kings@gtpv.online"
+        },
+        {
+            "type": "email-address",
+            "id": "email-address--fa8080d4-9ccc-48b4-8127-bbb0122be09c",
+            "value": "king@gtpv.online"
+        },
+        {
+            "type": "email-address",
+            "id": "email-address--86fd50d4-7e23-4a98-9b1b-1dc2093786d2",
+            "value": "airlet@nffplp.com"
+        },
+        {
+            "type": "email-address",
+            "id": "email-address--5b10a58c-7730-4c6d-9633-f67b660ef11d",
+            "value": "smt.treat@yandex.com"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f6e7ceb0-da39-4b27-bdee-c03a1e038023",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:00:00Z",
+            "modified": "2025-06-01T00:00:00Z",
+            "source_ref": "intrusion-set--c2183910-edeb-48c8-8a19-4c9bf5a3b67c",
+            "target_ref": "malware--a95d0d9c-ba6d-48cc-a817-5fda58a14a8c"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--94c3a4f8-3b65-4ec5-8b7b-1898de06a346",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:01:00Z",
+            "modified": "2025-06-01T00:01:00Z",
+            "source_ref": "intrusion-set--c2183910-edeb-48c8-8a19-4c9bf5a3b67c",
+            "target_ref": "malware--d545d2b3-5793-46a4-a32e-9d8a1090aed4"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d44bfc6c-6e6e-444a-8ae2-32cab78fa742",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:02:00Z",
+            "modified": "2025-06-01T00:02:00Z",
+            "source_ref": "intrusion-set--c2183910-edeb-48c8-8a19-4c9bf5a3b67c",
+            "target_ref": "malware--9e297c9b-f2e2-4a63-9ee5-6a465f65697a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bf8a0ee4-6996-45e7-8da5-713cacaa96ae",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:03:00Z",
+            "modified": "2025-06-01T00:03:00Z",
+            "source_ref": "indicator--de0fe7ac-8666-4cf1-9f59-4981c383806c",
+            "target_ref": "file--a22d4326-59fe-43ab-9f56-79377cb16039"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--25c23a8d-41ff-415b-9e30-76eaaf55efe9",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:04:00Z",
+            "modified": "2025-06-01T00:04:00Z",
+            "source_ref": "indicator--7bc01cea-ae4a-476a-a442-7fcfd4ec625e",
+            "target_ref": "file--b8d60869-8b29-4eff-b125-0b280664cc95"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--57f7d224-8d33-40df-852b-d5c7b5383a3a",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:05:00Z",
+            "modified": "2025-06-01T00:05:00Z",
+            "source_ref": "indicator--19406d5c-9fd9-4015-b1c2-8a3b25749460",
+            "target_ref": "file--e5474c47-8f98-4b11-9f65-efa1d8409c5c"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4ec6db49-8e20-420b-b8c6-6c2973ab5d9c",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:06:00Z",
+            "modified": "2025-06-01T00:06:00Z",
+            "source_ref": "indicator--093e7273-6511-49e0-9728-b7e45f59935b",
+            "target_ref": "file--bd614350-87e1-4fad-b594-481985a036e9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--435ab776-d92e-44db-8dbe-977ea0a6efa9",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:07:00Z",
+            "modified": "2025-06-01T00:07:00Z",
+            "source_ref": "indicator--a4f54fa1-4672-48ad-856d-5e0af7f7d4a8",
+            "target_ref": "file--672886fc-8ff0-4a8a-9571-9bcb1f84e677"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4284809d-dbaa-4b31-a1b7-62abc8bc714a",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:08:00Z",
+            "modified": "2025-06-01T00:08:00Z",
+            "source_ref": "indicator--bdff411b-c3b4-4ed7-b9b2-e4105659a87d",
+            "target_ref": "file--e9b0b062-cb8b-4407-843e-c5b9d5cd309c"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--58adc2d1-5562-4a1d-be6d-b65dbc5d5ac5",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:09:00Z",
+            "modified": "2025-06-01T00:09:00Z",
+            "source_ref": "indicator--627777e8-8e9c-4ea1-b580-c1329ad9518f",
+            "target_ref": "file--ff625a0f-90ac-46f6-baa7-aedf700e6a83"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--83089ca6-0326-4de6-a4b7-c6fc41564b94",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:10:00Z",
+            "modified": "2025-06-01T00:10:00Z",
+            "source_ref": "indicator--77ad9f67-8507-4bed-8c30-cfac68e37acd",
+            "target_ref": "file--c6437759-10a5-4385-b290-dd8274db1295"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3097f4df-0c98-42b0-b7b3-11c6ac5b601f",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:11:00Z",
+            "modified": "2025-06-01T00:11:00Z",
+            "source_ref": "indicator--fb0c19e5-7354-4e54-ae65-7f5bd075b522",
+            "target_ref": "file--dbaf09d5-013f-4c37-9690-1f2d0dad00c2"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5ece65b1-302e-4e82-8411-024bb4358968",
+            "relationship_type": "indicates",
+            "created": "2025-06-01T00:12:00Z",
+            "modified": "2025-06-01T00:12:00Z",
+            "source_ref": "indicator--a9c39ab1-366c-48ad-a9cd-d79081adabf0",
+            "target_ref": "file--317b67f5-fa6f-4376-a0f0-11e3139ae9f6"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cad5c756-f42a-4c6f-9ba9-95ad08762fd3",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:13:00Z",
+            "modified": "2025-06-01T00:13:00Z",
+            "source_ref": "malware--a95d0d9c-ba6d-48cc-a817-5fda58a14a8c",
+            "target_ref": "file--a22d4326-59fe-43ab-9f56-79377cb16039"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2c8dc4f1-3a8a-4249-b033-966f36cf6c31",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:14:00Z",
+            "modified": "2025-06-01T00:14:00Z",
+            "source_ref": "malware--d545d2b3-5793-46a4-a32e-9d8a1090aed4",
+            "target_ref": "file--bd614350-87e1-4fad-b594-481985a036e9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2bfd0d16-ed83-4181-b3ce-790b792e2de5",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:15:00Z",
+            "modified": "2025-06-01T00:15:00Z",
+            "source_ref": "malware--9e297c9b-f2e2-4a63-9ee5-6a465f65697a",
+            "target_ref": "file--c6437759-10a5-4385-b290-dd8274db1295"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--dc9d405c-e187-4ea4-b8a0-f67bc1143521",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:16:00Z",
+            "modified": "2025-06-01T00:16:00Z",
+            "source_ref": "malware--a95d0d9c-ba6d-48cc-a817-5fda58a14a8c",
+            "target_ref": "infrastructure--58c23019-394f-45b6-803b-1af6668ee780"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--be9a1100-de7f-4870-8c0b-221f9be31a4e",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:17:00Z",
+            "modified": "2025-06-01T00:17:00Z",
+            "source_ref": "malware--a95d0d9c-ba6d-48cc-a817-5fda58a14a8c",
+            "target_ref": "infrastructure--7b5b8047-c3bb-4953-89c0-b1f944dae3e0"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ca973f4d-0569-435c-b670-57db18ed32e1",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:18:00Z",
+            "modified": "2025-06-01T00:18:00Z",
+            "source_ref": "malware--d545d2b3-5793-46a4-a32e-9d8a1090aed4",
+            "target_ref": "infrastructure--48d558ee-86e3-4a2e-ba9d-a4d894a3bbdd"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2c0a9c5c-9e57-4539-b34b-989d53bca98d",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:19:00Z",
+            "modified": "2025-06-01T00:19:00Z",
+            "source_ref": "malware--d545d2b3-5793-46a4-a32e-9d8a1090aed4",
+            "target_ref": "infrastructure--9d26a1a9-0a0b-4669-bc56-4ee1d1510382"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d01a4d13-873d-4979-a99b-e6de3f58aba0",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:20:00Z",
+            "modified": "2025-06-01T00:20:00Z",
+            "source_ref": "malware--9e297c9b-f2e2-4a63-9ee5-6a465f65697a",
+            "target_ref": "infrastructure--734cf172-99ae-42b0-8407-0f66174bd2a6"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--aaec608a-1bc1-42b7-affa-1178ece2c3ff",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:21:00Z",
+            "modified": "2025-06-01T00:21:00Z",
+            "source_ref": "file--d63135d5-caf0-4650-96ef-55d49172e706",
+            "target_ref": "file--265f0e9f-8c74-4f2f-94d8-0a8d2b1995f6"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3ac229e4-298e-4f0b-addd-70c3064d3660",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:22:00Z",
+            "modified": "2025-06-01T00:22:00Z",
+            "source_ref": "file--265f0e9f-8c74-4f2f-94d8-0a8d2b1995f6",
+            "target_ref": "file--05b75f12-54d9-4940-834e-b3181f48fd99"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5d2204e7-342b-4049-b4db-f459254c0f92",
+            "relationship_type": "uses",
+            "created": "2025-06-01T00:23:00Z",
+            "modified": "2025-06-01T00:23:00Z",
+            "source_ref": "file--05b75f12-54d9-4940-834e-b3181f48fd99",
+            "target_ref": "file--bf749e59-5694-45dc-82dd-eab99de344c4"
+        }
+    ]
+}
