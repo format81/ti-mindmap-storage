@@ -1,0 +1,141 @@
+{
+    "name": "Stealthy .NET Malware: Hiding Malicious Payloads as Bitmap Resources",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques observed in .NET malware campaigns using steganography to hide malicious payloads in bitmap resources embedded in benign 32-bit .NET applications.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "Malware hides malicious payloads within bitmap resources embedded in benign 32-bit .NET applications, using steganography to evade detection by concealing payload inside images.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "Use of various .NET obfuscation methods such as metadata obfuscation, opcode replacement, stolen bytes, control flow obfuscation, virtualization-based obfuscation, string encryption, and dynamic code generation to obstruct analysis and hinder reverse engineering.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "comment": "Multi-stage unpacking process involves unpacking secondary payloads in DLL form (TL.dll and Montero.dll) loaded dynamically from embedded bitmap resources.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1620",
+            "tactic": "defense-evasion",
+            "comment": "Use of reflection (LateBinding.LateCall()) in .NET to dynamically invoke methods (e.g., Justy()) to load and execute unpacked payloads, aiding stealthy execution.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "The final payload (Remington.exe) is decrypted at runtime using a custom XOR with subtraction algorithm, adding a layer of encryption to avoid detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "comment": "Unpacking and executing payloads in multiple stages: initial bitmap resource \u2192 TL.dll \u2192 embedded bitmap resource \u2192 Montero.dll \u2192 final payload executed.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1030",
+            "tactic": "defense-evasion",
+            "comment": "Using segmented resource loading (e.g., loading only a segment of the bitmap resource initially) to evade detection by breaking down payload into smaller chunks.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1392",
+            "tactic": "defense-evasion",
+            "comment": "Debugger hooks on System.Resources.ResourceManager::GetObject(string) and System.Reflection.Assembly::Load(byte[]) APIs to intercept resource loading and assembly load operations for analysis and unpacking.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "comment": "Final payload (Agent Tesla variant) exfiltrates harvested data over SMTP using hardcoded SMTP servers, senders, and receivers.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "comment": "Malspam campaigns distributing the initial malicious executable as email attachments targeting specific sectors and regions with region-native language subjects.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "comment": "Malware uses a copy of a legitimate .NET executable (e.g., Windows Forms OCR) as a loader, embedding bitmap resources to blend in with normal software.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
