@@ -1,0 +1,423 @@
+{
+    "type": "bundle",
+    "id": "bundle--0f7f7204-a279-4773-8c99-96951fd3d233",
+    "objects": [
+        {
+            "type": "intrusion-set",
+            "id": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "name": "APT41",
+            "aliases": [
+                "BARIUM",
+                "Winnti Group"
+            ],
+            "description": "APT41 is a Chinese state-sponsored espionage group conducting both espionage and financially motivated operations. Active since at least 2012, targeting healthcare, telecom, technology, and video game industries across 14 countries. Known for using HTTP, FTP, DNS for command and control, exploiting CVE-2019-19781 and CVE-2020-10189, creating persistence mechanisms including registry key modifications and startup files, performing password brute-force attacks, and deploying malware via PowerShell and batch files.",
+            "first_seen": "2012-01-01T00:00:00Z",
+            "goals": [
+                "Espionage",
+                "Financial gain"
+            ],
+            "resource_level": "state-sponsored",
+            "primary_motivation": "financial-motivated operations",
+            "secondary_motivations": [
+                "espionage"
+            ],
+            "labels": [
+                "state-sponsored",
+                "espionage",
+                "financially motivated"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--e3c00c7b-7dd3-467e-a65e-b08045ddaf65",
+            "name": "Encryptor RaaS",
+            "description": "Ransomware used by APT41 to encrypt files on targeted systems and provide ransom notes to users.",
+            "is_family": "true",
+            "labels": [
+                "ransomware"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--21302edf-0d87-40c3-931b-c3f1731e85cd",
+            "name": "StorSyncSvc",
+            "description": "A service created by APT41 to provide persistence for Cobalt Strike.",
+            "labels": [
+                "cobalt strike",
+                "persistence"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--eefa1dd4-3ac4-415c-80aa-388825eab33a",
+            "name": "Use of CVE-2019-19781 Exploit",
+            "description": "APT41 exploited CVE-2019-19781 against Citrix devices, executing /bin/pwd and initiating download payloads via HTTP and FTP.",
+            "external_references": [
+                {
+                    "source_name": "CVE",
+                    "external_id": "CVE-2019-19781"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--995bc5d0-d912-4563-ab05-af23f86d7546",
+            "name": "Use of CVE-2020-10189 Exploit",
+            "description": "APT41 used payloads for CVE-2020-10189 exploits to download and execute malicious payloads.",
+            "external_references": [
+                {
+                    "source_name": "CVE",
+                    "external_id": "CVE-2020-10189"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--379699bb-cf65-484e-8180-76c6e696d563",
+            "name": "Password Brute-force Attack",
+            "description": "APT41 performed password brute-force attacks on local administrator accounts to gain unauthorized access."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--452aeba4-f91f-4a93-82e9-6775a8f53f72",
+            "name": "Command Execution via cmd.exe",
+            "description": "APT41 used cmd.exe /c to execute commands on remote machines."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--1357037c-e82f-4ec9-9531-a5006245fa4c",
+            "name": "Use of PowerShell for Malware Deployment",
+            "description": "APT41 leveraged PowerShell scripts to deploy malware families in victim environments."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--2660d982-bfd4-47f6-ba15-352987a53543",
+            "name": "Persistence via Registry Key Modification",
+            "description": "APT41 added a registry key under HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost to establish persistence for Cobalt Strike."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--f1d5fc04-07dc-49da-a525-a6af28cc1f8d",
+            "name": "Persistence via Startup File Modification",
+            "description": "APT41 created and modified startup files to maintain persistence."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--dfaf2b0d-9178-49e7-b0a6-767c860a67ea",
+            "name": "Persistence via Creation of User Accounts",
+            "description": "APT41 created user accounts and added them to User and Admin groups for persistence."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--6bf9e635-7a73-49ba-b86c-ccb9b7b7bb4a",
+            "name": "Modification of Windows Services",
+            "description": "APT41 modified legitimate Windows services to install malware backdoors."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--816d28b6-eaa4-4bee-a758-8e5258fb7599",
+            "name": "Use of BITSAdmin for Payload Download",
+            "description": "APT41 used BITSAdmin to download and install malicious payloads."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--db8bc760-b42c-4c2e-8b22-6319eaf97c54",
+            "name": "Data Exfiltration via RAR Archive",
+            "description": "APT41 created RAR archives of targeted files for data exfiltration."
+        },
+        {
+            "type": "tool",
+            "id": "tool--9e93ed3b-dd96-483b-b282-e520fa79afa7",
+            "name": "BITSAdmin",
+            "description": "A Microsoft command-line tool used by APT41 to download and install malicious payloads."
+        },
+        {
+            "type": "tool",
+            "id": "tool--7b7f23d5-026e-4e75-91f7-f25f098c3ddf",
+            "name": "Cobalt Strike BEACON",
+            "description": "A penetration testing tool used by APT41, with persistence mechanisms including batch files and registry key modifications."
+        },
+        {
+            "type": "windows-registry-key",
+            "id": "windows-registry-key--5f6ab484-5e7d-4d30-abcf-87a22996b94e",
+            "key": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost"
+        },
+        {
+            "type": "file",
+            "id": "file--3f120944-3a60-49bd-8b1c-9be9a116a132",
+            "name": "StorSyncSvc"
+        },
+        {
+            "type": "process",
+            "id": "process--93eb0f5d-04c9-415e-85e1-153545d5ffa0",
+            "name": "cmd.exe",
+            "command_line": "cmd.exe /c"
+        },
+        {
+            "type": "process",
+            "id": "process--82a3761d-6533-4393-8ae7-1b0f290b2d59",
+            "name": "powershell.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--10221041-940a-4b1c-8563-b005d08029ff",
+            "name": "/bin/pwd"
+        },
+        {
+            "type": "archive-ext",
+            "id": "archive-ext--376da43c-60af-4b76-8fc9-70969ad54bd8",
+            "extensions": {
+                "rar": true
+            }
+        },
+        {
+            "type": "user-account",
+            "id": "user-account--551c7373-ba4a-489d-98d5-0cbae2d92b7a",
+            "account_type": "windows",
+            "groups": [
+                "Users",
+                "Administrators"
+            ]
+        },
+        {
+            "type": "software",
+            "id": "software--df0754d7-5a8f-4b90-a5ad-1ebed42966e9",
+            "name": "BITSAdmin"
+        },
+        {
+            "type": "software",
+            "id": "software--1ccd66d1-76f6-45ab-a761-731933220591",
+            "name": "Cobalt Strike"
+        },
+        {
+            "type": "software",
+            "id": "software--115a8d0a-9f50-448a-84ba-a458de00cb7c",
+            "name": "Encryptor RaaS"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f715c215-dccc-4e1e-b811-1cd2259046fa",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "malware--e3c00c7b-7dd3-467e-a65e-b08045ddaf65",
+            "description": "APT41 uses Encryptor RaaS ransomware."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--99903522-f98f-40e2-8f8a-bbd953cc174a",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "infrastructure--21302edf-0d87-40c3-931b-c3f1731e85cd",
+            "description": "APT41 created StorSyncSvc infrastructure for persistence."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--05f40b12-5b0a-4de0-ae5f-05eeeddc3462",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--eefa1dd4-3ac4-415c-80aa-388825eab33a",
+            "description": "APT41 uses CVE-2019-19781 exploit."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3ee73ad8-0ebc-417c-9615-e8f38c8077c0",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--995bc5d0-d912-4563-ab05-af23f86d7546",
+            "description": "APT41 uses CVE-2020-10189 exploit."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7622d4a0-6916-4caa-a0d0-752deff2355f",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--379699bb-cf65-484e-8180-76c6e696d563",
+            "description": "APT41 performs password brute-force attacks."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a0101705-3802-420e-8b3b-e293408f2fdd",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--452aeba4-f91f-4a93-82e9-6775a8f53f72",
+            "description": "APT41 uses cmd.exe to execute commands on remote machines."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--baf45b4c-ec42-47b0-8de6-70622a385f5f",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--1357037c-e82f-4ec9-9531-a5006245fa4c",
+            "description": "APT41 leverages PowerShell to deploy malware."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--78138281-a380-46b9-b736-3bc4ccdcb2db",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--2660d982-bfd4-47f6-ba15-352987a53543",
+            "description": "APT41 adds registry key for persistence."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--38d0fe21-c685-4332-a864-a6aa028db144",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--f1d5fc04-07dc-49da-a525-a6af28cc1f8d",
+            "description": "APT41 modifies startup files for persistence."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8cc99e2b-0aff-4569-b3c2-dc9dda99c6fd",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--dfaf2b0d-9178-49e7-b0a6-767c860a67ea",
+            "description": "APT41 creates user accounts for persistence."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--c1edd8d8-fa07-49ed-9450-bbdec36b51ea",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--6bf9e635-7a73-49ba-b86c-ccb9b7b7bb4a",
+            "description": "APT41 modifies Windows services for malware backdoors."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--3ee42e77-d41a-41e1-ba76-1e88a2a2cb2a",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--816d28b6-eaa4-4bee-a758-8e5258fb7599",
+            "description": "APT41 uses BITSAdmin to download and install payloads."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cd910c2c-6b96-40a3-b26a-14b012c0e1bb",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "attack-pattern--db8bc760-b42c-4c2e-8b22-6319eaf97c54",
+            "description": "APT41 exfiltrates data via RAR archive."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d431771e-a619-4d96-8e94-3e2436661346",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "tool--9e93ed3b-dd96-483b-b282-e520fa79afa7",
+            "description": "APT41 uses BITSAdmin tool."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--667517a7-a3be-4fcf-bf9c-c21244b0c6fa",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "tool--7b7f23d5-026e-4e75-91f7-f25f098c3ddf",
+            "description": "APT41 uses Cobalt Strike BEACON tool."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0d156f74-13a3-4606-819a-db81c3f66360",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "windows-registry-key--5f6ab484-5e7d-4d30-abcf-87a22996b94e",
+            "description": "APT41 adds registry key to HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost for persistence."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--b6afa479-3635-4c36-a932-22640ad74a5f",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "file--3f120944-3a60-49bd-8b1c-9be9a116a132",
+            "description": "APT41 created StorSyncSvc file for persistence."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--1a2352d3-84ad-43f2-a18a-8c3687bfe4ac",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "process--93eb0f5d-04c9-415e-85e1-153545d5ffa0",
+            "description": "APT41 uses cmd.exe process to execute commands."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a4387ce6-f4af-4f97-8dba-142b5bfd76bc",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "process--82a3761d-6533-4393-8ae7-1b0f290b2d59",
+            "description": "APT41 uses powershell.exe process for malware deployment."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a19dff63-713e-4828-9113-16f7981b2a7b",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "file--10221041-940a-4b1c-8563-b005d08029ff",
+            "description": "APT41 executed file /bin/pwd in exploitation activity."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9a9195ee-4680-4a5e-acc7-444084682456",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "archive-ext--376da43c-60af-4b76-8fc9-70969ad54bd8",
+            "description": "APT41 creates RAR archives for data exfiltration."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8e10250f-e59c-46f5-ad4d-ba4eb613e9d8",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "user-account--551c7373-ba4a-489d-98d5-0cbae2d92b7a",
+            "description": "APT41 creates Windows user accounts and adds them to User and Admin groups."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5258a29e-d142-4116-bfcb-bab2207799ef",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "software--df0754d7-5a8f-4b90-a5ad-1ebed42966e9",
+            "description": "APT41 uses BITSAdmin software for payload deployment."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--fde94b25-7620-4823-a71c-0c31ca5e1287",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "software--1ccd66d1-76f6-45ab-a761-731933220591",
+            "description": "APT41 uses Cobalt Strike software for persistence and exploitation."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--0522951c-368a-4ef6-8f44-61f1fc4a2ad3",
+            "relationship_type": "uses",
+            "created_by_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "source_ref": "intrusion-set--2eb4a547-6a78-46d4-8ea0-0099b6b420c1",
+            "target_ref": "software--115a8d0a-9f50-448a-84ba-a458de00cb7c",
+            "description": "APT41 uses Encryptor RaaS software in ransomware operations."
+        }
+    ]
+}
