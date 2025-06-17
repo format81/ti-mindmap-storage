@@ -1,0 +1,64 @@
+{
+    "name": "API Key and Secret Management Practices",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Practices around the management and security of API keys and secrets, specifically relating to Tavily API keys.",
+    "filters": {
+        "platforms": [
+            "iaas",
+            "pas",
+            "saas"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1578",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Describes the management of Tavily API keys, including revocation, which falls under secret management.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1049.003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Although IP allowlisting is not mentioned, it's typically a measure related to API security.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
