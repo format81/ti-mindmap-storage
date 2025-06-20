@@ -1,0 +1,545 @@
+{
+    "type": "bundle",
+    "id": "bundle--248fe4e8-8406-44ec-8851-ab1b8aa9431e",
+    "objects": [
+        {
+            "type": "intrusion-set",
+            "spec_version": "2.1",
+            "id": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "name": "Naikon",
+            "description": "Naikon is a state-sponsored cyber espionage group attributed to the Chinese People\u2019s Liberation Army\u2019s Chengdu Military Region Second Technical Reconnaissance Bureau (Military Unit Cover Designator 78020). Active since at least 2010, Naikon targets government, military, civil organizations in Southeast Asia, as well as international bodies such as the UNDP and ASEAN.",
+            "aliases": [
+                "Naikon"
+            ],
+            "first_seen": "2010-01-01T00:00:00Z",
+            "goals": [
+                "Cyber espionage",
+                "Intelligence gathering"
+            ],
+            "resource_level": "organization",
+            "primary_motivation": "espionage",
+            "labels": [
+                "state-sponsored",
+                "cyber-espionage",
+                "PLA-affiliated",
+                "Chinese"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--869a6a34-528c-4d3e-93eb-e69cfc9b1b35",
+            "name": "Chinese People\u2019s Liberation Army Chengdu Military Region Second Technical Reconnaissance Bureau (Unit 78020)",
+            "description": "Alleged sponsor of Naikon cyber espionage operations. This military organization is reportedly a part of the Chinese PLA\u2019s cyber reconnaissance effort.",
+            "roles": [
+                "sponsor",
+                "operator"
+            ],
+            "goals": [
+                "Intelligence gathering",
+                "State-level espionage"
+            ],
+            "labels": [
+                "nation-state",
+                "military",
+                "state-sponsored"
+            ],
+            "sophistication": "advanced",
+            "primary_motivation": "espionage",
+            "secondary_motivations": [],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--f33dd255-f80f-4d0b-a5f1-7485b2e62aaa",
+            "name": "LadonGo",
+            "description": "LadonGo is a network scanner used by Naikon for scanning target networks.",
+            "tool_types": [
+                "network-scanner"
+            ],
+            "labels": [
+                "scanner",
+                "network-reconnaissance"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--549546b6-95cb-493d-bae8-1fd3809b5907",
+            "name": "RoyalRoad",
+            "description": "RoyalRoad exploit builder has been used by Naikon to drop second-stage loaders onto compromised hosts.",
+            "tool_types": [
+                "exploit-builder"
+            ],
+            "labels": [
+                "exploit",
+                "document-builder"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "tool",
+            "spec_version": "2.1",
+            "id": "tool--80ef87c6-1a24-4900-be00-55ebcd32c9f2",
+            "name": "netbios scanner",
+            "description": "Netbios scanner utility used by Naikon actors for remote machine identification in targeted environments.",
+            "tool_types": [
+                "network-scanner"
+            ],
+            "labels": [
+                "scanner",
+                "network-enumeration"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--857c6a39-d2fe-435b-87d3-bec80b199f99",
+            "name": "intel.wll Loader",
+            "description": "A second stage loader dropped by RoyalRoad into the Word Startup folder during Naikon operations.",
+            "is_family": "false",
+            "labels": [
+                "loader",
+                "second-stage"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--04d3cc4f-60e6-4ae2-bf64-0e542e2bda72",
+            "name": "DLL Side-Loading",
+            "description": "Naikon has used DLL side-loading to load malicious DLLs into legitimate executables.",
+            "x_mitre_id": "T1073",
+            "labels": [
+                "persistence",
+                "defense-evasion"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--9b2617bd-49bd-4d61-9707-f919a504763e",
+            "name": "Registry Run Key Persistence",
+            "description": "Naikon has modified a victim's Windows Run registry to establish persistence.",
+            "x_mitre_id": "T1547.001",
+            "labels": [
+                "persistence"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--38c5cde1-bd3f-441d-8951-c61107dd5cdb",
+            "name": "Masquerade Programs and Services",
+            "description": "Naikon has renamed malicious service taskmgr to appear as a legitimate Task Manager, and disguised payloads to look like Google Chrome, Adobe, and VMware executables.",
+            "x_mitre_id": "T1036",
+            "labels": [
+                "defense-evasion"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--eaf0be82-d0fd-4272-a452-d4d642b2c7bb",
+            "name": "Malicious Email Attachments",
+            "description": "Naikon has used malicious e-mail attachments to deliver malware and leveraged social engineering to convince victims to open attachments.",
+            "x_mitre_id": "T1566.001",
+            "labels": [
+                "initial-access"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--5664bc51-c1d5-4420-87a0-63a2896ad356",
+            "name": "Lateral Movement Using Administrator Credentials",
+            "description": "Naikon has used administrator credentials, schtasks.exe, and WMIC.exe for lateral movement through compromised networks.",
+            "x_mitre_id": "T1021",
+            "labels": [
+                "lateral-movement"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--158b233e-a5e4-42b9-98e3-e91e1e457475",
+            "name": "Firewall and Network Interface Discovery",
+            "description": "Naikon uses commands such as netsh advfirewall firewall and netsh interface show to discover local firewall and network settings.",
+            "x_mitre_id": "T1016",
+            "labels": [
+                "discovery"
+            ],
+            "confidence": 90,
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z"
+        },
+        {
+            "type": "windows-registry-key",
+            "id": "windows-registry-key--b1ca2f7f-181c-4e42-ba89-77428a097da5",
+            "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+        },
+        {
+            "type": "file",
+            "id": "file--b9d4660c-0b87-489f-8438-aa889d127a11",
+            "name": "intel.wll",
+            "parent_directory_ref": "directory--78224296-025a-4ea7-98e1-44cc979f4098"
+        },
+        {
+            "type": "directory",
+            "id": "directory--23384695-3a40-4195-8336-825e97f39af9",
+            "path": "C:\\Users\\<username>\\AppData\\Roaming\\Microsoft\\Word\\Startup"
+        },
+        {
+            "type": "software",
+            "id": "software--b20281b9-5954-4694-86c9-ec317e499f94",
+            "name": "LadonGo",
+            "cpe": "unknown"
+        },
+        {
+            "type": "software",
+            "id": "software--d8c5c336-af48-4bd3-9bf6-d37fb0d5bb16",
+            "name": "RoyalRoad",
+            "cpe": "unknown"
+        },
+        {
+            "type": "email-message",
+            "id": "email-message--e286a499-35d3-469d-8b38-226dd8685f95",
+            "is_multipart": true
+        },
+        {
+            "type": "file",
+            "id": "file--68865fd6-2d5e-4a82-8f76-5dee1a4dcd41",
+            "name": "taskmgr.exe"
+        },
+        {
+            "type": "software",
+            "id": "software--93a92408-c323-4f59-a2c5-a2793d43b336",
+            "name": "Google Chrome",
+            "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+        },
+        {
+            "type": "software",
+            "id": "software--461418ba-5950-4a63-8e47-556751837339",
+            "name": "Adobe",
+            "cpe": "unknown"
+        },
+        {
+            "type": "software",
+            "id": "software--6c637c6c-5094-4b41-b534-f7e5b739acff",
+            "name": "VMware",
+            "cpe": "unknown"
+        },
+        {
+            "type": "software",
+            "id": "software--e00db450-22c8-4f0f-acb1-ed54a8dd5fd4",
+            "name": "netbios scanner",
+            "cpe": "unknown"
+        },
+        {
+            "type": "file",
+            "id": "file--958a5511-d9d4-4358-a432-b9ce46d5d78e",
+            "name": "schtasks.exe"
+        },
+        {
+            "type": "file",
+            "id": "file--12f2e81c-6085-497a-80e6-652fc600eb23",
+            "name": "WMIC.exe"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4032d7f2-d78c-45cb-a185-f7d07bdc485d",
+            "relationship_type": "sponsors",
+            "source_ref": "threat-actor--869a6a34-528c-4d3e-93eb-e69cfc9b1b35",
+            "target_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a1f401b1-a39d-47b1-9909-7bd66edccb0e",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "tool--f33dd255-f80f-4d0b-a5f1-7485b2e62aaa",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b3bc6cbb-fafe-46ea-922f-080606181a2f",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "tool--549546b6-95cb-493d-bae8-1fd3809b5907",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--50690948-a11a-4a66-a874-888451d66a51",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "malware--857c6a39-d2fe-435b-87d3-bec80b199f99",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a08f0541-456c-4bab-a622-2950ef32d83f",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "tool--80ef87c6-1a24-4900-be00-55ebcd32c9f2",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--57b80b69-8467-4d0b-a081-8d1bbfb13efe",
+            "relationship_type": "uses",
+            "source_ref": "tool--f33dd255-f80f-4d0b-a5f1-7485b2e62aaa",
+            "target_ref": "software--b20281b9-5954-4694-86c9-ec317e499f94",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--bbaa7133-80cc-4559-ae4a-241fc7cba274",
+            "relationship_type": "uses",
+            "source_ref": "tool--549546b6-95cb-493d-bae8-1fd3809b5907",
+            "target_ref": "software--d8c5c336-af48-4bd3-9bf6-d37fb0d5bb16",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6e4e6746-e334-4123-9928-7a158c92d9c2",
+            "relationship_type": "drops",
+            "source_ref": "tool--549546b6-95cb-493d-bae8-1fd3809b5907",
+            "target_ref": "file--b9d4660c-0b87-489f-8438-aa889d127a11",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0f262310-d4c5-4a14-816d-b702d110d1ae",
+            "relationship_type": "contained-by",
+            "source_ref": "file--b9d4660c-0b87-489f-8438-aa889d127a11",
+            "target_ref": "directory--23384695-3a40-4195-8336-825e97f39af9",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--92262353-9951-4e01-bd4b-9021c96137b1",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "attack-pattern--9b2617bd-49bd-4d61-9707-f919a504763e",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8ab19386-5dd2-4b30-9bf2-57d9f59ac8ea",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--9b2617bd-49bd-4d61-9707-f919a504763e",
+            "target_ref": "windows-registry-key--b1ca2f7f-181c-4e42-ba89-77428a097da5",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--04647e13-ff37-4d46-bd22-1cc0a3685700",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "attack-pattern--04d3cc4f-60e6-4ae2-bf64-0e542e2bda72",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5e5cf8cd-9c29-4447-a338-2ac57df17b7d",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "attack-pattern--38c5cde1-bd3f-441d-8951-c61107dd5cdb",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5d2c5bad-a977-4ffb-8ea5-37f5a9053e9d",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--38c5cde1-bd3f-441d-8951-c61107dd5cdb",
+            "target_ref": "file--68865fd6-2d5e-4a82-8f76-5dee1a4dcd41",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e3cf5cb8-fac0-4495-a1fe-ed85c1b5188c",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "attack-pattern--eaf0be82-d0fd-4272-a452-d4d642b2c7bb",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--23c9ac0c-0522-42f6-b979-919d44338921",
+            "relationship_type": "delivers",
+            "source_ref": "email-message--e286a499-35d3-469d-8b38-226dd8685f95",
+            "target_ref": "malware--857c6a39-d2fe-435b-87d3-bec80b199f99",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3bfd58c9-39a4-4139-a806-c70ab9c9b7d0",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "attack-pattern--5664bc51-c1d5-4420-87a0-63a2896ad356",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d3dfe2c2-3bb8-4ec2-b6a5-95ef478a7d44",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--5664bc51-c1d5-4420-87a0-63a2896ad356",
+            "target_ref": "file--958a5511-d9d4-4358-a432-b9ce46d5d78e",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0766495d-25e5-48bb-abcf-045823fe7894",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--5664bc51-c1d5-4420-87a0-63a2896ad356",
+            "target_ref": "file--12f2e81c-6085-497a-80e6-652fc600eb23",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--36863f22-7136-4346-9e37-73611fcd5cb1",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--ff06cabe-6ecb-4036-a906-7779f46a2914",
+            "target_ref": "attack-pattern--158b233e-a5e4-42b9-98e3-e91e1e457475",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5a059e47-0662-4f0a-b710-9a1e34500765",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--38c5cde1-bd3f-441d-8951-c61107dd5cdb",
+            "target_ref": "software--93a92408-c323-4f59-a2c5-a2793d43b336",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a000cd85-35ae-45e0-b434-4c04a2945411",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--38c5cde1-bd3f-441d-8951-c61107dd5cdb",
+            "target_ref": "software--461418ba-5950-4a63-8e47-556751837339",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2b2f9cc5-3c42-4985-b1ae-fca8e21271a1",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--38c5cde1-bd3f-441d-8951-c61107dd5cdb",
+            "target_ref": "software--6c637c6c-5094-4b41-b534-f7e5b739acff",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f9e3c09f-f3a0-4b2b-8305-0ac65be0050a",
+            "relationship_type": "uses",
+            "source_ref": "tool--80ef87c6-1a24-4900-be00-55ebcd32c9f2",
+            "target_ref": "software--e00db450-22c8-4f0f-acb1-ed54a8dd5fd4",
+            "created": "2024-06-14T00:00:00Z",
+            "modified": "2024-06-14T00:00:00Z",
+            "confidence": 90
+        }
+    ]
+}
