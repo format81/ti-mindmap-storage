@@ -1,0 +1,297 @@
+{
+    "type": "bundle",
+    "id": "bundle--5f630535-b160-42de-9138-2c12263757c9",
+    "objects": [
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--b5858a81-feee-4a8f-80de-d2f86db9955b",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "Initial Compromise via Containerized Environments",
+            "description": "Attackers exploit security misconfigurations and lack of visibility in containerized environments to compromise hosts or containers. This includes leveraging shared kernel exposure, insufficient logging, and ambiguous process trees to evade detection and establish persistence.",
+            "confidence": 90,
+            "labels": [
+                "container-escape",
+                "cloud",
+                "infrastructure",
+                "privilege-escalation"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--3ae7c006-145c-44e6-aec7-bfb7496c100e",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "Abuse of BusyBox Shell in Containers",
+            "description": "Attackers utilize BusyBox or Alpine containers to execute shell commands or run custom binaries. The non-standard shell process (BusyBox) is used for live command execution or further staging by installing additional tools within the compromised container.",
+            "confidence": 90,
+            "labels": [
+                "container",
+                "abuse-legitimate-tools",
+                "living-off-the-land"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--5edcd41f-734c-450c-9b5c-e05ad241542e",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "Installation of Docker CLI Inside a Container",
+            "description": "Attackers install Docker CLI within a running container to facilitate interaction with the Docker daemon (dockerd API), potentially allowing lateral movement, container breakout, or automated deployment of malicious containers.",
+            "confidence": 90,
+            "labels": [
+                "container",
+                "lateral-movement",
+                "persistence"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--8e436472-9de0-4278-8cf0-311b3a343818",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "Containerization Platform (e.g., Docker, containerd, CRI-O, runc, BusyBox, Alpine)",
+            "description": "Used as target infrastructure for compromise or lateral movement. Includes both the orchestration layer (Docker CLI, containerd, CRI-O), the container runtime (runc), and lightweight Linux distributions (BusyBox, Alpine) often used in attacks.",
+            "infrastructure_types": [
+                "hosting-target",
+                "virtualization"
+            ],
+            "confidence": 90,
+            "labels": [
+                "container",
+                "hosted-environment",
+                "virtualization"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--56535a86-0d7d-4303-bb28-7bda6288df4e",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "Cryptojacking Miner in Containers (e.g., Dero Miner)",
+            "description": "Malware designed to mine cryptocurrency (such as Dero) by compromising misconfigured, vulnerable, or poorly monitored containers. Frequently deployed via Docker API abuse and runs inside containers to maximize mining resources and evade host-level detection.",
+            "is_family": "true",
+            "malware_types": [
+                "crypto-miner"
+            ],
+            "confidence": 90,
+            "labels": [
+                "crypto-miner",
+                "container",
+                "linux",
+                "cloud"
+            ]
+        },
+        {
+            "type": "tool",
+            "id": "tool--dec3958c-a466-482c-8872-090fc73c8a86",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "BusyBox",
+            "description": "BusyBox provides a set of minimalist UNIX utilities packed as a single binary, commonly present on lightweight Linux containers. Attackers exploit BusyBox as a shell for executing commands and scripts inside containerized environments.",
+            "tool_types": [
+                "remote-access",
+                "malware-support"
+            ],
+            "confidence": 90,
+            "labels": [
+                "utility",
+                "shell",
+                "container"
+            ]
+        },
+        {
+            "type": "tool",
+            "id": "tool--bad4b30b-828f-409c-8932-db264b6b132f",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "Docker CLI",
+            "description": "Docker client command-line interface, often abused by adversaries when installed inside compromised containers to control Docker hosts or communicate directly with the Docker daemon for further exploitation.",
+            "tool_types": [
+                "reconnaissance",
+                "execution"
+            ],
+            "confidence": 90,
+            "labels": [
+                "container",
+                "orchestration"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--75f59a29-bfb3-4365-a994-d27e50758bb2",
+            "spec_version": "2.1",
+            "created": "2025-06-03T00:00:00Z",
+            "modified": "2025-06-03T00:00:00Z",
+            "name": "Implement Dedicated Container Monitoring and Logging Solutions",
+            "description": "Deploy and properly configure container-aware security monitoring, such as Kaspersky Container Security or Auditd with container-specific rules. Ensure process-level visibility inside containers and correlate with host activity to timely detect abnormal or malicious behavior.",
+            "confidence": 90,
+            "labels": [
+                "mitigation",
+                "container-security"
+            ]
+        },
+        {
+            "type": "software",
+            "id": "software--b3e6fd6f-037d-4cba-b353-b4479dc5af55",
+            "name": "Docker CLI"
+        },
+        {
+            "type": "software",
+            "id": "software--9eddb880-d79d-4ae6-8180-8806e7d33449",
+            "name": "containerd"
+        },
+        {
+            "type": "software",
+            "id": "software--e6feb522-320b-47c4-bf52-f5f9f79ffddb",
+            "name": "CRI-O"
+        },
+        {
+            "type": "software",
+            "id": "software--2843a61a-e3f4-4e67-ae89-31d650a2fc62",
+            "name": "runc"
+        },
+        {
+            "type": "software",
+            "id": "software--c8efd139-9e68-4b61-84bb-aeaca1a8ea2e",
+            "name": "containerd-shim-runc-v2"
+        },
+        {
+            "type": "software",
+            "id": "software--7a04b1b2-7e85-41ee-b9bf-73ccc13d7153",
+            "name": "BusyBox"
+        },
+        {
+            "type": "software",
+            "id": "software--daec5877-fa4f-4aa4-b6c0-937a7c5490bf",
+            "name": "Alpine Linux"
+        },
+        {
+            "type": "software",
+            "id": "software--b550ab01-b39c-443b-8d99-27a7efe2fc21",
+            "name": "Docker"
+        },
+        {
+            "type": "software",
+            "id": "software--112aa9d0-5936-43a6-81d3-ac3c51761d8c",
+            "name": "Auditd"
+        },
+        {
+            "type": "software",
+            "id": "software--2960d377-c48f-4fd2-a320-b343980d92b7",
+            "name": "Kaspersky Container Security"
+        },
+        {
+            "type": "file",
+            "id": "file--c4d29a78-4d44-4ac0-8d61-83e64099f25d",
+            "name": "/bin/busybox"
+        },
+        {
+            "type": "file",
+            "id": "file--f4092884-603d-437a-967f-5b683e3f2021",
+            "name": "/bin/sh"
+        },
+        {
+            "type": "file",
+            "id": "file--100679ee-c820-4ce6-9213-032673e520a8",
+            "name": "/.redtail"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--1dfea8d6-7371-4959-89da-9c2383b93004",
+            "spec_version": "2.1",
+            "relationship_type": "uses",
+            "description": "Docker CLI is used to control Docker, frequently involved in container management operations.",
+            "source_ref": "software--b3e6fd6f-037d-4cba-b353-b4479dc5af55",
+            "target_ref": "software--b550ab01-b39c-443b-8d99-27a7efe2fc21"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ab17b169-ae54-43be-a3e8-badbd889ab7d",
+            "spec_version": "2.1",
+            "relationship_type": "delivers",
+            "description": "Docker CLI triggers containerd, CRI-O, or other container engines to orchestrate containers.",
+            "source_ref": "software--b3e6fd6f-037d-4cba-b353-b4479dc5af55",
+            "target_ref": "software--9eddb880-d79d-4ae6-8180-8806e7d33449"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--61fb8bef-3c51-4bc8-a7fb-362f5188b52f",
+            "spec_version": "2.1",
+            "relationship_type": "contains",
+            "description": "Alpine Linux and BusyBox containers typically deploy /bin/busybox as the core shell utility.",
+            "source_ref": "software--daec5877-fa4f-4aa4-b6c0-937a7c5490bf",
+            "target_ref": "file--c4d29a78-4d44-4ac0-8d61-83e64099f25d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6aff305a-5e6e-44e4-a026-f297d297a48e",
+            "spec_version": "2.1",
+            "relationship_type": "contains",
+            "description": "/bin/sh in Alpine Linux is a symlink to /bin/busybox.",
+            "source_ref": "software--daec5877-fa4f-4aa4-b6c0-937a7c5490bf",
+            "target_ref": "file--f4092884-603d-437a-967f-5b683e3f2021"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--22d555d1-2e21-4fe8-a53c-0210fcf64326",
+            "spec_version": "2.1",
+            "relationship_type": "contains",
+            "description": "/bin/sh is an instance or symlink of /bin/busybox.",
+            "source_ref": "file--f4092884-603d-437a-967f-5b683e3f2021",
+            "target_ref": "file--c4d29a78-4d44-4ac0-8d61-83e64099f25d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7639e0dc-3b5a-4cc9-8d33-7027eaee3427",
+            "spec_version": "2.1",
+            "relationship_type": "hosts",
+            "description": "Containerd, CRI-O, and runc are used to host and execute containerized workloads, utilizing BusyBox or Alpine Linux images.",
+            "source_ref": "software--9eddb880-d79d-4ae6-8180-8806e7d33449",
+            "target_ref": "software--7a04b1b2-7e85-41ee-b9bf-73ccc13d7153"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--433e8b35-643d-4dbc-b4bf-162ee3d995c2",
+            "spec_version": "2.1",
+            "relationship_type": "hosts",
+            "description": "Containerd-shim-runc-v2 manages child container processes and re-parents them after runc exits.",
+            "source_ref": "software--c8efd139-9e68-4b61-84bb-aeaca1a8ea2e",
+            "target_ref": "software--7a04b1b2-7e85-41ee-b9bf-73ccc13d7153"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--289d180a-d26a-4fd8-87a4-d1a8d57839cd",
+            "spec_version": "2.1",
+            "relationship_type": "uses",
+            "description": "BusyBox binary serves as underlying shell for /bin/sh in containers.",
+            "source_ref": "software--7a04b1b2-7e85-41ee-b9bf-73ccc13d7153",
+            "target_ref": "file--c4d29a78-4d44-4ac0-8d61-83e64099f25d"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cc188bc2-1e68-4358-88e2-328b2fd473d7",
+            "spec_version": "2.1",
+            "relationship_type": "detects",
+            "description": "Kaspersky Container Security and Auditd are used to monitor activities and detect threats within containers and the host.",
+            "source_ref": "software--2960d377-c48f-4fd2-a320-b343980d92b7",
+            "target_ref": "software--112aa9d0-5936-43a6-81d3-ac3c51761d8c"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a0648bcf-fa0f-4758-808c-c0c93d642199",
+            "spec_version": "2.1",
+            "relationship_type": "drops",
+            "description": "Cryptojacking activity or the attacker process drops or creates files like /.redtail inside compromised containers.",
+            "source_ref": "software--7a04b1b2-7e85-41ee-b9bf-73ccc13d7153",
+            "target_ref": "file--100679ee-c820-4ce6-9213-032673e520a8"
+        }
+    ]
+}
