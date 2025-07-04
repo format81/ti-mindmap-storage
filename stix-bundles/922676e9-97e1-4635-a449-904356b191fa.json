@@ -1,0 +1,219 @@
+{
+    "type": "bundle",
+    "id": "bundle--2b9e5f8b-b967-4e44-93be-298a80245d12",
+    "objects": [
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--b92ec997-3190-4e43-b778-32a3c2c23b88",
+            "name": "TeamCity CVE-2023-42793",
+            "description": "A remote-code execution vulnerability affecting multiple versions of JetBrains TeamCity server.",
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--895b8ecf-3f86-4ed0-9036-997b66db14a6",
+            "name": "Diamond Sleet",
+            "description": "A North Korean nation-state threat actor that prioritizes espionage, data theft, financial gain, and network destruction.",
+            "threat_actor_types": [
+                "nation-state"
+            ],
+            "labels": [
+                "espionage",
+                "data theft",
+                "financial gain",
+                "network destruction"
+            ],
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--7af780d9-b1cd-4bf7-89dd-be61821c53e2",
+            "name": "Onyx Sleet",
+            "description": "A North Korean nation-state threat actor that primarily targets defense and IT services organizations.",
+            "threat_actor_types": [
+                "nation-state"
+            ],
+            "labels": [
+                "persistent access",
+                "defense targeting",
+                "IT services targeting"
+            ],
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--dbcabdcc-bfda-4534-be5a-090b54fe2af7",
+            "name": "ForestTiger",
+            "description": "A backdoor used by Diamond Sleet, involved in credential dumping via LSASS memory.",
+            "is_family": "false",
+            "labels": [
+                "backdoor",
+                "credential dumping"
+            ],
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--c0ddf0c8-195b-4fb8-a475-8e247383e87f",
+            "name": "RollSling",
+            "description": "A malicious DLL used in DLL search-order hijacking by Diamond Sleet.",
+            "is_family": "false",
+            "labels": [
+                "DLL hijacking"
+            ],
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--e28180be-a6e7-48c7-a144-c43bc4d1eb1e",
+            "name": "FeedLoad",
+            "description": "A malware used by Diamond Sleet involving Version.dll for remote access via DLL hijacking.",
+            "is_family": "false",
+            "labels": [
+                "remote access",
+                "DLL hijacking"
+            ],
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--97dc6611-4a5c-4d60-983f-b79389b5b35f",
+            "name": "HazyLoad",
+            "description": "A proxy tool used by Onyx Sleet to establish a persistent connection with attacker infrastructure.",
+            "is_family": "false",
+            "labels": [
+                "proxy tool",
+                "persistence"
+            ],
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--6bce27ef-44a5-44b6-8ed6-d4851888e950",
+            "value": "dersmarketim.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--24e22d70-cfc9-411b-8721-ae5123659168",
+            "value": "olidhealth.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--f139dd21-e3c1-4970-ae55-1a632e89e1b1",
+            "value": "galerielamy.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--54b74549-c0cf-44af-9a1e-b5e814594f76",
+            "value": "3dkit.org"
+        },
+        {
+            "type": "url",
+            "id": "url--0e8d9a00-0f5d-4916-a1dc-41a98b4a71c8",
+            "value": "hxxp://www.bandarpowder[.]com/public/assets/img/cfg.png"
+        },
+        {
+            "type": "url",
+            "id": "url--21d781fd-46a2-48d4-a7f9-aaf912a56f1f",
+            "value": "hxxps://www.bandarpowder[.]com/public/assets/img/cfg.png"
+        },
+        {
+            "type": "url",
+            "id": "url--e8151597-f20a-42e2-806c-ff75608dc89a",
+            "value": "hxxp://www.aeon-petro[.]com/wcms/plugins/addition_contents/cfg.png"
+        },
+        {
+            "type": "url",
+            "id": "url--d8101bc9-a010-4425-8f18-3e4b482a3d9b",
+            "value": "hxxp://www.bandarpowder[.]com/public/assets/img/user64.png"
+        },
+        {
+            "type": "url",
+            "id": "url--ee0069ce-9dd0-451b-a176-0cc12470fd3b",
+            "value": "hxxps://www.bandarpowder[.]com/public/assets/img/user64.png"
+        },
+        {
+            "type": "url",
+            "id": "url--952b9bd8-3d35-405b-895b-c11a803dbae7",
+            "value": "hxxp://www.aeon-petro[.]com/wcms/plugins/addition_contents/user64.png"
+        },
+        {
+            "type": "url",
+            "id": "url--8dabc505-540b-46fd-951d-bb3c7c0848f9",
+            "value": "hxxp://www.mge[.]sn/themes/classic/modules/ps_rssfeed/feed.zip"
+        },
+        {
+            "type": "url",
+            "id": "url--c10f5e2f-9f57-4286-ad46-60fe1ee04561",
+            "value": "hxxp://www.mge[.]sn/themes/classic/modules/ps_rssfeed/feedmd.zip"
+        },
+        {
+            "type": "url",
+            "id": "url--11d7b542-a204-44f1-9f7f-96f9563a94c3",
+            "value": "hxxps://vadtalmandir[.]org/admin/ckeditor/plugins/icontact/about.php"
+        },
+        {
+            "type": "url",
+            "id": "url--d005360f-82b5-4054-9cf6-e27e07f310ae",
+            "value": "hxxps://commune-fraita[.]ma/wp-content/plugins/wp-contact/contact.php"
+        },
+        {
+            "type": "url",
+            "id": "url--13b086a0-5ddb-4fc6-91f8-e9dc488e3edc",
+            "value": "hxxp://147.78.149[.]201:9090/imgr.ico"
+        },
+        {
+            "type": "url",
+            "id": "url--ce6cbce1-2e33-4d76-966d-83d807b01f0e",
+            "value": "hxxp://162.19.71[.]175:7443/bottom.gif"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--10848ce7-a0f3-48ee-bc4c-285519e91009",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--895b8ecf-3f86-4ed0-9036-997b66db14a6",
+            "target_ref": "vulnerability--b92ec997-3190-4e43-b778-32a3c2c23b88",
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a5ea6e6c-194d-45e1-90a2-1a5a472f978e",
+            "relationship_type": "exploits",
+            "source_ref": "threat-actor--7af780d9-b1cd-4bf7-89dd-be61821c53e2",
+            "target_ref": "vulnerability--b92ec997-3190-4e43-b778-32a3c2c23b88",
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--bdd9d230-f189-4fe0-84f4-69517ff1e615",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--895b8ecf-3f86-4ed0-9036-997b66db14a6",
+            "target_ref": "malware--dbcabdcc-bfda-4534-be5a-090b54fe2af7",
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--f2800e6d-7eb5-4dad-ad84-c8b6a9595df9",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--895b8ecf-3f86-4ed0-9036-997b66db14a6",
+            "target_ref": "malware--c0ddf0c8-195b-4fb8-a475-8e247383e87f",
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--e8959b1a-ecc7-432f-ac13-c64a76f54325",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--895b8ecf-3f86-4ed0-9036-997b66db14a6",
+            "target_ref": "malware--e28180be-a6e7-48c7-a144-c43bc4d1eb1e",
+            "created": "2023-10-18T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a7f5bd46-11d6-4f1b-84fc-2c220b66583d",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--7af780d9-b1cd-4bf7-89dd-be61821c53e2",
+            "target_ref": "malware--97dc6611-4a5c-4d60-983f-b79389b5b35f",
+            "created": "2023-10-18T00:00:00Z"
+        }
+    ]
+}
