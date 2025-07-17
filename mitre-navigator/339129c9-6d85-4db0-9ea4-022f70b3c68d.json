@@ -1,0 +1,123 @@
+{
+    "name": "China-Aligned Espionage Actors Targeting Taiwan Semiconductor Industry",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in China-aligned espionage campaigns targeting the Taiwanese semiconductor industry.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "comment": "Spearphishing campaigns targeting Taiwan-based semiconductor firms.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1574.002",
+            "tactic": "defense-evasion",
+            "comment": "Use of DLL sideloading to execute malicious payloads like Voldemort backdoor.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "comment": "Use of scheduled tasks to maintain persistence for malware like HealthKick.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "comment": "Phishing emails targeting individuals in the semiconductor industry's supply chain.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.005",
+            "tactic": "execution",
+            "comment": "VBScript files used to execute infection chains.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1573",
+            "tactic": "command-and-control",
+            "comment": "Use of TLS-encrypted channels and Google Sheets for C2 communication.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "comment": "LNK files require user execution to trigger payloads.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.002",
+            "tactic": "credential-access",
+            "comment": "Use of AiTM phishing kits for credential theft.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1021",
+            "tactic": "lateral-movement",
+            "comment": "Use of Remote Monitoring and Management tools within networks.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
