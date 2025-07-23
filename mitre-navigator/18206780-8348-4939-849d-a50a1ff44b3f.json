@@ -1,0 +1,152 @@
+{
+    "name": "Enterprise TTPs observed in 2025 SharePoint Exploitation (Microsoft ATT&CK mapping)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "The most important MITRE ATT&CK TTPs observed or recommended for detection/remediation in active exploitation of 2025 SharePoint vulnerabilities, as described in Microsoft Threat Intelligence's July 2025 post. Includes actor/incident-specific procedures based on the text.",
+    "filters": {
+        "platforms": [
+            "Windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1190",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Use of CVE-2025-49704, CVE-2025-49706, CVE-2025-53770, and CVE-2025-53771 to exploit public-facing SharePoint servers via crafted POST request to ToolPane endpoint. Linen Typhoon noted for historical use of this craft; Violet Typhoon for scanning/vulnerability exploitation.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Post-exploitation PowerShell scripts (often encoded) run by IIS worker process to drop or execute payloads/exfiltrate data; e.g., used to read/transmit MachineKey data to the attacker.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Deployment of web shells (e.g., spinstall0.aspx, spinstall.aspx, spinstall1.aspx, etc.) on the SharePoint server for persistent, post-exploitation access and command execution.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1620",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Payloads (including additional scripts or .NET assemblies) reflectively loaded into IIS worker process memory to evade host-based defenses. Dropped files may be deleted post-infection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Web shells used for automated collection (e.g., gathering MachineKey and sensitive config data, often written to debug_dev.js or returned via HTTP GET to web shell endpoint).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "MachineKey data and sensitive files returned to attacker via HTTP(s) GET requests or exfiltrated via web shell (e.g., debug_dev.js, direct output to C2 endpoints).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Obfuscated/encoded scripts and web shells, use of variant and misleading file names (e.g., spinstall0.aspx, spinstall1.aspx, debug_dev.js) and encoded PowerShell commands to hinder detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1552.002",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Attackers target and steal ASP.NET MachineKey values from SharePoint for persistence and potential lateral movement or future exploitation.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Machine Key Rotation job may be run manually as mitigation/remediation; attackers can use scheduled tasks to persist (implied as a risk based on defender recommendations).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1189",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Drive-by compromise for SharePoint initial access (Linen Typhoon historically known for using such methods alongside exploits).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "reconnaissance",
+            "color": "",
+            "comment": "Groups like Violet Typhoon scan exposed web infrastructure to identify vulnerable SharePoint instances before exploiting them.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
