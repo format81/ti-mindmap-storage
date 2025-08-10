@@ -1,0 +1,162 @@
+{
+    "name": "UMBRELLA STAND Malware TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Top-priority MITRE ATT&CK techniques exhibited by UMBRELLA STAND malware targeting Fortinet devices",
+    "filters": {
+        "platforms": [
+            "Linux"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1059.004",
+            "tactic": "execution",
+            "color": "",
+            "comment": "UMBRELLA STAND can receive and execute shell commands remotely using BusyBox\u2019s ash shell with a timeout wrapper to limit long-running tasks.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "AES-encrypted stack strings and obfuscated C2 IP to hinder detection and enable post-compilation patching.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1055",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Uses dskz tool to inject shared objects into processes (including potential injection into init process for persistence).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1070.004",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Actor deletes binaries and temporary output/result files after execution to remove evidence.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1564.010",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Renames process name to /bin/httpsd to masquerade as a legitimate service in process listings.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1564.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Hides malware in /data2/.ztls/ and abuses Fortinet\u2019s hidden directory protections to avoid admin detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1547.006",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Hooks Fortinet OS reboot function to re-execute loader binary (cisz) on reboot, maintaining persistence.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1574.006",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Uses /etc/ld.so.preload to force load libguic.so, which in turn loads the rest of the malware.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1057",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Watchdog process (jvnlpe) checks for presence of key malware component (blghtd) and restarts it if not running.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1046",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Uses nbtscan to enumerate NetBIOS names on the network, likely for lateral movement preparation.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1040",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Includes and uses tcpdump to capture network traffic from victim devices.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1001.003",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Uses fake TLS headers over port 443 for C2 communications without performing a legitimate TLS handshake, to mimic legitimate encrypted traffic.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
