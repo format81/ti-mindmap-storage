@@ -1,0 +1,41 @@
+{
+    "name": "Empty Layer",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "No TTPs identified",
+    "filters": {
+        "platforms": [
+            "windows",
+            "linux",
+            "macos"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [],
+    "gradient": {
+        "colors": [
+            "#ffffff"
+        ],
+        "minValue": 0,
+        "maxValue": 0
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
