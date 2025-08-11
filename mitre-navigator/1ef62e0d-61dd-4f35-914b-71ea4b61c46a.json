@@ -1,0 +1,80 @@
+{
+    "name": "How Dark is Dark Energy? - Techniques required",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques involved in the analysis of cosmological structures.",
+    "filters": {
+        "platforms": []
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1090",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Conceptualize the relation between cosmic dark energy and how models for cosmological expansion are projected.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1000",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Gather observational data based on light cones for cosmic analysis.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Utilize mathematical models to process and interpret scientific data related to cosmology, such as comparing celestial spheres.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1115",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Utilize imaging techniques to visualize dark energy metrics and understand large-scale cosmic features.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
