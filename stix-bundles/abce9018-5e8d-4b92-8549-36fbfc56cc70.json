@@ -1,0 +1,429 @@
+{
+    "type": "bundle",
+    "id": "bundle--9bb13619-97a1-4271-8b19-ca87872255b1",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "UMBRELLA STAND",
+            "is_family": "false",
+            "labels": [
+                "remote-access-trojan",
+                "backdoor"
+            ],
+            "description": "UMBRELLA STAND is a medium sophistication malware targeting Fortinet FortiGate devices, enabling remote shell execution, configurable beaconing to its C2 over fake TLS, process injection, file encryption/decryption, and persistence via reboot hooking and ldpreload. It uses AES encrypted communications and obfuscation to evade detection, and is deployed alongside various tools such as BusyBox, nbtscan, tcpdump, and openLDAP."
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--11ab55f9-9a9e-44d2-8990-4ac6d5393529",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "UMBRELLA STAND C2 Server",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "description": "Command and control server for UMBRELLA STAND, communicating using fake TLS headers and AES encryption over TCP port 443.",
+            "aliases": [],
+            "first_seen": "2025-06-18T00:00:00Z",
+            "last_seen": "2025-06-18T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--de23e07f-7f84-4766-be6c-b6aeca161bf3",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "UMBRELLA STAND C2 IPv4",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[ipv4-addr:value = '89.44.194.32']",
+            "pattern_type": "stix",
+            "valid_from": "2025-06-18T00:00:00Z",
+            "description": "C2 IPv4 address used by UMBRELLA STAND"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--47044264-0e21-451b-af90-d9bd64ff3d86",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "UMBRELLA STAND hidden directory",
+            "indicator_types": [
+                "anomalous-activity"
+            ],
+            "pattern": "[file:parent_directory_ref.path = '/data2/.ztls/']",
+            "pattern_type": "stix",
+            "valid_from": "2025-06-18T00:00:00Z",
+            "description": "Hidden directory used by UMBRELLA STAND and associated tooling"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--08b14f7f-9020-4aff-98c4-709705272047",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "Command and Scripting Interpreter: Unix Shell",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1059.004",
+                    "url": "https://attack.mitre.org/techniques/T1059/004"
+                }
+            ],
+            "description": "UMBRELLA STAND contains functionality to receive and run shell commands on compromised Fortinet devices."
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--d104dac7-31e8-4e23-ada7-5a08a773af9d",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "Deobfuscate/Decode Files or Information",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1140",
+                    "url": "https://attack.mitre.org/techniques/T1140"
+                }
+            ],
+            "description": "UMBRELLA STAND contains AES-encrypted stack strings and obfuscated C2 IP, decrypted at runtime."
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--73f497a2-5c1b-4387-9764-53ebfdc87331",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "Process Injection",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1055",
+                    "url": "https://attack.mitre.org/techniques/T1055"
+                }
+            ],
+            "description": "UMBRELLA STAND uses tooling such as dskz to perform process injection into processes like PID 1 (init)."
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--eb20010c-e205-45f3-96c9-7a04ded1932d",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "Hide Artifacts: Hidden Files and Directories",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1564.001",
+                    "url": "https://attack.mitre.org/techniques/T1564/001"
+                }
+            ],
+            "description": "UMBRELLA STAND and associated tooling use hidden directories such as /data2/.ztls."
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--d9ff2180-50af-4fdf-9848-0a0e6c814758",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "name": "Protocol or Service Impersonation",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1001.003",
+                    "url": "https://attack.mitre.org/techniques/T1001/003"
+                }
+            ],
+            "description": "UMBRELLA STAND uses fake TLS headers to impersonate legitimate TLS sessions to its C2."
+        },
+        {
+            "type": "file",
+            "id": "file--5f9ae1cf-423a-4180-88c0-0ba072a2225c",
+            "name": "blghtd",
+            "size": 873696,
+            "hashes": {
+                "MD5": "79c8db07491b9049921b060ee059877a",
+                "SHA-1": "8632487a9f19223b20d34c082a3077ca6ac6eac4",
+                "SHA-256": "8bacd5df99476328321a7e8e2fc0124c20f7a7ebf3e8f151c050387038515b70"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--262cab87-56f9-4aa1-bb8b-f2a592447a7b",
+            "name": "jvnlpe",
+            "size": 857024,
+            "hashes": {
+                "MD5": "ff82ea16717c6fa9fc8c07ae2de09c5f",
+                "SHA-1": "3294257f9085a727a7723885e8431e8a036d3082",
+                "SHA-256": "591d60c1d356da827a26f4141fa431d3663af91746d5371014695b1c89bac2b2"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--20d7f3c9-7218-4c2a-a05f-d6dfc29c156a",
+            "name": "cisz",
+            "size": 10624,
+            "hashes": {
+                "MD5": "586856B41EB0F101924CAEEAD5AEB4F0",
+                "SHA-1": "7931678cdd0d143ca98c18a00b8d237583fa8d93",
+                "SHA-256": "6a3abc19f324a475d4ce01fcc69797fc90e1a47970ed90e9cb01f540f3000b4e"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--2b120562-65ee-482f-8535-d70d1ef80edc",
+            "name": "libguic.so2",
+            "size": 12292,
+            "hashes": {
+                "MD5": "6bdfac0500e164de8c6bbd13e05b3968",
+                "SHA-1": "3a7d09c9ce2ff7f6026cda4a7f80945ee0952c95",
+                "SHA-256": "190293440fce95f45eb8bf5d40334b41dd68c79578d06fe9b34670298daea7f3"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--eb71ef0a-3d6b-4bf1-9455-2ffc2b62065a",
+            "name": "reboot_hooker",
+            "size": 24574,
+            "hashes": {
+                "MD5": "43f398bfe3eecd5584ebf3321000c3cd",
+                "SHA-1": "73e2ae5b03e20eaa4e2cafb2000d57321bfa0b5f",
+                "SHA-256": "a64b41e98e3e1066f41fbff5d4f99f6d34b792d35fe2be7e5d9fa8f3f8b93739"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--b7580963-c26b-4b2f-85fc-7cd5ab551440",
+            "name": "a",
+            "size": 849056,
+            "hashes": {
+                "MD5": "615521d36644d11f53e17805a1422f29",
+                "SHA-1": "d21e46856ffb344ed06a461efb554e5a490a9e3e",
+                "SHA-256": "d1d5f502e2039b20269b562bbc1e5622a73bbecad54cb25ae5eaa7a91504e70e"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--4de729ce-8f9b-4ec6-9e93-8d7a0cdf4487",
+            "name": "lidwok",
+            "size": 2765328,
+            "hashes": {
+                "MD5": "d07a6070e4cee1716fc882bc1d51b7bc",
+                "SHA-1": "99dde2df0b8b31fce5807d710c1b8d9018a56f58",
+                "SHA-256": "d3b88b7f640e478d8d875e12b4561e8c794909e4954aebbc6fd1f5e79f381648"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--8409e387-ec43-423e-b09c-00632d589f74",
+            "name": "dskz",
+            "size": 14640,
+            "hashes": {
+                "MD5": "821B1158AA87A055030C99B93026485A",
+                "SHA-1": "c8183d12c2070cf04cd03f080904ed1312a56911",
+                "SHA-256": "65f1e17f7fa2e2fd9c57265f390484a7428c192f59ee41fc7c0d8386ea3b811a"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--e63a12b9-cba5-43d9-9d92-b5875878b6a8",
+            "name": "tdp",
+            "size": 2571376,
+            "hashes": {
+                "MD5": "c8c20c56c950eb291ce7902bf1c28485",
+                "SHA-1": "c2a463d5091efb2be590fbfa5dba5a821d5625cf",
+                "SHA-256": "38801caae26916367dd6cf6e8c55e50ed62526fe242cd0343dfe80a70564c28a"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--f1dc2078-7b5a-4b2f-a4d6-7242d320d8fa",
+            "name": "nbso",
+            "size": 133256,
+            "hashes": {
+                "MD5": "50664a15bce874e53cdc99c220a10aab",
+                "SHA-1": "28ff882baa02c646bcdddffacb75923490a3dcf7",
+                "SHA-256": "881998c9864d2c7fe35f9b8071dbcf84386cb15da77e6f6a086cf605a4dd7823"
+            }
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--877615bf-68b8-448f-8c3f-dc04ff7523d0",
+            "value": "89.44.194.32"
+        },
+        {
+            "type": "directory",
+            "id": "directory--1b8ea5bf-5835-40f2-bac3-42d6c7f39c71",
+            "path": "/data2/.ztls/"
+        },
+        {
+            "type": "directory",
+            "id": "directory--0ef4a021-5dc1-4a49-8738-cb29211aa17e",
+            "path": "/tmp/%d.sv"
+        },
+        {
+            "type": "directory",
+            "id": "directory--4acbb569-5ecb-4dd1-801c-2d84e0026db8",
+            "path": "/data2/tmp/%s.ini"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--157ecdf8-bc3a-4b3b-ace8-400060106fc0",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "infrastructure--11ab55f9-9a9e-44d2-8990-4ac6d5393529",
+            "description": "UMBRELLA STAND uses the C2 infrastructure for command-and-control."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9fb39b86-b2a2-4de4-833f-8fed81363f82",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "infrastructure--11ab55f9-9a9e-44d2-8990-4ac6d5393529",
+            "target_ref": "ipv4-addr--877615bf-68b8-448f-8c3f-dc04ff7523d0",
+            "description": "UMBRELLA STAND C2 server communicates with IPv4 address 89.44.194.32."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a66c9662-10a1-4256-b28a-378d0a2033e4",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--de23e07f-7f84-4766-be6c-b6aeca161bf3",
+            "target_ref": "infrastructure--11ab55f9-9a9e-44d2-8990-4ac6d5393529",
+            "description": "Indicator for malicious C2 IPv4 address associated with UMBRELLA STAND infrastructure."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ddeb9d50-1534-46b8-8bd3-e2503eab3669",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--47044264-0e21-451b-af90-d9bd64ff3d86",
+            "target_ref": "directory--1b8ea5bf-5835-40f2-bac3-42d6c7f39c71",
+            "description": "Indicator for hidden directory used by UMBRELLA STAND."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3a6fe2a2-6d22-4580-9781-34a2e22cce28",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--5f9ae1cf-423a-4180-88c0-0ba072a2225c",
+            "description": "UMBRELLA STAND uses blghtd binary for networking and processing tasking."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--eb64fbe8-eea7-4c3f-98ae-3e2e139f4c66",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--262cab87-56f9-4aa1-bb8b-f2a592447a7b",
+            "description": "UMBRELLA STAND uses jvnlpe binary to watch and restart blghtd."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3d49babb-4194-482e-97e0-5aebdb386383",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--20d7f3c9-7218-4c2a-a05f-d6dfc29c156a",
+            "description": "UMBRELLA STAND uses cisz for initialization, launching injection, and starting jvnlpe."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a23276c7-5fe6-4158-841f-f410f141afef",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--2b120562-65ee-482f-8535-d70d1ef80edc",
+            "description": "UMBRELLA STAND uses libguic.so2 loaded via ldpreload to load cisz."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8fa23631-9e85-4b4c-bab8-0d12aa0f653f",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--eb71ef0a-3d6b-4bf1-9455-2ffc2b62065a",
+            "description": "UMBRELLA STAND uses reboot_hooker to hook and modify device reboot function for persistence."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--23596410-6d80-4c9c-a8e5-d9dc0f1798d0",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--b7580963-c26b-4b2f-85fc-7cd5ab551440",
+            "description": "UMBRELLA STAND uses 'a' binary as a file encryptor and decryptor tool."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c528c8c9-bb29-43d7-a48d-51ec1139d5d8",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--4de729ce-8f9b-4ec6-9e93-8d7a0cdf4487",
+            "description": "UMBRELLA STAND uses BusyBox (lidwok) for shell command execution."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4e520e27-adaa-41ea-957e-d5731aea7add",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--8409e387-ec43-423e-b09c-00632d589f74",
+            "description": "UMBRELLA STAND uses dskz tool for process injection."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--31d3961e-22a7-4daa-8536-6466a7c2dc5a",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--e63a12b9-cba5-43d9-9d92-b5875878b6a8",
+            "description": "UMBRELLA STAND uses tdp (tcpdump) for network traffic capture."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--032dd827-7b7c-41b3-aee2-bc6479bb6538",
+            "created": "2025-06-18T00:00:00Z",
+            "modified": "2025-06-18T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "malware--3a1a16ed-d205-43cf-b6fd-e191c8007eb6",
+            "target_ref": "file--f1dc2078-7b5a-4b2f-a4d6-7242d320d8fa",
+            "description": "UMBRELLA STAND uses nbso (nbtscan) tool for network service discovery."
+        }
+    ]
+}
