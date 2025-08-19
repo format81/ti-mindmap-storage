@@ -1,0 +1,246 @@
+{
+    "type": "bundle",
+    "id": "bundle--bbbe4d5a-47cc-467e-bf19-f595a769cf16",
+    "objects": [
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--5b489130-e72f-4906-be5c-bbbf3259871c",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "LameHug",
+            "is_family": "false",
+            "labels": [
+                "infostealer",
+                "python-based",
+                "ai-assisted",
+                "espionage"
+            ],
+            "description": "LameHug is a Python-based infostealer linked to the Russian state-sponsored group APT28. Discovered in mid-2025, it represents the first publicly documented case of malware operationally integrating a large language model (LLM) to dynamically generate malicious commands at runtime. It is deployed via spear-phishing targeting Ukrainian government agencies and leverages cloud-hosted AI via Hugging Face API for adaptive, signature-less operations."
+        },
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--ca5e6645-cd96-4cc7-99c8-e4da12c4af7d",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "APT28",
+            "labels": [
+                "nation-state",
+                "state-sponsored",
+                "apt",
+                "espionage"
+            ],
+            "description": "APT28, also known as Fancy Bear or Sofacy, is a Russian state-sponsored advanced persistent threat group. It is known for custom malware and spear-phishing campaigns, and in 2025 deployed the LameHug infostealer in a campaign against Ukrainian government agencies, integrating AI-driven command generation to enhance operational agility."
+        },
+        {
+            "type": "campaign",
+            "spec_version": "2.1",
+            "id": "campaign--2dcec060-867e-489f-9d3b-c46d828eb10d",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "LameHug Spear-Phishing Campaign Against Ukraine",
+            "description": "A spear-phishing campaign in 2025 by APT28 targeting Ukrainian government and defense sector entities using the LameHug infostealer with integrated LLM for dynamic command generation. The attack leveraged compromised Ukrainian ministry email accounts and malicious .pif executables disguised as PDFs.",
+            "first_seen": "2025-06-01T00:00:00Z",
+            "objective": "Espionage and sensitive file exfiltration from Ukrainian government agencies"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--4bb793dc-74bd-4ec0-8291-a6061b040c7e",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "Double-Extension Masquerade",
+            "description": "Using files with double extensions to disguise malicious executables as benign documents, such as .pdf.zip containing a .pif executable; aligns with MITRE ATT&CK T1036.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1036"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--f97eff5c-aa89-4b46-b95c-970de4d00a79",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "Trusted Relationship Account Compromise",
+            "description": "Exploitation of legitimate or hijacked accounts to deliver phishing messages, such as sending spear-phishing emails from a compromised Ukrainian ministry account; aligns with MITRE ATT&CK T1586.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1586"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--ddd6d24d-d48e-41a1-8dc8-987c5e49364e",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "Command and Scripting Interpreter: Python",
+            "description": "Execution of malicious Python code in memory for payload operations; aligns with MITRE ATT&CK T1059.006.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1059.006"
+                }
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--c4c52dcf-853e-420f-b3ab-456a437dc92b",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "stayathomeclasses[.]com",
+            "description": "A compromised website used by LameHug to exfiltrate stolen data over HTTP POST.",
+            "infrastructure_types": [
+                "hosting-malware",
+                "exfiltration"
+            ]
+        },
+        {
+            "type": "infrastructure",
+            "spec_version": "2.1",
+            "id": "infrastructure--0e2dbfe4-3cf7-43c3-9e14-74a2e27d1af4",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "name": "144[.]126[.]202[.]227",
+            "description": "An IP address receiving exfiltrated data from LameHug malware over SFTP on port 22.",
+            "infrastructure_types": [
+                "exfiltration"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--34a526a0-347c-476f-ba39-e9c5a3d2486e",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "malware--",
+            "target_ref": "threat-actor--",
+            "description": "LameHug is attributed to APT28."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fd0c3f87-10f1-46c6-8931-64710d86df8f",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--",
+            "target_ref": "campaign--",
+            "description": "APT28 conducted the 2025 LameHug spear-phishing campaign against Ukraine."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--251979a2-4013-42e8-a555-64aa6490b25b",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "uses",
+            "source_ref": "campaign--",
+            "target_ref": "malware--",
+            "description": "The LameHug malware was deployed in the spear-phishing campaign."
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--05cad9f4-76d1-43e1-a358-3714e21522d5",
+            "value": "picussecurity.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--45ff08a9-e1e2-4b97-91e3-88963635af1c",
+            "value": "stayathomeclasses.com"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--db544c20-8a53-421b-89f7-5cd56f36206e",
+            "value": "144.126.202.227"
+        },
+        {
+            "type": "file",
+            "id": "file--15280410-27ed-45e2-8565-eaf72821fd74",
+            "name": "Appendix.pdf.zip"
+        },
+        {
+            "type": "file",
+            "id": "file--e22f6cdc-abb2-404c-ab88-1bf3fa4028c4",
+            "name": "Dodatok.pdf.zip"
+        },
+        {
+            "type": "file",
+            "id": "file--53777b0e-a78d-47d7-8d1c-ec98e8e1e313",
+            "name": "Dodatok.pif"
+        },
+        {
+            "type": "url",
+            "id": "url--ce6fa778-ec97-4410-8cc5-ade73d14a420",
+            "value": "https://www.picussecurity.com/resource/blog/lamehug-the-first-publicly-documented-case-of-a-malware-integrating-a-llm"
+        },
+        {
+            "type": "url",
+            "id": "url--0325b637-8f86-44fb-a861-6e0c81b8decb",
+            "value": "http://stayathomeclasses.com/slpw/up.php"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e55c054d-61cd-4daa-8c3b-2d87d0205ea5",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--5b489130-e72f-4906-be5c-bbbf3259871c",
+            "target_ref": "domain-name--45ff08a9-e1e2-4b97-91e3-88963635af1c",
+            "description": "LameHug exfiltrates stolen data to a compromised domain stayathomeclasses.com via HTTP POST."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--98275309-3b03-4dd0-b06b-c0e1a06b50c2",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--5b489130-e72f-4906-be5c-bbbf3259871c",
+            "target_ref": "ipv4-addr--db544c20-8a53-421b-89f7-5cd56f36206e",
+            "description": "LameHug uploads exfiltrated data over SFTP to IP address 144.126.202.227."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f2d67bdf-17f8-468e-9e86-ae493d3e739d",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "drops",
+            "source_ref": "malware--5b489130-e72f-4906-be5c-bbbf3259871c",
+            "target_ref": "file--53777b0e-a78d-47d7-8d1c-ec98e8e1e313",
+            "description": "LameHug was contained in and executed from the file Dodatok.pif."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1d7d5343-e845-45c9-a19f-15c342069a6d",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "contains",
+            "source_ref": "file--15280410-27ed-45e2-8565-eaf72821fd74",
+            "target_ref": "file--53777b0e-a78d-47d7-8d1c-ec98e8e1e313",
+            "description": "The Appendix.pdf.zip archive contained the Dodatok.pif executable."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e0a35a99-103b-4a1b-b9b0-0e884994f7e3",
+            "created": "2025-08-11T00:00:00Z",
+            "modified": "2025-08-11T00:00:00Z",
+            "relationship_type": "contains",
+            "source_ref": "file--e22f6cdc-abb2-404c-ab88-1bf3fa4028c4",
+            "target_ref": "file--53777b0e-a78d-47d7-8d1c-ec98e8e1e313",
+            "description": "The Dodatok.pdf.zip archive contained the Dodatok.pif executable."
+        }
+    ]
+}
