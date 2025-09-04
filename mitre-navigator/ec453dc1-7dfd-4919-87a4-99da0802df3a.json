@@ -1,0 +1,152 @@
+{
+    "name": "BouldSpy Analysis",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques used by BouldSpy Android Spyware",
+    "filters": {
+        "platforms": [
+            "android"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "all"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "BouldSpy retrieves device information such as IP address, SIM card information, Wi-Fi info, etc.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1113",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Takes screenshots of the device's screen.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1115",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Captures clipboard content.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056.001",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Logs keystrokes from the device.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1123",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Records audio from the microphone and captures live call recordings.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1125",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Takes photos using the device cameras.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1048.002",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Utilizes unencrypted web traffic for C2 communication, exposing data in plaintext.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1548.002",
+            "tactic": "privilege-escalation",
+            "color": "",
+            "comment": "BouldSpy abuses Android accessibility services to maintain persistence in execution.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": true
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "BouldSpy disguises itself as legitimate applications such as CPU-Z, Currency Converter Pro, and others.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Has the ability to download and run additional custom code.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Collects a comprehensive list of user information, including browser history, installed apps, and call recording logs.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
