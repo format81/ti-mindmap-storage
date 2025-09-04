@@ -1,0 +1,337 @@
+{
+    "type": "bundle",
+    "id": "bundle--cd1cddaf-b56a-49ee-aee6-8df58961b521",
+    "objects": [
+        {
+            "type": "malware",
+            "id": "malware--0674b9d7-8ee6-4e1c-aa4e-1c0f37b31972",
+            "name": "BouldSpy",
+            "is_family": "true",
+            "aliases": [
+                "BoulderApplication"
+            ],
+            "first_seen": "2020-03-01T00:00:00Z",
+            "labels": [
+                "spyware",
+                "android",
+                "surveillance"
+            ],
+            "description": "BouldSpy is an Android surveillance tool attributed to the Law Enforcement Command of the Islamic Republic of Iran (FARAJA). It targets minorities and potentially monitors illegal activities."
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--11a73f0e-dbe3-4864-abbc-0e91f14c65ac",
+            "name": "FARAJA",
+            "labels": [
+                "government",
+                "law enforcement"
+            ],
+            "description": "FARAJA, short for Law Enforcement Command of the Islamic Republic of Iran, is attributed with the development and utilization of the BouldSpy spyware to monitor and target minorities and possibly disrupt illegal trafficking activities."
+        },
+        {
+            "type": "identity",
+            "id": "identity--81bf66ce-2f68-480d-96c7-508ffcb3d9b7",
+            "name": "Lookout",
+            "identity_class": "organization",
+            "sectors": [
+                "technology",
+                "cybersecurity"
+            ],
+            "description": "Lookout is a cybersecurity firm specializing in mobile threat detection and intelligence. They discovered the BouldSpy spyware attributed to FARAJA."
+        },
+        {
+            "type": "location",
+            "id": "location--18dd94b1-9926-4cce-8900-d546e2b333d7",
+            "name": "Iran",
+            "description": "The geographic focus of BouldSpy's operations, affecting minority groups like Iranian Kurds, Baluchis, Azeris, and possibly Armenian Christian groups."
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--8907d06a-f2bf-43f1-b26f-eb22c84013b9",
+            "name": "BouldSpy C2 Servers",
+            "infrastructure_types": [
+                "command-and-control"
+            ],
+            "description": "Command and Control infrastructure used by BouldSpy, including IP addresses and custom ports for administration access."
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--20970ed1-c990-4231-af18-0648332f9ba0",
+            "pattern": "[file:hashes.'SHA-1' = '5168610b73f50661b998e95a74be25bfe749b6ef']",
+            "valid_from": "2023-04-27T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--5c989809-1a72-459b-9ee9-c2ad44d7bc0d",
+            "pattern": "[ipv4-addr:value = '192.99.251.51']",
+            "valid_from": "2023-04-27T00:00:00Z",
+            "labels": [
+                "malicious-activity"
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--6b7bd916-7add-43fd-b02e-65c87e5e6aad",
+            "value": "twitter.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--1ba16039-0c17-43f1-903c-eb27d74bd953",
+            "value": "blog.cyble.com"
+        },
+        {
+            "type": "url",
+            "id": "url--c54e303f-a579-406d-abe3-41af9191b791",
+            "value": "https://github.com/benniraj25/crydroid/"
+        },
+        {
+            "type": "url",
+            "id": "url--a28a477d-30ff-4a6b-ae44-2a2415aca93a",
+            "value": "https://play.google.com/store/apps/details?id=com.devnied.currency.pro&gl=US"
+        },
+        {
+            "type": "url",
+            "id": "url--7ca90201-3af6-4a71-b00f-1bf4d0843bcd",
+            "value": "https://cafebazaar.ir/app/ir.andromedads.interestcalculator"
+        },
+        {
+            "type": "url",
+            "id": "url--d417483a-7422-4dfd-baa5-f1015564b94f",
+            "value": "https://apkpure.com/fake-call/com.keladan.fakecall"
+        },
+        {
+            "type": "url",
+            "id": "url--e85fec57-f4d5-425f-a438-389f98ff6c18",
+            "value": "https://play.google.com/store/apps/details?id=com.psiphon3"
+        },
+        {
+            "type": "ip4-addr",
+            "id": "ip4-addr--5bc92828-578e-4c4d-adfd-194cd80613f1",
+            "value": "192.99.251.51"
+        },
+        {
+            "type": "ip4-addr",
+            "id": "ip4-addr--4c7c27a8-e75e-4450-8810-86b168250951",
+            "value": "192.99.251.50"
+        },
+        {
+            "type": "ip4-addr",
+            "id": "ip4-addr--1b231783-2f64-4e7f-ad76-731b1fc54575",
+            "value": "192.99.251.49"
+        },
+        {
+            "type": "ip4-addr",
+            "id": "ip4-addr--f1706385-534f-49a8-a260-c176c2e7f020",
+            "value": "192.99.251.54"
+        },
+        {
+            "type": "ip4-addr",
+            "id": "ip4-addr--8794ab08-ae7a-45d9-884b-45a76499ffac",
+            "value": "84.234.96.117"
+        },
+        {
+            "type": "ip4-addr",
+            "id": "ip4-addr--e7201a0f-878f-42db-908c-4b33e017359a",
+            "value": "149.56.92.127"
+        },
+        {
+            "type": "file",
+            "id": "file--aefd2833-20ef-4308-a038-563390e5874a",
+            "hashes": {
+                "SHA-1": "5168610b73f50661b998e95a74be25bfe749b6ef"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--855143a7-af49-4489-8be9-4601ff0e66f1",
+            "hashes": {
+                "SHA-1": "af999714aec75a64529c59f1e8de4c669adfa97a"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--954bc299-32c0-4951-af81-33caef371a34",
+            "hashes": {
+                "SHA-1": "965d118cb80ccdbc6e95e530a314cb4b85ae1b42"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--83b1a4d6-6d06-4ffe-9868-2d48dd738b7a",
+            "hashes": {
+                "SHA-1": "f3b135555ae731b5499502f3b69724944ab367d5"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--6fc5bbdd-a4c1-4e64-9e05-0a1015466e68",
+            "hashes": {
+                "SHA-1": "02ac97b090a6b2a1b14bad839deec7d966f5642c"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--e285c0d5-5eba-43e0-87c8-66a7ee722bed",
+            "hashes": {
+                "SHA-1": "da3c0cfd432b53a602ce7dc5165848b88411d9c9"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--7fe65a06-c692-417f-9c6c-17148609ccfd",
+            "hashes": {
+                "SHA-1": "75a6c724f43168346b177a60c81ca179a436246f"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--416ebbb4-1aed-4467-b57f-ae1ccb808802",
+            "hashes": {
+                "SHA-1": "08fd24e4514793b29b7bd2c29f9e5c15ffc9bada"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--65f0fce7-1c92-4503-8ac5-1c6a1762d59c",
+            "hashes": {
+                "SHA-1": "73c93be188f88755ed690266063223e141fdb9ff"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--b1260390-c40d-4e0e-b9dd-6fa4698de933",
+            "hashes": {
+                "SHA-1": "7537ac1658100efaf6558eed4a3f732208b393ab"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--17101da3-6305-49c6-91f6-42790f524502",
+            "hashes": {
+                "SHA-1": "7208dc915a800fe5c5eaf599084147a8afeba991"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--64230a01-114f-4e23-b747-9ba6cb84c3bc",
+            "hashes": {
+                "SHA-1": "8afc495b6632ce9ef812a971f71ae82d39d7e7e9"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--67fa0948-d6e5-45c3-8f9c-002385d070be",
+            "hashes": {
+                "SHA-1": "43f5506b960914ab76ffaf531cdd51dd86df22f2"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--ed45f35f-80dd-4d00-9763-d868e0210bca",
+            "hashes": {
+                "SHA-1": "dd66dcb8db678d10f9589a12745ec2e575e4f5eb"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--dd8b0754-204b-41bf-8cca-00216a8ec6ff",
+            "hashes": {
+                "SHA-1": "69894818ba1dc8bfffe9fb384abf77d991379aaa"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--c2975ee0-0116-4da4-9f2d-e8a2b55e7ec5",
+            "hashes": {
+                "SHA-1": "db650b0eaffa21b63ce84d31b2bd09720da9491e"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--db53e463-ef8f-41fe-86dc-6e0f7095ca16",
+            "hashes": {
+                "SHA-1": "67a3def7ad736df94c8c50947f785c0926142b69"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--7835dbb1-399a-4452-8faa-68a365f11053",
+            "hashes": {
+                "SHA-1": "63ff362f58c7b6dec8ea365a5dbc6a88ec09dacf"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--87fbfe8d-b08e-4fe7-a490-ffdd91f7cda6",
+            "hashes": {
+                "SHA-1": "bc826967c90acc08f1f70aa018f5d13f31521b92"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--4b62f1d1-905a-492c-9644-ae7be0713f8f",
+            "hashes": {
+                "SHA-1": "02c4969c45fd7ac913770f9db075eadf9785d3a7"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--715b69dd-d394-4171-98f6-ae342747ac07",
+            "hashes": {
+                "SHA-1": "5446e0cf2de0a888571ef1d521b9ada7b34ef33e"
+            }
+        },
+        {
+            "type": "file",
+            "id": "file--98027050-7b92-4a8d-b07b-c7ea74c701d5",
+            "hashes": {
+                "SHA-1": "43a92743c8264a8d06724ab80139c0d31e8292ee"
+            }
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--540ae711-cd66-4cde-a635-0de02be85f5f",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--11a73f0e-dbe3-4864-abbc-0e91f14c65ac",
+            "target_ref": "malware--0674b9d7-8ee6-4e1c-aa4e-1c0f37b31972"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--59549103-0658-48e7-9721-c6a023fbdc97",
+            "relationship_type": "uses",
+            "source_ref": "malware--0674b9d7-8ee6-4e1c-aa4e-1c0f37b31972",
+            "target_ref": "infrastructure--8907d06a-f2bf-43f1-b26f-eb22c84013b9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--09575e97-108a-461c-8a1a-f00a3bc738b3",
+            "relationship_type": "located-at",
+            "source_ref": "threat-actor--11a73f0e-dbe3-4864-abbc-0e91f14c65ac",
+            "target_ref": "location--18dd94b1-9926-4cce-8900-d546e2b333d7"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--58572cdd-0168-4b69-8d81-80d253ad610c",
+            "relationship_type": "uses",
+            "source_ref": "malware--0674b9d7-8ee6-4e1c-aa4e-1c0f37b31972",
+            "target_ref": "file--aefd2833-20ef-4308-a038-563390e5874a"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--2820b72d-5ff0-4188-be4f-c3216b18a48c",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--0674b9d7-8ee6-4e1c-aa4e-1c0f37b31972",
+            "target_ref": "ip4-addr--5bc92828-578e-4c4d-adfd-194cd80613f1"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--04862066-1b25-4fa9-aa98-139f3a334474",
+            "relationship_type": "published",
+            "source_ref": "identity--81bf66ce-2f68-480d-96c7-508ffcb3d9b7",
+            "target_ref": "malware--0674b9d7-8ee6-4e1c-aa4e-1c0f37b31972"
+        }
+    ]
+}
