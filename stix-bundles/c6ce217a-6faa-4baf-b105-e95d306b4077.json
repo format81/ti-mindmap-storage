@@ -1,0 +1,199 @@
+{
+    "type": "bundle",
+    "id": "bundle--e2c5f72f-4d16-45b3-9dfc-b8807db699dc",
+    "objects": [
+        {
+            "type": "malware",
+            "id": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "name": "IMDDOS",
+            "labels": [
+                "botnet",
+                "ddos"
+            ],
+            "description": "The IMDDOS botnet is a commercial service designed to deliver Distributed Denial of Service (DDoS) attacks. The botnet rapidly grew and uses malware to infect systems and coordinate DDoS attacks against specified targets as part of its operations.",
+            "is_family": "true",
+            "malware_types": [
+                "botnet",
+                "ddos"
+            ]
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--626d6bdc-7404-4e34-bb69-0be40507c1e8",
+            "name": "IMDDOS Botnet Operators",
+            "labels": [
+                "criminal-organization",
+                "ddos-service"
+            ],
+            "description": "A criminal organization operating the IMDDOS botnet, which is used commercially to provide DDoS-for-hire services, primarily targeting non-legitimate websites.",
+            "roles": [
+                "bot operator"
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--6c8b6bf2-c715-480b-b2c7-a092587c00e3",
+            "value": "imddos.my03.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--763f3be1-53ea-441f-b623-4d716f525a2e",
+            "value": "test.dns-dns.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--03772d89-9d02-4d19-8af8-022e561767b5",
+            "value": "dns.ddos.im"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--94c1b31f-879c-4397-82c7-dad0994c00ff",
+            "value": "win2003ddos.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--ab369861-6443-412e-92ba-4e26802d7738",
+            "value": "woshindi.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--83980f33-7341-4118-8d33-e1b83cdfc29f",
+            "value": "pk518.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--95f522c4-0ff4-42cd-bbe4-1fbc64a51e42",
+            "value": "huanjue6369029.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--e4b595f1-645b-4b74-bf7f-fe7a767b8eec",
+            "value": "qq603535.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--c8677378-420d-4405-960f-a7044feeb13a",
+            "value": "qq188588.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--3ae4d5a2-2c97-4c8c-b98c-39d7572fb134",
+            "value": "hjff.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--57371dc1-b46f-4af6-9866-b395da133d05",
+            "value": "198600.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--76fb455a-2cd8-442c-8d75-be839e0700f3",
+            "value": "ankankan.3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--217a2831-55e7-422c-b413-059a0de10927",
+            "value": "yinn.3322.org"
+        },
+        {
+            "type": "url",
+            "id": "url--19d96455-2903-4c85-9726-6821467c1fe0",
+            "value": "http://imddos.my03.com:9090/test1.html"
+        },
+        {
+            "type": "url",
+            "id": "url--80ed42c9-6481-4e09-9be4-b53c0f766087",
+            "value": "http://test.dns-dns.com:9090/888.html"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--6c8b6bf2-c715-480b-b2c7-a092587c00e3",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--763f3be1-53ea-441f-b623-4d716f525a2e",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--03772d89-9d02-4d19-8af8-022e561767b5",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--94c1b31f-879c-4397-82c7-dad0994c00ff",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--ab369861-6443-412e-92ba-4e26802d7738",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--83980f33-7341-4118-8d33-e1b83cdfc29f",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--95f522c4-0ff4-42cd-bbe4-1fbc64a51e42",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--e4b595f1-645b-4b74-bf7f-fe7a767b8eec",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--c8677378-420d-4405-960f-a7044feeb13a",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--3ae4d5a2-2c97-4c8c-b98c-39d7572fb134",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--57371dc1-b46f-4af6-9866-b395da133d05",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--76fb455a-2cd8-442c-8d75-be839e0700f3",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "domain-name--217a2831-55e7-422c-b413-059a0de10927",
+            "relationship_type": "uses"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "url--19d96455-2903-4c85-9726-6821467c1fe0",
+            "relationship_type": "connects-to"
+        },
+        {
+            "type": "relationship",
+            "source_ref": "malware--28e6dcb7-a0a7-4615-a208-acb93e508fc0",
+            "target_ref": "url--80ed42c9-6481-4e09-9be4-b53c0f766087",
+            "relationship_type": "connects-to"
+        }
+    ]
+}
