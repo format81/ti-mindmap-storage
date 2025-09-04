@@ -1,0 +1,241 @@
+{
+    "type": "bundle",
+    "id": "bundle--ff11a865-5052-4689-92ad-48338b63f668",
+    "objects": [
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--80d77602-da56-4cd9-a808-50c81ee38aff",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "CVE-2016-4657",
+            "description": "Visiting a maliciously crafted website may lead to arbitrary code execution."
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--65897a57-3b1c-4db6-a5bb-6acd7c198c06",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "CVE-2016-4655",
+            "description": "An application may be able to disclose kernel memory."
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--35ab402f-b8e3-4aca-aa56-e03dc9397997",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "CVE-2016-4656",
+            "description": "An application may be able to execute arbitrary code with kernel privileges."
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "Pegasus",
+            "is_family": "false",
+            "labels": [
+                "spyware",
+                "surveillance",
+                "remote-access"
+            ],
+            "description": "Pegasus is a spyware product by NSO Group, capable of turning an iPhone into a digital spy by taking over the phone's microphone and camera, intercepting calls and messages, and tracking movements."
+        },
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--920732af-7b38-4de6-a0ef-140cec067749",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "NSO Group",
+            "description": "NSO Group is an Israel-based company known for selling the Pegasus spyware. It specializes in cyber warfare products.",
+            "threat_actor_types": [
+                "crime-syndicate"
+            ],
+            "roles": [
+                "vendor"
+            ],
+            "labels": [
+                "cyber war",
+                "surveillance",
+                "spyware vendor"
+            ]
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--f12b2ecb-7ebd-4b6b-acb9-2747ac8d4eec",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "Ahmed Mansoor",
+            "description": "Ahmed Mansoor is an internationally recognized human rights defender based in the UAE, known for exposing torture in UAE jails.",
+            "identity_class": "individual",
+            "sectors": [
+                "human-rights"
+            ],
+            "contact_information": "UAE"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--5b7724a5-d153-4c17-a494-0883860fb56a",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "Apple Inc.",
+            "description": "Apple Inc. is a technology company that developed and maintains the iOS operating system for iPhones.",
+            "identity_class": "organization",
+            "sectors": [
+                "technology"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "spec_version": "2.1",
+            "id": "course-of-action--2dc169d3-174d-4bd4-8178-676fbe6762ff",
+            "created": "2016-08-24T00:00:00.000Z",
+            "name": "Update to iOS 9.3.5",
+            "description": "All iPhone owners should update to iOS version 9.3.5 to protect against the Trident exploit chain used by Pegasus spyware."
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--060b833c-2e70-4953-8760-2260312dd3cc",
+            "value": "webadv.co"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--b0d10423-adc4-48ab-bba7-91e450f7414c",
+            "value": "sms.webadv.co"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--c161012a-8211-48e6-9d2d-7da70470ed36",
+            "value": "aalaan.tv"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--32d3775c-a2bb-42e6-b39b-337ea74d8cd8",
+            "value": "manoraonline.net"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--73c8793c-2d4c-496c-bd7a-5d990c91cea6",
+            "value": "52.8.153.44"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--a9500aeb-a08b-436c-a499-b7d4956f6a5e",
+            "value": "52.8.52.166"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--3224ca00-970a-4eab-9ec1-1e8e40b34062",
+            "value": "162.209.103.68"
+        },
+        {
+            "type": "url",
+            "id": "url--d46fdce0-90a6-487b-ad27-8f0eda1259e4",
+            "value": "http://fb-accounts.com/1074139s/"
+        },
+        {
+            "type": "url",
+            "id": "url--43027ad4-12b2-4752-a28e-2c6431da6ad9",
+            "value": "http://unonoticias.net/3423768s/"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1bb2492f-be52-4ed1-9f5e-6ace9b435657",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--920732af-7b38-4de6-a0ef-140cec067749",
+            "target_ref": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "description": "The NSO Group uses Pegasus spyware for cyber surveillance."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8dfc467b-200a-4bd8-ba85-eeed25c81474",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "exploits",
+            "source_ref": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "target_ref": "vulnerability--80d77602-da56-4cd9-a808-50c81ee38aff",
+            "description": "Pegasus exploits CVE-2016-4657 for arbitrary code execution."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1fac827d-d69c-464d-8fea-b5017968ee48",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "exploits",
+            "source_ref": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "target_ref": "vulnerability--65897a57-3b1c-4db6-a5bb-6acd7c198c06",
+            "description": "Pegasus exploits CVE-2016-4655 to disclose kernel memory."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--c4214e8a-cb91-4e8a-977c-aff22ef924ff",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "exploits",
+            "source_ref": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "target_ref": "vulnerability--35ab402f-b8e3-4aca-aa56-e03dc9397997",
+            "description": "Pegasus exploits CVE-2016-4656 to execute arbitrary code with kernel privileges."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--641d1f79-a577-4389-8913-a8198505b7b3",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "target_ref": "identity--f12b2ecb-7ebd-4b6b-acb9-2747ac8d4eec",
+            "description": "Pegasus was used to target Ahmed Mansoor."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e2bf48e2-90ec-4353-8eaa-fc3c2d887625",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "related-to",
+            "source_ref": "threat-actor--920732af-7b38-4de6-a0ef-140cec067749",
+            "target_ref": "identity--5b7724a5-d153-4c17-a494-0883860fb56a",
+            "description": "NSO Group exploits targeted vulnerabilities in Apple iOS systems."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a5d7dc22-6476-4ca3-99b9-e8b10525559a",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "implemented-by",
+            "source_ref": "course-of-action--2dc169d3-174d-4bd4-8178-676fbe6762ff",
+            "target_ref": "identity--5b7724a5-d153-4c17-a494-0883860fb56a",
+            "description": "iOS 9.3.5 update was implemented by Apple to protect against Pegasus."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--eef94b28-a539-4943-8607-3fef2f1bd13b",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "target_ref": "domain-name--c161012a-8211-48e6-9d2d-7da70470ed36",
+            "description": "Pegasus communicates with the command-and-control domain aalaan.tv."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--09ef7071-f9aa-4622-92db-d763c914c5db",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--5ad4edba-12cb-47e2-87ac-762784ea5b96",
+            "target_ref": "domain-name--32d3775c-a2bb-42e6-b39b-337ea74d8cd8",
+            "description": "Pegasus communicates with the command-and-control domain manoraonline.net."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a38d441d-0dca-46db-84f8-a64bfdaeca98",
+            "created": "2016-08-24T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--920732af-7b38-4de6-a0ef-140cec067749",
+            "target_ref": "domain-name--b0d10423-adc4-48ab-bba7-91e450f7414c",
+            "description": "NSO Group uses the domain sms.webadv.co as part of the exploit infrastructure."
+        }
+    ]
+}
