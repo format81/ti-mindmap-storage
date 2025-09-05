@@ -1,0 +1,137 @@
+{
+    "type": "bundle",
+    "id": "bundle--110c1799-401d-414f-abf8-8e6ab1125efd",
+    "objects": [
+        {
+            "type": "malware",
+            "id": "malware--4c52e651-d03b-4497-91f3-328d0c19388a",
+            "name": "IMDDOS Botnet",
+            "is_family": "true",
+            "labels": [
+                "botnet",
+                "DDoS"
+            ],
+            "description": "The IMDDOS Botnet is a commercial DDoS service, rapidly growing to become one of the largest botnets. It offers a service for delivering Distributed Denial of Service attacks, with infected hosts instructed to launch coordinated attacks."
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--dee0b430-7387-4ffd-93f9-597241575908",
+            "name": "IMDDOS Botnet Infrastructure",
+            "description": "The infrastructure of the IMDDOS botnet includes components like the IMDDOS malware infecting host PCs, a Target-List Hosting Domain for the list of DDoS targets, and C2 domains for botnet control.",
+            "first_seen": "2010-03-20T00:00:00Z"
+        },
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--05320adf-8fe8-49f7-9d63-701d819ada7d",
+            "name": "IMDDOS Operators",
+            "labels": [
+                "cybercriminal",
+                "botnet-operator"
+            ],
+            "description": "Operators of the IMDDOS botnet, providing a fee-based DDoS service through the botnet infrastructure."
+        },
+        {
+            "type": "tool",
+            "id": "tool--ff92749f-a372-4e49-b349-3d7505893771",
+            "name": "IMDDOS Toolset",
+            "description": "The toolset involved in the IMDDOS botnet, including malware agents, attack methodologies, and the control panel for operating the botnet.",
+            "tool_version": "2.0"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--c462a87b-4592-47cb-a0a7-ac0f757a8010",
+            "value": "imddos.my03.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--af2c3e0a-9320-4333-b3f3-743bd454a06c",
+            "value": "test.dns-dns.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--1cb0b988-6035-496f-9e50-e50ccddcbfd2",
+            "value": "3322.org"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--189406ad-7c4e-4d39-b151-8c2b1846a15d",
+            "value": "dns.ddos.im"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--5998dcf8-e636-4dbc-865b-4dd93c7e4973",
+            "value": "C:\\WINDOWS\\system32\\goemka.exe"
+        },
+        {
+            "type": "mutex",
+            "id": "mutex--665bc1b6-a58b-4ef7-8a81-08f2b133a48a",
+            "name": "SafePrec"
+        },
+        {
+            "type": "windows-registry-key",
+            "id": "windows-registry-key--5f9951e4-072f-4746-b192-268d63dc8f22",
+            "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SafePrecpfu",
+            "values": [
+                {
+                    "name": "ImagePath",
+                    "data": "hex(2):43,3a,5c,57,49,4e,44,4f,57,53,5c,73,79,73,74,65,6d,33,32,5c,67,6f,65,6d,6b,61,2e,65,78,65,00"
+                }
+            ]
+        },
+        {
+            "type": "software",
+            "id": "software--531dbe2c-d2bd-4fa5-aed5-4f6beeebf578",
+            "name": "IMDDOS Malware",
+            "version": "V2.0"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--39442101-f903-4ab9-98de-68320fc85d25",
+            "relationship_type": "uses",
+            "source_ref": "malware--4c52e651-d03b-4497-91f3-328d0c19388a",
+            "target_ref": "infrastructure--dee0b430-7387-4ffd-93f9-597241575908"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--afbbad4e-8a9f-44f3-afd4-39141b5cdc24",
+            "relationship_type": "operates",
+            "source_ref": "threat-actor--05320adf-8fe8-49f7-9d63-701d819ada7d",
+            "target_ref": "infrastructure--dee0b430-7387-4ffd-93f9-597241575908"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--45d42e5f-efa5-4852-b382-c44f722d7187",
+            "relationship_type": "uses",
+            "source_ref": "tool--ff92749f-a372-4e49-b349-3d7505893771",
+            "target_ref": "infrastructure--dee0b430-7387-4ffd-93f9-597241575908"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--aca09d27-14fd-48bb-bb0a-207b921bd863",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--4c52e651-d03b-4497-91f3-328d0c19388a",
+            "target_ref": "domain-name--c462a87b-4592-47cb-a0a7-ac0f757a8010"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--a1b61c29-fa18-4895-9d92-172a01ca514a",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--4c52e651-d03b-4497-91f3-328d0c19388a",
+            "target_ref": "domain-name--af2c3e0a-9320-4333-b3f3-743bd454a06c"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--afb65961-f4ee-4abb-a318-6207c84e002b",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--4c52e651-d03b-4497-91f3-328d0c19388a",
+            "target_ref": "domain-name--1cb0b988-6035-496f-9e50-e50ccddcbfd2"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--ea76c2e1-602c-46e6-b1c7-8243caf479ee",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--4c52e651-d03b-4497-91f3-328d0c19388a",
+            "target_ref": "domain-name--189406ad-7c4e-4d39-b151-8c2b1846a15d"
+        }
+    ]
+}
