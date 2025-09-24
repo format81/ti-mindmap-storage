@@ -1,0 +1,212 @@
+{
+    "type": "bundle",
+    "id": "bundle--e9a8b559-dfcb-47fb-bcb1-5daf49ff8682",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--21a436d9-0beb-4205-a345-c925e5489a2a",
+            "name": "AI-obfuscated Phishing Campaign August 2025",
+            "description": "Credential phishing campaign leveraging AI-generated code to obfuscate a malicious SVG payload, targeting US-based organizations. The campaign used a compromised small business email account, self-addressed emails with BCC, and disguised the phishing attachment as a PDF via an SVG file. Payloads redirected users to a CAPTCHA, and likely to a credential harvesting page. Obfuscation relied on business nomenclature and advanced JavaScript, evidencing large language model (LLM) involvement.",
+            "objective": "Credential harvesting from US-based organizations using AI-assisted obfuscation techniques.",
+            "first_seen": "2025-08-18T00:00:00Z",
+            "last_seen": "2025-08-18T23:59:59Z",
+            "aliases": [
+                "Business Analytics SVG Phishing"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z",
+            "labels": [
+                "phishing",
+                "AI-generated",
+                "obfuscated",
+                "credential-theft"
+            ]
+        },
+        {
+            "type": "malware",
+            "id": "malware--203bf7de-5445-403d-a513-125848360332",
+            "name": "Obfuscated SVG Phishing Payload",
+            "description": "The malicious SVG file, disguised as a PDF, embeds highly obfuscated JavaScript using business-related terms to conceal code that redirects the user\u2019s browser to a phishing site, initiates browser fingerprinting, and starts session tracking. Overly descriptive variable names and modular code suggest generation with a large language model (LLM). The payload leverages invisible SVG elements as decoys and encoded business terminology as an obfuscation vector.",
+            "is_family": "false",
+            "malware_types": [
+                "phishing"
+            ],
+            "labels": [
+                "phishing",
+                "obfuscated",
+                "svg",
+                "javascript",
+                "ai-generated"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--cc20e59b-1a9c-4881-a5d6-315cc6aece8a",
+            "name": "Malicious Domain Hosting Phishing Content",
+            "description": "Domain observed hosting phishing pages associated with the August 2025 AI-obfuscated phishing campaign.",
+            "pattern": "[domain-name:value = 'kmnl.cpfcenters.de']",
+            "pattern_type": "stix",
+            "valid_from": "2025-08-18T00:00:00Z",
+            "labels": [
+                "phishing",
+                "malicious-domain"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--bf32b560-835f-462b-bd78-bce951d73bde",
+            "name": "Malicious SVG Attachment Filename",
+            "description": "Observed file name of SVG attachment associated with AI-obfuscated phishing campaign.",
+            "pattern": "[file:name = '23mb \u2013 PDF- 6 Pages.svg']",
+            "pattern_type": "stix",
+            "valid_from": "2025-08-18T00:00:00Z",
+            "labels": [
+                "phishing",
+                "malicious-file"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--f7e2400a-149b-4bf4-8786-976a6634d219",
+            "name": "Obfuscated SVG-based Phishing via Business Nomenclature Encoding",
+            "description": "Use of SVG files containing invisible business analytics dashboard decoys and business terminology-encoded payload to embed and obfuscate malicious JavaScript, which is then decoded to redirect to phishing sites, trigger browser fingerprinting, and session tracking.",
+            "aliases": [
+                "Business-Term Encoded SVG Phishing"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z",
+            "labels": [
+                "phishing",
+                "obfuscation",
+                "svg",
+                "javascript",
+                "ai-generated"
+            ]
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--fa834e61-ee1d-43c0-9622-bf5c862665aa",
+            "name": "Mitigations for AI-obfuscated Phishing Campaigns",
+            "description": "Apply recommended settings for Exchange Online Protection and Microsoft Defender for Office 365. Enable Safe Links, Zero-hour auto purge (ZAP), cloud-delivered protection, and deploy phishing-resistant authentication methods and smart URL/link scanning. Encourage use of browsers supporting Microsoft Defender SmartScreen and implement Conditional Access authentication strength.",
+            "action_type": "mitigation",
+            "labels": [
+                "phishing-mitigation",
+                "office365",
+                "safe-links",
+                "authentication-strength",
+                "cloud-protection"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--28ff038c-701d-472f-b991-0853a889f07d",
+            "name": "Phishing Landing Page Infrastructure",
+            "description": "Web infrastructure hosted at kmnl.cpfcenters.de, used for redirecting users from malicious SVG attachments to credential harvesting pages using CAPTCHA gates, session tracking, and browser fingerprinting.",
+            "infrastructure_types": [
+                "phishing",
+                "web-server"
+            ],
+            "labels": [
+                "phishing",
+                "web-infrastructure",
+                "malicious-domain"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "identity",
+            "id": "identity--28a821d5-51a3-444f-b86b-8415a3c1d770",
+            "name": "Microsoft Threat Intelligence",
+            "description": "Threat intelligence group within Microsoft responsible for detection, analysis, and reporting of the AI-obfuscated phishing campaign targeting US organizations in August 2025.",
+            "identity_class": "organization",
+            "sectors": [
+                "technology"
+            ],
+            "contact_information": "https://www.microsoft.com/en-us/security/blog/author/microsoft-security-threat-intelligence/",
+            "labels": [
+                "defender",
+                "technology",
+                "security"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--e3ada0e8-db35-45fb-8209-614fc94b3cf4",
+            "value": "kmnl.cpfcenters.de"
+        },
+        {
+            "type": "file",
+            "id": "file--32bf9633-8391-45b8-a450-b3316ca5c293",
+            "name": "23mb \u2013 PDF- 6 Pages.svg",
+            "extensions": {
+                "raster-image-ext": {
+                    "image_type": "svg"
+                }
+            }
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--cc0ea363-83b2-442b-9547-de878a5e8394",
+            "relationship_type": "uses",
+            "source_ref": "campaign--21a436d9-0beb-4205-a345-c925e5489a2a",
+            "target_ref": "malware--203bf7de-5445-403d-a513-125848360332",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d9df5b02-25fc-4881-9846-57afe32f78ef",
+            "relationship_type": "uses",
+            "source_ref": "malware--203bf7de-5445-403d-a513-125848360332",
+            "target_ref": "file--32bf9633-8391-45b8-a450-b3316ca5c293",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--4a964d96-33a6-483d-b167-d174241bb21b",
+            "relationship_type": "communicates-with",
+            "source_ref": "file--32bf9633-8391-45b8-a450-b3316ca5c293",
+            "target_ref": "domain-name--e3ada0e8-db35-45fb-8209-614fc94b3cf4",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--abb56e29-ac74-4fc9-8226-776dd463e9f7",
+            "relationship_type": "hosts",
+            "source_ref": "infrastructure--28ff038c-701d-472f-b991-0853a889f07d",
+            "target_ref": "domain-name--e3ada0e8-db35-45fb-8209-614fc94b3cf4",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d3704030-a3db-412d-ab50-219a9b3299c5",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--203bf7de-5445-403d-a513-125848360332",
+            "target_ref": "domain-name--e3ada0e8-db35-45fb-8209-614fc94b3cf4",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        }
+    ]
+}
