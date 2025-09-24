@@ -1,0 +1,250 @@
+{
+    "type": "bundle",
+    "id": "bundle--7845a03f-40f7-4b6c-9689-36395e0bcf25",
+    "objects": [
+        {
+            "type": "campaign",
+            "id": "campaign--37507eff-13cb-4493-9755-06483456bcb3",
+            "name": "AI-Obfuscated SVG Phishing Campaign (August 2025)",
+            "description": "A credential phishing campaign discovered in August 2025 targeting US-based organizations via self-addressed phishing emails with BCC recipients. Utilized an SVG file containing heavily AI-obfuscated JavaScript, business-themed decoys, and a redirect to a credential-harvesting site behind a fake CAPTCHA.",
+            "first_seen": "2025-08-18T00:00:00Z",
+            "last_seen": "2025-08-18T23:59:59Z",
+            "objective": "Harvest credentials via AI-obfuscated phishing attachments and lures.",
+            "confidence": 90,
+            "labels": [
+                "phishing",
+                "credential theft",
+                "ai-generated",
+                "obfuscation"
+            ],
+            "aliases": [
+                "AI SVG Phishing 2025"
+            ],
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "malware",
+            "id": "malware--66a3bf97-da13-46fa-a2c6-ee1e91d33cea",
+            "name": "AI-Obfuscated SVG Phishing Payload",
+            "description": "A malicious SVG file embedded with JavaScript that uses a unique, AI-generated obfuscation technique. The payload is hidden using business-related terminology, invisible chart decoys, and modular code, redirecting users to malicious infrastructure for credential collection, browser fingerprinting, and session tracking.",
+            "is_family": "false",
+            "labels": [
+                "phishing",
+                "obfuscation",
+                "ai-generated",
+                "svg",
+                "redirector"
+            ],
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--b8c2b80a-91f6-4f54-867a-c40634d758fd",
+            "name": "kmnl.cpfcenters.de - Phishing Domain",
+            "description": "Domain hosting web pages used for credential harvesting as part of the August 2025 AI-obfuscated SVG phishing campaign.",
+            "indicator_types": [
+                "malicious-activity",
+                "anomalous-activity"
+            ],
+            "pattern": "[domain-name:value = 'kmnl.cpfcenters.de']",
+            "valid_from": "2025-08-18T00:00:00Z",
+            "labels": [
+                "phishing",
+                "infrastructure"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "id": "indicator--3fffd121-3c6a-47a0-ae9e-500c2d70a6e5",
+            "name": "23mb \u2013 PDF- 6 Pages.svg - Phishing Attachment Filename",
+            "description": "Filename used for SVG file attachment in phishing emails, disguised to look like a legitimate PDF.",
+            "indicator_types": [
+                "malicious-activity",
+                "anomalous-activity"
+            ],
+            "pattern": "[file:name = '23mb \u2013 PDF- 6 Pages.svg']",
+            "valid_from": "2025-08-18T00:00:00Z",
+            "labels": [
+                "phishing",
+                "attachment"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--a244c6f1-2ad1-4fbf-b6b1-d36715ce41d8",
+            "name": "AI-assisted Obfuscated Phishing via SVG Attachment",
+            "description": "Attackers deliver phishing emails with AI-obfuscated SVG attachments containing decoy business dashboards and encoded payloads, which, when opened, execute JavaScript to redirect users to credential-harvesting sites while employing browser fingerprinting and session tracking.",
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "lockheed-martin-cyber-kill-chain",
+                    "phase_name": "delivery"
+                },
+                {
+                    "kill_chain_name": "lockheed-martin-cyber-kill-chain",
+                    "phase_name": "exploitation"
+                }
+            ],
+            "labels": [
+                "phishing",
+                "obfuscation",
+                "ai-generated",
+                "svg",
+                "redirect"
+            ],
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "infrastructure",
+            "id": "infrastructure--0d9581d2-a7ac-48f5-a619-bf01faa1f2c8",
+            "name": "kmnl.cpfcenters.de Phishing Server",
+            "description": "Web infrastructure hosted at kmnl.cpfcenters.de used for serving phishing landing pages and possibly for session-based evasive techniques.",
+            "infrastructure_types": [
+                "server",
+                "phishing"
+            ],
+            "confidence": 90,
+            "labels": [
+                "phishing",
+                "malicious infrastructure"
+            ],
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "course-of-action",
+            "id": "course-of-action--a422696d-c583-4c3b-8a25-f4d6adf7366a",
+            "name": "Mitigation for AI-Obfuscated SVG Phishing Campaign",
+            "description": "Mitigations include enabling Microsoft Defender for Office 365 Safe Links, Zero-hour auto purge, Defender SmartScreen, cloud-delivered antivirus protection, configuring Microsoft Entra with increased security, deploying phishing resistant authentication methods, and reviewing/restricting suspicious file types.",
+            "labels": [
+                "phishing-mitigation",
+                "email-security",
+                "endpoint-protection",
+                "ai-generated-obfuscation"
+            ],
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "report",
+            "id": "report--e260fd84-46c9-42c8-9327-c75bc1fd639b",
+            "name": "AI vs. AI: Detecting an AI-obfuscated phishing campaign",
+            "description": "This report details an AI-obfuscated phishing campaign targeting US-based organizations in August 2025 using SVG attachments that mimic PDF documents and AI-generated code to evade detection. Tactics, indicators of compromise, and mitigations are covered.",
+            "published": "2025-09-24T00:00:00Z",
+            "report_types": [
+                "threat-report",
+                "campaign"
+            ],
+            "object_refs": [
+                "campaign--",
+                "malware--",
+                "indicator--",
+                "attack-pattern--",
+                "infrastructure--",
+                "course-of-action--"
+            ],
+            "labels": [
+                "phishing",
+                "ai-generated",
+                "svg-obfuscation"
+            ],
+            "confidence": 90,
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--5e2f15be-c05a-4b59-bbe7-545c94175884",
+            "value": "kmnl.cpfcenters.de"
+        },
+        {
+            "type": "file",
+            "id": "file--b213b5c2-42a3-4760-9348-a3d9cd3dd2e8",
+            "name": "23mb \u2013 PDF- 6 Pages.svg",
+            "extensions": {
+                "raster-image-ext": {
+                    "image_type": "svg"
+                }
+            }
+        },
+        {
+            "type": "artifact",
+            "id": "artifact--ac492c9c-1a76-486d-8331-7e08ed1c0322",
+            "mime_type": "image/svg+xml",
+            "payload_bin": ""
+        },
+        {
+            "type": "url",
+            "id": "url--b58f3a20-4e12-45ee-a250-02f2f9336d09",
+            "value": "http://kmnl.cpfcenters.de"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--5256523c-7c84-4d8c-aeab-a601bd1e1d85",
+            "relationship_type": "attributed-to",
+            "source_ref": "campaign--37507eff-13cb-4493-9755-06483456bcb3",
+            "target_ref": "malware--66a3bf97-da13-46fa-a2c6-ee1e91d33cea",
+            "description": "This phishing campaign used the AI-obfuscated SVG phishing payload as its primary malware.",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--448f74c4-730f-4caf-8a3c-46a1c746a7a5",
+            "relationship_type": "uses",
+            "source_ref": "malware--66a3bf97-da13-46fa-a2c6-ee1e91d33cea",
+            "target_ref": "file--b213b5c2-42a3-4760-9348-a3d9cd3dd2e8",
+            "description": "The malware payload was delivered as a malicious SVG file disguised as a PDF.",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--05b7f328-2d39-4505-b8e0-357d6178dd00",
+            "relationship_type": "contains",
+            "source_ref": "file--b213b5c2-42a3-4760-9348-a3d9cd3dd2e8",
+            "target_ref": "artifact--ac492c9c-1a76-486d-8331-7e08ed1c0322",
+            "description": "The SVG file contains the encoded and obfuscated malware payload as SVG (JavaScript).",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--121fefb6-b921-414f-ad95-e42cee4a3575",
+            "relationship_type": "communicates-with",
+            "source_ref": "malware--66a3bf97-da13-46fa-a2c6-ee1e91d33cea",
+            "target_ref": "domain-name--5e2f15be-c05a-4b59-bbe7-545c94175884",
+            "description": "The JavaScript embedded in the SVG redirects users to the phishing landing domain kmnl.cpfcenters.de.",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--6cdbb94c-1044-46cb-975b-fa71a68c9f33",
+            "relationship_type": "hosts",
+            "source_ref": "infrastructure--0d9581d2-a7ac-48f5-a619-bf01faa1f2c8",
+            "target_ref": "domain-name--5e2f15be-c05a-4b59-bbe7-545c94175884",
+            "description": "The kmnl.cpfcenters.de infrastructure serves the phishing landing page used in the campaign.",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--60936b36-ae86-4a2e-97da-1a4639cc8774",
+            "relationship_type": "related-to",
+            "source_ref": "domain-name--5e2f15be-c05a-4b59-bbe7-545c94175884",
+            "target_ref": "url--b58f3a20-4e12-45ee-a250-02f2f9336d09",
+            "description": "The domain name is referenced as a phishing URL by the SVG payload.",
+            "created": "2025-09-24T00:00:00Z",
+            "modified": "2025-09-24T00:00:00Z"
+        }
+    ]
+}
