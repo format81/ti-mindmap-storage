@@ -1,0 +1,291 @@
+{
+    "name": "AI-Obfuscated Phishing Campaign TTPs (Microsoft, 2025)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Key MITRE ATT&CK TTPs observed in the 2025 credential phishing campaign using AI-generated SVG obfuscation as described by Microsoft Threat Intelligence.",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "macOS",
+            "Linux",
+            "Office 365",
+            "SaaS"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Attackers sent credential phishing emails from a compromised small business email account to dupe users and steal credentials. Phishing attempted to mimic file-sharing notifications.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Campaign leveraged a compromised small business email account to distribute phishing emails.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036.008",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "SVG file was named to resemble a legitimate PDF (e.g., '23mb \u2013 PDF- 6 pages.svg') to trick users into opening it, which also aided in bypassing user suspicions and automated detections.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036.008",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "SVG file camouflaged as 'PDF' to increase open rates in the phishing campaign.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.007",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Embedded JavaScript within SVG executed when file was opened in a browser, enabling the payload's delivery and facilitating redirects, fingerprinting, and session tracking.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "SVG payload obfuscated malicious code using business-related language and terminology, invisible SVG elements, and encoded strings to evade both human and automated analysis.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Invisible dashboard/chart elements with zero opacity and transparent fill were used to mislead casual review of SVG, making it look benign.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "SVG payload redirected users to a malicious domain hosting the phishing landing page.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "SVG file's payload triggered a web redirect when the attachment was opened, facilitating exploitation.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Successful attack depended on users opening the SVG attachment (thinking it is a PDF), triggering embedded scripts.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Campaign depended on users opening the disguised SVG file.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Self-addressed emails (sender=recipient), with actual targets placed in BCC field, were used to bypass heuristics and hide true recipients from detection systems.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1111",
+            "tactic": "collection",
+            "color": "",
+            "comment": "After CAPTCHA, a fake sign-in page was likely presented to collect user credentials (implied from campaign structure).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1111",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Purpose of phishing flow was to harvest credentials via fake sign-in page.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1106",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "CAPTCHA page acted as a fake verification step, delaying suspicion and building trust.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "CAPTCHA/social engineering used to further lure and trick users.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "SVG-initiated scripts performed browser fingerprinting on redirected page to profile victims or deliver tailored payloads.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Scripts established session tracking to monitor victim interaction and potentially adjust phishing behavior dynamically.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1584.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Emails impersonated legitimate file-sharing notification messages to increase credibility and lure victims.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "AI-generated code used unique, verbose, over-engineered, and redundant patterns to hinder static analysis and bypass automated detection engines.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1647",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Obfuscated payload showed AI-generated artifacts (descriptive naming, unnatural logic, overuse of business terminology) to confound detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1583.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Campaign used previously flagged malicious infrastructure (e.g., kmnl.cpfcenters.de) for redirect and hosting phishing content.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1583.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Malicious landing page hosted on domain with known history of phishing activity.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "execution",
+            "color": "",
+            "comment": "SVG script performed multi-stage data transformation (mapping business terms to code, block reversal, dynamic decoding) for reconstructing hidden payload logic.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [
+        {
+            "name": "Source",
+            "value": "https://www.microsoft.com/en-us/security/blog/2025/09/24/ai-vs-ai-detecting-an-ai-obfuscated-phishing-campaign/"
+        }
+    ],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
