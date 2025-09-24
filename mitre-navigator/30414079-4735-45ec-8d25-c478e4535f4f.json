@@ -1,0 +1,174 @@
+{
+    "name": "Enterprise techniques used in AI-obfuscated Phishing Campaign (2025, Microsoft Threat Intelligence)",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Most important enterprise TTPs observed in the 2025 AI-obfuscated phishing campaign utilizing SVG, AI-generated obfuscation, and social engineering, as analyzed by Microsoft Threat Intelligence.",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "Linux",
+            "macOS"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Phishing emails sent from a compromised business account, containing an SVG masquerading as a PDF, intended to steal credentials via credential phishing.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Compromised small business email account used as sender to distribute phishing emails and increase legitimacy.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "SVG payload obfuscated with invisible chart elements and encoded business terminology, supported by AI-generated code structure and variable naming.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Self-sending emails with victim addresses hidden in BCC field for recipient anonymization and to bypass basic security heuristics.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204.002",
+            "tactic": "execution",
+            "color": "",
+            "comment": "User-executed malicious SVG file, appearing as a PDF document, leveraged to entice victim to open in browser, triggering embedded JavaScript.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.007",
+            "tactic": "execution",
+            "color": "",
+            "comment": "JavaScript embedded in SVG file runs in the victim's browser, decoding the obfuscated payload, managing redirect, and session logic.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204.001",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Malicious redirect upon file open\u2014SVG triggers redirect to external phishing page leveraging a previously flagged malicious domain.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1102.002",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Browser redirect facilitates connection to attacker-controlled infrastructure, for command/control and post-exploitation steps.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1111",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Credential harvesting: Phishing website likely presented a fake sign-in page after CAPTCHA to steal user credentials.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "CAPTCHA on phishing landing page applied as social engineering to build trust, block automation, and increase victim compliance.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Phishing site session tracking used to enhance attack targeting, restrict content delivery to intended victims, and evade automated analysis.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Browser fingerprinting and environment awareness leveraged by phishing site to serve targeted content and evade automated sandboxes.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Masquerading: Email and attachment crafted to appear as file-sharing notifications with an attachment mimicking a PDF (but actually SVG).",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
