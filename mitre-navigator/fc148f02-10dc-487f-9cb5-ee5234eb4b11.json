@@ -1,0 +1,72 @@
+{
+    "name": "Shuyal Techniques",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Overview of Shuyal tactics and techniques identified from the extended activities targeting 19 browser types with stealthy tactics for credential theft, data collection, and evasion.",
+    "techniques": [
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "comment": "Shuyal steals credentials from web browsers' databases by executing SQL queries."
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "collection",
+            "comment": "Clipboard data is captured to gather any sensitive information copied by the user."
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "comment": "System and browser data are collected, including browsing history and saved passwords."
+        },
+        {
+            "techniqueID": "T1022",
+            "tactic": "exfiltration",
+            "comment": "Stolen data is compressed and encrypted before being sent via Telegram."
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "exfiltration",
+            "comment": "Shuyal automatically exfiltrates data using Telegram Bot API, bypassing controls."
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "Shuyal uses system commands and WMI queries to perform detailed system reconnaissance."
+        },
+        {
+            "techniqueID": "T1045",
+            "tactic": "defense-evasion",
+            "comment": "Shuyal likely uses software packing or obfuscation to evade antivirus detection."
+        },
+        {
+            "techniqueID": "T1562.001",
+            "tactic": "defense-evasion",
+            "comment": "Shuyal disables Windows Task Manager to prevent users from interrupting its processes."
+        },
+        {
+            "techniqueID": "T1112",
+            "tactic": "defense-evasion",
+            "comment": "The malware makes registry changes to disable Task Manager, ensuring it cannot be reactivated easily."
+        },
+        {
+            "techniqueID": "T1547.001",
+            "tactic": "persistence",
+            "comment": "Shuyal establishes persistence by copying its executable into the Windows Startup folder."
+        },
+        {
+            "techniqueID": "T1490",
+            "tactic": "impact",
+            "comment": "By deleting itself and its traces after execution, Shuyal inhibits system recovery efforts."
+        },
+        {
+            "techniqueID": "T1036.005",
+            "tactic": "defense-evasion",
+            "comment": "Shuyal may use names mimicking legitimate software for its files to avoid detection."
+        }
+    ]
+}
