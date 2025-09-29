@@ -1,0 +1,233 @@
+{
+    "name": "Enterprise techniques used by Moonstone Sleet",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "TTPs identified in Moonstone Sleet's operations",
+    "filters": {
+        "platforms": [
+            "Windows",
+            "Linux"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "all"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1192",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Moonstone Sleet used malicious npm packages sent via email and freelancing platforms.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Moonstone Sleet used fake companies and job opportunities to create initial access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1072",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "Trojanized version of PuTTY delivered via LinkedIn and Telegram.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053.005",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "The installer executes SplitLoader via a scheduled task.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1543",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Moonstone Sleet loads malicious services with custom malware loader YouieLoad.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1036.005",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Using legitimate-looking software and fake companies to evade detection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1140",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "PuTTY decrypts embedded payloads.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1041",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Malicious npm package used curl to connect to actor-controlled IP for exfiltration.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Moonstone Sleet pursued employment to gain access to organizations.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1005",
+            "tactic": "collection",
+            "color": "",
+            "comment": "YouieLoad performs functions such as network and user discovery and collects browser data.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1003",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Credential theft from LSASS by malicious npm loaders.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Moonstone Sleet performs further discovery on compromised systems.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071.001",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "SplitLoader communicates with C2 over HTTP.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1486",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Moonstone Sleet delivers ransomware called FakePenny.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1587.004",
+            "tactic": "resource-development",
+            "color": "",
+            "comment": "The actor developed custom ransomware.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1566.001",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Fake employment offers were used to gather credentials.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1105",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Malicious payloads and tools were transferred to the victim's system post-infection via C2 channels.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1021",
+            "tactic": "lateral-movement",
+            "color": "",
+            "comment": "Remote access tools and malware used to maintain control over infected systems.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1550",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "The actor used stolen credentials for further access within target networks.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
