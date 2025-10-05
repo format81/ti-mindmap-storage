@@ -1,0 +1,335 @@
+{
+    "type": "bundle",
+    "id": "bundle--2302ed75-7cb0-4928-922c-087ebc7fe5cf",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--350c8a9d-2e66-45db-bbaa-f92b1155654d",
+            "name": "Earth Estries",
+            "aliases": [
+                "Salt Typhoon",
+                "FamousSparrow",
+                "GhostEmperor",
+                "UNC2286"
+            ],
+            "labels": [
+                "advanced persistent threat",
+                "Chinese APT",
+                "cyber espionage",
+                "sophisticated"
+            ],
+            "description": "Earth Estries is a Chinese APT group that targets critical sectors such as telecommunications, government, technology, and NGOs.",
+            "first_seen": "2023-01-01T00:00:00Z",
+            "goals": [
+                "Intelligence gathering",
+                "Espionage"
+            ],
+            "resource_level": "nation-state",
+            "primary_motivation": "espionage",
+            "secondary_motivations": [
+                "financial gain"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--4987854d-ee36-4ef4-9208-405b17d3db40",
+            "name": "GHOSTSPIDER",
+            "labels": [
+                "backdoor",
+                "modular"
+            ],
+            "description": "GHOSTSPIDER is a sophisticated multi-modular backdoor designed for long-term espionage activities.",
+            "created": "2023-01-01T00:00:00Z",
+            "is_family": "false"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--2505849c-2128-48c9-b604-859835b8f0a5",
+            "name": "SNAPPYBEE",
+            "aliases": [
+                "Deed RAT"
+            ],
+            "labels": [
+                "backdoor",
+                "modular"
+            ],
+            "description": "SNAPPYBEE is a modular backdoor used by Earth Estries and other Chinese APT groups for long-term espionage.",
+            "created": "2020-01-01T00:00:00Z",
+            "is_family": "false"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--9e30f16f-5046-4102-835c-2a07f680cf95",
+            "name": "MASOL RAT",
+            "labels": [
+                "backdoor",
+                "cross-platform"
+            ],
+            "description": "MASOL RAT is a cross-platform backdoor used by Earth Estries, targeting Linux servers within Southeast Asian governments.",
+            "created": "2020-01-01T00:00:00Z",
+            "is_family": "false"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--edb8eb86-70e4-4eff-a7a0-c6eb8a24b8f3",
+            "name": "DEMODEX",
+            "labels": [
+                "rootkit"
+            ],
+            "description": "DEMODEX is a rootkit used by Earth Estries for stealthy infiltration and persistence in government and telecommunications networks.",
+            "created": "2020-01-01T00:00:00Z",
+            "is_family": "false"
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--34967a01-66bb-4e04-b9d9-e0389d663270",
+            "name": "CVE-2023-46805",
+            "description": "A vulnerability in Ivanti Connect Secure VPN that allows for bypassing authentication and executing arbitrary commands.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2023-46805"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--4bbd66d5-fba2-4be4-844d-b498f2466bf2",
+            "name": "CVE-2024-21887",
+            "description": "A vulnerability in Ivanti Connect Secure VPN chain exploits that allows for elevated privilege command execution.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2024-21887"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--aa75efca-5e28-4e92-928a-2e57dbb9ee51",
+            "name": "CVE-2023-48788",
+            "description": "A SQL Injection Vulnerability in Fortinet FortiClient EMS.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2023-48788"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--d71cf236-2bba-45f3-953a-b2fc4cf682ef",
+            "name": "CVE-2022-3236",
+            "description": "A code injection vulnerability in the User Portal and Webadmin of Sophos Firewall allows for remote code execution.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2022-3236"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--cd0ba4d6-0479-45e0-99f7-b224e8c5309b",
+            "name": "CVE-2021-26855",
+            "description": "Part of the ProxyLogon set of vulnerabilities allowing for RCE in Microsoft Exchange servers.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2021-26855"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--58375bd6-dcfa-43cd-812a-d2c511988764",
+            "name": "CVE-2021-26857",
+            "description": "Part of the ProxyLogon set of vulnerabilities allowing for RCE in Microsoft Exchange servers.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2021-26857"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--95917919-42a8-4d4b-9369-ad9c95f7a20c",
+            "name": "CVE-2021-26858",
+            "description": "Part of the ProxyLogon set of vulnerabilities allowing for RCE in Microsoft Exchange servers.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2021-26858"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "spec_version": "2.1",
+            "id": "vulnerability--c1b9da24-2519-4b33-a180-172d5f052c93",
+            "name": "CVE-2021-27065",
+            "description": "Part of the ProxyLogon set of vulnerabilities allowing for RCE in Microsoft Exchange servers.",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2021-27065"
+                }
+            ]
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--87f8a4af-813d-43f5-ac7a-070e82f75256",
+            "value": "api.solveblemten.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--3106dbe3-cc8a-458e-be5f-b7b035a8a412",
+            "value": "esh.hoovernamosong.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--02c2f2b9-1979-4b1a-bd74-35607a50f1ba",
+            "value": "vpn114240349.softether.net"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--203a3f3f-06e4-433b-a73c-4f3b19c6bade",
+            "value": "pulseathermakf.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--be3eb99e-4e9e-4f50-bfc2-e593d4f5219d",
+            "value": "www.infraredsen.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--7e584526-aa12-4c3f-bc44-69a4eb4e0b49",
+            "value": "imap.dateupdata.com"
+        },
+        {
+            "type": "domain-name",
+            "id": "domain-name--c238019b-7837-44b5-9971-62122e8bf785",
+            "value": "cloudlibraries.global.ssl.fastly.net"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--05859c2a-fd7d-432a-b240-ea1507b2b793",
+            "value": "23.81.41.166"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--d84eb798-488d-4df5-935e-3fef3978b05a",
+            "value": "165.154.227.192"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--37e1f535-f6c8-4e7d-b004-b70a42b6a4af",
+            "value": "103.91.64.214"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--2f83c286-709b-42c6-b56c-d2f525b361fe",
+            "value": "158.247.222.165"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--3a36e5b5-3ae2-4837-b6b6-b0af7fa6baab",
+            "value": "103.159.133.251"
+        },
+        {
+            "type": "ipv4-addr",
+            "id": "ipv4-addr--bf609fe3-7758-4eb2-afcf-aa3de2318705",
+            "value": "141.255.164.98"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--405cc4b6-98a6-4c77-a222-3c34e7dcf53e",
+            "relationship_type": "uses",
+            "created": "2023-11-23T00:00:00Z",
+            "modified": "2023-11-23T00:00:00Z",
+            "source_ref": "threat-actor--350c8a9d-2e66-45db-bbaa-f92b1155654d",
+            "target_ref": "malware--4987854d-ee36-4ef4-9208-405b17d3db40",
+            "description": "Earth Estries uses the GHOSTSPIDER malware for long-term espionage activities."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ebd3e7c9-baef-439f-9279-e143481f7024",
+            "relationship_type": "uses",
+            "created": "2023-11-23T00:00:00Z",
+            "modified": "2023-11-23T00:00:00Z",
+            "source_ref": "threat-actor--350c8a9d-2e66-45db-bbaa-f92b1155654d",
+            "target_ref": "malware--2505849c-2128-48c9-b604-859835b8f0a5",
+            "description": "Earth Estries uses the SNAPPYBEE malware in its operations."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2b48b012-cc19-406e-94ca-f90f7293d86b",
+            "relationship_type": "uses",
+            "created": "2023-11-23T00:00:00Z",
+            "modified": "2023-11-23T00:00:00Z",
+            "source_ref": "threat-actor--350c8a9d-2e66-45db-bbaa-f92b1155654d",
+            "target_ref": "malware--9e30f16f-5046-4102-835c-2a07f680cf95",
+            "description": "Earth Estries has been observed using MASOL RAT for targeting Linux servers."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--55b2d645-f8c6-4a48-a025-dff0139e89ae",
+            "relationship_type": "targets",
+            "created": "2023-11-23T00:00:00Z",
+            "modified": "2023-11-23T00:00:00Z",
+            "source_ref": "threat-actor--350c8a9d-2e66-45db-bbaa-f92b1155654d",
+            "target_ref": "domain-name--87f8a4af-813d-43f5-ac7a-070e82f75256",
+            "description": "Earth Estries targets the domain api.solveblemten.com as part of their operations."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--118e9e95-8fa2-4442-80e0-9722a458f7f1",
+            "relationship_type": "targets",
+            "created": "2023-11-23T00:00:00Z",
+            "modified": "2023-11-23T00:00:00Z",
+            "source_ref": "threat-actor--350c8a9d-2e66-45db-bbaa-f92b1155654d",
+            "target_ref": "domain-name--3106dbe3-cc8a-458e-be5f-b7b035a8a412",
+            "description": "Earth Estries targets the domain esh.hoovernamosong.com."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f64cf1ac-f059-45d7-822e-4d74802afc89",
+            "relationship_type": "has",
+            "created": "2023-11-23T00:00:00Z",
+            "modified": "2023-11-23T00:00:00Z",
+            "source_ref": "malware--2505849c-2128-48c9-b604-859835b8f0a5",
+            "target_ref": "domain-name--87f8a4af-813d-43f5-ac7a-070e82f75256",
+            "description": "SNAPPYBEE uses the domain api.solveblemten.com for C&C communications."
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1ac3ac54-be06-451a-8b99-60b7c84229ef",
+            "relationship_type": "has",
+            "created": "2023-11-23T00:00:00Z",
+            "modified": "2023-11-23T00:00:00Z",
+            "source_ref": "malware--2505849c-2128-48c9-b604-859835b8f0a5",
+            "target_ref": "domain-name--3106dbe3-cc8a-458e-be5f-b7b035a8a412",
+            "description": "SNAPPYBEE uses the domain esh.hoovernamosong.com for C&C communications."
+        }
+    ]
+}
