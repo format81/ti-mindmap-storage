@@ -1,0 +1,92 @@
+{
+    "name": "MITRE ATT&CK Navigator Layer - DraftKings Attack",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques used in the DraftKings credential stuffing attack.",
+    "filters": {
+        "platforms": [
+            "windows"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1081",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Attackers likely used information obtained from other data breaches to access the accounts.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Attackers used valid credentials from other breaches to log into DraftKings accounts.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1556.001",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Attackers changed 2FA settings by redirecting to another phone number, locking out the actual owners of the accounts.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1020",
+            "tactic": "exfiltration",
+            "color": "",
+            "comment": "Attackers quickly withdrew money after accessing the accounts.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1491",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Not explicitly stated, but implied by \"locking out the actual owners of the accounts\" through 2FA changes, causing a temporary denial of account access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
