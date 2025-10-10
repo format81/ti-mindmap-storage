@@ -1,0 +1,218 @@
+{
+    "type": "bundle",
+    "id": "bundle--f337fbc7-6fa5-44be-abf1-dbff373743eb",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "id": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "spec_version": "2.1",
+            "name": "APT35",
+            "aliases": [
+                "Charming Kitten",
+                "Phosphorus",
+                "Mint Sandstorm",
+                "Agent Serpens",
+                "COBALT MIRAGE",
+                "G0059",
+                "Magic Hound",
+                "Newscaster",
+                "Newscaster Team",
+                "Tunnel Vision"
+            ],
+            "goals": [
+                "Espionage"
+            ],
+            "primary_motivation": "espionage",
+            "labels": [
+                "state-sponsored",
+                "cyber-espionage"
+            ],
+            "description": "APT35 is an Iranian state-sponsored cyber-espionage group active since at least 2014, associated with the Islamic Revolutionary Guard Corps (IRGC). It targets sectors like energy, government, and technology across Europe, the Middle East, and the United States."
+        },
+        {
+            "type": "malware",
+            "id": "malware--ecd0b659-95f2-4f60-8968-a578cde0145f",
+            "spec_version": "2.1",
+            "name": "CharmPower",
+            "is_family": "false",
+            "labels": [
+                "powershell",
+                "backdoor"
+            ],
+            "description": "A PowerShell backdoor used by APT35 to maintain persistence and exfiltrate sensitive information."
+        },
+        {
+            "type": "malware",
+            "id": "malware--fbe925bb-666f-4feb-8001-249d3e004488",
+            "spec_version": "2.1",
+            "name": "MediaPl",
+            "is_family": "false",
+            "labels": [
+                "backdoor"
+            ],
+            "description": "A backdoor tool used by APT35 for persistence and data exfiltration."
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--8f5b8a81-7ac1-4eeb-bde2-e1ad57ced10e",
+            "spec_version": "2.1",
+            "name": "Spearphishing",
+            "description": "APT35 uses spear-phishing techniques including links and attachments to gain initial access to target systems.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "external_id": "T1566"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--cff96c63-d9e3-4a39-8f06-ea090c320dcb",
+            "spec_version": "2.1",
+            "name": "Exploitation of Unpatched Vulnerabilities",
+            "description": "APT35 exploits unpatched vulnerabilities such as Log4j and ProxyShell to gain initial access.",
+            "external_references": [
+                {
+                    "source_name": "MITRE ATT&CK",
+                    "external_id": "T1190"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--76132422-fcee-4470-942d-4944a9316418",
+            "spec_version": "2.1",
+            "name": "CVE-2021-44228",
+            "description": "Apache Log4j2 2.0-beta9 through 2.15.0 JNDI features used in vulnerable configurations.",
+            "external_references": [
+                {
+                    "source_name": "CVE",
+                    "external_id": "CVE-2021-44228"
+                }
+            ]
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--69b7b6a9-05cf-4acd-b608-639c9013d209",
+            "spec_version": "2.1",
+            "name": "CVE-2020-12812",
+            "description": "An improper authentication vulnerability in SSL VPN in FortiOS may result in a user being able to login without credentials.",
+            "external_references": [
+                {
+                    "source_name": "CVE",
+                    "external_id": "CVE-2020-12812"
+                }
+            ]
+        },
+        {
+            "type": "software",
+            "id": "software--a1561fab-dd03-4529-9044-304d306aebd9",
+            "name": "PowerShell",
+            "description": "APT35 utilizes a range of custom malware and tools, including PowerShell backdoors like CharmPower and MediaPl, to maintain persistence and exfiltrate sensitive information."
+        },
+        {
+            "type": "software",
+            "id": "software--10e1ecc7-3aab-445f-8444-fb4f1873c16a",
+            "name": "CharmPower",
+            "description": "APT35 custom PowerShell backdoor tool."
+        },
+        {
+            "type": "software",
+            "id": "software--6a36ecab-c3d9-4cc0-b975-63d21ed0b0fb",
+            "name": "MediaPl",
+            "description": "APT35 custom PowerShell backdoor tool."
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--d42c2685-f174-462e-809b-6755f43edb00",
+            "description": "CVE-2021-44228: Apache Log4j2 2.0-beta9 through 2.15.0 (excluding security releases 2.12.2, 2.12.3, and 2.3.1) JNDI features used in Apache Log4j."
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--786d18a5-597c-42c6-b4c9-128b7d1d4fb4",
+            "description": "CVE-2020-12812: An improper authentication vulnerability in SSL VPN in FortiOS 6.4.0, 6.2.0 to 6.2.3, 6.0.9 and below may result in improper access."
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--6aecd0b7-1646-4809-ad19-2b22fcd747b9",
+            "description": "CVE-2023-27350: This vulnerability allows remote attackers to bypass authentication on affected installations of PaperCut NG 22.0.5 (Build...)."
+        },
+        {
+            "type": "vulnerability",
+            "id": "vulnerability--997535d3-0d3e-4030-ab49-b09ebf908449",
+            "description": "CVE-2022-22954: VMware Workspace ONE Access and Identity Manager contain a remote code execution vulnerability."
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--55eae15a-97d1-4086-b7a7-3c92ea611539",
+            "spec_version": "2.1",
+            "relationship_type": "uses",
+            "description": "APT35 uses CharmPower malware for persistence and exfiltration.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "malware--ecd0b659-95f2-4f60-8968-a578cde0145f"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--8016c1d2-8bbe-4766-9085-648ed6dc1a78",
+            "spec_version": "2.1",
+            "relationship_type": "uses",
+            "description": "APT35 uses MediaPl malware for persistence and exfiltration.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "malware--fbe925bb-666f-4feb-8001-249d3e004488"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--41f4ed6f-ae0c-4bd8-a291-b74e601d9ea2",
+            "spec_version": "2.1",
+            "relationship_type": "uses",
+            "description": "APT35 uses PowerShell for executing custom backdoors.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "software--a1561fab-dd03-4529-9044-304d306aebd9"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--d0716422-5fd9-448b-a3f0-6ce76ae70afb",
+            "spec_version": "2.1",
+            "relationship_type": "uses",
+            "description": "APT35 employs spear-phishing to gain initial access.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "attack-pattern--8f5b8a81-7ac1-4eeb-bde2-e1ad57ced10e"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--7aeb5e8c-959f-488d-99d5-b512ef4ada36",
+            "spec_version": "2.1",
+            "relationship_type": "uses",
+            "description": "APT35 exploits unpatched vulnerabilities like Log4j and ProxyShell.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "attack-pattern--cff96c63-d9e3-4a39-8f06-ea090c320dcb"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--06fb1cbe-5774-488f-a1b3-a593f2eeaa7f",
+            "spec_version": "2.1",
+            "relationship_type": "targets",
+            "description": "APT35 primarily targets the United States.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "location--fdd60b30-c1e9-4763-acea-d06f5ce1b822"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--83434fa4-7c49-40b9-87fa-16c9cd7fd07f",
+            "spec_version": "2.1",
+            "relationship_type": "exploits",
+            "description": "APT35 exploits Log4j vulnerability CVE-2021-44228 for unauthorized access.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "vulnerability--76132422-fcee-4470-942d-4944a9316418"
+        },
+        {
+            "type": "relationship",
+            "id": "relationship--9ec56da6-133e-4c91-af40-9625eaaec909",
+            "spec_version": "2.1",
+            "relationship_type": "exploits",
+            "description": "APT35 exploits FortiOS vulnerability CVE-2020-12812 for unauthorized access.",
+            "source_ref": "threat-actor--d0fe825a-8156-493d-b555-f196dd5b698e",
+            "target_ref": "vulnerability--69b7b6a9-05cf-4acd-b608-639c9013d209"
+        }
+    ]
+}
