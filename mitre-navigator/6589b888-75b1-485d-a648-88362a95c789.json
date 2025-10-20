@@ -1,0 +1,147 @@
+{
+    "name": "JavaGhost's Persistent Phishing Attacks From the Cloud",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "JavaGhost uses various techniques for phishing and unauthorized access in cloud environments.",
+    "filters": {
+        "platforms": [
+            "aws"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "JavaGhost group targets cloud environments to send phishing campaigns for financial gain.",
+            "enabled": true,
+            "metadata": [],
+            "links": [
+                {
+                    "label": "Related Article",
+                    "url": "https://unit42.paloaltonetworks.com/javaghost-cloud-phishing/"
+                }
+            ],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1548",
+            "tactic": "privilege-escalation",
+            "color": "",
+            "comment": "JavaGhost uses overly permissive IAM permissions to escalate privileges within compromised AWS environments.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "JavaGhost obtained exposed long-term access keys to gain initial access to AWS environment.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "color": "",
+            "comment": "Advanced evasion techniques used by JavaGhost to cover tracks, similar to Scattered Spider.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1606.001",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "JavaGhost generates temporary credentials and login URL for console access to obfuscate identity.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1053",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "JavaGhost creates unused IAM accounts seemingly as long-term persistence mechanisms.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1071",
+            "tactic": "command-and-control",
+            "color": "",
+            "comment": "Phishing emails sent using known SES infrastructure to bypass email protections.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1570",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "JavaGhost performs reconnaissance on AWS SES quotas and account information.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1098",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "JavaGhost creates IAM roles with trust policies allowing access from threat actor-controlled AWS accounts.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1532",
+            "tactic": "impact",
+            "color": "",
+            "comment": "JavaGhost creates EC2 Security Groups with specific naming conventions as a calling card.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
