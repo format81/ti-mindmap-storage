@@ -1,0 +1,154 @@
+{
+    "name": "Prompt injection to RCE in AI agents",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques relevant to vulnerabilities in AI agents leading to RCE",
+    "filters": {
+        "platforms": [
+            "windows",
+            "linux",
+            "mac"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Describes vulnerability involving execution of shell commands through argument injection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1204",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Techniques like argument injection are triggered by user actions, such as command execution.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1203",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Argument injection used to exploit agent systems and execute remote shells.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1056",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Use of input like JSON to nudge AI agents into executing commands.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1548",
+            "tactic": "privilege-escalation",
+            "color": "",
+            "comment": "Achieving execution by bypassing intended security controls, such as argument injection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Discusses using pre-approved execution without additional verification or approval.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1083",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Use of tools like `find` and `grep` as part of malicious searches and command execution.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Examples given of querying system information using commands like `hostname`.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1491",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Modifying the behavior of AI agents and their output through prompt injection.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1049",
+            "tactic": "discovery",
+            "color": "",
+            "comment": "Mention of commands like `curl`, used for unauthorized network connections in execution paths.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1059.003",
+            "tactic": "execution",
+            "color": "",
+            "comment": "Utilizing existing deployment capabilities in agent systems to conduct malicious activities.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
