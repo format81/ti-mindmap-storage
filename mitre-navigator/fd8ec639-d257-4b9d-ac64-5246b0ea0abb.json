@@ -1,0 +1,115 @@
+{
+    "name": "Mitnick Attack Techniques",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Techniques used in the Kevin Mitnick attack as documented in the SANS GIAC Paper.",
+    "filters": {
+        "platforms": [
+            "linux",
+            "windows",
+            "mac",
+            "network"
+        ]
+    },
+    "sorting": 0,
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1584.001",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "IP Spoofing attack to impersonate a trusted host and gain unauthorized access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1505.002",
+            "tactic": "initial-access",
+            "color": "",
+            "comment": "TCP Sequence Prediction used to establish connections by impersonating another system.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1040",
+            "tactic": "collection",
+            "color": "",
+            "comment": "Network Sniffing to determine sequence numbers and predict trusted connection patterns.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T2024",
+            "tactic": "credential-access",
+            "color": "",
+            "comment": "Exploitation of trusted relationships amongst systems via IP spoofing to bypass authentication.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1547.006",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Kernel Module Installation indicating persistence via kernel modifications.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1102.002",
+            "tactic": "persistence",
+            "color": "",
+            "comment": "Manipulation of .rhosts file to create a backdoor for future access.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        },
+        {
+            "techniqueID": "T1499",
+            "tactic": "impact",
+            "color": "",
+            "comment": "Denial of Service attack using SYN flooding to disable trusted machine for spoofing.",
+            "enabled": true,
+            "metadata": [],
+            "links": [],
+            "showSubtechniques": false
+        }
+    ],
+    "gradient": {
+        "colors": [
+            "#ff6666",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#dddddd"
+}
