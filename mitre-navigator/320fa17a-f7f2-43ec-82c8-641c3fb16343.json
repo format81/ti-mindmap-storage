@@ -1,0 +1,295 @@
+{
+    "name": "GTIG AI Threat Tracker 2025: Key Enterprise TTPs",
+    "versions": {
+        "attack": "14",
+        "navigator": "4.9.1",
+        "layer": "4.5"
+    },
+    "domain": "enterprise-attack",
+    "description": "Most relevant enterprise-layer ATT&CK techniques from GTIG's 2025 'AI Threat Tracker', including novel AI-enabled malware, real-world operations, and observed actor tradecraft.",
+    "filters": {
+        "platforms": [
+            "windows",
+            "linux",
+            "macos"
+        ]
+    },
+    "gradient": {
+        "colors": [
+            "#fd00b3",
+            "#ffe766",
+            "#8ec843"
+        ],
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "layout": {
+        "layout": "side",
+        "aggregateFunction": "average",
+        "showID": false,
+        "showName": true,
+        "showAggregateScores": false,
+        "countUnscored": false,
+        "expandedSubtechniques": "none"
+    },
+    "hideDisabled": false,
+    "techniques": [
+        {
+            "techniqueID": "T1027",
+            "tactic": "defense-evasion",
+            "comment": "PROMPTFLUX (VBScript dropper) uses Gemini LLM API to rewrite/obfuscate its code hourly, evading AV, regenerating itself \u2018just-in-time\u2019.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059",
+            "tactic": "execution",
+            "comment": "PROMPTSTEAL queries LLMs (Qwen2.5, Gemini) to dynamically generate malicious single-line commands for collection and execution. FRUITSHELL (reverse shell in PowerShell, contains hardcoded AI bypass prompts).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.001",
+            "tactic": "execution",
+            "comment": "FRUITSHELL reverse shell (PowerShell); scripts executed for attack functionality.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1059.006",
+            "tactic": "execution",
+            "comment": "PROMPTSTEAL implements Python scripts to query the LLM, automate system/data theft operations.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1106",
+            "tactic": "execution",
+            "comment": "PROMPTFLUX and PROMPTSTEAL trigger malicious code execution by interacting with public Gemini/Hugging Face APIs.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1213",
+            "tactic": "collection",
+            "comment": "PROMPTSTEAL prompts LLM for Win commands to collect detailed system and document info; data sent to C2.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1074",
+            "tactic": "collection",
+            "comment": "PROMPTSTEAL copies target files to staging folder before exfiltration.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1119",
+            "tactic": "collection",
+            "comment": "PROMPTSTEAL, QUIETVAULT automate collection (searching for credentials, documents, system info) as part of their workflows.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1555",
+            "tactic": "credential-access",
+            "comment": "QUIETVAULT steals GitHub/NPM tokens, discovered via AI-driven local search.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1081",
+            "tactic": "credential-access",
+            "comment": "QUIETVAULT locates and exfiltrates credential files using AI-enabled search.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1566",
+            "tactic": "initial-access",
+            "comment": "State and criminal actors use LLMs (Gemini, etc.) for AI-enhanced phishing lure creation (emails, content, language, wording).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1566.003",
+            "tactic": "initial-access",
+            "comment": "Actors send spearphishing via service, including use of compromised corporate accounts (e.g., TEMP.Zagros/MUDDYCOAST).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1556",
+            "tactic": "initial-access",
+            "comment": "UNC1069 leverages AI-generated deepfakes (image/video) for lures, combined with language-localized content; social engineering via Gemini.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1204.002",
+            "tactic": "execution",
+            "comment": "Deepfake social engineering/Zoom SDK lures entice victim to execute/download malware.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1089",
+            "tactic": "defense-evasion",
+            "comment": "PROMPTFLUX\u2019s \u2018Thinking Robot\u2019 module continuously obfuscates code, disables/dodges security tools.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1547.001",
+            "tactic": "persistence",
+            "comment": "PROMPTFLUX writes regenerated dropper to Startup folder for persistence.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1219",
+            "tactic": "command-and-control",
+            "comment": "Reverse shell (FRUITSHELL) establishes remote control connection for arbitrary command execution.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1567.002",
+            "tactic": "exfiltration",
+            "comment": "PROMPTSTEAL/QUIETVAULT exfiltrate data and credentials to server or public GitHub repo.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1021",
+            "tactic": "lateral-movement",
+            "comment": "PROMPTFLUX attempts to self-copy to removable drives, mapped network shares for intra-network spread.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1078",
+            "tactic": "initial-access",
+            "comment": "Actors use compromised accounts for phishing and ongoing access (e.g. TEMP.Zagros).",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1595",
+            "tactic": "reconnaissance",
+            "comment": "Actors leverage LLMs for organization/target research, vulnerability identification, technical knowledge gathering.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1087",
+            "tactic": "discovery",
+            "comment": "Actors use Gemini to enumerate users/groups as part of pre-access or post-compromise discovery.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1082",
+            "tactic": "discovery",
+            "comment": "PROMPTSTEAL collects host system info; PROMPTFLUX uses commands with LLM support for runtime system discovery.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1203",
+            "tactic": "initial-access",
+            "comment": "Actors prompt LLMs for exploitation steps; use Gemini to help exploit Windows/macOS/cloud targets.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1068",
+            "tactic": "privilege-escalation",
+            "comment": "Actors leverage Gemini output to find and exploit system/app vulnerabilities.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1505.003",
+            "tactic": "persistence",
+            "comment": "Custom web shell (e.g. TEMP.Zagros) generated/researched via Gemini.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1647",
+            "tactic": "resource-development",
+            "comment": "AI-enabled toolkits, droppers, malware (PROMPTFLUX, PROMPTLOCK) generated via Gemini/Qwen/HuggingFace.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1587.001",
+            "tactic": "resource-development",
+            "comment": "Marketplaces for AI-built malware, ransomware, phishing kits.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1589",
+            "tactic": "reconnaissance",
+            "comment": "Actors use Gemini, HuggingFace API and other third-party AI services to gather target info, web research.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1588.002",
+            "tactic": "resource-development",
+            "comment": "Actors acquire/tool AI API access to automate tradecraft or support C2.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1609",
+            "tactic": "collection",
+            "comment": "APT42, UNC1069, others leverage Gemini translation for phishing lures, cross-language social engineering.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1189",
+            "tactic": "initial-access",
+            "comment": "UNC1069 campaigns use deepfake lures to drive-by compromise via fake Zoom SDK app install.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1538",
+            "tactic": "discovery",
+            "comment": "Cloud infrastructure reconnaissance: actors use Gemini-driven reconnaissance for AWS EC2 token access.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1526",
+            "tactic": "discovery",
+            "comment": "Actor enumerates cloud infrastructure (Kubernetes, vSphere) via Gemini-guided workflow.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1580",
+            "tactic": "reconnaissance",
+            "comment": "Actors use LLMs to gather intelligence around cloud services configuration and enumerate targets.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1195",
+            "tactic": "initial-access",
+            "comment": "UNC4899 leverages Gemini for exploit/dev to augment supply chain attacks.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1565",
+            "tactic": "impact",
+            "comment": "APT42 builds data \u2018processing agent\u2019 using Gemini to auto-generate SQL queries for sensitive data.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1602",
+            "tactic": "collection",
+            "comment": "Automated data manipulation via AI-generated queries/scripts.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1562",
+            "tactic": "defense-evasion",
+            "comment": "Actors use prompt engineering/social engineering (CTF, student, researcher pretexts) to bypass AI model safeguards/guardrails.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1135",
+            "tactic": "discovery",
+            "comment": "Actors use Gemini for technical knowledge research supporting intrusion and tool development.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1592",
+            "tactic": "reconnaissance",
+            "comment": "Actors use LLMs for infrastructure discovery, learning defenses, enumerating attack surfaces.",
+            "enabled": true
+        },
+        {
+            "techniqueID": "T1648",
+            "tactic": "defense-evasion",
+            "comment": "Actors leverage prompt injection, adversarial prompt engineering (pretexting) to bypass model protections.",
+            "enabled": true
+        }
+    ],
+    "legendItems": [],
+    "metadata": [],
+    "links": [],
+    "showTacticRowBackground": false,
+    "tacticRowBackground": "#f3f3f3"
+}
